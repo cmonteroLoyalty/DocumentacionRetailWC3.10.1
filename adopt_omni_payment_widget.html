@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Adopt the Initiate omni payment widget</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="adopt_omni_payment_widget" class="book toc2 toc-left">
+<div id="header">
+<h1>Adopt the Initiate omni payment widget</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html"><span class="toc-current">Adopt the Initiate omni payment widget</span></a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="adopt_omni_payment_widget" class="sect0">Adopt the Initiate omni payment widget</h1>
+          <div class="paragraph">
+<p>The <strong>Initiate omni payment</strong>  widget is configurable to support different payment types.
+Developers have the option to use one of the <a href="omni_payment_reference.html">out-of-the-box configurations</a>,
+or to create a custom configuration. If the widget is configured using a custom configuration file,
+there are additional configuration options available.</p>
+</div>
+<div class="paragraph">
+<p>This section explains how to adopt the <strong>Initiate omni payment</strong> widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="adopt_omni_payment_widget.html#omni_payment_configure_payment_type">Configure a payment type</a>: Apply an out-of-the-box, or a custom payment type configuration.</p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#omni_payment_advanced_config_options">Advanced configuration options</a>: Reposition fields, toggle fields, and override existing form components.</p>
+</li>
+</ul>
+</div>
+<h2 id="_prerequisites_2" class="discrete">Prerequisites</h2>
+<div class="paragraph">
+<p>Before you start, make sure you have the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to a local or shared developer environment.</p>
+</li>
+<li>
+<p>A project setup with Retail Banking Widget Collection.</p>
+</li>
+</ul>
+</div>
+<h2 id="omni_payment_configure_payment_type" class="discrete">Configure a payment type</h2>
+<div class="paragraph">
+<p>Follow these steps to configure the <strong>Initiate omni payment</strong> widget with an out-of-the-box or a custom payment type:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Scaffold your widget.</strong></p>
+<div class="paragraph">
+<p>To scaffold your widget, do one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scaffold an empty widget and copy the default routes from the <strong>Initiate omni payment</strong> widget.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Use <a href="http://wa3.backbase.com/foundation/6.13.1/howto/schematics"><code>@bb-cli/schematics</code></a> to
+<a href="https://community.backbase.com/documentation/foundation_angular/6.13.1/widget_development_environment#scaffold_new_widget">scaffold an empty widget</a>.
+Give the widget a name, for example <code>us-domestic-wire-widget-ang</code>.</p>
+</li>
+<li>
+<p>To copy the default routes of <code>PayordOmniPaymentWidgetAngComponent</code>, use the
+<a href="http://wa3.backbase.com/foundation/6.13.1/api/foundation-ang/core/public_api/CopyRoutes">CopyRoutes</a> decorator.
+For example:</p>
+<div class="listingblock">
+<div class="title">us-domestic-wire-widget-ang.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+
+@Component({
+    selector: 'bb-us-domestic-wire-widget-ang',
+    template: `
+        &lt;bb-payord-omni-payment-widget-ang&gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+    `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class UsDomesticWireWidgetAngComponent {}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Generate a widget with <a href="payments_schematics_reference.html">Payments Schematics</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This is a beta (sample code) release. This feature may, unless otherwise authorized by Backbase, be used for testing
+purposes only, and is provided on an "AS IS" basis without support of any kind. You should not use this feature in a
+production environment.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Install <code>@backbase/payment-schematics</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm i @backbase/payment-schematics --save-dev</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate the widget.
+For example, to generate <code>us-domestic-wire-widget</code> that supports the out-of-the-box payment type <code>US_DOMESTIC_WIRE</code>,
+and the business function <code>US Domestic Wire</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm run ng -- generate @backbase/payment-schematics:init-payment-widget --name=us-domestic-wire-widget --config=US_DOMESTIC_WIRE --businessFunction="US Domestic Wire"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Create a custom payment configuration.</strong>
+Skip this step if you want to use an out-of-the-box configuration.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create your configuration file and save it in the widget folder. For example, <code>sepa_config.ts</code>.
+Specify the details of each form field in a payment form. See the <a href="omni_payment_reference.html">Initiate omni payment</a> reference.
+For example, for SEPA payments:</p>
+<div class="listingblock">
+<div class="title">sepa_config.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import {
+    PaymentFormGroup,
+    PaymentBaseFields,
+    PaymentComponents,
+    InitiatorFields,
+    RemittanceInfoFields,
+    CounterPartyFields,
+    ScheduleFields
+} from '@backbase/payment-orders-ang/configs';
+
+export const initiator: PaymentFormGroup = {
+    name: PaymentBaseFields.initiator,
+    title: 'From account',
+    fields: [
+        {
+            type: PaymentComponents.debitAccountSelector,
+            name: InitiatorFields.initiatorAccountGroup,
+            options: {
+                label: 'From',
+                placeholder: 'Select an account',
+            },
+        },
+    ],
+};
+
+const counterParty: PaymentFormGroup = {
+    name: PaymentBaseFields.counterparty,
+    title: 'To',
+    fields: [
+        {
+            name: CounterPartyFields.name,
+            type: PaymentComponents.beneficiarySelector,
+            options: {
+                label: 'Beneficiary name',
+                placeholder: 'Select a beneficiary',
+            },
+        },
+        {
+            name: CounterPartyFields.accountNumber,
+            type: PaymentComponents.text,
+            options: {
+                validators: [Validators.required, isValidIBANFormControl],
+                label: 'IBAN',
+                isIban: true,
+            },
+        },
+    ],
+};
+
+const remittanceInfo: PaymentFormGroup = {
+    name: PaymentBaseFields.remittanceInfo,
+    title: 'Payment details',
+    fields: [
+        {
+            type: PaymentComponents.amount,
+            name: RemittanceInfoFields.amountCurrencyGroup,
+            options: {
+                label: 'Amount',
+                currencies: ['EUR'],
+            },
+        },
+    ],
+};
+
+export const schedule: PaymentFormGroup = {
+    name: PaymentBaseFields.schedule,
+    fields: [
+        {
+            type: PaymentComponents.schedule,
+            name: ScheduleFields.scheduleGroup,
+            options: {
+                label: 'Schedule',
+                frequencies: [
+                        { value: 'ONCE', every: 1 },
+                        { value: 'DAILY', every: 1 },
+                        { value: 'WEEKLY', every: 1 },
+                        { value: 'BIWEEKLY', every: 1 },
+                        { value: 'MONTHLY', every: 1 },
+                        { value: 'QUARTERLY', every: 1 },
+                        { value: 'YEARLY', every: 1 },
+                ],
+                minOccurs: 2,
+                maxOccurs: 200,
+            },
+        },
+    ],
+};
+
+export const SEPA: PaymentTypeConfig = {
+    fields: [initiator, counterParty, remittanceInfo, schedule],
+    name: 'Sepa',
+    paymentType: 'SEPA_CREDIT_TRANSFER',
+};</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Inject your configuration into the Initiate omni payment widget</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>There are two methods to provide the configuration to the widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide the configuration to the widget module: This is the simplest method.</p>
+</li>
+<li>
+<p>Provide the configuration to the widget component: This method enables the developer to add logic to conditionally provide a configuration to the widget.
+For example, present the customer a dropdown to select a different payment type.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Follow the instructions for one of the two methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Provide the configuration to the widget module</strong></p>
+<div class="paragraph">
+<p>Provide the payment type configuration, the business function, and the class name of the widget component as <code>classId</code> to the <code>withConfig</code> static method.
+Also you can provide the below optional set of properties as additional options to customise the widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultScheme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default scheme name for the arrangements. When an arrangement has both <code>IBAN</code> and <code>BBAN</code>, the provided <code>defaultScheme</code> option will have priority. Available options <code>IBAN</code> or <code>BBAN</code>, default value is <code>BBAN</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableApprovals</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to enable approval while submitting the payment. Enabling this option will provide an option to <code>Submit and approve</code> the payment. Default value is <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enablePaymentTemplateSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to toggle save as payment template button in review screen. Default value is <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableSavePaymentAsTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to toggle the payment template dropdown in form screen. Default value is <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of beneficiary items per page. Default value is <code>50</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>checkClosedPaymentsAccess</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to check whether an account has closed payments access. The check is made to each originating payment account selected by the user. Default value is <code>false</code>. If set to <code>true</code> for an account, the account will only be able to make closed payments to pre-defined beneficiaries in the user&#8217;s contacts.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Depending on the situation, do one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Out-of-the-box configuration</strong></p>
+<div class="paragraph">
+<p>To inject an out-of-the-box configuration,
+import the out-of-the-box configuration from <code>@backbase/payment-orders-ang/configs</code>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">UsDomesticWireWidgetAngModule</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { UsDomesticWireWidgetAngComponent } from './us-domestic-wire-widget-ang.component';
+import { PayordOmniPaymentWidgetAngModule } from '@backbase/payord-omni-payment-widget-ang';
+import { US_DOMESTIC_WIRE } from '@backbase/payment-orders-ang/configs';
+
+@NgModule({
+    declarations: [UsDomesticWireWidgetAngComponent],
+    imports: [
+        CommonModule,
+        BackbaseCoreModule.withConfig({
+            classMap: { UsDomesticWireWidgetAngComponent },
+        }),
+        PayordOmniPaymentWidgetAngModule.withConfig({
+            paymentType: US_DOMESTIC_WIRE,
+            businessFunction: 'US Domestic Wire',
+            classId: 'UsDomesticWireWidgetAngComponent',
+            options: {
+              defaultScheme: 'BBAN',
+              enableApprovals: true,
+              enablePaymentTemplateSelector: true,
+              enableSavePaymentAsTemplate: true,
+              checkClosedPaymentsAccess: false,
+            }
+        }),
+    ],
+})
+export class UsDomesticWireWidgetAngModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Custom configuration</strong></p>
+<div class="paragraph">
+<p>To inject your custom configuration,
+import the custom configuration that you created from your local file, in this example <code>sepa_config.ts</code>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">SepaWidgetAngModule</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { SepaWidgetAngComponent } from './sepa-widget-ang.component';
+import { PayordOmniPaymentWidgetAngModule } from '@backbase/payord-omni-payment-widget-ang';
+import { SEPA_CREDIT_TRANSFER } from './sepa_config.ts';
+
+@NgModule({
+    declarations: [SepaWidgetAngComponent],
+    imports: [
+        CommonModule,
+        BackbaseCoreModule.withConfig({
+            classMap: { SepaWidgetAngComponent },
+        }),
+        PayordOmniPaymentWidgetAngModule.withConfig({
+            paymentType: SEPA_CREDIT_TRANSFER,
+            businessFunction: 'SEPA CT',
+            classId: 'SepaWidgetAngComponent',
+        }),
+    ],
+})
+export class SepaWidgetAngModule {}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Provide the configuration to the widget component</strong></p>
+<div class="paragraph">
+<p>Follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Provide the payment type configuration and the business function as input of the <code>PayordOmniPaymentWidgetAngComponent</code>
+in the template. For example:</p>
+<div class="listingblock">
+<div class="title">UsDomesticWireWidgetAngModule</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { UsDomesticWireWidgetAngComponent } from './us-domestic-wire-widget-ang.component';
+import { PayordOmniPaymentWidgetAngModule } from '@backbase/payord-omni-payment-widget-ang';
+
+@NgModule({
+    declarations: [UsDomesticWireWidgetAngComponent],
+    imports: [
+        CommonModule,
+        BackbaseCoreModule.withConfig({
+            classMap: { UsDomesticWireWidgetAngComponent },
+        }),
+        PayordOmniPaymentWidgetAngModule,
+    ],
+})
+export class UsDomesticWireWidgetAngModule {}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">UsDomesticWireWidgetAngComponent</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import { US_DOMESTIC_WIRE } from '@backbase/payment-orders-ang/configs';
+
+@Component({
+    selector: 'bb-us-domestic-wire-widget-ang',
+    template: `
+        &lt;bb-payord-omni-payment-widget-ang
+          [paymentConfig]="paymentConfig"
+          [businessFunction]="businessFunction"
+          [options]="options"
+        &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+    `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class UsDomesticWireWidgetAngComponent {
+  paymentConfig = US_DOMESTIC_WIRE;
+  businessFunction = 'US Domestic Wire';
+  options = {
+    defaultScheme: 'BBAN',
+    enableApprovals: true,
+    enablePaymentTemplateSelector: true,
+    enableSavePaymentAsTemplate: true,
+    checkClosedPaymentsAccess: false,
+  };
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional step. To use a different template in the review screen,
+add a custom <code>reviewTemplate</code> as input to the <code>PayordOmniPaymentWidgetAngComponent</code>, in addition
+to <code>paymentConfig</code> and <code>businessFunction</code>.
+For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  let-payment
+  let-paymentConfig="paymentConfig"
+  let-status="status"
+  let-methods="methods"
+  let-isSubmitting="isSubmitting"
+  let-breachError="breachError"
+  #rt&gt;
+  &lt;fieldset class="bb-fieldset"&gt;
+    &lt;legend
+      class="bb-label bb-block bb-block--md"
+      *ngIf="!status || status ===  'LIMIT_BREACH' || status ===  'USER_DECLINED' else paymentSubmitted"
+      i18n="@@omni-payment-review-page-title.label"
+    &gt;
+      Review payment
+    &lt;/legend&gt;
+
+    &lt;ng-template #paymentSubmitted&gt;
+      &lt;legend
+        class="bb-label bb-block bb-block--md"
+        i18n="@@omni-payment-review-page-title.payment-submitted.label"
+      &gt;
+        Payment submitted
+      &lt;/legend&gt;
+    &lt;/ng-template&gt;
+
+    &lt;ng-container *ngIf="payment"&gt;
+      &lt;div class="bb-block bb-block--md" *ngIf="status"&gt;
+        &lt;bb-payord-status-card
+          [status]="methods.isApprovalPending() ? 'pending': 'success'"
+          *ngIf="status === 'SUCCESS'"
+          data-role="success-message"
+        &gt;&lt;/bb-payord-status-card&gt;
+
+        &lt;ng-container *ngIf="!!status &amp;&amp; status !== 'SUCCESS'"&gt;
+          &lt;ng-container [ngSwitch]="status"&gt;
+            &lt;bb-alert-ui
+              title=""
+              (close)="false"
+              modifier="error"
+              [ngSwitch]="status"
+            &gt;
+              &lt;div class="bb-stack" *ngSwitchCase="'LIMIT_BREACH'"&gt;
+                &lt;div
+                  class="bb-stack__item"
+                  data-role="failure-message"
+                  i18n="@@omni-payment-review-limit-breach-error"
+                &gt;
+                  Payment cannot be submitted because your limits have been breached
+                &lt;/div&gt;
+                &lt;button
+                  bbButton
+                  color="unstyled"
+                  buttonSize="sm"
+                  i18n="@@omni-payment-review-limit-breach-error-see-details-button"
+                  class="bb-stack__item bb-stack__item--push-right alert-link"
+                  data-role="failure-see-details"
+                  (click)="methods.showBreachModal()"
+                &gt;
+                  See details
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div *ngSwitchCase="'USER_DECLINED'"
+                data-role="failure-message"&gt;
+                &lt;div class="bb-text-bold" i18n="@@omni-payment-review-txn-signing-cancelled-error-title"&gt;Payment not submitted&lt;/div&gt;
+                &lt;div i18n="@@omni-payment-review-txn-signing-cancelled-error-text"&gt;The transaction signing request was cancelled&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div *ngSwitchDefault
+                data-role="failure-message"
+                i18n="@@omni-payment-review-payment-failed-alert.label"&gt;
+                Failed to submit payment. Please try again later.
+              &lt;/div&gt;
+            &lt;/bb-alert-ui&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        *ngIf="payment?.isIntraLegalEntity || payment?.remittanceInfo?.urgent"
+        class="bb-block bb-block--md bb-inline-stack bb-text-support"&gt;
+        &lt;div class="bb-inline-stack bb-inline-stack__item" *ngIf="payment?.isIntraLegalEntity" &gt;
+          &lt;bb-icon-ui name="domain"&gt;&lt;/bb-icon-ui&gt;
+          &lt;div class="bb-inline-stack__item"&gt;&lt;/div&gt;
+          &lt;div
+            class="bb-inline-stack__item bb-text-bold bb-inline-stack__item--spacing-sm" i18n="@@omni-payment-intra-company-transfer-label"
+          &gt;
+            Intracompany payment
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf="payment?.remittanceInfo?.urgent" class="bb-inline-stack bb-inline-stack__item"&gt;
+          &lt;bb-icon-ui name="priority-high"&gt;&lt;/bb-icon-ui&gt;
+          &lt;div class="bb-inline-stack__item"&gt;&lt;/div&gt;
+          &lt;div class="bb-inline-stack__item bb-text-bold" i18n="@@omni-payment-urgent-transfer-label" data-role='payment-is-urgent'&gt;
+            Urgent payment
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-payment-account-details-card__container d-none d-md-flex"&gt;
+        &lt;div class="bb-text-bold w-md-50"&gt;
+          &lt;ng-container *ngTemplateOutlet="dynamicLabelInitiator"&gt;&lt;/ng-container&gt;
+        &lt;/div&gt;
+        &lt;div class="mr-3"&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;div class="bb-text-bold w-md-50"&gt;
+          &lt;ng-container *ngTemplateOutlet="dynamicLabelCounterparty"&gt;&lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-payment-account-details-card__container bb-block bb-block--md break-word"&gt;
+        &lt;div class="w-md-50"&gt;
+          &lt;div class="bb-text-bold d-md-none"&gt;
+            &lt;ng-container *ngTemplateOutlet="dynamicLabelInitiator"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+          &lt;bb-debitor-details-card [details]="payment?.initiator"&gt;&lt;/bb-debitor-details-card&gt;
+        &lt;/div&gt;
+
+        &lt;div class="justify-content-center align-items-center d-flex"&gt;
+          &lt;bb-icon-ui class="bb-account-transfer-icon" name="arrow-forward"&gt;&lt;/bb-icon-ui&gt;
+        &lt;/div&gt;
+
+        &lt;div class="w-md-50"&gt;
+          &lt;div class="bb-text-bold d-md-none"&gt;
+            &lt;ng-container *ngTemplateOutlet="dynamicLabelCounterparty"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+          &lt;bb-creditor-details-card [details]="payment?.counterparty"&gt;&lt;/bb-creditor-details-card&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;ng-template #dynamicLabelInitiator&gt;
+        &lt;bb-payord-dynamic-label
+          name="initiator"
+          [config]="paymentConfig"
+          defaultLabel="From"
+          i18n-defaultLabel="@@omni-payment-review-initiator-title"
+        &gt;&lt;/bb-payord-dynamic-label&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template #dynamicLabelCounterparty&gt;
+        &lt;bb-payord-dynamic-label
+          name="counterparty"
+          [config]="paymentConfig"
+          defaultLabel="To"
+          i18n-defaultLabel="@@omni-payment-review-counterparty-title"
+        &gt;&lt;/bb-payord-dynamic-label&gt;
+      &lt;/ng-template&gt;
+
+      &lt;bb-payord-amount-details
+        [config]="paymentConfig"
+        [details]="payment?.remittanceInfo"
+        [transferFee]="payment?.transferFee"
+        [chargeBearer]="payment?.chargeBearer"
+        [forexDetails]="methods.getForexDetails(payment)"
+      &gt;&lt;/bb-payord-amount-details&gt;
+
+      &lt;bb-payord-counterparty-details
+        [details]="payment?.counterparty"
+        [config]="paymentConfig"
+      &gt;&lt;/bb-payord-counterparty-details&gt;
+
+      &lt;div *ngIf="payment?.messageToBank || payment?.remittanceInfo?.description || payment?.remittanceInfo?.paymentReference || payment?.counterparty.messageToBank || payment?.counterparty.remittanceInformation"&gt;
+        &lt;hr&gt;
+        &lt;div class="bb-block bb-block--md" *ngIf="payment?.remittanceInfo?.paymentReference"&gt;
+          &lt;div
+            class="bb-text-bold"
+            data-role="payment-reference-label"
+          &gt;
+            &lt;bb-payord-dynamic-label
+              name="paymentReference"
+              [config]="paymentConfig"
+              parentName="remittanceInfo"
+              defaultLabel="Payment reference"
+              i18n-defaultLabel="@@omni-payment-review-payment-reference-title"
+            &gt;&lt;/bb-payord-dynamic-label&gt;
+          &lt;/div&gt;
+          &lt;div class="break-word" data-role="payment-reference"&gt;
+            {{ payment?.remittanceInfo?.paymentReference }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="bb-block bb-block--md" *ngIf="payment?.remittanceInfo?.description"&gt;
+          &lt;div
+            class="bb-text-bold"
+            data-role="payment-description-label"
+          &gt;
+          &lt;bb-payord-dynamic-label
+            name="description"
+            [config]="paymentConfig"
+            parentName="remittanceInfo"
+            defaultLabel="Description"
+            i18n-defaultLabel="@@omni-payment-review-description-title"
+          &gt;&lt;/bb-payord-dynamic-label&gt;
+          &lt;/div&gt;
+          &lt;div class="break-word" data-role="payment-description"&gt;
+            {{ payment?.remittanceInfo?.description }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="bb-block bb-block--md" *ngIf="payment?.counterparty.remittanceInformation"&gt;
+          &lt;div class="bb-text-bold"&gt;
+            &lt;bb-payord-dynamic-label
+              name="remittanceInformation"
+              [config]="paymentConfig"
+              defaultLabel="Message to beneficiary"
+              i18n-defaultLabel="@@omni-payment-review-message-to-beneficiary-title"
+            &gt;&lt;/bb-payord-dynamic-label&gt;
+          &lt;/div&gt;
+          &lt;div class="break-word" data-role='message-to-beneficiary'&gt;{{payment?.counterparty?.remittanceInformation}}&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="bb-block bb-block--md" *ngIf="payment?.messageToBank || payment?.counterparty?.messageToBank"&gt;
+          &lt;div class="bb-text-bold"&gt;
+            &lt;bb-payord-dynamic-label
+              name="messageToBank"
+              [config]="paymentConfig"
+              defaultLabel="Message to beneficiary bank"
+              i18n-defaultLabel="@@omni-payment-review-message-to-bank.label"
+            &gt;&lt;/bb-payord-dynamic-label&gt;
+          &lt;/div&gt;
+          &lt;div class="break-word"&gt;{{payment?.counterparty?.messageToBank || payment?.messageToBank}}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr&gt;
+      &lt;/div&gt;
+
+      &lt;hr&gt;
+      &lt;bb-payord-schedule-details [paymentConfig]="paymentConfig" [data]="payment?.schedule"&gt;&lt;/bb-payord-schedule-details&gt;
+    &lt;/ng-container&gt;
+  &lt;/fieldset&gt;
+
+  &lt;ng-container *ngIf="!status || status ===  'LIMIT_BREACH' || status ===  'USER_DECLINED' else newPayment"&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;button
+        bbButton
+        class="bb-button-bar__button"
+        data-role="submit-button"
+        (click)="methods.submit()"
+        [disabled]="isSubmitting"
+        *ngIf="!methods.isApprovalEnabled()"
+        i18n="@@omni-payment-review-submit-dropdown-btn"
+      &gt;
+        Submit
+      &lt;/button&gt;
+      &lt;div class="btn-group bb-button-bar__button" data-role="button-group" *ngIf="methods.isApprovalEnabled()"&gt;
+        &lt;bb-load-button-ui
+          color="primary"
+          [isLoading]="isSubmitting"
+          (click)="methods.submit()"
+          data-role="submit-button"
+          i18n="@@omni-payment-review-submit-btn"
+        &gt;
+            Submit
+        &lt;/bb-load-button-ui&gt;
+
+        &lt;bb-dropdown-menu-ui
+          class="btn-group"
+          btnColor="primary"
+          icon="caret-down"
+          data-role="dropdown-menu"
+          container="body"
+          position="top-right"
+        &gt;
+          &lt;ng-template bbDropdownMenuItem&gt;
+            &lt;button
+              role="menuitem"
+              type="button"
+              class="dropdown-item"
+              data-role="bus-submit-and-approve-button"
+              [disabled]="isSubmitting"
+              (bbKeyboardClick)="methods.submit(true)"
+              i18n="@@omni-payment-review-submit-and-approve-btn"&gt;
+              Submit and Approve
+            &lt;/button&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-dropdown-menu-ui&gt;
+      &lt;/div&gt;
+      &lt;button
+        class="bb-button-bar__button"
+        bbButton
+        color="secondary"
+        data-role="edit-button"
+        (click)="methods.edit()"
+        [disabled]="isSubmitting"
+        i18n="@@omni-payment-review-edit-btn"&gt;
+        Edit
+      &lt;/button&gt;
+      &lt;button
+        bbButton
+        class="bb-button-bar__button bb-button-bar__button--across"
+        color="link"
+        data-role="cancel-button"
+        (click)="methods.toggleDiscardDialog()"
+        [disabled]="isSubmitting"
+        i18n="@@omni-payment-review-discard-btn"&gt;
+        Discard
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;div *ngIf="isSubmitting" class="position-absolute w-100 h-100 top-0 fixed-top bg-white" [style.opacity]="0.6"&gt;
+    &lt;bb-loading-indicator-ui loaderSize="lg" class="absolute-center"&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #newPayment&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;button
+        bbButton
+        class="bb-button-bar__button"
+        data-role="new-payment-button"
+        *ngIf="status"
+        (click)="methods.reset()"
+        [disabled]="methods.isSavingTemplate$() | async"
+        i18n="@@omni-payment-review-btn-group-new-payment.label"
+      &gt;
+        New Payment
+      &lt;/button&gt;
+
+      &lt;button
+        *ngIf="status === 'SUCCESS' &amp;&amp; methods.isPaymentTemplateEnabled() &amp;&amp; (createTemplatePermission$ | async)"
+        bbButton
+        color="secondary"
+        class="bb-button-bar__button"
+        data-role="save-as-template-button"
+        (click)="methods.openTemplateModal()"
+        [disabled]="methods.isTemplateSaved()"
+        i18n="@@omni-payment-review-btn-group-save-as-template.label"
+      &gt;
+        Save as a template
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-breach-limit-details
+    [paymentDetails]="paymentItem"
+    [error]="breachError"
+    [isOpen]="showBreachDetails"
+    (close)="hideBreachModal()"
+  &gt;&lt;/bb-breach-limit-details&gt;
+
+  &lt;bb-modal-ui
+    [isOpen]="methods.showDiscardDialog()"
+    (cancel)="methods.toggleDiscardDialog()"
+    (confirm)="methods.reset()"&gt;
+    &lt;bb-modal-header-ui title="Discard entered data?" i18n-title="omni-payment-review-discard-modal-title"&gt;&lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;ng-container i18n="@@omni-payment-review-discard-modal-content"&gt;
+          Are you sure to exit and discard all changes? Entered data will be lost.
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+
+    &lt;bb-modal-footer-ui #modalFooterRef&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;div class="bb-button-bar"&gt;
+          &lt;button
+            bbButton
+            color="danger"
+            class="bb-button-bar__button"
+            (click)="methods.reset()"
+            data-role="discard-action-btn"
+            i18n="@@omni-payment-review-discard-modal-discard-btn"&gt;
+            Discard
+          &lt;/button&gt;
+
+          &lt;button
+            bbButton
+            class="bb-button-bar__button"
+            color="link"
+            (click)="methods.toggleDiscardDialog()"
+            data-role="cancel-action-btn"
+            i18n="@@omni-payment-review-discard-modal-cancel-btn"
+          &gt;
+            Cancel
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;
+&lt;bb-payord-omni-payment-widget-ang
+  [paymentConfig]="paymentConfig"
+  [businessFunction]="businessFunction"
+  [reviewTemplate]="rt"
+&gt;&lt;/bb-payord-omni-payment-widget-ang&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The template provided to the reviewTemplate input has following inputs provided in the template context.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>default</code> or <code>$implicit</code> - the payment details of the form</p>
+</li>
+<li>
+<p><code>status</code> - the status of the payment. This value is available after the payment is submitted.</p>
+</li>
+<li>
+<p><code>paymentConfig</code> - the payment config item</p>
+</li>
+<li>
+<p><code>methods</code> - an object that contains a bunch of accessible methods in the review container. The below table describes the available methods.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Triggers edit mode of the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submits the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>saveTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submits request to the payment as template. Requires a templateName as parameter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resets the Payment and redirects to form screen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toggleDiscardDialog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Toggles the confirm discard details modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openTemplateModal</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the save as template modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isPaymentTemplateEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean flag to denote if the payment template feature is enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isApprovalEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean flag to denote if payment approval feature is enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isTemplateSaved</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean flag to denote if the payment template has been saved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSubmitting$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns an observable that denotes if the payment is being submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSavingTemplate$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns an observable that denotes if the payment template is being saved.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="omni_payment_advanced_config_options" class="discrete">Advanced configuration options</h2>
+<div class="paragraph">
+<p>If you customized the widget by creating a custom configuration, the following advanced options are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="adopt_omni_payment_widget.html#custom_paymenttype_repositionfields">Reposition fields</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#custom_paymenttype_togglefields">Toggle fields</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#custom_paymenttype_overridecomponents">Override existing form components</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#custom_paymenttype_override_btn_section">Override button section</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#provide_custom_validation_messages">Provide custom validation messages to the form field</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#attach_async_validators_to_the_form_field">Attach asynchronous validators to the form field</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#provide_hooks_to_the_form_field_configuration">Provide hooks to the form field configuration</a></p>
+</li>
+<li>
+<p><a href="adopt_omni_payment_widget.html#provide_hooks_to_the_payment_configuration">Provide hooks to the payment configuration</a></p>
+</li>
+</ul>
+</div>
+<h3 id="custom_paymenttype_repositionfields" class="discrete">Reposition fields</h3>
+<div class="paragraph">
+<p>By default, each form field is displayed along with other fields in the same group, since the form fields are contained in groups.
+For example, all counter party fields are placed in the same section in the payment form, and all remittance fields are grouped together.</p>
+</div>
+<div class="paragraph">
+<p>In order to display a form control from one section in a different section, add a <code>mapToField</code> property to the form control and
+set it to the original section so that it is mapped to correct value when sent to the backend.</p>
+</div>
+<div class="paragraph">
+<p>For example: to display the <code>CounterPartyFields.accountNumber</code> field in the remittance section, add the <code>mapToField</code> property
+and set it to <code>PaymentBaseFields.counterparty</code>, which is the group name, or the logical parent, of <code>CounterPartyFields.accountNumber</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentBaseFields.remittanceInfo,
+    title: 'Payment details',
+    fields: [{
+        name: RemittanceInfoFields.amountCurrencyGroup,
+        type: PaymentComponents.amount,
+        options: {
+            label: 'Amount',
+            currencies: ['EUR'],
+        }
+    },{
+        name: CounterPartyFields.accountNumber,
+        type: PaymentComponents.text,
+        options: {
+            validators: [Validators.required],
+            label: 'Account number',
+            mapToField: PaymentBaseFields.counterparty
+        },
+    }],
+}</code></pre>
+</div>
+</div>
+<h3 id="custom_paymenttype_togglefields" class="discrete">Toggle fields</h3>
+<div class="paragraph">
+<p>For some use cases, form controls should be hidden by default and appear based on an action on another field.
+The <strong>Initiate omni payment</strong> widget supports toggling of fields with the <code>dependants</code> and <code>activateDependantsOn</code> form field options.
+Toggling fields is supported for fields that share a common ancestor group. Toggling a field from a different ancestor group is not supported.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Appear on any value</strong></p>
+<div class="paragraph">
+<p>Use the <code>dependants</code> option to specify fields that should appear when the form field is not empty.</p>
+</div>
+<div class="paragraph">
+<p>For example, the <code>CounterPartyFields.accountNumber</code> field should appear only when a beneficiary is selected.
+Use the following configuration to achieve this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentBaseFields.counterparty,
+    title: 'Transfer to',
+    fields: [{
+        name: CounterPartyFields.name,
+        type: PaymentComponents.beneficiarySelector,
+        options: {
+            label: 'Beneficiary name',
+            placeholder: 'Select a beneficiary',
+            dependants: [
+                CounterPartyFields.accountNumber,
+            ],
+        },
+    },{
+        name: CounterPartyFields.accountNumber,
+        type: PaymentComponents.text,
+        options: {
+            validators: [Validators.required],
+            label: 'Account number',
+        },
+    }],
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Appear on a specific value</strong></p>
+<div class="paragraph">
+<p>Use the <code>activateDependantsOn</code> option to specify fields that should appear when the form field has a specific value.
+The dependent fields appear when the form field&#8217;s value is equal to the value of the <code>activateDependantsOn</code> property.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The following form controls support toggling of dependent fields with <code>dependants</code> and <code>activateDependantsOn</code> properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Radio</p>
+</li>
+<li>
+<p>Checkbox</p>
+</li>
+<li>
+<p>Switch</p>
+</li>
+<li>
+<p>Select</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: CounterPartyFields.correspondentBank,
+  fields: [
+    {
+      name: 'isCorrespondentBankTransfer',
+      type: PaymentComponents.switch,
+      options: {
+        label: 'Transfer through correspondent bank',
+        cssClasses: ['d-block', 'align-top', 'px-0', 'pr-md-3', 'mb-0'],
+        labelPosition: 'right',
+        dependants: [
+          CounterPartyFields.bankName,
+          CounterPartyFields.bankBranchCode,
+        ],
+        activateDependantsOn: true,
+      },
+    },
+    {
+      name: CounterPartyFields.bankBranchCode,
+      type: PaymentComponents.text,
+      options: {
+        label: 'Routing Transit Number (ABA)',
+        maxLength: 9,
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pr-md-3', 'mt-3'],
+        validators: [routingTransitNumberValidator],
+        isConditionalMandatory: true,
+      },
+    },
+    {
+      name: CounterPartyFields.bankName,
+      type: PaymentComponents.text,
+      options: {
+        label: 'Bank name (optional)',
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pr-md-3', 'mt-3'],
+      },
+    }
+  ],
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Appear on a custom condition</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>activateDependantsOn</code> option alternatively takes a function. The dependant fields appear based on the value returned by the function. The function is provided wit the of the input as parameter and it should return an array of dependant names or undefined.
+For example: the below config displays diffent dependants based on different values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">  name: PaymentBaseFields.schedule,
+  fields: [
+    {
+      name: ScheduleFields.endType,
+      type: PaymentComponents.radio,
+      options: {
+        label: 'End',
+        preselect: true,
+        isConditionalMandatory: true,
+        cssClasses: ['d-inline-block', 'col-md-2', 'align-top', 'px-0', 'bb-schedule__end-type'],
+        defaultValue: ScheduleEndType.NEVER,
+        options: [
+          { label: 'Never', value: ScheduleEndType.NEVER },
+          { label: 'On date', value: ScheduleEndType.ON },
+          { label: 'After', value: ScheduleEndType.AFTER },
+        ],
+        dependants: [ScheduleFields.endDate, ScheduleFields.repeat],
+        activateDependantsOn(value: string) {
+          switch (value) {
+            case ScheduleEndType.ON:
+              return [ScheduleFields.endDate];
+            case ScheduleEndType.AFTER:
+              return [ScheduleFields.repeat];
+            default:
+              return;
+          }
+        },
+      },
+    },
+    {
+      name: ScheduleFields.endDate,
+      type: PaymentComponents.date,
+      options: {
+        cssClasses: ['d-inline-block', 'col-md-10', 'align-top', 'px-0', 'bb-schedule__end-date'],
+        validators: [endDateAfterStartDateValidator as ValidatorFn],
+        validationMessages: [
+          { name: 'required', message: 'End date is required' },
+          { name: 'lessThanStartDate', message: 'End date cannot be before start date' },
+        ],
+        isConditionalMandatory: true,
+        defaultValue: new Date().toISOString(),
+      },
+    },
+    {
+      name: ScheduleFields.repeat,
+      type: PaymentComponents.number,
+      options: {
+        isConditionalMandatory: true,
+        description: 'times',
+        min: 2,
+        max: 200,
+        defaultValue: 2,
+        validationMessages: [
+          { name: 'required', message: 'Value is required' },
+          { name: 'max', message: 'Value exceeds maximum allowed occurances' },
+        ],
+        cssClasses: ['d-inline-block', 'col-md-9', 'align-top', 'px-0', 'bb-schedule__repeat'],
+      },
+    },
+  ],
+}</code></pre>
+</div>
+</div>
+<h3 id="custom_paymenttype_overridecomponents" class="discrete">Override existing form components</h3>
+<div class="paragraph">
+<p>Add a new form field or override an existing form control with a customized component using the <code>customFields</code> property.
+To add a new toggle component to the <strong>Initiate omni payment</strong> widget or to override an existing component, provide the component type with a new custom component.
+The custom component should implement <code>PaymentFormField</code> or <code>ActivatableFormField</code> and it should be an Angular form control.
+You should also register the custom field in the <code>entryComponents</code> section of the <code>NgModule</code> decorator.</p>
+</div>
+<div class="paragraph">
+<p>The following configuration shows how to add custom fields:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NewToggleCompoent } from 'new-toggle';
+import { CustomTextCompoent } from 'custom-text';
+
+export const SEPA: PaymentTypeConfig = {
+    fields: [initiator, counterParty, remittanceInfo, schedule],
+    name: 'Sepa',
+    paymentType: 'SEPA_CREDIT_TRANSFER',
+    customFields: {
+        toggle: NewToggleCompoent,
+        text: CustomTextCompoent
+    }
+};</code></pre>
+</div>
+</div>
+<h3 id="custom_paymenttype_override_btn_section" class="discrete">Override button section</h3>
+<div class="paragraph">
+<p>Similar to overriding a formfield you can override the submit button section of the form by providing a custom component for <code>buttonGroup</code> to the <code>customFields</code> of payment config. The custom button group will be injected with few options at runtime that can be used to submit or clear the form. The dynamically injected options are below:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method that submits the form. This is not required when the butoon group has a button of type submit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method that resets the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitting$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An observable that denotes if the form is being submitted. This can be used to disable the submit or clear buttons.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { CustomButtonGroupComponent } from 'custom-btn-group';
+
+export const SEPA: PaymentTypeConfig = {
+  fields: [initiator, remittanceInfo, counterParty, paymentInformation, schedule],
+  name: 'Sepa',
+  businessFunction: 'SEPA CT',
+  paymentType: 'SEPA_CREDIT_TRANSFER',
+  customFields: {
+    buttonGroup: CustomButtonGroupComponent
+  }
+};</code></pre>
+</div>
+</div>
+<h3 id="provide_custom_validation_messages" class="discrete">Provide custom validation messages to the form field</h3>
+<div class="paragraph">
+<p>You can provide custom validation messages to the form field configuration similar to other options. The validation messages can be provided with <code>validationMessages</code> property of the <code>options</code> in a form field configuration. The validation message item is an object that contains the name of the error and the valiadtion message. If more than one validation error is applicable the error message is displayed based on the order of validation item in the array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { endDateAfterStartDateValidator } from '@backbase/payments-common-ang';
+{
+  type: PaymentComponents.date,
+  name: ScheduleFields.endDate,
+  options: {
+    cssClasses: ['d-inline-block', 'col-md-10', 'align-top', 'px-0', 'bb-schedule__end-date'],
+    validators: [endDateAfterStartDateValidator as ValidatorFn],
+    validationMessages: [
+      { name: 'required', message: 'End date is required' },
+      { name: 'lessThanStartDate', message: 'End date cannot be before start date' },
+    ],
+    isConditionalMandatory: true,
+    defaultValue: new Date().toISOString(),
+  },
+},</code></pre>
+</div>
+</div>
+<h3 id="attach_async_validators_to_the_form_field" class="discrete">Attach asynchronous validators to the form field</h3>
+<div class="paragraph">
+<p>You can provide an asynchronous validator to the form field configuration similar to other properties.
+To attach an asynchronous validator to the form field, include the asynchronous validator in the <code>asyncValidators</code> property array
+of the <code>options</code> in a form field configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: CounterPartyFields.accountNumber,
+  type: PaymentComponents.text,
+  options: {
+    validators: [Validators.required],
+    asyncValidators: [asyncIbanValidator],
+    label: 'IBAN',
+    isIban: true,
+  },
+}</code></pre>
+</div>
+</div>
+<h3 id="provide_hooks_to_the_form_field_configuration" class="discrete">Provide hooks to the form field configuration</h3>
+<div class="paragraph">
+<p>Using hooks you can dynamically change a property in the form field instance or modify a field&#8217;s value based on another form field. There are two hooks supported by a payment form field config, they are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>onInit</code>: Triggered when the form field configuration is created.</p>
+</li>
+<li>
+<p><code>onDestroy</code>: Triggered when the form field configuration is destroyed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The form field hooks function would receive <code>FormFieldHooksParams</code> that contains the following details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>component</code>: The instance of the form field component.</p>
+</li>
+<li>
+<p><code>control</code>: The angular form control of the field.</p>
+</li>
+<li>
+<p><code>group</code>: The parent form group that contains the form field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some form components such as <code>PaymentComponents.debitAccountSelector</code>, <code>PaymentComponents.internalAccountSelector</code>, and <code>PaymentComponents.schedule</code> are registered as groups, so the <code>control</code> value of the FormFieldHooksParams might be unavailable. In these cases <code>group</code> will contain the formGroup instance of the component.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: CounterPartyFields.accountNumber,
+  type: PaymentComponents.text,
+  options: {
+    validators: [Validators.required, isValidIBANFormControl],
+    label: 'IBAN',
+    isIban: true,
+  },
+  hooks: {
+    onInit({ component, control, group }: FormFieldHooksParams) {
+      // Your custom logic here
+    },
+    onDestroy({ component, control, group }: FormFieldHooksParams) {
+      // Your custom logic here
+    },
+  },
+},</code></pre>
+</div>
+</div>
+<h3 id="provide_hooks_to_the_payment_configuration" class="discrete">Provide hooks to the payment configuration</h3>
+<div class="paragraph">
+<p>You can provide hooks to the payment configuration similar to the form field configuration. There are four hooks supported by a payment config, they are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>onInit</code>: Triggered when the payment form is initialized.</p>
+</li>
+<li>
+<p><code>onDestroy</code>: Triggered when the payment form is destroyed.</p>
+</li>
+<li>
+<p><code>onSave</code>: Triggered when you click on continue and go to the review screen.</p>
+</li>
+<li>
+<p><code>onSubmit</code>: Triggered when you submit the payment in the review screen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>onSave</code> and <code>onSubmit</code> payment hooks function would receive <code>PaymentHooksParams</code> that contains the following details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>doneFn</code>: A callback function you should trigger when the hook is completed.</p>
+</li>
+<li>
+<p><code>form</code>: The entire payment form.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+To prevent the flow of the widget in the <code>onSave</code> or <code>onSubmit</code> hook, call the <code>doneFn</code> with the parameter <code>false</code>: <code>doneFn(false)</code>.
+This prevents the widget from saving or submitting the payment.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export const SEPA: PaymentTypeConfig = {
+  name: 'Sepa',
+  paymentType: 'SEPA_CREDIT_TRANSFER',
+  fields: [initiator, counterParty, remittanceInfo, schedule],
+  hooks: {
+    onInit: () =&gt; {
+      console.log('onInit');
+    },
+    onDestroy: () =&gt; {
+      console.log('onDestroy');
+    },
+    onSave: ({ form, doneFn }?: PaymentHooksParams) =&gt; {
+      if (doneFn) {
+        console.log('onSave');
+        // Trigger the done function.
+        doneFn();
+      }
+    },
+    onSubmit: ({ form, doneFn }?: PaymentHooksParams) =&gt; {
+      if (doneFn) {
+        console.log('onSave');
+        // Trigger the done function.
+        doneFn();
+      }
+    }
+  }
+};</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

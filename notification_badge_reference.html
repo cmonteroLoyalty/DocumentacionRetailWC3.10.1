@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Notification badge</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="notification_badge_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Notification badge</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html"><span class="toc-current">Notification badge</span></a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="notification_badge_reference" class="sect0">Notification badge</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#notification_badge_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="notification_badge_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-notifications-badge-widget&gt;</code>.</p>
+</div>
+<h2 id="notification_badge_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angular Common module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { CommonModule } from '@angular/common';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Backbase Core module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BackbaseCoreModule } from '@backbase/foundation-ang/core';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Widget module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NotificationsBadgeWidgetModule } from '@backbase/notifications-badge-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="notification_badge_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/notification_badge_slots_1-3_7.svg?ver=3.10.1" alt="notification badge slots 1 3 7"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/notification_badge_slots_4_5_6.svg?ver=3.10.1" alt="notification badge slots 4 5 6"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationsBadgeCustomizable">bbNotificationsBadgeCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationsListCustomizable">bbNotificationsListCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationsListItemCustomizable">bbNotificationsListItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationDetailsCustomizable">bbNotificationDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationDetailsItemCustomizable">bbNotificationDetailsItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbNotificationsCapabilityIconCustomizable">bbNotificationsCapabilityIconCustomizable</a></p>
+</li>
+<li>
+<p><a href="notification_badge_reference.html#bbHumanizedDateCustomizable">bbHumanizedDateCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbNotificationsBadgeCustomizable" class="discrete">bbNotificationsBadgeCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbNotificationsBadgeCustomizable
+  let-hostRef
+  let-unreadCount="context.unreadCount"
+  let-listTransform="context.listTransform"
+&gt;
+  &lt;div class="bb-notifications-badge-widget"&gt;
+    &lt;div #popover="ngbDropdown" ngbDropdown placement="bottom-right" (openChange)="hostRef.onOpenChange($event)"&gt;
+      &lt;button
+        bbButton
+        [attr.aria-labelledby]="'notifications-badge-label' + hostRef.id"
+        color="transparent"
+        class="bb-notifications-badge-widget__dropdown-button"
+        ngbDropdownToggle
+      &gt;
+        &lt;bb-icon-ui name="notifications" color="secondary" data-role="notifications-icon" size="lg"&gt;&lt;/bb-icon-ui&gt;
+        &lt;bb-badge-counter-ui
+          class="bb-notifications-badge-widget__dropdown-button-counter"
+          [count]="unreadCount"
+          maxCount="99"
+          color="danger"
+          data-role="notifications-unread-count"
+        &gt;&lt;/bb-badge-counter-ui&gt;
+      &lt;/button&gt;
+      &lt;div
+        ngbDropdownMenu
+        class="bb-notifications-badge-widget__dropdown-menu dropdown-menu-unstyled"
+        data-role="notifications-list-wrapper"
+      &gt;
+        &lt;div
+          class="bb-notifications-badge-widget__dropdown-menu-list"
+          data-role="notifications-dropdown-menu-list"
+          [style.transform]="listTransform"
+        &gt;
+          &lt;div class="card bb-notifications-badge-widget__list-wrapper"&gt;
+            &lt;bb-notifications-list
+              *ngIf="popover.isOpen()"
+              (navigation)="popover.close()"
+              [preselectedNotification]="hostRef.preselectedNotification$ | async"
+            &gt;&lt;/bb-notifications-list&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;span
+        i18n="Notifications badge aria label@notifications.badge.aria-label"
+        [attr.id]="'notifications-badge-label' + hostRef.id"
+        aria-live="polite"
+        aria-relevant="text"
+        class="sr-only"
+      &gt;
+        { unreadCount || 0, plural, =0 { no new notifications } =1 { {{ unreadCount }} new notification} other {
+        {{ unreadCount }} new notifications } }
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsListCustomizable" class="discrete">bbNotificationsListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbNotificationsListCustomizable
+  let-hostRef
+  let-notifications="context.notifications"
+  let-error="context.error"
+  let-isLoading="context.isLoading"
+  let-totalCount="context.totalCount"
+  let-pageSize="context.pageSize"
+  let-newNotificationsAvailable="context.newNotificationsAvailable"
+  let-unreadCount="context.unreadCount"
+  let-markAllAsReadError="context.markAllAsReadError"
+  let-pageFrom="context.pageFrom"
+&gt;
+  &lt;ng-container *ngIf="!hostRef.selectedNotification"&gt;
+    &lt;header data-role="notifications-list-header" class="card-header bb-stack"&gt;
+      &lt;span class="bb-stack__item"&gt;
+        &lt;span class="bb-heading-3" i18n="Notifications modal label@@notifications.modalLabel"&gt;Notifications&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;button
+        bbButton
+        class="bb-stack__item bb-stack__item--push-right"
+        data-role="settings-button"
+        color="link"
+        circle="true"
+        aria-label="Redirect to notification settings"
+        i18n-aria-label="Aria-label for settings button@@notifications.notification-settings.aria-label"
+        (click)="hostRef.onNotificationsSettingsOpen()"
+      &gt;
+        &lt;bb-icon-ui class="text-dark" name="settings" size="md"&gt;&lt;/bb-icon-ui&gt;
+      &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;button
+      bbButton
+      *ngIf="newNotificationsAvailable"
+      role="status"
+      color="primary"
+      [block]="true"
+      i18n="Label for new notifications loading button@@notifications.new-notifications-available.button"
+      aria-label="New Notification available. Click to refresh"
+      i18n-aria-label="
+        Aria-label for new notifications loading button@@notifications.new-notifications-available.aria-label"
+      class="bb-notifications-badge-widget__load-new-button"
+      data-role="notifications-load-new-btn"
+      (click)="hostRef.onLoadNewNotifications()"
+    &gt;
+      &lt;span&gt;New Notification available. Click to refresh&lt;/span&gt;
+      &lt;bb-icon-ui name="loading" size="md" cropped="true"&gt;&lt;/bb-icon-ui&gt;
+    &lt;/button&gt;
+    &lt;bb-alert-ui
+      *ngIf="markAllAsReadError"
+      class="bb-notifications-badge-widget__alert"
+      data-role="mark-all-read-error-alert"
+      title="Error! Couldn’t mark all as read."
+      i18n-title="Label for mark all as read error@@notifications.mark-all-read.alert.title"
+      aria-label="Error! Couldn’t mark all as read."
+      i18n-aria-label="Aria-label for mark all as read error@@notifications.mark-all-read.alert.aria-label"
+      modifier="error"
+      [dismissible]="false"
+    &gt;
+    &lt;/bb-alert-ui&gt;
+    &lt;div class="bb-notifications-badge-widget__all-read-button" *ngIf="unreadCount &gt; 0"&gt;
+      &lt;button
+        bbButton
+        data-role="mark-all-read-button"
+        class="bb-subtitle"
+        color="link-text"
+        aria-label="Mark all notifcations as read"
+        i18n-aria-label="Aria-label for mark all as read button@@notifications.mark-all-read.aria-label"
+        (click)="hostRef.onReadAllNotifications()"
+      &gt;
+        &lt;bb-icon-ui name="playlist-add-check" size="md" cropped="true"&gt;&lt;/bb-icon-ui&gt;
+        &lt;span i18n="Label for mark all as read button@@notifications.mark-all-read.label"&gt;Mark all as read&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-container *ngIf="notifications; else loadingState"&gt;
+    &lt;ng-container *ngIf="!error &amp;&amp; notifications.length"&gt;
+      &lt;div data-role="notifications-list-inner-wrapper" [ngClass]="hostRef.selectedNotification ? 'd-none' : null"&gt;
+        &lt;p
+          aria-live="polite"
+          class="sr-only"
+          i18n="Label for new loaded notifications available@@notifications.new-loaded-notifications-available"
+        &gt;
+          { notifications.length, plural, =1 {new notification of {{ totalCount }}available} other {
+          {{ notifications.length }} new notifications of {{ totalCount }}available } }
+        &lt;/p&gt;
+        &lt;ul
+          tabindex="-1"
+          class="bb-notifications-badge-widget__list bb-list bb-list--flush-lg"
+          data-role="notifications-list-body"
+        &gt;
+          &lt;li class="bb-list__item" *ngFor="let notification of notifications; trackBy: hostRef.trackById"&gt;
+            &lt;bb-notifications-list-item
+              [notification]="notification"
+              class="bb-nt-{{ notification.id }}"
+              (click)="hostRef.selectNotification($event, notification)"
+              (openDetails)="hostRef.selectNotification($event, notification, true)"
+            &gt;
+            &lt;/bb-notifications-list-item&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;footer class="card-footer"&gt;
+          &lt;ng-container *ngIf="totalCount &gt; pageSize"&gt;
+            &lt;div
+              *ngIf="notifications.length &lt; totalCount; else LoadMoreDisabled"
+              class="bb-button-bar bb-button-bar--center"
+            &gt;
+              &lt;bb-load-button-ui
+                i18n="Load more button@@notifications.notification-list.load-more"
+                class="bb-button-bar__button"
+                color="link"
+                [size]="pageSize"
+                [from]="pageFrom"
+                [totalCount]="totalCount"
+                [isLoading]="isLoading"
+                [block]="false"
+                (paramChange)="hostRef.onLoadMore(totalCount, $event)"
+              &gt;
+                Load More
+              &lt;/bb-load-button-ui&gt;
+            &lt;/div&gt;
+            &lt;ng-template #LoadMoreDisabled&gt;
+              &lt;div
+                data-role="notification-list-load-more-disabled-text"
+                class="bb-subtitle bb-text-support bb-text-align-center"
+                i18n="Load more disabled text@@notifications.notification-list.load-more-disabled"
+              &gt;
+                You’ve reached the end of the list.
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/ng-container&gt;
+        &lt;/footer&gt;
+      &lt;/div&gt;
+
+      &lt;bb-notification-details
+        *ngIf="hostRef.selectedNotification"
+        [notification]="hostRef.selectedNotification"
+        (navigateBack)="hostRef.unselectNotification()"
+        (delete)="hostRef.deleteNotification()"
+      &gt;&lt;/bb-notification-details&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;div role="status"&gt;
+    &lt;div class="card-body" *ngIf="!notifications?.length || error"&gt;
+      &lt;bb-empty-state-ui
+        *ngIf="error"
+        data-role="notifications-badge-error-state"
+        class="bb-state-container"
+        iconSize="xxl"
+        iconModifier="error-outline"
+        title="Notifications couldn’t load"
+        i18n-title="Notifications are not loading title@@notifications.error-state.title"
+        subtitle="Try to reload the page or contact the system administrator."
+        i18n-subtitle="Notifications are not loading subtitle@@notifications.error-state.subtitle"
+      &gt;
+      &lt;/bb-empty-state-ui&gt;
+
+      &lt;bb-empty-state-ui
+        *ngIf="notifications &amp;&amp; !notifications.length &amp;&amp; !error"
+        data-role="notifications-badge-empty-state"
+        class="bb-state-container"
+        i18n-title="Notifications empty state message title@@notifications.state.no-notifications.title"
+        title="No Notifications"
+        iconModifier="notifications-off"
+        iconSize="xxl"
+        i18n-subtitle="Notifications empty state message@@notifications.state.no-notifications.subtitle"
+        subtitle="You don't have any notifications to be displayed"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui
+      loaderSize="md"
+      text="Loading..."
+      i18n-test="Loading title@@notifications.state.loading.title"
+    &gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsListItemCustomizable" class="discrete">bbNotificationsListItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbNotificationsListItemCustomizable
+  let-hostRef
+  let-notificationsMessageLineAmount="context.notificationsMessageLineAmount"
+&gt;
+  &lt;div
+    tabindex="0"
+    class="bb-notifications-badge-list-item bb-notification bb-notification--flush"
+    data-role="notifications-list-item"
+    [attr.aria-labelledby]="hostRef.id + '-aria-label'"
+    [class.bb-notifications-badge-list-item--unread]="!hostRef.notification.read"
+  &gt;
+    &lt;div
+      class="sr-only"
+      i18n="Notification item severity level@@notifications.list.notification-details.severity-level"
+    &gt;
+      { hostRef.notification.level, select, ALERT { Alert } INFO { Info } SUCCESS { Success } WARNING { Warning } },
+    &lt;/div&gt;
+    &lt;bb-icon-ui
+      [name]="hostRef.icon"
+      [color]="hostRef.color"
+      class="bb-notification__icon"
+      data-role="notifications-list-item-severity-level-icon"
+    &gt;&lt;/bb-icon-ui&gt;
+    &lt;div class="bb-notifications-badge-list-item__body bb-notification__body"&gt;
+      &lt;div
+        class="bb-notifications-badge-list-item__header bb-notification__title bb-stack"
+        data-role="notification-heading"
+      &gt;
+        &lt;bb-ellipsis-ui
+          class="bb-notifications-badge-list-item__title bb-stack__item bb-text-align-left"
+          [text]="hostRef.notification | notificationLocalization: 'title'"
+          data-role="notifications-list-item-title"
+        &gt;&lt;/bb-ellipsis-ui&gt;
+        &lt;bb-humanized-date
+          class="bb-stack__item bb-stack__item--push-right"
+          [date]="hostRef.notification.createdOn"
+          [displayRelativeTime]="hostRef.displayRelativeTime$ | async"
+          data-role="notification-list-item-creation-date"
+        &gt;&lt;/bb-humanized-date&gt;
+      &lt;/div&gt;
+      &lt;bb-ellipsis-ui
+        data-role="notifications-list-item-content"
+        aria-hidden="true"
+        class="bb-notifications-badge-list-item__content bb-text-align-left bb-stack bb-block bb-block--sm"
+        [tooltipTriggers]="''"
+        [lineClamp]="notificationsMessageLineAmount"
+      &gt;
+        &lt;div
+          #notificationMessage
+          [innerHTML]="
+            hostRef.notification | notificationLocalization: 'message' | interpolateLink: hostRef.notification:false
+          "
+        &gt;&lt;/div&gt;
+      &lt;/bb-ellipsis-ui&gt;
+      &lt;button
+        type="button"
+        data-role="notifications-list-item-show-more-button"
+        *ngIf="hostRef.displayShowMoreButtonInBadge$ | async"
+        class="btn-link-text bb-text-bold bb-block bb-block--sm"
+        (click)="hostRef.openNotificationDetails($event)"
+        aria-label="Show more notification details"
+        i18n="Notification badge Show More button@@notifications.list.show-more.button"
+        i18n-aria-label="Aria-label for Show More button@@notifications.list.show-more.button.aria-label"
+      &gt;
+        Show more
+      &lt;/button&gt;
+      &lt;bb-notifications-capability-icon
+        aria-hidden="true"
+        [origin]="hostRef.notification?.origin"
+      &gt;&lt;/bb-notifications-capability-icon&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationDetailsCustomizable" class="discrete">bbNotificationDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationDetailsCustomizable let-hostRef&gt;
+  &lt;div role="dialog" aria-modal="false"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;div class="bb-notifications-badge-widget__back-button bb-stack"&gt;
+        &lt;button
+          bbFocus
+          bbButton
+          color="link-text"
+          class="bb-stack__item--push-left"
+          data-role="notification-details-go-back-btn"
+          (click)="hostRef.navigateBack.emit()"
+        &gt;
+          &lt;bb-icon-ui name="arrow-back" color="info"&gt;&lt;/bb-icon-ui&gt;
+          &lt;span i18n="Notifications details Go back button@@notifications.details.go-back-button"&gt;
+            Back to notifications
+          &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button
+          bbFocus
+          bbButton
+          class="bb-stack__item--push-right"
+          color="link"
+          circle="true"
+          aria-label="delete"
+          i18n-aria-label="delete aria-label@@notifications.details.delete-button-aria-label"
+          bbTooltip="Delete"
+          container="body"
+          i18n-bbTooltip="Delete|Button text to delete notification@@notifications.details.delete-button"
+          triggers="hover"
+          placement="top"
+          data-role="notification-details-delete-btn"
+          (click)="hostRef.deleteNotification()"
+        &gt;
+          &lt;bb-icon-ui name="delete" class="bb-text-support"&gt;&lt;/bb-icon-ui&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-block bb-block--lg"&gt;
+      &lt;bb-notification-details-item [notification]="hostRef.notification"&gt;&lt;/bb-notification-details-item&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationDetailsItemCustomizable" class="discrete">bbNotificationDetailsItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationDetailsItemCustomizable let-hostRef&gt;
+  &lt;div class="bb-notification bb-notification--flush"&gt;
+    &lt;bb-icon-ui
+      class="bb-notification__icon"
+      [name]="hostRef.icon"
+      [color]="hostRef.color"
+      data-role="notification-details-icon"
+    &gt;&lt;/bb-icon-ui&gt;
+    &lt;div class="bb-notification__body"&gt;
+      &lt;div class="bb-notification__title bb-stack"&gt;
+        &lt;span
+          class="bb-stack__item break-word bb-text-default"
+          data-role="notification-details-title"
+          [innerHTML]="hostRef.notification | notificationLocalization: 'title'"
+        &gt;&lt;/span&gt;
+        &lt;bb-humanized-date
+          class="bb-stack__item bb-stack__item--push-right"
+          [date]="hostRef.notification.createdOn"
+          [displayRelativeTime]="hostRef.displayRelativeTime$ | async"
+          data-role="notification-details-message"
+        &gt;&lt;/bb-humanized-date&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-stack bb-block bb-block--sm"&gt;
+        &lt;div
+          data-role="notification-details-message-text"
+          class="break-word bb-text-align-left"
+          [innerHTML]="
+            hostRef.notification | notificationLocalization: 'message' | interpolateLink: hostRef.notification
+          "
+        &gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;bb-notifications-capability-icon [origin]="hostRef.notification?.origin"&gt;&lt;/bb-notifications-capability-icon&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsCapabilityIconCustomizable" class="discrete">bbNotificationsCapabilityIconCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsCapabilityIconCustomizable let-origin="context.origin" let-host&gt;
+  &lt;div *ngIf="host.originIcons[origin]" class="bb-stack bb-stack--align-center bb-text-support"&gt;
+    &lt;bb-icon-ui
+      size="sm"
+      class="bb-stack__item bb-stack__item--spacing-sm"
+      [name]="host.originIcons[origin]"
+      data-role="notifications-capability-icon"
+    &gt;&lt;/bb-icon-ui&gt;
+    &lt;span
+      class="bb-stack__item bb-subheader bb-subheader--regular"
+      data-role="notifications-capability-icon-label"
+      i18n="Notification origin label@@notifications-capability-icon.origin.label"
+    &gt;
+      { origin, select, Transaction {Transactions} MessageCenter {Messages} Limits {Limits} Payment {Payments}
+      AccountStatement {Account Statement} Contact {Contact} PFM {Saving Goals} }
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbHumanizedDateCustomizable" class="discrete">bbHumanizedDateCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbHumanizedDateCustomizable let-hostRef&gt;
+  &lt;div class="sr-only" i18n="Humanized date title@@humanized.date.title"&gt;,Date:&lt;/div&gt;
+  &lt;ng-container *ngIf="hostRef.date as date"&gt;
+    &lt;time *ngIf="hostRef.isToday" class="bb-subheader bb-subheader--regular bb-text-nowrap"&gt;
+      &lt;ng-container *ngIf="hostRef.displayRelativeTime; else today"&gt;
+        &lt;ng-container
+          *ngIf="hostRef.isWithinHour; else moreThanHourAgo"
+          i18n="Notifications time less than an hour ago date@@notifications.humanized-date.less-than-an-hour-ago"
+        &gt;
+          { hostRef.minutesFromNow, plural, =0 {now} other {{{hostRef.minutesFromNow}} min ago} }
+        &lt;/ng-container&gt;
+
+        &lt;ng-template #moreThanHourAgo&gt;
+          {{ date | bbDate: 'shortTime' }}
+        &lt;/ng-template&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-template #today i18n="Notifications today date@@notifications.humanized-date.today"&gt; today &lt;/ng-template&gt;
+    &lt;/time&gt;
+
+    &lt;time
+      *ngIf="hostRef.isYesterday"
+      class="bb-subheader bb-subheader--regular"
+      i18n="Notifications yesterday date@@notifications.humanized-date.yesterday"
+    &gt;
+      yesterday
+    &lt;/time&gt;
+
+    &lt;time
+      *ngIf="!hostRef.isToday &amp;&amp; !hostRef.isYesterday"
+      class="bb-subheader bb-subheader--regular"
+      [attr.aria-label]="date | bbDate: 'mediumDate'"
+      role="text"
+    &gt;
+      {{ date | bbDate: 'MM/dd/yy' }}
+    &lt;/time&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="notification_badge_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>HumanizedDateComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbHumanizedDateCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() displayRelativeTime: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag that defines if we should display relative time for today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set date(value: Date | string | undefined)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notification date.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get date(): Date | string | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date getter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isWithinHour(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is date within an hour from now flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isToday(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is date within the current day flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isYesterday(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Is date within the yesterday date flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get minutesFromNow(): number | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How many minutes from now is the date getter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>NotificationDetailsItemComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>bbNotificationDetailsItemCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly levelMap: Readonly&lt;SeverityLevelIconMap&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notifications severity map, which includes the severity level icon and the color mapper.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notification: NotificationItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification item data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly displayRelativeTime$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with a flag that defines if relative time for today should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get icon(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the icon name from the severity level icon map depending on the severity level of the notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get color(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for icon color from the severity level icon map depending on the severity level of the notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>NotificationDetailsComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbNotificationDetailsCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notification: NotificationItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification item data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() navigateBack: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event to navigate back to the notification list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() delete: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event to delete notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteNotification(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to emit delete notification event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="22"><p class="tableblock"><code>NotificationsListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="22"><p class="tableblock"><code>bbNotificationsListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() navigation: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigation event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set preselectedNotification(notification: NotificationItem | undefined)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preselected notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly allowedRoutes$: Observable&lt;string[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routes available for navigation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly displaySettingsButton$: Observable&lt;boolean&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the flag that defines whether the settings button should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly notifications$: Observable&lt;Notifications&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with notification items.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly error$: Observable&lt;Error&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notification loading request error stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly markAllAsReadError$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mark-as-read request error stream that shows if the request has failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly isLoading$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with a flag that shows if notifications are currently loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly totalCount$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with a total count of notifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly newNotificationsAvailable$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with a flag showing if new notifications are available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly pageSize$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with the page size.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly unreadCount$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stream with the unread notifications count.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly pageFrom$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A steam with the starting page number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteNotification(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to emit delete notification event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedNotification: NotificationItem | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification item that is currently shown in notification details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onReadAllNotifications(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to mark all notifications as read.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadNewNotifications(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to load new notifications by reloading the first page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadMore(totalCount: number, $event: { from: number }): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to load the next notification page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onNotificationsSettingsOpen(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to open notification settings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectNotification(clickEvent: Event, notification: NotificationItem, openDetailsView?: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to show notification in the details view or to navigate to the notification routing URL if routing is enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unselectNotification(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to unselect a notification and return back the focus position.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackById(_index: number, notification: NotificationItem): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method to differentiate notifications by IDs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>NotificationsListItemComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>bbNotificationsListItemCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly id: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification badge list item ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notification: NotificationItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification item data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() openDetails: EventEmitter&lt;Event&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event emitter for opening notification details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly notificationsMessageLineAmount$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with the number of lines to show as a notification message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly displayRelativeTime$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with the flag that defines if relative time for today should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly displayShowMoreButtonInBadge$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with a flag that defines if the <strong>Show More</strong> button should be displayed when the notification text is truncated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly levelMap: Readonly&lt;SeverityLevelIconMap&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notification severity map.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get icon(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the icon name from the severity level icon map depending on the level of the notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get color(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the icon color from the severity level icon map depending on the level of the notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openNotificationDetails(event: Event): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to trigger the opening of the notification details in the parent component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isTextTruncated(element: HTMLElement): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to check if the notification text is truncated or displayed in the full size.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="18"><p class="tableblock"><code>NotificationsBadgeWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="18"><p class="tableblock"><code>bbNotificationsBadgeCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly preselectedNotification$: Observable&lt;NotificationItem | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preselected outside of a badge notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set preselectedNotification(notification: NotificationItem | undefined)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preselected notification data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('notificationsMessageLineAmount') set notificationsMessageLineAmountValue(value: string | number);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the number of lines of the notification message to be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('displayRelativeTime') set displayRelativeTimeValue(value: string | boolean);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the flag that defines if the notification date should be displayed in regular or relative format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('displayShowMoreButtonInBadge') set displayShowMoreButtonInBadgeValue(value: string | boolean);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the preference that defines if the <strong>See More</strong> button (navigation to details view) should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('allowedRoutes') set allowedRoutesValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the routes available for navigation upon clicking a notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('displaySettingsButton') set displaySettingsButtonValue(value: string | boolean);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the preference that defines if the <strong>Settings</strong> icon (navigation to notification settings) should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('pageSize') set pageSizeValue(value: string | number);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the number of notifications to be displayed per page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('origins') set originsValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the list of notification origins that define what kind of notifications should be displayed to the user.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('severityLevels') set severityLevelsValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the preferred severity levels for notifications to be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('unreadCountUpdateInterval') set unreadCountUpdateIntervalValue(value: string | number);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the preferred interval for the unread notifications count update.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() notificationsSettingsOpened: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event emitted on the settings button click.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() notificationRouting: EventEmitter&lt;NotificationRouting&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event with the navigation metadata.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly id: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unique ID HTML property for each component instance.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly unreadCount$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream with the count of unread notifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly listTransform$:Observale&lt;string | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream that adjusts the layout to the screen size by applying different <code>translateX</code> values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild('popover') readonly popover: NgbDropdown | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification badge drop-down.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onOpenChange(isOpen: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to clear the preselected notification value.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="notification_badge_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">notifications-badge-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { NotificationsBadgeWidgetModule } from '@backbase/notifications-badge-widget-ang';
+import { NotificationsBadgeExtendedComponent } from './notifications-badge-extended.component';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { NotificationsBadgeExtendedComponent },
+    }),
+    NotificationsBadgeWidgetModule,
+  ],
+  declarations: [NotificationsBadgeExtendedComponent],
+  exports: [NotificationsBadgeExtendedComponent],
+})
+export class NotificationsBadgeExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">notifications-badge-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component, EventEmitter, Output } from '@angular/core';
+import { NotificationRouting } from '@backbase/notifications-common-ang';
+
+@Component({
+  selector: 'bb-notifications-badge-extended',
+  templateUrl: './notifications-badge-extended.component.html',
+})
+export class NotificationsBadgeExtendedComponent {
+  @Output() notificationsSettingsOpened = new EventEmitter&lt;void&gt;();
+  @Output() notificationRouting = new EventEmitter&lt;NotificationRouting&gt;();
+
+  onNotificationsSettingsOpened() {
+    this.notificationsSettingsOpened.emit();
+  }
+
+  onNotificationRoutingChange(routing: NotificationRouting) {
+    this.notificationRouting.emit(routing);
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">notifications-badge-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">&lt;bb-notifications-badge-widget
+  (notificationsSettingsOpened)="onNotificationsSettingsOpened()"
+  (notificationRouting)="onNotificationRoutingChange($event)"
+&gt;
+  &lt;ng-template
+    bbNotificationsBadgeCustomizable
+    let-hostRef
+    let-unreadCount="context.unreadCount"
+    let-listTransform="context.listTransform"
+  &gt;
+    &lt;!-- place your customization here --&gt;
+   &lt;/ng-template&gt;
+&lt;/bb-notifications-badge-widget&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="notification_badge_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Value type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Interval to poll server for unread count (seconds)</strong></p>
+<p class="tableblock">The interval to poll the server for the unread count in seconds.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unreadCountUpdateInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Amount of lines for message body that will be shown</strong></p>
+<p class="tableblock">The number of lines of the notification body that will be shown.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationsMessageLineAmount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Size of notifications page shown in the popover</strong></p>
+<p class="tableblock">The size of the notifications page shown in the popover.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navigation</strong></p>
+<p class="tableblock">The navigation when the notification settings are opened.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.notificationsSettingsOpened</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>String of allowed routes (conversation-view, arrangement-view, transaction-view, party-view&#8230;&#8203;)</strong></p>
+<p class="tableblock">Allowed routes for navigation from notifications to target widgets.
+See <a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowedRoutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conversation-view, arrangement-view, transaction-view, party-view, payment-view, notification-details</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma-separated list of notifications origins to process (empty for all)</strong></p>
+<p class="tableblock">Filters the notifications to be displayed in the popup by their origin. For example,
+only notifications coming from Payments or Messages. Set this preference in a consistent
+manner with the <strong>View sticky and popup notifications</strong> widget. Set the value in all capital letters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>origins</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None (all notifications are displayed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma-separated list of notifications severity levels to process (empty for all)</strong></p>
+<p class="tableblock">Filters the notifications to be displayed in the popup by their severity level. For example,
+only notifications with the severity level of <strong>Warning</strong> or <strong>Alert</strong>. Set this preference in a consistent
+manner with the <strong>View sticky and popup notifications</strong> widget. Set the value in all capital letters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>severityLevels</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None (all notifications are displayed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Display relative time for today</strong></p>
+</div>
+<div class="paragraph">
+<p>Whether the exact date of receiving a notification should be changed to a more convenient relative format. If this preference is set to <code>true</code>, then the following rules apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the receipt time is less than 1 minute ago, the timestamp changes to <strong>Now</strong>.</p>
+</li>
+<li>
+<p>If the receipt time is more than 1 minute but less than 1 hour ago, then the number of minutes is displayed. For example, <strong>59 min ago</strong>.</p>
+</li>
+<li>
+<p>If the receipt time is more than 1 hour but less than 1 day ago, then the <code>HH:MM AM/PM</code> format is used. For example, <strong>10:00 AM</strong>.</p>
+</li>
+<li>
+<p>If the receipt time is 1 day ago, the timestamp changes to <strong>Yesterday</strong>.</p>
+</li>
+<li>
+<p>If the receipt time is more than 1 day ago, then the <code>DD/MM/YYYY</code> format is used. For example, <strong>10/03/2020</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayRelativeTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display Show More button</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayShowMoreButtonInBadge</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Emits routing metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.notificationRouting</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>memory</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display Settings button</strong></p>
+<p class="tableblock">Defines if the clickable notification preferences icon is displayed in the <strong>Notification badge</strong> widget. This allows to prevent confusion in the apps where there is no possibility to manage notification preferences.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displaySettingsButton</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Retail Banking Widget Collection v3.2.0</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="rb_320" class="book toc2 toc-left">
+<div id="header">
+<h1>Retail Banking Widget Collection v3.2.0</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html"><span class="toc-current">Retail Banking Widget Collection v3.2.0</span></a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="rb_320" class="sect0">Retail Banking Widget Collection v3.2.0</h1>
+          <div class="paragraph">
+<p>See the individual release notes for each capability:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="rb_320.html#x_capability_320">Cross-capability changes</a></p>
+</li>
+<li>
+<p>Access Control - no changes</p>
+</li>
+<li>
+<p><a href="rb_320.html#account_statements_320">Account Statements v3.2.0</a></p>
+</li>
+<li>
+<p>Actions - no changes</p>
+</li>
+<li>
+<p>Authentication - no changes</p>
+</li>
+<li>
+<p><a href="rb_320.html#bill_pay_320">Bill Pay v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#card_management_320">Card Management v3.2.0</a></p>
+</li>
+<li>
+<p>Consents - no changes</p>
+</li>
+<li>
+<p>Contacts - no changes</p>
+</li>
+<li>
+<p><a href="rb_320.html#messages_320">Messages v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#payments_320">Payments v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#personal_finance_management_320">Personal Finance Management v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#places_320">Places v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#products_320">Products v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#remote_deposit_capture_320">Remote Deposit Capture v3.2.0</a></p>
+</li>
+<li>
+<p><a href="rb_320.html#transactions_320">Transactions v3.2.0</a></p>
+</li>
+</ul>
+</div>
+<h2 id="x_capability_320" class="discrete">Cross-capability changes</h2>
+<div class="paragraph">
+<p>This release note lists the changes for in this release that affect several or all capabilities.</p>
+</div>
+<h3 id="_important_change_for_mobile_widgets" class="discrete">Important Change for Mobile Widgets</h3>
+<div class="paragraph">
+<p>There is a new technical version number for the Native Mobile Widgets.</p>
+</div>
+<div class="paragraph">
+<p>Until now, the Widget Collection has followed the version format: &lt;release&gt;.&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;. As of this major release, the &lt;release&gt; number has been removed from artifacts. This means that this release, instead of being Widget Collection 3.2.0(.0) will now be named Widget Collection 2.0.0 in the Backbase repo.</p>
+</div>
+<div class="paragraph">
+<p>This change has been introduced because customers with patched versions of the collection (for example, 3.2.0.1) are currently unable to publish apps to the App store. This is due to the App Store Connect rules around apps with 4-digit version numbers.</p>
+</div>
+<div class="paragraph">
+<p>The &lt;release&gt; number is now part of the repository URL, which is the version number developers add to their local CocoaPods and Gradle installations. To stay consistent, this will happen both for Android and iOS.</p>
+</div>
+<div class="paragraph">
+<p>To use the new major version of the Widget Collection, update the Gradle and Cocoapods dependencies to reflect the repository name change.</p>
+</div>
+<div class="paragraph">
+<p>It is important to understand the actual <strong>product</strong> version is still 3.2.0(.0).</p>
+</div>
+<h4 id="_end_of_support_for_ios_9_and_ios_10" class="discrete">End of support for iOS 9 and iOS 10</h4>
+<div class="paragraph">
+<p>From this release, the Widget Collection will no longer support iOS 9 and 10. For more information, see <a href="https://community.backbase.com/documentation/mobile-sdk/latest/platform_support_for_mobile">Platform Support for Mobile</a>.</p>
+</div>
+<h3 id="_deprecations_54" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release. Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets and clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>common-UI</code> library will be discontinued for both iOS and Android.</p>
+</li>
+<li>
+<p>All clients and widgets with a dependency on Android support libraries will be updated to use AndroidX.
+For the majority of clients and widgets, this only affects <code>@Nullable</code> and <code>@NonNull</code> annotations.
+No deprecation will be added to client or widget code for this change.</p>
+</li>
+<li>
+<p>All clients and widgets will be compiled with Java 8 source and target compatibility.
+Projects will need to be compiled with Java 8 to continue using clients and widgets.
+No deprecation will be added to client or widget code for this change.</p>
+</li>
+<li>
+<p><code>Common-utils</code> for Android</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DBSDataImpl#buildGetRequest(URI, String, DBSDataProvider, Map)</code> is deprecated in favor of <code>DBSDataImpl#buildGetRequest(URI, String, Params, DBSDataProvider)</code>.
+<code>Params</code> is a map-like object that can be built in a type-safe manner.</p>
+</li>
+<li>
+<p><code>GenericListener</code> is deprecated in favor of <code>ResponseBodyListener</code>. The new interface&#8217;s signature and usage is the same,
+but the name makes its purpose clearer (in contrast to the new <code>ResponseListener</code> that returns the full <code>Response</code> object on success).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="account_statements_320" class="discrete">Account Statements v3.2.0</h2>
+<div class="paragraph">
+<p>This release note lists the changes for the Account Statements capability in this release.</p>
+</div>
+<h3 id="_new_features_135" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>View PDF file in the widget.</p>
+</li>
+<li>
+<p>The date picker and category dropdown components are updated in line with the newest design components.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bill_pay_320" class="discrete">Bill Pay v3.2.0</h2>
+<div class="paragraph">
+<p>This release note lists the changes for the Bill Pay capability in this release.</p>
+</div>
+<h3 id="_new_features_136" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simple payment.</p>
+</li>
+<li>
+<p>Set recurring payment.</p>
+</li>
+<li>
+<p>Add manual payee.</p>
+</li>
+</ul>
+</div>
+<h3 id="_deprecations_55" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release.
+Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bill Pay widget</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bb.action.bill-pay.payee-selected</code> event is deprecated. Use <code>bb.action.bill-pay.payeesummary-selected</code> instead.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bb.action.bill-pay.payee-selected</code> event is deprecated. Use <code>bb.action.bill-pay.payeesummary-selected</code> instead.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Bill Pay Form widget</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BillPayFormView</code> - <code>updateViewWithPayee</code> is deprecated, use <code>updateViewWithPayeeSummary</code> instead.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>confirm</code> mode is deprecated. Use the <code>overview</code> mode instead.</p>
+</li>
+<li>
+<p>The supported modes are now: <code>initiate</code>, <code>review</code>, <code>overview</code>.</p>
+</li>
+<li>
+<p>The default, initial mode is now <code>initiate</code>. Therefore, for the first initial mode, use the <code>initiate</code> mode.</p>
+</li>
+<li>
+<p><code>BillPayFormView</code> - <code>updateViewWithPayee</code> is deprecated, use <code>updateViewWithPayeeSummary</code> instead.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bill Pay Client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Amount</code> <code>DTO</code> class internal to this client will be replaced by the <code>Amount</code> <code>DTO</code> in <code>common-utils</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BBCurrency</code> <code>DTO</code> class internal to this client would be replaced with the <code>BBCurrency</code> <code>DTO</code> in <code>common-utils</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bill Pay client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Amount</code> <code>DTO</code> class internal to this client will be replaced by the <code>Amount</code> <code>DTO</code> in <code>common-utils</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BBCurrency</code> <code>DTO</code> class internal to this client would be replaced with the <code>BBCurrency</code> <code>DTO</code> in <code>common-utils</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_50" class="discrete">Breaking Changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bill Pay Client</p>
+<div class="paragraph">
+<p><strong>Android &amp; iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GenericListener and methods that accept it have been replaced with method-specific listeners. The versions of each method with specific listeners are available now.</p>
+</li>
+<li>
+<p><code>PaymentService</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>paymentFee</code> field: fee and type has changed from double to Amount.</p>
+</li>
+<li>
+<p>get/setPaymentFee(double paymentFee) has changed to get/setFee(Amount fee).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>RecurringPayment</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>paymentAmount</code> field has changed to Amount and type has changed from Number to Amount. New constructor has been added to accept an Amount object for amount instead of Number as paymentAmount</p>
+</li>
+<li>
+<p><code>getPaymentAmount()</code> has changed to <code>getAmount()</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>PaymentRequest</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Amount field type has changed from double to Amount and the <code>paymentAmount</code> field has been  removed. A new constructor has been added to accept an Amount object for <code>paymentAmount</code> instead of Number as amount.</p>
+</li>
+<li>
+<p>get/setAmount(double amount) has been changed to get/setPaymentAmount(Amount amount).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>PaymentAccount</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>balance</code> field has been changed to <code>accountBalance</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p>get/setBalance(double balance) has been changed to get/setAccountBalance(Amount accountBalance).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Payment</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>paymentFee</code> field has been changed to <code>Fee</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p><code>paymentAmount</code> field has been changed to <code>Amount</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p>new constructor has been added to accept an Amount object for amount instead of Number as paymentAmount.</p>
+</li>
+<li>
+<p>get/setPaymentAmount(double paymentAmount) has changed to get/setAmount(Amount amount).</p>
+</li>
+<li>
+<p>get/setPaymentFee(double paymentFee) has changed to get/setFee(Amount fee).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>NextPayment</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>paymentFee</code> field has changed to <code>Fee</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p><code>paymentAmount</code> field has changed to <code>Amount</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p>A new constructor has been added to accept an Amount object for amount instead of Number as paymentAmount.</p>
+</li>
+<li>
+<p>get/setPaymentAmount(double paymentAmount) has changed to get/setAmount(Amount amount).</p>
+</li>
+<li>
+<p>get/setPaymentFee(double paymentFee) has changed to get/setFee(Amount fee).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>LatestBill</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>paymentAmount</code> field has changed to <code>Amount</code> and type has changed from double to Amount.</p>
+</li>
+<li>
+<p>A new constructor has been added  to accept an Amount object for amount instead of Number as paymentAmount.</p>
+</li>
+<li>
+<p>get/setPaymentAmount(double paymentAmount) has changed to get/setAmount(Amount amount).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="card_management_320" class="discrete">Card Management v3.2.0</h2>
+<h3 id="_new_features_137" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can now request a replacement of their stolen, broken and lost cards.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can now request a replacement of their stolen, broken and lost cards.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_known_issues_22" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>The known issues in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>TRANS-2008 -  conflicts between customization slots when a widget is rendered more than once. When a user goes to details, and then back to the overview using the back button in the browser, cards are not clickable.</p>
+<div class="paragraph">
+<p>Work around:</p>
+</div>
+<div class="paragraph">
+<p>Enable <code>ENFORCE_WIDGET_WRAPPER</code> to true.
+Also all custom templates to be moved out of the global registry (ie: moved out of the app.module) and placed into a "wrapper widget", as described in the Customize Widgets guide).</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="messages_320" class="discrete">Messages v3.2.0</h2>
+<h3 id="_new_features_138" class="discrete">New features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Delete multiple conversations.</p>
+<div class="paragraph">
+<p>Clients are now able to select multiple conversations in the Messages Conversations List widget and delete them.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_known_issues_23" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>The known issues in this release are:</p>
+</div>
+<div class="paragraph">
+<p><strong>DBSK-3411</strong> Multiselector does not work.</p>
+</div>
+<div class="paragraph">
+<p><strong>Root-cause</strong>: Template-driven form forgets context.</p>
+</div>
+<div class="paragraph">
+<p><strong>Workaround</strong>: Default widget setting is <code>{ENFORCE_WIDGET_WRAPPER: true}</code>.</p>
+</div>
+<h3 id="_breaking_changes_51" class="discrete">Breaking changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Message Center widget</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In <code>assets</code> &gt; <code>backbase</code> &gt; <code>model.json</code>, the preference <code>size</code> is now renamed to <code>pageSize</code>. The default value is 10.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterContract</code> class, the following methods are permanently removed: <code>createConversationWithDraftMessage</code>, <code>sendConversationWithDraftId</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterContract</code> class, the following methods are refactored: <code>getMessages</code> is now <code>getConversation</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterView</code> class, the <code>updateViewWithConversation</code> method is refactored to <code>updateViewWithConversationInfo</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterWidget</code> class, the <code>KEY_FROM</code> variable is removed permanently as the page offset will be calculated within the widget now.</p>
+</li>
+<li>
+<p>For the <code>Mode</code> class, the following modes are permanently removed: <code>CREATE_CONVERSATION</code>, <code>CONVERSATIONS</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For the <code>MessageCenterContract</code> class, the following methods are permanently removed: <code>createConversationWithDraft</code>, <code>sendDraftWithId</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterDelegate</code> class, the following methods are permanently removed: <code>didSucceedCreatingMessageDraft</code>, <code>didFailCreatingMessageDraft</code>, <code>didFinishSendingDraft</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterDelegate</code> class, the following new methods are introduced for replying a message: <code>didReplyMessageWithIdentifier</code>, <code>didFailReplingMessageWithError</code>.</p>
+</li>
+<li>
+<p><code>MessageCenterContract</code> - the following methods are now refactored: <code>retrieveConversations</code> to <code>retrieveConversationsWithPageNumber</code>,
+<code>retrieveMessagesByConversationId</code> to <code>retrieveConversationByRootMessageId</code>, <code>didSelectCreateConversation</code> to <code>showCreateConversation</code>,
+<code>markMessageAsReadByConversationId</code> to <code>toggleConversationReadStateByRootMessageId</code>,
+<code>deleteConversationById</code> to <code>deleteConversationsByRootMessageIds</code>, <code>replyMessageWithConversationId</code> to <code>replyMessageWithRootMessageId</code>,
+<code>showReplyMessageWithConversation</code> to <code>showReplyMessageWithConversation</code>,
+<code>sendConversationWithDraftId</code> to <code>createRootMessageWithRootMessageRequest</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterDelegate</code> class, the following methods are refactored: <code>conversationsDidLoad</code> to <code>didLoadConversations</code>,
+<code>conversationsDidFailLoadWithError</code> to <code>didFailLoadingConversationsWithError</code>, <code>messagesDidLoad</code> to <code>didLoadConversationThread</code>,
+<code>messagesDidFailLoadWithError</code> to <code>didFailLoadingConversationThreadWithError</code>,
+<code>didFinishMarkingMessage</code> to <code>didToggleConversationStateWithResponse</code> and <code>didFailTogglingConversationStateWithError</code>,
+<code>didFinishDeletingConversation</code> to <code>didDeleteConversationsWithReport</code> and <code>didFailDeletingConversationsWithError</code>,
+<code>conversationCreationDidSucceed</code> to <code>didCreateRootMessageWithIdentifier</code>,
+<code>conversationCreationDidFailed</code> to <code>didFailCreatingRootMessageWithError</code>,
+<code>topicsDidLoad</code> to <code>didLoadTopics</code>, <code>topicsDidFailLoadWithError</code> to <code>didFailLoadingTopicsWithError</code>.</p>
+</li>
+<li>
+<p>For the <code>MessageCenterView</code> class, the following methods are renamed: <code>updateViewWithConversation</code> to <code>updateViewWithConversationInfo</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Message Center client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The methods <code>getDrafts</code>, <code>createDraft</code>, <code>createDraftForConversationId</code>, <code>sendDraft</code> and all their overloads are permanently removed.</p>
+</li>
+<li>
+<p><code>com.backbase.android.client.messagecenter.listeners.GenericListener</code> is permanently removed.
+Use <code>com.backbase.android.common.utils.dbs.ResponseBodyListener</code> instead.</p>
+</li>
+<li>
+<p><code>com.backbase.android.client.messagecenter.listeners</code> &gt; <code>DraftCreationListener</code>, <code>DraftRetrievalListener</code> are permanently removed.</p>
+</li>
+<li>
+<p><code>com.backbase.android.client.messagecenter.dto</code> &gt; <code>Draft</code>, <code>DraftResponse</code>, <code>DraftRequestError</code> are permanently removed.</p>
+</li>
+<li>
+<p><code>com.backbase.android.client.messagecenter.dto.Message</code> class is permanently removed.
+Use <code>MessageRequest</code>, <code>MessageResponse</code>, <code>RootMessageRequest</code> instead.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The following methods are permanently removed and there are no replacements:
+<code>retrieveDraftsWithParams</code>, <code>retrieveDraftsWithParamsDictionary</code>, <code>retrieveDraftsWithParams</code>, <code>retrieveDraftsWithParamsDictionary</code>.</p>
+</li>
+<li>
+<p>The following methods are permanently removed: <code>sendDraftRequestWithDraftId</code>, <code>sendDraftWithId</code>, <code>createDraft</code>, <code>createDraftForConversationId</code>.</p>
+</li>
+<li>
+<p>The following new methods are introduced: <code>createRootMessage</code> for creating a conversation and <code>replyMessage</code> for replying to a conversation.</p>
+</li>
+<li>
+<p>The following methods are replaced: <code>retrieveMessagesByConversationId</code> by <code>retrieveConversationThreadByRootMessageId</code>,
+<code>deleteConversationById</code> by <code>deleteConversationsByRootMessageId</code>, <code>markConversationAsRead</code> by <code>toggleConversationReadStateByRootMessageId</code>.</p>
+</li>
+<li>
+<p>The following classes are renamed and changed: <code>ConversationRequestParams</code> to <code>BBConversationRequest</code>,
+<code>ConversationItem</code> to <code>BBConversationInfo</code>, <code>MessageItem</code> to <code>BBMessage</code>, <code>TopicItem</code> to <code>BBTopicItem</code>, <code>UnreadConversationCount</code> to <code>BBUnreadConversationCount</code>,
+<code>Topic</code> to <code>BBTopic</code>.</p>
+</li>
+<li>
+<p>The following classes are permanently removed: <code>Draft</code>, <code>DraftItem</code>, <code>DraftRequestParams</code>, <code>SubscriptionItem</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="notifications_320" class="discrete">Notifications v3.2.0</h2>
+<h3 id="_deprecations_56" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release. Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Notifications client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>createError</code> method and all its overloads are currently public static.
+<code>createError</code> will become an instance method, and it will not be accessible statically.</p>
+</li>
+<li>
+<p>The <code>buildQuery</code> method will be removed from <code>NotificationsDataImpl</code>,
+and it will be a part of its super class <code>DBSDataImpl</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_52" class="discrete">Breaking Changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Notifications Client</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>UpdateNotificationListener#onSuccess()</code> and <code>#onError(Response)</code> are deprecated. Use <code>onSuccess(String)</code> and <code>onError(String, Response)</code> to receive the updated notification&#8217;s ID in each callback.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="payments_320" class="discrete">Payments v3.2.0</h2>
+<h3 id="_new_features_139" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit an existing payment.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_53" class="discrete">Breaking Changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Payment Widget</p>
+<div class="paragraph">
+<p><strong>Android &amp; iOS</strong></p>
+</div>
+<div class="paragraph">
+<p>This widget is removed, it was deprecated in a previous major release (3.1.3), and no support and update are now provided. Use the Payment Order Widget instead.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Payment Client</p>
+<div class="paragraph">
+<p><strong>Android &amp; iOS</strong></p>
+</div>
+<div class="paragraph">
+<p>The entire Payments Client module is removed and moved to a new Payment Order Client. The pre-existing endpoints continue to function as in the old client with the following name changes and new additions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>createPayment()</code> has been renamed to <code>createPaymentOrder()</code>.</p>
+</li>
+<li>
+<p><code>getPaymentOrder()</code> has been updated with respective DTOs.</p>
+</li>
+<li>
+<p><code>PaymentResponse</code> has been renamed to <code>PaymentOrdersPostResponse</code> with a few additional fields.</p>
+</li>
+<li>
+<p><code>InstructedAmount</code> has been removed and is now represented by an Amount object from common-utils.</p>
+</li>
+<li>
+<p><code>Creditor</code> has been renamed to <code>InvolvedParty</code>.</p>
+</li>
+<li>
+<p><code>CreditTransferTransactionInformation</code> has been renamed to <code>InitiateCreditTransaction</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_known_issues_24" class="discrete">Known issues</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>DBSA-4121/DBSA-4122: Upcoming payments - when editing a payment, the From account and description is blank on the Edit Payment page.</p>
+</li>
+<li>
+<p>DBSA-4122: Upcoming payments - when editing a payment, extra zeroes are added at the end of the decimal part of the amount field.</p>
+</li>
+</ul>
+</div>
+<h2 id="personal_finance_management_320" class="discrete">Personal Finance Management v3.2.0</h2>
+<h3 id="_breaking_changes_54" class="discrete">Breaking changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>PFM Client</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="paragraph">
+<p>Amount class is deprecated. All usages of this type will be converted to use the Amount class from common-utils.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="places_320" class="discrete">Places v3.2.0</h2>
+<div class="paragraph">
+<p>This release note lists the changes for Places in this release.</p>
+</div>
+<h3 id="_known_issues_25" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>The known issues in this release are:</p>
+</div>
+<div class="paragraph">
+<p><strong>Native mobile widgets</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-8626: App Store rejection due to use of non-public API in Places widget for iOS.</p>
+<div class="paragraph">
+<p>The Places widget for iOS has a blocker for the App Store release.
+For details, visit the <a href="https://community.backbase.com/t/ios-app-store-getting-rejected-is-the-answer-to-upgrade-the-sdk/13253/8">Community</a>.</p>
+</div>
+<div class="paragraph">
+<p>This issue was fixed in Widget Collection Retail Banking v3.2.1.
+Upgrade all widgets that you are using from the collection to this version. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">pod 'PlacesWidget', '2.1.0'
+pod 'TransactionsWidget', '2.1.0'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="products_320" class="discrete">Products v3.2.0</h2>
+<h3 id="_deprecations_57" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release.
+Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Product Summary Client</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The string-based <code>TotalBalance#aggregatedBalance</code> field is deprecated,
+to be replaced with a <code>BigDecimal</code> in the next major release.</p>
+</li>
+<li>
+<p><code>ProductConverter#fillProductInfoForRecipientModel</code> is deprecated.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_55" class="discrete">Breaking Changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="paragraph">
+<p><strong>Warning: Following deprecations apply only when Accounts Widget is available.</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Product Summary Widget</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>ProductSummaryContract#selectedAccount(Product)</code> method is deprecated.</p>
+</li>
+<li>
+<p><code>ProductSummaryView#updateViewWithProduct(Product)</code> method is deprecated.</p>
+</li>
+<li>
+<p><code>EVENT_ACCOUNT_SELECTED</code> is deprecated.</p>
+</li>
+<li>
+<p><code>EVENT_ACCOUNT_RECEIVED</code> is deprecated.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>updateViewWithProduct</code> method is deprecated.</p>
+</li>
+<li>
+<p><code>accountReceivedEvent</code> - <code>bb.action.product-summary.account-received</code> is deprecated, use <code>accountSelectedEvent</code> instead.</p>
+</li>
+<li>
+<p><code>productReceivedEvent</code> - <code>bb.action.product-summary.product-received</code> is deprecated, use <code>productSelectedEvent</code> instead.</p>
+</li>
+<li>
+<p><code>didSelectProduct</code> method is deprecated, use <code>productSelected</code> method instead.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Product Summary Client</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Type of <code>bookedBalance</code>, <code>availableBalance</code>, <code>creditLimit</code>, <code>currentInvestmentValue</code>, and <code>interestSettlementsAccount</code> has changed from string to BigDecimal in subclasses of Product.</p>
+</li>
+<li>
+<p>Type of value in <code>AggregatedBalance</code> has changed from string to BigDecimal.</p>
+</li>
+<li>
+<p>Type of <code>principalAmount</code> in Product subclasses has changed from string to number.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Product</code> - <code>bookedBalance</code>, <code>availableBalance</code>, <code>creditLimit</code>, <code>currentInvestmentValue</code> and <code>interestSettlementAccount</code> properties are deprecated and will be changed to decimal value type.</p>
+</li>
+<li>
+<p><code>Product</code> - <code>defaultAmount</code> and <code>productKindName</code> properties are deprecated and will be removed.</p>
+</li>
+<li>
+<p><code>AggregatedBalance</code> - <code>aggregatedBalance</code> property is deprecated and will be changed to decimal value type.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="remote_deposit_capture_320" class="discrete">Remote Deposit Capture v3.2.0</h2>
+<h3 id="_deprecations_58" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release.
+Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>RDC Form widget</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>EVENT_SUBMIT_SUCCEEDED and EVENT_SUBMIT_FAILED</code> will no longer be published automatically after a deposit is submitted. The app’s listener will still receive success or failure callbacks,
+and the app can call <code>showSubmitSucceeded(RDCDeposit)</code> or <code>showSubmitFailed(List)</code> if it wants these navigation events to be published.</p>
+</li>
+<li>
+<p>Both <code>submit_failed</code> and <code>submit_succeeded</code> modes are deprecated. Instead, use <code>submitFailed</code> and <code>submitSucceeded</code> respectively.</p>
+</li>
+<li>
+<p><code>readRdcFormDataFromStorage</code>, <code>readRdcDepositDataFromStorage</code> and <code>readValidationErrorsFromStorage</code> methods are deprecated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Both <code>succeeded</code> and <code>failed</code> modes are deprecated. Instead, use <code>submitFailed</code> and <code>submitSucceeded</code> respectively.</p>
+</li>
+<li>
+<p>The supported modes are now: <code>initiate</code>, <code>review</code>, <code>submitSucceeded</code>, <code>submitFailed</code>.</p>
+</li>
+<li>
+<p>The default, initial mode is now <code>initiate</code>. Therefore, fot the first initial mode, use <code>initiate</code>.</p>
+</li>
+<li>
+<p><code>dailyLimitDidLoad:(NSString *_Nullable)depositLimit</code> with <code>Currency:(NSString *_Nullable)currencyString</code> method is deprecated.
+Instead, use <code>dailyLimitDidLoad:(BBCurrency *_Nullable)limit</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_56" class="discrete">Breaking Changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>RDC Client</p>
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>getRDCDailyLimit</code> method with <code>rdcDepositDailyLimitListener</code> is deprecated. Use <code>getRDCDailyLimit</code> method with <code>rdcDailyLimitListener</code> instead.</p>
+</li>
+<li>
+<p><code>RDCDailyLimit</code> class is deprecated, use <code>Amount</code> class from CommonUtils instead.</p>
+</li>
+<li>
+<p><code>AggregatedBalance</code> class is deprecated, use Amount class instead.</p>
+</li>
+<li>
+<p><code>RDCDeposit</code> - amount and currency properties are deprecated, use depositAmount property which has type as Amount instead.</p>
+</li>
+<li>
+<p><code>RDCFormData</code> - amount and currency properties are deprecated, use formDataAmount property which is a Amount type instead.</p>
+</li>
+<li>
+<p><code>RDCProduct</code> - balance, availableBalance and currency properties are deprecated, use productBalance and productAvailableBalance properties which are Amount type instead.</p>
+</li>
+<li>
+<p><code>RDCProductKind</code> - Property type of aggregatedBalance is deprecated and will be changed to Amount type. As an alternative use Amount conversion methods in the AggregatedBalance class.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>loadRDCDailyLimitWithHandler</code> method is deprecated, use <code>loadRDCDailyLimit</code> method instead.</p>
+</li>
+<li>
+<p><code>AggregatedBalance</code> class is deprecated, use BBCurrency from CommonUtils instead.</p>
+</li>
+<li>
+<p><code>RDCDeposit</code> - amount and currency properties are deprecated, use depositAmount property which is a BBCurrency type from CommonUtils instead.</p>
+</li>
+<li>
+<p><code>RDCFormData</code> - amount and currency properties are deprecated, use formDataAmount property which is a BBCurrency type from CommonUtils instead.</p>
+</li>
+<li>
+<p><code>RDCProduct</code> - balance, availableBalance and currency properties are deprecated, use productBalance and productAvailableBalance properties which are BBCurrency type instead.</p>
+</li>
+<li>
+<p><code>RDCProductKind</code> = Property type of aggregatedBalance is deprecated and will be changed to BBCurrency type. As an alternative use BBCurrency conversion methods in the AggregatedBalance class.
+:rootdir: ../../../..</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="transactions_320" class="discrete">Transactions v3.2.0</h2>
+<h3 id="_new_features_140" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Transactions List - the widget now supports pub/sub events.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_deprecations_59" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release.
+Support for these features ceases in Retail Banking Widget Collection v3.3.0.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile clients</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Transactions client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Type enum is deprecated. All usages of this class will be converted to string.</p>
+</li>
+<li>
+<p><code>TransactionItem(String,String,String,TypeGroup,Type,String,CreditDebitIndicator)</code> constructor in <code>TransactionItem</code> is deprecated.
+Instead, use <code>TransactionItem(String,String,String,TypeGroup,String,String,CreditDebitIndicator)</code> constructor.</p>
+</li>
+<li>
+<p><code>getType</code> method in <code>TransactionItem</code> is deprecated and will be replaced with a method that returns a string.</p>
+</li>
+<li>
+<p><code>setType(Type)</code> method in <code>TransactionItem</code> is deprecated. Instead, use <code>setType(string)</code>.</p>
+</li>
+<li>
+<p><code>getTypeAsString()</code> method in <code>TransactionItem</code> is deprecated and will be renamed to <code>getType</code> after the deprecation is finished.</p>
+</li>
+<li>
+<p><code>Load</code> method is deprecated, instead use <code>getTransactions</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BBTransactionType</code> enum is deprecated. All usages of this class will be converted to <code>NSString</code>.</p>
+</li>
+<li>
+<p><code>Load</code> method is deprecated, instead use <code>retrieveTransactionsWithParams</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_breaking_changes_57" class="discrete">Breaking changes</h3>
+<div class="paragraph">
+<p>The following breaking changes have been introduced in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native mobile widgets</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Transactions client</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Android</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DefaultTransactionsWidgetDetailsView</code> is now moved to Sample Views as <code>TransactionsWidgetDetailsView</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionsWidgetView</code> is now moved to Sample Views as <code>TransactionsWidgetView</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>iOS</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DefaultTransactionCell</code> is now moved to Sample Views as <code>TransactionCell</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionDetailCategoryCell</code> is now moved to Sample Views as <code>TransactionDetailCategoryCell</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionErrorCell</code> is now moved to Sample Views as <code>TransactionErrorCell</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionProductCell</code> is now moved to Sample Views as <code>TransactionProductCell</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionsDetailAmountCell</code> is now moved to Sample Views as <code>TransactionsDetailAmountCell</code>.</p>
+</li>
+<li>
+<p><code>DefaultTransactionsDetailInfoCell</code> is now moved to Sample Views as <code>TransactionsDetailInfoCell</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

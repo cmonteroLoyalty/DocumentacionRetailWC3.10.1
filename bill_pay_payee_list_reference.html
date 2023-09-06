@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>View bill payees</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="bill_pay_payee_list_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View bill payees</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html"><span class="toc-current">View bill payees</span></a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="bill_pay_payee_list_reference" class="sect0">View bill payees</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#view_bill_payees_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="view_bill_payees_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-billpay-payee-list-widget-ang&gt;</code>.</p>
+</div>
+<h2 id="view_bill_payees_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BillpayPayeeListWidgetModule } from '@backbase/billpay-payee-list-widget-ang';</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>For standalone use and testing of this widget, import <code>BillpayEnrolmentWidgetModule</code> in the <code>app.module.ts</code> of your app. All Bill Pay widgets are closely related to each other, so it is recommended to use them together as well.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_bill_payees_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_payee_list_slots_5.svg?ver=3.10.1" alt="billpay payee list slots 5"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_payee_list_slots_6.svg?ver=3.10.1" alt="billpay payee list slots 6"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_payee_list_slots_7_8.svg?ver=3.10.1" alt="billpay payee list slots 7 8"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeListCustomizable">bbBillpayPayeeListCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeSummaryListCustomizable">bbBillpayPayeeSummaryListCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeSummaryItemCustomizable">bbBillpayPayeeSummaryItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeSummaryItemButtonCustomizable">bbBillpayPayeeSummaryItemButtonCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeDeleteComponentCustomizable">bbBillpayPayeeDeleteComponentCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeNavigateModalComponentCustomizable">bbBillpayPayeeNavigateModalComponentCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeListWidgetNotificationMessageCustomizable">bbBillpayPayeeListWidgetNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_payee_list_reference.html#bbBillpayPayeeListWidgetNotificationHeaderCustomizable">bbBillpayPayeeListWidgetNotificationHeaderCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBillpayPayeeListCustomizable" class="discrete">bbBillpayPayeeListCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayeeListCustomizable
+  [bbHostRef]="hostRef"
+  [bbTemplateContext]="{
+    ebillGroupedData: payeeSummariesByEbillObservable | async
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPayeeListCustomizable
+  let-ebillGroupedData="context.ebillGroupedData"
+  let-host&gt;
+
+    &lt;ng-container&gt;
+      &lt;section&gt;
+        &lt;ng-container *ngIf="host.currentLoadingState !== 'error'; else errorState"&gt;
+          &lt;ng-container *ngIf="ebillGroupedData; else loadingState"&gt;
+            &lt;ng-container *ngIf="host.currentLoadingState !== 'loading'; else loadingState"&gt;
+              &lt;ng-container
+                *ngIf="ebillGroupedData.ebillsEnabled.length || ebillGroupedData.ebillsNotEnabled.length; else emptyState"&gt;
+
+                &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2PayeeList"&gt;
+
+                &lt;div *ngIf="ebillGroupedData.ebillsEnabled.length" data-role="payees-with-active-e-bills-list"&gt;
+                  &lt;h5
+                    data-role="sub-header"
+                    class="pb-2 mb-0"
+                    *ngIf="host.areBothListsPresent(ebillGroupedData)"
+                    i18n="Payees with eBills title|Title for the list of payees with eBills enabled@@bb-billpay-payee-list-widget-ang.title.payees-with-ebills"&gt;
+                    Payees with active eBills
+                  &lt;/h5&gt;
+                  &lt;bb-billpay-payee-summary-list
+                    [payeeSummaries]="ebillGroupedData.ebillsEnabled"
+                  &gt;
+                  &lt;/bb-billpay-payee-summary-list&gt;
+                  &lt;div
+                    data-role="outstanding-e-bill-total"
+                    *ngFor="let ebillCurrencyTotal of host.getEbillTotals(ebillGroupedData.ebillsEnabled); trackBy: host.ngForTrackByCurrencyFn"
+                    class="text-large mt-3"&gt;
+                &lt;span
+                  i18n="Outstanding eBills total text|Text for the total of outstanding eBills@@bb-billpay-payee-list-widget-ang.ebills.total"&gt;
+                  Outstanding eBill total:
+                &lt;/span&gt;
+                    &lt;bb-amount-ui
+                      data-role="total-amount"
+                      class="font-weight-bold"
+                      [amount]="ebillCurrencyTotal.amount"
+                      [currency]="ebillCurrencyTotal.currencyCode"&gt;
+                    &lt;/bb-amount-ui&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div
+                  data-role="all-other-payees-list"
+                  *ngIf="ebillGroupedData.ebillsNotEnabled.length"
+                  [ngClass]="{ 'mt-4': host.areBothListsPresent(ebillGroupedData) }"&gt;
+                  &lt;h5
+                    data-role="sub-header"
+                    class="pb-2 mb-0"
+                    *ngIf="host.areBothListsPresent(ebillGroupedData)"
+                    i18n="Payees without eBills title|Title for the list of payees that do not have eBills enabled@@bb-billpay-payee-list-widget-ang.title.other-payees"&gt;
+                    All other payees
+                  &lt;/h5&gt;
+                  &lt;bb-billpay-payee-summary-list
+                    [payeeSummaries]="ebillGroupedData.ebillsNotEnabled"
+                  &gt;
+                  &lt;/bb-billpay-payee-summary-list&gt;
+                &lt;/div&gt;
+
+                &lt;/ng-container&gt;
+
+                &lt;ng-template #themeV2PayeeList&gt;
+
+                  &lt;div
+                    class="bb-block bb-block--lg"
+                    *ngIf="ebillGroupedData.ebillsEnabled.length"
+                    data-role="payees-with-active-e-bills-list"&gt;
+                    &lt;div class="card card-lg"&gt;
+                      &lt;div class="card-body"&gt;
+                        &lt;div class="bb-block bb-block--md"&gt;
+                          &lt;bb-header-ui
+                            headingType="h2"
+                            *ngIf="host.areBothListsPresent(ebillGroupedData)"
+                            data-role="sub-header"
+                            heading="Payees with active eBills"
+                            i18n-heading="Payees with eBills title|Title for the list of payees with eBills enabled@@bb-billpay-payee-list-widget-ang.title.payees-with-ebills"&gt;
+                          &lt;/bb-header-ui&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="bb-list"&gt;
+                          &lt;li class="bb-list__item"&gt;
+                            &lt;bb-billpay-payee-summary-list
+                              [payeeSummaries]="ebillGroupedData.ebillsEnabled"
+                            &gt;
+                            &lt;/bb-billpay-payee-summary-list&gt;
+                          &lt;/li&gt;
+                          &lt;li class="bb-list__item"&gt;
+                            &lt;div
+                              data-role="outstanding-e-bill-total"
+                              *ngFor="let ebillCurrencyTotal of host.getEbillTotals(ebillGroupedData.ebillsEnabled); trackBy: host.ngForTrackByCurrencyFn"
+                              class="bb-highlight"&gt;
+                              &lt;span
+                                i18n="Outstanding eBills total text|Text for the total of outstanding eBills@@bb-billpay-payee-list-widget-ang.ebills.total"&gt;
+                                Outstanding eBill total:
+                              &lt;/span&gt;
+                              &lt;bb-amount-ui
+                                data-role="total-amount"
+                                class="bb-highlight"
+                                [amount]="ebillCurrencyTotal.amount"
+                                [currency]="ebillCurrencyTotal.currencyCode"&gt;
+                              &lt;/bb-amount-ui&gt;
+                            &lt;/div&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div
+                    class="card card-lg"
+                    data-role="all-other-payees-list"
+                    *ngIf="ebillGroupedData.ebillsNotEnabled.length"&gt;
+                    &lt;div class="card-body"&gt;
+                      &lt;div class="bb-block bb-block--md"&gt;
+                        &lt;bb-header-ui
+                          headingType="h2"
+                          *ngIf="host.areBothListsPresent(ebillGroupedData)"
+                          data-role="sub-header"
+                          heading="All other payees"
+                          i18n-heading="Payees without eBills title|Title for the list of payees that do not have eBills enabled@@bb-billpay-payee-list-widget-ang.title.other-payees"&gt;
+                        &lt;/bb-header-ui&gt;
+                      &lt;/div&gt;
+                      &lt;ul class="bb-list"&gt;
+                        &lt;bb-billpay-payee-summary-list
+                          [payeeSummaries]="ebillGroupedData.ebillsNotEnabled"
+                        &gt;
+                        &lt;/bb-billpay-payee-summary-list&gt;
+                      &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/ng-template&gt;
+
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/section&gt;
+    &lt;/ng-container&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2LoadingState"&gt;
+      &lt;bb-loading-indicator-ui loaderSize="lg"&gt;
+      &lt;/bb-loading-indicator-ui&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2LoadingState&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;bb-loading-indicator-ui loaderSize="lg"&gt;
+          &lt;/bb-loading-indicator-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ErrorState"&gt;
+      &lt;bb-empty-state-ui
+        data-role="error-state"
+        iconSize="xxl"
+        iconModifier="error"
+        subtitle="Try to reload the page or contact support"
+        i18n-subtitle="Try to reload the page or contact support|Payee List loading subtitle@@bb-billpay-payee-list-widget-ang.loading.subtitle"
+        title="Payee list is not loading"
+        i18n-title="Payee list is not loading|Payee List loading title@@bb-billpay-payee-list-widget-ang.loading.title"&gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2ErrorState&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;bb-empty-state-ui
+            data-role="error-state"
+            iconSize="xxl"
+            iconModifier="error-outline"
+            subtitle="Try to reload the page or contact support"
+            i18n-subtitle="Try to reload the page or contact the support.|Payee List loading subtitle@@bb-billpay-payee-list-widget-ang.loading.subtitle"
+            title="Payee list is not loading"
+            i18n-title="Payee list is not loading|Payee List loading title@@bb-billpay-payee-list-widget-ang.loading.title"&gt;
+          &lt;/bb-empty-state-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2EmptyState"&gt;
+      &lt;bb-empty-state-ui
+        data-role="empty-state"
+        iconSize="xxl"
+        iconModifier="error"
+        subtitle="To make a bill payment, first you must add a payee"
+        i18n-subtitle="To make a bill payment, first you must add a payee|Payee List no payees subtitle@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.subtitle"
+        title="No payees found"
+        i18n-title="No payees state text|Payee List no payees title@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.title"&gt;
+      &lt;/bb-empty-state-ui&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-12 text-center"&gt;
+          &lt;button
+            bbButton
+            data-role="empty-state-add-payee-btn"
+            (click)="host.addPayee()"
+            [disabled]="host.areButtonsDisabled"
+            i18n="Add a payee|Payee List add payee button@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.button.add-payee"&gt;
+            Add a payee
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2EmptyState&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body bb-state-container"&gt;
+          &lt;bb-empty-state-ui
+            data-role="empty-state"
+            iconSize="xxl"
+            iconModifier="assignment-ind"
+            subtitle="Add a payee to make a bill payment"
+            i18n-subtitle="Add a payee to make a bill payment|Payee List no payees subtitle@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.subtitle"
+            title="No payees"
+            i18n-title="No payees state text|Payee List no payees title@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.title"&gt;
+          &lt;/bb-empty-state-ui&gt;
+          &lt;div class="bb-state-container__footer"&gt;
+            &lt;button
+              bbButton
+              data-role="empty-state-add-payee-btn"
+              (click)="host.addPayee()"
+              [disabled]="host.areButtonsDisabled"
+              i18n="Add a payee|Payee List add payee button@@bb-billpay-payee-list-widget-ang.bb-empty-state-ui.button.add-payee"&gt;
+              Add a payee
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payee-delete-modal
+    *ngIf="host.isDeleteModalOpened"
+    (resolve)="host.onDeletePayee($event)"
+  &gt;&lt;/bb-billpay-payee-delete-modal&gt;
+
+  &lt;bb-billpay-ebills-delete-modal
+    *ngIf="host.isDeleteEbillsModalOpen"
+    (resolve)="host.onDeleteEbills($event)"
+  &gt;&lt;/bb-billpay-ebills-delete-modal&gt;
+
+  &lt;bb-billpay-payee-navigate-modal
+    *ngIf="host.isNavigateModalOpened"
+    (resolve)="host.onNavigateToPayments($event)"
+  &gt;&lt;/bb-billpay-payee-navigate-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeSummaryListCustomizable" class="discrete">bbBillpayPayeeSummaryListCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayeeSummaryListCustomizable
+  [bbHostRef]="hostRef"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPayeeSummaryListCustomizable
+  let-hostRef
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2List"&gt;
+    &lt;div class="card shadow-sm"&gt;
+      &lt;ul class="list-group list-group-flush"&gt;
+        &lt;li
+          data-role="list-group-item"
+          *ngFor="let payeeSummary of hostRef.payeeSummaries; trackBy: hostRef.ngForTrackByIdFn"
+          class="list-group-item"&gt;
+          &lt;bb-billpay-payee-summary-item
+            [payeeSummary]="payeeSummary"
+          &gt;&lt;/bb-billpay-payee-summary-item&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2List&gt;
+      &lt;ul class="bb-list"&gt;
+        &lt;li
+          data-role="list-group-item"
+          *ngFor="let payeeSummary of hostRef.payeeSummaries; trackBy: hostRef.ngForTrackByIdFn"
+          class="bb-list__item"&gt;
+          &lt;bb-billpay-payee-summary-item
+            [payeeSummary]="payeeSummary"
+          &gt;&lt;/bb-billpay-payee-summary-item&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeSummaryItemCustomizable" class="discrete">bbBillpayPayeeSummaryItemCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayeeSummaryItemCustomizable
+  [bbHostRef]="hostRef"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPayeeSummaryItemCustomizable
+  let-hostRef
+&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ListItem"&gt;
+  &lt;div class="d-flex flex-wrap"&gt;
+    &lt;!--TODO: use bootstrap flex-grow when 4.1 version will be available--&gt;
+    &lt;div class="d-flex" style="flex-grow: 1"&gt;
+      &lt;div class="d-flex align-self-center flex-column"&gt;
+        &lt;div&gt;
+          &lt;a
+            (click)="hostRef.handleViewSummary()"
+            class="font-weight-bold"
+            tabIndex="0"
+            role="button"
+            style="cursor:pointer"
+            [attr.aria-label]="'view payee summary for '+hostRef.payeeName"
+            data-role="payee-name"&gt;{{ hostRef.payeeName }}&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.isLatestEbillPaid" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;bb-icon-ui
+            data-role="ebill-payment-icon"
+            name="savings-accounts"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="font-weight-bold text-support pl-1"
+            data-role="ebill-payment-label"
+            i18n="eBill payment scheduled note|Text for the information that an eBill payment is scheduled@@bb-billpay-payee-summary-item.note.eBill-payment-scheduled"
+          &gt;eBill payment scheduled&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsDue" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;bb-icon-ui
+            data-role="receipt-icon"
+            name="receipt"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="font-weight-bold text-support pl-1"
+            data-role="due-date-label"
+            *ngIf="hostRef.payeeSummary?.ebill?.latestBill?.paymentDate as ebillPaymentDate"
+            i18n="Ebill due note|Text for the information about the due eBill@@bb-billpay-payee-summary-item.note.ebill-due"
+          &gt;eBill due on {{ ebillPaymentDate | bbDate: "MMM d" }}&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsInErrorState" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;bb-icon-ui
+            data-role="ebills-error-icon"
+            name="error"
+            color="danger"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUpdateCredentials"&gt;
+            &lt;span
+              class="text-danger font-weight-bold pl-1"
+              data-role="ebills-error-cannot-be-retrieved-message"
+              i18n="Ebills cannot be retrieved error|Error text to display when the eBills cannot be retrieved due to invalid login credentials@@bb-billpay-payee-summary-item.ebill-error.ebills-cannot-be-retrieved"
+            &gt;eBills cannot be retrieved.&lt;/span&gt;
+            &lt;button
+              bbButton
+              color="link"
+              class="btn-sm"
+              (click)="hostRef.handleResolveEbillsErrors()"
+              data-role="ebills-update-login-credentials-button"
+              i18n="Ebills update login credentials link|Button text to display for updating login credentials for the payee@@bb-billpay-payee-summary-item.ebill-link.update-login-credentials"
+              attr.aria-label="Update login credentials for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Ebills update login credentials link aria label|Aria label for updating login credentials for the payee@@bb-billpay-payee-summary-item.ebill-link.aria-label.update-login-credentials"
+              &gt;Update login credentials&lt;/button&gt;
+          &lt;/ng-container&gt;
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorNotSupported"&gt;
+            &lt;span
+              class="text-danger font-weight-bold pl-1"
+              data-role="ebills-error-no-longer-supported-message"
+              i18n="Biller no longer supports ebills error|Error text to display when the payee no longer supports eBills@@bb-billpay-payee-summary-item.ebill-error.ebills-no-longer-available"
+            &gt;This biller no longer supports eBills.&lt;/span&gt;
+            &lt;button
+              bbButton
+              color="link"
+              class="btn-sm"
+              (click)="hostRef.handleResolveEbillsErrors()"
+              data-role="ebills-disabled-button"
+              attr.aria-label="Disable eBills for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Disable eBills link aria label|Aria label for Disable eBills@@bb-billpay-payee-summary-item.ebill-link.ebills-no-longer-available"
+              i18n="Disable eBills for this payee link|Button text to display to disable eBills for the payee@@bb-billpay-payee-summary-item.ebill-link.aria-label.ebills-no-longer-available"
+              &gt;Disable eBills for this payee&lt;/button&gt;
+          &lt;/ng-container&gt;
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUserAction"&gt;
+            &lt;span
+              class="text-danger font-weight-bold pl-1"
+              class="text-danger font-weight-bold pl-1"
+              data-role="ebills-error-login-to-biller-message"
+              i18n="Please log in to biller to resolve error|Error text to display when the user must log into the biller's site to resolve an issue@@bb-billpay-payee-summary-item.ebill-error.log-in-to-bille-site"
+            &gt;Please log in to the biller's site to resolve an issue and continue receiving eBills for this payee.&lt;/span&gt;
+            &lt;button
+              bbButton
+              color="link"
+              class="btn-sm"
+              (click)="hostRef.handleResolveEbillsErrors()"
+              data-role="ebills-refresh-status-button"
+              i18n="Refresh status for payee link|Button text to display for refreshing the status of eBills for the payee@@bb-billpay-payee-summary-item.ebill-link.refresh-status"
+              attr.aria-label="Refresh status for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Refresh status for payee link aria label|Aria label for Refresh status@@bb-billpay-payee-summary-item.ebill-link.aria-label.refresh-status"
+              &gt;Refresh status&lt;/button&gt;
+          &lt;/ng-container&gt;
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUnknown"&gt;
+            &lt;span
+              class="text-danger font-weight-bold pl-1"
+              data-role="ebills-error-try-again-later-message"
+              i18n="Ebills cannot be retrieved error|Error text to display when eBills cannot currently be retreived for the payee@@bb-billpay-payee-summary-item.ebill-error.ebills-cannot-be-retrieved"
+            &gt;eBills cannot be retrieved, please try again later or contact support&lt;/span&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsEnabledButNotDue" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;span
+            class="font-weight-bold text-support pl-1"
+            data-role="no-due-date-label"
+            i18n="No eBill due note|Text for the information that no eBill is due@@bb-billpay-payee-summary-item.note.no-ebill-due"
+          &gt;No eBills due&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsAvailable" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;bb-icon-ui
+            data-role="receipt-icon"
+            name="receipt"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="font-weight-bold text-support pl-1"
+            data-role="ebills-available-label"
+            i18n="eBills available note|Text for the information that eBills are available@@bb-billpay-payee-summary-item.note.ebills-available"
+          &gt;eBills available&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areRecurringPaymentsScheduled" class="d-flex align-items-center text-small mt-1"&gt;
+          &lt;bb-icon-ui
+            data-role="recurring-payment-icon"
+            name="repeat"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="font-weight-bold text-support pl-1"
+            data-role="recurring-payment-label"
+            i18n="Recurring payments scheduled note|Text for the information that recurring payments are scheduled@@bb-billpay-payee-summary-item.note.recurring-payments-scheduled"
+          &gt;Recurring payments scheduled&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="hostRef.areEbillsDue" class="align-self-center ml-auto pl-3 font-weight-bold"&gt;
+        &lt;bb-amount-ui
+          data-role="amount"
+          [amount]="hostRef.payeeSummary?.ebill?.latestBill?.amount?.amount"
+          [currency]="hostRef.payeeSummary?.ebill?.latestBill?.amount?.currencyCode"&gt;
+        &lt;/bb-amount-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;ng-container
+      bbBillpayPayeeSummaryItemButtonCustomizable
+      [bbHostRef]="hostRef"
+    &gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2ListItem&gt;
+
+    &lt;div class="bb-stack bb-stack--wrap"&gt;
+      &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+        &lt;a
+          (click)="hostRef.handleViewSummary()"
+          class="bb-text-bold"
+          tabIndex="0"
+          role="button"
+          style="cursor:pointer"
+          [attr.aria-label]="'view payee summary for '+hostRef.payeeName"
+          data-role="payee-name"&gt;{{ hostRef.payeeName }}&lt;/a&gt;
+
+        &lt;div *ngIf="hostRef.isLatestEbillPaid" class="bb-stack bb-stack--align-top"&gt;
+          &lt;bb-icon-ui
+            class="bb-stack__item bb-stack__item--spacing-none"
+            data-role="ebill-payment-icon"
+            name="savings-accounts"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="bb-stack__item bb-text-support"
+            data-role="ebill-payment-label"
+            i18n="eBill payment scheduled note|Text for the information that an eBill payment is scheduled@@bb-billpay-payee-summary-item.note.eBill-payment-scheduled"
+          &gt;eBill payment scheduled&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsDue" class="bb-stack"&gt;
+          &lt;bb-icon-ui
+            class="bb-stack__item bb-stack__item--spacing-sm"
+            data-role="receipt-icon"
+            size="sm"
+            name="receipt"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="bb-stack__item bb-subtitle bb-text-support"
+            data-role="due-date-label"
+            *ngIf="hostRef.payeeSummary?.ebill?.latestBill?.paymentDate as ebillPaymentDate"
+            i18n="Ebill due note|Text for the information about the due eBill@@bb-billpay-payee-summary-item.note.ebill-due"
+          &gt;eBill due on {{ ebillPaymentDate | bbDate: "MMM d" }}&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsInErrorState" class="bb-stack bb-stack--wrap bb-stack--align-top"&gt;
+
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUpdateCredentials"&gt;
+            &lt;div class="bb-stack__item bb-stack__item--spacing-sm"&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;bb-icon-ui
+                  class="bb-stack__item bb-stack__item--spacing-sm"
+                  data-role="ebills-error-icon"
+                  size="sm"
+                  name="error-outline"
+                  color="danger"
+                &gt;&lt;/bb-icon-ui&gt;
+                &lt;div class="bb-stack__item bb-subtitle bb-text-danger"
+                     data-role="ebills-error-cannot-be-retrieved-message"
+                     i18n="Ebills cannot be retrieved error|Error text to display when the eBills cannot be retrieved due to invalid login credentials@@bb-billpay-payee-summary-item.ebill-error.ebills-cannot-be-retrieved"&gt;
+                  eBills cannot be retrieved.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a
+              class="bb-stack__item"
+              (click)="hostRef.handleResolveEbillsErrors()"
+              tabIndex="0"
+              role="button"
+              class="bb-stack__item bb-subtitle"
+              style="cursor:pointer"
+              i18n="Ebills update login credentials link|Button text to display for updating login credentials for the payee@@bb-billpay-payee-summary-item.ebill-link.update-login-credentials"
+              attr.aria-label="Update login credentials for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Ebills update login credentials link aria label|Aria label for updating login credentials for the payee@@bb-billpay-payee-summary-item.ebill-link.aria-label.update-login-credentials"
+              data-role="ebills-update-login-credentials-button"&gt;Update login credentials
+            &lt;/a&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorNotSupported"&gt;
+            &lt;div class="bb-stack__item bb-stack__item--spacing-sm"&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;bb-icon-ui
+                  class="bb-stack__item bb-stack__item--spacing-sm"
+                  data-role="ebills-error-icon"
+                  size="sm"
+                  name="error-outline"
+                  color="danger"
+                &gt;&lt;/bb-icon-ui&gt;
+                &lt;div class="bb-stack__item bb-subtitle  bb-text-danger"
+                     data-role="ebills-error-no-longer-supported-message"
+                     i18n="Biller no longer supports ebills error|Error text to display when the payee no longer supports eBills@@bb-billpay-payee-summary-item.ebill-error.ebills-no-longer-available"&gt;
+                  This biller no longer supports eBills.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a
+              (click)="hostRef.handleResolveEbillsErrors()"
+              tabIndex="0"
+              role="button"
+              class="bb-stack__item bb-subtitle"
+              style="cursor:pointer"
+              attr.aria-label="Disable eBills for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Disable eBills link aria label|Aria label for Disable eBills@@bb-billpay-payee-summary-item.ebill-link.ebills-no-longer-available"
+              i18n="Disable eBills for this payee link|Button text to display to disable eBills for the payee@@bb-billpay-payee-summary-item.ebill-link.aria-label.ebills-no-longer-available"
+              data-role="ebills-disabled-button"&gt;Disable eBills for this payee
+            &lt;/a&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUserAction"&gt;
+            &lt;div class="bb-stack__item"&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;bb-icon-ui
+                  class="bb-stack__item bb-stack__item--spacing-sm"
+                  data-role="ebills-error-icon"
+                  name="error-outline"
+                  size="sm"
+                  color="danger"
+                &gt;&lt;/bb-icon-ui&gt;
+                &lt;div class="bb-stack__item bb-subtitle bb-text-danger"
+                     data-role="ebills-error-login-to-biller-message"
+                     i18n="Please log in to biller to resolve error|Error text to display when the user must log into the biller's site to resolve an issue@@bb-billpay-payee-summary-item.ebill-error.log-in-to-bille-site"&gt;
+                  Please log in to the biller's site to resolve an issue and continue receiving eBills for this payee.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a
+              (click)="hostRef.handleResolveEbillsErrors()"
+              tabIndex="0"
+              role="button"
+              class="bb-stack__item bb-subtitle"
+              style="cursor:pointer"
+              i18n="Refresh status for payee link|Button text to display for refreshing the status of eBills for the payee@@bb-billpay-payee-summary-item.ebill-link.refresh-status"
+              attr.aria-label="Refresh status for {{ hostRef.payeeName }}"
+              i18n-attr.aria-label="Refresh status for payee link aria label|Aria label for Refresh status@@bb-billpay-payee-summary-item.ebill-link.aria-label.refresh-status"
+              data-role="ebills-refresh-status-button"&gt;Refresh status
+            &lt;/a&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngIf="hostRef.isEbillsErrorUnknown"&gt;
+            &lt;div class="bb-stack"&gt;
+              &lt;bb-icon-ui
+                class="bb-stack__item bb-stack__item--spacing-sm"
+                data-role="ebills-error-icon"
+                name="error-outline"
+                size="sm"
+                color="danger"
+              &gt;&lt;/bb-icon-ui&gt;
+              &lt;div class="bb-stack__item bb-subtitle bb-text-danger"
+                   data-role="ebills-error-try-again-later-message"
+                   i18n="Ebills cannot be retrieved error|Error text to display when eBills cannot currently be retreived for the payee@@bb-billpay-payee-summary-item.ebill-error.ebills-cannot-be-retrieved"&gt;
+                eBills cannot be retrieved, please try again later or contact support
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsEnabledButNotDue"
+             class="bb-text-support"
+             data-role="no-due-date-label"
+             i18n="No eBill due note|Text for the information that no eBill is due@@bb-billpay-payee-summary-item.note.no-ebill-due"&gt;
+          No eBills due
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areEbillsAvailable" class="bb-stack"&gt;
+          &lt;bb-icon-ui
+            class="bb-stack__item bb-stack__item--spacing-sm"
+            data-role="receipt-icon"
+            size="sm"
+            name="receipt"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="bb-text-support bb-subtitle bb-stack__item"
+            data-role="ebills-available-label"
+            i18n="eBills available note|Text for the information that eBills are available@@bb-billpay-payee-summary-item.note.ebills-available"
+          &gt;eBills available&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.areRecurringPaymentsScheduled" class="bb-stack"&gt;
+          &lt;bb-icon-ui
+            class="bb-stack__item bb-stack__item--spacing-sm"
+            data-role="recurring-payment-icon"
+            size="sm"
+            name="repeat"
+            color="secondary"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;div class="bb-stack__item bb-subtitle bb-text-support"
+               data-role="recurring-payment-label"
+               i18n="Recurring payments scheduled note|Text for the information that recurring payments are scheduled@@bb-billpay-payee-summary-item.note.recurring-payments-scheduled"&gt;
+            Recurring payments scheduled
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+        &lt;div class="bb-stack"&gt;
+          &lt;div class="bb-stack__item bb-stack__item--fill bb-text-align-left bb-text-align-right--md-up"&gt;
+            &lt;bb-amount-ui
+              class="bb-text-bold"
+              *ngIf="hostRef.areEbillsDue"
+              data-role="amount"
+              [amount]="hostRef.payeeSummary?.ebill?.latestBill?.amount?.amount"
+              [currency]="hostRef.payeeSummary?.ebill?.latestBill?.amount?.currencyCode"&gt;
+            &lt;/bb-amount-ui&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-stack__item"&gt;
+            &lt;ng-container
+              bbBillpayPayeeSummaryItemButtonCustomizable
+              [bbHostRef]="hostRef"
+            &gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeSummaryItemButtonCustomizable" class="discrete">bbBillpayPayeeSummaryItemButtonCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBillpayPayeeSummaryItemButtonCustomizable
+  let-hostRef
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Dropdown"&gt;
+    &lt;div class="align-self-center ml-auto pl-3 py-1"&gt;
+      &lt;div class="btn-group" data-role="button-group"&gt;
+        &lt;button
+          bbButton
+          data-role="pay-button"
+          (click)="hostRef.handlePayPayee(hostRef.ONE_OFF_PAYMENT)"
+          i18n="Pay payee button|Button for paying the payee@@bb-billpay-payee-summary-item.button.pay"
+          attr.aria-label="Pay {{ hostRef.payeeName }}"
+          i18n-attr.aria-label="Pay payee aria label|Aria label for paying the payee@@bb-billpay-payee-summary-item.aria-label.pay"&gt;
+          Pay
+        &lt;/button&gt;
+
+        &lt;bb-dropdown-menu-ui
+          class="btn-group"
+          btnColor="primary"
+          icon="caret-down"
+          data-role="payee-dropdown-menu"
+          attr.aria-label="More options for {{ hostRef.payeeName }}"
+          i18n-attr.aria-label="More options for payee aria label|Aria label for more payee options@@bb-billpay-payee-summary-item.aria-label.more-payee-options"
+        &gt;
+          &lt;ng-template bbDropdownMenuItem&gt;
+            &lt;a role="menuitem"
+               (click)="hostRef.handlePayPayee(hostRef.ONE_OFF_PAYMENT)"&gt;
+            &lt;span
+              class="dropdown-item bb-dropdown-single-select"
+              i18n="Make a payment dropdown list button|Button in the dropdown list for paying the payee@@bb-billpay-payee-summary-item.button.dropdown.pay"
+            &gt;Make a payment&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a role="menuitem"
+               target="_blank"
+               data-role="recurring-payments-menu-item"
+               (click)="hostRef.handlePayPayee(hostRef.RECURRING_PAYMENT)"&gt;
+            &lt;span
+              class="dropdown-item bb-dropdown-single-select"
+              i18n="Make a recurring payment dropdown list button|Button in the dropdown list for making a recurring payment for the payee@@bb-billpay-payee-summary-item.button.dropdown.pay-recurring"
+            &gt;Set up a recurring payment&lt;/span&gt;
+            &lt;/a&gt;
+
+            &lt;ng-container *ngIf="hostRef.payeeSummary?.ebill?.capable"&gt;
+              &lt;a
+                role="menuitem"
+                *ngIf="hostRef.ebillLink"
+                target="_blank"&gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="View eBill dropdown list button|Button in the dropdown list for viewing the eBill@@bb-billpay-payee-summary-item.button.dropdown.view-eBill"
+              &gt;View eBill&lt;/span&gt;
+              &lt;/a&gt;
+
+              &lt;a
+                role="menuitem"
+                target="_blank"
+                data-role="stop-ebills-menu-item"
+                *ngIf="hostRef.showStopEbills"
+                (click)="hostRef.handleStopEbills($event)"&gt;
+                &lt;span
+                  class="dropdown-item bb-dropdown-single-select"
+                  i18n="Stop eBills dropdown list button|Button in the dropdown list for getting eBills@@bb-billpay-payee-summary-item.button.dropdown.get-eBills"
+                &gt;Stop eBills&lt;/span&gt;
+              &lt;/a&gt;
+
+              &lt;a
+                data-role="get-ebills-menu-item"
+                *ngIf="hostRef.areEbillsAvailable"
+                role="menuitem"
+                target="_blank"
+                (click)="hostRef.handleGetEbills()"&gt;
+             &lt;span
+               class="dropdown-item bb-dropdown-single-select"
+               i18n="Get eBills dropdown list button|Button in the dropdown list for getting eBills@@bb-billpay-payee-summary-item.button.dropdown.get-eBills"
+             &gt;Get eBills&lt;/span&gt;
+              &lt;/a&gt;
+
+            &lt;/ng-container&gt;
+
+            &lt;div class="dropdown-divider border-secondary"&gt;&lt;/div&gt;
+            &lt;a
+              role="menuitem"
+              data-role="view-payee-menu-item"
+              (click)="hostRef.handleViewSummary()"&gt;
+            &lt;span
+              class="dropdown-item bb-dropdown-single-select"
+              i18n="View payee dropdown list button|Button in the dropdown list for viewing the payee@@bb-billpay-payee-summary-item.button.dropdown.view-payee"
+            &gt;View payee&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a
+              role="menuitem"
+              data-role="edit-payee-menu-item"
+              (click)="hostRef.handleEditPayee()"&gt;
+            &lt;span
+              class="dropdown-item bb-dropdown-single-select"
+              i18n="Edit payee dropdown list button|Button in the dropdown list for editing the payee@@bb-billpay-payee-summary-item.button.dropdown.edit-payee"
+            &gt;Edit payee&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a role="menuitem" data-role="delete-payee-menu-item"
+               (click)="hostRef.handleDeletePayee($event)"
+            &gt;
+            &lt;span
+              class="dropdown-item bb-dropdown-single-select"
+              i18n="Delete payee dropdown list button|Button in the dropdown list for deleting the payee@@bb-billpay-payee-summary-item.button.dropdown.delete-payee"
+            &gt;Delete payee&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-dropdown-menu-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2Dropdown&gt;
+
+      &lt;div class="btn-group" data-role="button-group"&gt;
+        &lt;button
+          bbButton
+          data-role="pay-button"
+          (click)="hostRef.handlePayPayee(hostRef.ONE_OFF_PAYMENT)"
+          i18n="Pay payee button|Button for paying the payee@@bb-billpay-payee-summary-item.button.pay"
+          attr.aria-label="Pay {{ hostRef.payeeName }}"
+          i18n-attr.aria-label="Pay payee aria label|Aria label for paying the payee@@bb-billpay-payee-summary-item.aria-label.pay"&gt;
+          Pay
+        &lt;/button&gt;
+
+        &lt;bb-dropdown-menu-ui
+          class="btn-group"
+          btnColor="primary"
+          container="body"
+          icon="caret-down"
+          data-role="payee-dropdown-menu"
+          attr.aria-label="More options for {{ hostRef.payeeName }}"
+          i18n-attr.aria-label="More options for payee aria label|Aria label for more payee options@@bb-billpay-payee-summary-item.aria-label.more-payee-options"
+        &gt;
+          &lt;ng-template bbDropdownMenuItem&gt;
+            &lt;a role="menuitem"
+               (click)="hostRef.handlePayPayee(hostRef.ONE_OFF_PAYMENT)"&gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="Make a payment dropdown list button|Button in the dropdown list for paying the payee@@bb-billpay-payee-summary-item.button.dropdown.pay"
+              &gt;Make a payment&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a role="menuitem"
+               target="_blank"
+               data-role="recurring-payments-menu-item"
+               (click)="hostRef.handlePayPayee(hostRef.RECURRING_PAYMENT)"&gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="Make a recurring payment dropdown list button|Button in the dropdown list for making a recurring payment for the payee@@bb-billpay-payee-summary-item.button.dropdown.pay-recurring"
+              &gt;Set up a recurring payment&lt;/span&gt;
+            &lt;/a&gt;
+
+            &lt;ng-container *ngIf="hostRef.payeeSummary?.ebill?.capable"&gt;
+              &lt;a
+                role="menuitem"
+                *ngIf="hostRef.ebillLink"
+                target="_blank"&gt;
+                &lt;span
+                  class="dropdown-item bb-dropdown-single-select"
+                  i18n="View eBill dropdown list button|Button in the dropdown list for viewing the eBill@@bb-billpay-payee-summary-item.button.dropdown.view-eBill"
+                &gt;View eBill&lt;/span&gt;
+              &lt;/a&gt;
+
+              &lt;a role="menuitem"
+                 target="_blank"
+                 data-role="stop-ebills-menu-item"
+                 *ngIf="hostRef.showStopEbills"
+                 (click)="hostRef.handleStopEbills($event)"&gt;
+                  &lt;span
+                    class="dropdown-item bb-dropdown-single-select"
+                    i18n="Stop eBills dropdown list button|Button in the dropdown list for getting eBills@@bb-billpay-payee-summary-item.button.dropdown.get-eBills"
+                  &gt;Stop eBills&lt;/span&gt;
+              &lt;/a&gt;
+
+              &lt;a
+                data-role="get-ebills-menu-item"
+                *ngIf="hostRef.areEbillsAvailable"
+                role="menuitem"
+                target="_blank"
+                (click)="hostRef.handleGetEbills()"&gt;
+                 &lt;span
+                   class="dropdown-item bb-dropdown-single-select"
+                   i18n="Get eBills dropdown list button|Button in the dropdown list for getting eBills@@bb-billpay-payee-summary-item.button.dropdown.get-eBills"
+                 &gt;Get eBills&lt;/span&gt;
+              &lt;/a&gt;
+
+            &lt;/ng-container&gt;
+
+            &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+            &lt;a
+              role="menuitem"
+              data-role="view-payee-menu-item"
+              (click)="hostRef.handleViewSummary()"&gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="View payee dropdown list button|Button in the dropdown list for viewing the payee@@bb-billpay-payee-summary-item.button.dropdown.view-payee"
+              &gt;View payee&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a role="menuitem" data-role="edit-payee-menu-item"
+              (click)="hostRef.handleEditPayee()"&gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="Edit payee dropdown list button|Button in the dropdown list for editing the payee@@bb-billpay-payee-summary-item.button.dropdown.edit-payee"
+              &gt;Edit payee&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a role="menuitem" data-role="delete-payee-menu-item"
+               (click)="hostRef.handleDeletePayee($event)"
+            &gt;
+              &lt;span
+                class="dropdown-item bb-dropdown-single-select"
+                i18n="Delete payee dropdown list button|Button in the dropdown list for deleting the payee@@bb-billpay-payee-summary-item.button.dropdown.delete-payee"
+              &gt;Delete payee&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-dropdown-menu-ui&gt;
+      &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeDeleteComponentCustomizable" class="discrete">bbBillpayPayeeDeleteComponentCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayeeDeleteComponentCustomizable
+  [bbHostRef]="hostRef"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPayeeDeleteComponentCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-modal-ui
+    [isOpen]="true"
+    (cancel)="hostRef.cancelModal()"
+    data-role="payee-delete-modal"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          data-role="payee-delete-modal-header"
+          headingType="h3"
+          i18n-heading="Payee delete modal header@@billpay.payee-delete-modal.header"
+          heading="Delete payee?"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;span
+          i18n="Payee delete modal body@@billpay.payee-delete-modal.body"
+          data-role="payee-delete-modal-body"
+        &gt;Are you sure you want to delete this payee? This action cannot be undone.&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          i18n="cancel modal button|Cancel payee delete button@@billpay.payee-delete-modal.cancel-button"
+          (click)="hostRef.cancelModal()"
+          data-role="payee-delete-modal-cancel-button"
+        &gt;Keep payee&lt;/button&gt;
+        &lt;button
+          bbButton
+          color="danger"
+          i18n="confirm modal button|Confirm payee delete button@@billpay.payee-delete-modal.confirm-button"
+          (click)="hostRef.confirmModal()"
+          data-role="payee-delete-modal-confirm-button"
+        &gt;Delete payee&lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeNavigateModalComponentCustomizable" class="discrete">bbBillpayPayeeNavigateModalComponentCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayeeNavigateModalComponentCustomizable
+  [bbHostRef]="hostRef"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPayeeNavigateModalComponentCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-modal-ui
+    [isOpen]="true"
+    (cancel)="hostRef.cancelModal()"
+    data-role="payee-navigate-modal"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          data-role="payee-navigate-modal-header"
+          headingType="h3"
+          i18n-heading="Payee navigate modal header@@billpay.payee-navigate-modal.header"
+          heading="Payee cannot be deleted"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;span
+          i18n="Payee navigate modal body@@billpay.payee-navigate-modal.body"
+          data-role="payee-navigate-modal-body"
+        &gt;This payee has upcoming payments which must be canceled before deleting.&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          i18n="cancel modal button|Cancel navigate button@@billpay.payee-navigate-modal.cancel-button"
+          (click)="hostRef.cancelModal()"
+          data-role="payee-navigate-modal-cancel-button"
+        &gt;Keep payee&lt;/button&gt;
+        &lt;button
+          bbButton
+          color="primary"
+          i18n="confirm modal button|Confirm navigate button@@billpay.payee-navigate-modal.confirm-button"
+          (click)="hostRef.confirmModal()"
+          data-role="payee-navigate-modal-confirm-button"
+        &gt;View scheduled payments&lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeListWidgetNotificationMessageCustomizable" class="discrete">bbBillpayPayeeListWidgetNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;div [ngSwitch]="hostRef.notificationType"&gt;
+    &lt;ng-container bbBillpayPayeeListWidgetNotificationMessageCustomizable
+                  [bbHostRef]="hostRef" *ngSwitchCase="'delete'"
+                  [bbTemplateContext]="{
+        payee: selectedDeletePayee() | async
+      }"
+    &gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container bbBillpayPayeeListWidgetNotificationMessageCustomizable
+                  [bbHostRef]="hostRef" *ngSwitchCase="'ebills'"
+                  [bbTemplateContext]="{
+        payee: selectedDeleteEbills() | async
+      }"
+    &gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPayeeListWidgetNotificationMessageCustomizable
+             let-hostRef
+             let-payee="context.payee"
+&gt;
+  &lt;div [ngSwitch]="hostRef.notificationType"&gt;
+    &lt;div *ngSwitchCase="'ebills'"&gt;
+    &lt;span
+      i18n="stop ebill notification message|Payee stop ebill confirmation success notification message@@billpay-payee-list.stop-ebill-confirm.notification.message"
+    &gt;eBills for {{ payee.nickName ? payee.nickName + ' (' + payee.name + ')' : payee.name }} has been stopped successfully&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngSwitchCase="'delete'"&gt;
+    &lt;span
+      i18n="delete payee notification message|Payee delete confirmation success notification message@@billpay-payee-list.delete-payee-confirm.notification.message"
+    &gt;The payee {{ payee.nickName ? payee.nickName + ' (' + payee.name + ')' : payee.name }} has been deleted successfully&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayeeListWidgetNotificationHeaderCustomizable" class="discrete">bbBillpayPayeeListWidgetNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayPayeeListWidgetNotificationHeaderCustomizable
+                [bbHostRef]="hostRef"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPayeeListWidgetNotificationHeaderCustomizable
+             let-hostRef
+&gt;
+  &lt;div [ngSwitch]="hostRef.notificationType"&gt;
+    &lt;span *ngSwitchCase="'ebills'"
+          class="bb-text-bold"
+          i18n="eBills stopped notification header|eBills stopped confirmation success notification header@@billpay-payee-list.confirm.notification.header"
+    &gt;eBills stopped&lt;/span&gt;
+    &lt;span *ngSwitchCase="'delete'"
+          class="bb-text-bold"
+          i18n="delete payee notification header|Payee delete confirmation success notification header@@billpay-payee-list.confirm.notification.header"
+    &gt;Payee deleted&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="view_bill_payees_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPayeeListWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBillpayPayeeListCustomizable</code>,
+<code>bbBillpayPayeeListWidgetNotificationMessageCustomizable</code>,
+<code>bbBillpayPayeeListWidgetNotificationHeaderCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get currentLoadingState(): "" | "loading" | "error";</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns loading states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areBothListsPresent(payeeSummariesByEbill: PayeeSummariesByEbill): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to flag if there are both enabled and not enabled ebill payees.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getEbillTotals(ebillPayeeSummaries?: PayeeSummary[]): Currency[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to get the total of the ebills, grouped by currency.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addPayee(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit a payee with the <code>managePayee</code> event emitter and navigate to payee management.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areButtonsDisabled(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the <strong>Add a payee</strong> button is disabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isDeleteModalOpened: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open a modal to confirm deletion of a payee.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDeletePayee(resolve: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The handle to delete a payee after confirmation and closing of the modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isDeleteEbillsModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open the modal to confirm the stopping of receiving ebills.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isNavigateModalOpened: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the navigate modal is open.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationType: string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification type to render the relevant notification text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPayeeSummaryListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayPayeeSummaryListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeSummaries: PayeeSummary[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The array of the payee summary details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ngForTrackByIdFn(payee: PayeeSummary): string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the ID of the payee parameter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="24"><p class="tableblock"><code>BillpayPayeeSummaryItemComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="24"><p class="tableblock"><code>bbBillpayPayeeSummaryItemCustomizable</code>, <code>bbBillpayPayeeSummaryItemButtonCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleViewSummary($event: Event): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the click-on-payee item to navigate to payee summary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get payeeName(): string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter to return the payee nickname or name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isLatestEbillPaid(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the latest ebill is paid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areEbillsDue(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if there is an ebill due.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeSummary: PayeeSummary | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input</code> value for the details of the payee summary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areEbillsInErrorState(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the ebill summary is not active.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isEbillsErrorUpdateCredentials(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the ebill summary status is <code>UPDATE_CREDENTIALS</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleResolveEbillsErrors(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the resolving error with the ID of the <code>payeeSummary</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isEbillsErrorNotSupported(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the ebill summary status is <code>NOT_SUPPORTED</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isEbillsErrorUserAction(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns  true   if the ebill summary status is <code>USER_ACTION</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isEbillsErrorUnknown(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the ebill summary status is <code>ERROR</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areEbillsEnabledButNotDue(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if there are no due ebills.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areEbillsAvailable(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns true if the ebill is available but not enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get areRecurringPaymentsScheduled(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the payee has recurring payments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handlePayPayee(type?: PaymentType): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle ebill payments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ONE_OFF_PAYMENT: PaymentType;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The one-off payment type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RECURRING_PAYMENT: PaymentType;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The recurring payment type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get ebillLink(): string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the URL of the latest payment ebill.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get showStopEbills(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns if the ebill is enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleStopEbills($event: Event): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the stopping of ebills.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleGetEbills(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the payee summary for ebill enrollment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleViewSummary($event: Event): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit payee summary for viewing the summary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleEditPayee(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit payee summary for editing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleDeletePayee($event: Event): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit <code>payeesummary</code> as the selected payee to delete.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPayeeDeleteModalComponent, BillpayPayeeNavigateModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayPayeeDeleteComponentCustomizable</code>, <code>bbBillpayPayeeNavigateModalComponentCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to close the modal without action.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to confirm the action in the modal.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="view_bill_payees_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { MyCustomWidgetComponent } from './my-custom-widget.component';
+import { BillpayDataHttpModule } from '@backbase/data-ang/billpay';
+import { BillpayCommonModule } from '@backbase/billpay-common';
+import { BillpayPayeeListWidgetModule } from '@backbase/billpay-payee-list-widget-ang';
+import { BillpayEnrolmentWidgetModule } from '@backbase/billpay-enrolment-widget-ang';
+
+@NgModule({
+  declarations: [MyCustomWidgetComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { MyCustomWidgetComponent },
+    }),
+    BillpayDataHttpModule,
+    BillpayCommonModule,
+    BillpayPayeeListWidgetModule,
+    BillpayEnrolmentWidgetModule,
+  ],
+})
+export class MyCustomWidgetModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">"@Component({
+  selector: 'bp-my-custom-widget',
+  template: `&lt;bb-billpay-payee-list-widget-ang&gt;&lt;/bb-billpay-payee-list-widget-ang&gt;`,
+  styles: [],
+})
+@CopyRoutes(BillpayManagePayeeWidgetComponent)
+export class MyCustomWidgetComponent {}"</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_bill_payees_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification dismiss time</strong></p>
+<p class="tableblock">Sets the number of seconds that notifications triggered by this widget are visible.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Manage payee</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking add payee.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.managePayee</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit manual payee</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking edit payee and the payee type is manual.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.editManualPayee</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit electronic payee</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking edit payee and the payee type is electronic. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.editElectronicPayee</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pay one-off payee</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking make a payment.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.payPayeeOneOff</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pay recurring payee</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking make a recurring payment. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.payPayeeRecurring</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payee list</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when returning to payee list or successfully deleting a payee. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.paymentsList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payveris eBill enrollment</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when intending to enroll in eBills. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.payverisEbillEnrol</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payee summary</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when clicking an individual payee. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.payeeSummary</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

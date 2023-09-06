@@ -1,0 +1,3746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Manage bill payee</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="bill_pay_manage_payee_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage bill payee</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html"><span class="toc-current">Manage bill payee</span></a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="bill_pay_manage_payee_reference" class="sect0">Manage bill payee</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#manage_bill_pay_payee_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="manage_bill_pay_payee_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-billpay-manage-payee-widget&gt;</code></p>
+</div>
+<h2 id="manage_bill_pay_payee_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BillpayManagePayeeWidgetModule } from '@backbase/billpay-manage-payee-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+For standalone use and testing of this widget, import <code>BillpayEnrolmentWidgetModule</code> in the <code>app.module.ts</code> of your app.
+All Bill Pay widgets are closely related to each other, so it is recommended to use them together as well.
+</td>
+</tr>
+</table>
+</div>
+<h2 id="manage_bill_pay_payee_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_1_12.svg?ver=3.10.1" alt="billpay manage payee slots 1 12"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_2_3_25.svg?ver=3.10.1" alt="billpay manage payee slots 2 3 25"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_4_26.svg?ver=3.10.1" alt="billpay manage payee slots 4 26"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_6_7.svg?ver=3.10.1" alt="billpay manage payee slots 6 7"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_11_13.svg?ver=3.10.1" alt="billpay manage payee slots 11 13"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_10_14.svg?ver=3.10.1" alt="billpay manage payee slots 10 14"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payee_slots_15_16.svg?ver=3.10.1" alt="billpay manage payee slots 15 16"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpaySearchPayeeCustomizable">bbBillpaySearchPayeeCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateManualPayeeCustomizable">bbBillpayCreateManualPayeeCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayManualPayeeFormCustomizable">bbBillpayManualPayeeFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayManualPayeeReviewCustomizable">bbBillpayManualPayeeReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayPaymentFormCustomizable_manage_payee">bbBillpayPaymentFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable">bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable">bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCancelNewPayeeModalCustomizable">bbBillpayCancelNewPayeeModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCancelEditPayeeModalCustomizable">bbBillpayCancelEditPayeeModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayElectronicPayeeReviewCustomizable">bbBillpayElectronicPayeeReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayElectronicPayeeFormCustomizable">bbBillpayElectronicPayeeFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayElectronicPayeeSearchCustomizable">bbBillpayElectronicPayeeSearchCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateElectronicPayeeCustomizable">bbBillpayCreateElectronicPayeeCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateElectronicPayeeReviewCustomizable">bbBillpayCreateElectronicPayeeReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable">bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable">bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditElectronicPayeeCustomizable">bbBillpayEditElectronicPayeeCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditElectronicPayeeReviewCustomizable">bbBillpayEditElectronicPayeeReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable">bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable">bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditManualPayeeCustomizable">bbBillpayEditManualPayeeCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditManualPayeeReviewCustomizable">bbBillpayEditManualPayeeReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable">bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayEditManualPayeeReviewNotificationMessageCustomizable">bbBillpayEditManualPayeeReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayAddressFormCustomizable">bbBillpayAddressFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payee_reference.html#bbBillpayCreateManualPayeeReviewCustomizable">bbBillpayCreateManualPayeeReviewCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBillpaySearchPayeeCustomizable" class="discrete">bbBillpaySearchPayeeCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpaySearchPayeeCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpaySearchPayeeCustomizable let-host&gt;
+  &lt;ng-container *ngIf="!host.isThemeV2Enabled; else themeV2SearchPayee"&gt;
+    &lt;section class="container-small"&gt;
+      &lt;bb-fieldset-ui
+        heading="Find a payee"
+        i18n-heading="Find a payee heading|Form heading@@billpay-manage-payee.search.form.heading"
+      &gt;
+        &lt;bb-billpay-electronic-payee-search
+          (payeeSelected)="host.onPayeeSelected($event)"
+          data-role="search-box"
+        &gt;&lt;/bb-billpay-electronic-payee-search&gt;
+        &lt;div
+          i18n="Payee search description|Description under search box@@billpay-manage-payee.search.form.description"
+        &gt;If the payee can’t be found, you can choose to enter their details manually&lt;/div&gt;
+      &lt;/bb-fieldset-ui&gt;
+      &lt;button bbButton
+        data-role="enter-details-button"
+        (click)="host.createManualPayee()"
+        color="secondary"
+        i18n="button label|Create manual payee button@@billpay-manage-payee.search.form.button"
+      &gt;
+        Enter details manually
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;button bbButton
+                data-role="cancel-button"
+                (click)="host.onCanceled()"
+                color="link"
+                i18n="button label|Cancel payee search button@@billpay-manage-payee.cancel.form.button"
+                class="mt-4"
+        &gt;
+          Cancel
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2SearchPayee&gt;
+    &lt;div class="card card-lg"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;section class="bb-block bb-block--md"&gt;
+          &lt;bb-header-ui
+            headingType="h2"
+            i18n-heading="Find a payee heading|Form heading@@billpay-manage-payee.search.form.heading"
+            heading="Find a payee"&gt;
+          &lt;/bb-header-ui&gt;
+          &lt;bb-billpay-electronic-payee-search
+            (payeeSelected)="host.onPayeeSelected($event)"
+            data-role="search-box"
+          &gt;&lt;/bb-billpay-electronic-payee-search&gt;
+          &lt;div
+            class="bb-block bb-block--md"
+            i18n="Payee search description|Description under search box@@billpay-manage-payee.search.form.description"
+          &gt;If the payee can’t be found, you can choose to enter their details manually
+          &lt;/div&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse bb-block bb-block--xl"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              data-role="enter-details-button"
+              (click)="host.createManualPayee()"
+              color="secondary"
+              i18n="button label|Create manual payee button@@billpay-manage-payee.search.form.button"
+            &gt;
+              Enter details manually
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              data-role="cancel-button"
+              (click)="host.onCanceled()"
+              color="link"
+              i18n="button label|Cancel payee search button@@billpay-manage-payee.cancel.form.button"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateManualPayeeCustomizable" class="discrete">bbBillpayCreateManualPayeeCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCreateManualPayeeCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayCreateManualPayeeCustomizable let-host&gt;
+  &lt;bb-billpay-manual-payee-form
+    [payeeFormState]="host.payeeFormState | async"
+    (formSubmitted)="host.onFormSubmitted($event)"
+    (formCanceled)="host.onFormCanceled()"
+    (backToSearch)="host.onBackToSearch()"
+    (valueChanged)="host.onFormValueChanged()"
+  &gt;
+  &lt;/bb-billpay-manual-payee-form&gt;
+  &lt;bb-billpay-cancel-new-payee-modal
+    *ngIf="host.isDiscardModalOpen"
+    [findPayee]="hostRef.isFindPayeeModal"
+    (resolve)="host.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-new-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayManualPayeeFormCustomizable" class="discrete">bbBillpayManualPayeeFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayManualPayeeFormCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayManualPayeeFormCustomizable
+  let-host&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+    &lt;section class="container-small"&gt;
+      &lt;form
+        #form
+        data-role="manual-payee-form"
+        (ngSubmit)="host.onSubmit(host.payeeForm)"
+        [formGroup]="host.payeeForm"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="!host.editForm"
+          modifier="warning"
+          title="Please note that payees entered manually will have a longer payment processing time and no eBill functionality"
+          i18n-title="alert title|For create payee form alert@@billpay-manual-payee-form.alert"
+          data-role="alert-message"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;label
+          class="form-label mt-2 mb-4 w-100"
+          data-role="name-label"
+        &gt;
+          &lt;ng-container
+            i18n="label|Label for company, organisation, individual's name field@@billpay-manual-payee-form.name"
+          &gt;Company, organisation or individual's name&lt;/ng-container&gt;
+          &lt;input
+            formControlName="name"
+            class="form-control my-2"
+            data-role="name-input"
+            aria-label="Company, organisation or individual's name"
+            i18n-aria-label="aria label|Aria label for company or organisation field@@billpay-manual-payee-form.company-aria-label"
+          &gt;
+          &lt;bb-input-validation-message-ui
+            role="alert"
+            [showErrors]="host.hasError('name', 'required')"
+            i18n="error text|Name is required error text@@billpay-manual-payee-form.error.name-required"
+            data-role="name-error-required"
+          &gt;
+            Please enter a name
+          &lt;/bb-input-validation-message-ui&gt;
+          &lt;bb-input-validation-message-ui
+            role="alert"
+            [showErrors]="host.hasError('name', 'minlength')"
+            i18n="error text|Name minlength error text@@billpay-manual-payee-form.error.name-minlength"
+            data-role="name-error-minlength"
+          &gt;
+            Name must be at least 2 characters
+          &lt;/bb-input-validation-message-ui&gt;
+          &lt;bb-input-validation-message-ui
+            role="alert"
+            [showErrors]="host.hasError('name', 'maxlength')"
+            i18n="error text|Name max length error text@@billpay-manual-payee-form.error.name-maxlength"
+            data-role="name-error-maxlength"
+          &gt;
+            Name may not be over a hundred characters
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/label&gt;
+
+        &lt;bb-fieldset-ui
+          i18n-heading="Fieldset heading|Payee contact details heading@@billpay-manual-payee-form.payee-details-heading"
+          heading="Payee contact details"
+        &gt;
+          &lt;bb-billpay-address-form formGroupName="address"&gt;&lt;/bb-billpay-address-form&gt;
+
+          &lt;label
+            class="form-label my-2 d-block"
+            data-role="phone-number-label"
+          &gt;
+            &lt;ng-container
+              i18n="label|Label for phone number field@@billpay-manual-payee-form.phone-label"
+            &gt;Phone number&amp;nbsp;&lt;/ng-container&gt;&lt;span
+              i18n="label optional|Label for optional field@@billpay-manual-payee-form.optional-label"
+              class="text-support"
+            &gt;(optional)&lt;/span&gt;
+            &lt;input
+              class="form-control my-2 col-12 col-sm-4"
+              formControlName="phoneNumber"
+              data-role="phone-number-input"
+              type="tel"
+              aria-label="Phone number"
+              i18n-aria-label="aria label|Aria label for phone number field@@billpay-manual-payee-form.phone-number-aria-label"
+            &gt;
+            &lt;span
+              class="text-support mt-1 mb-3 d-block"
+              i18n="label|Label for phone number format info message@@billpay-manual-payee-form.phone-format"
+              data-role="phone-number-help-text"
+            &gt;
+              Format +1 XXX XXX XXXX
+            &lt;/span&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('phoneNumber', 'pattern')"
+              i18n="error text|Phone number format error text@@billpay-manual-payee-form.error.phone-number-format"
+              data-role="phone-number-error-pattern"
+            &gt;
+              Phone number format should be +1 xxx xxx xxxx
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/label&gt;
+
+          &lt;label
+            class="form-label mt-2 mb-4 d-block"
+            data-role="account-number-label"
+          &gt;
+            &lt;ng-container
+              i18n="label|Label for account number field@@billpay-manual-payee-form.account-number-label"
+            &gt;Account number&amp;nbsp;&lt;/ng-container&gt;&lt;span
+              i18n="label optional|Label for optional field@@billpay-manual-payee-form.optional-label"
+              class="text-support"
+            &gt;(optional)&lt;/span&gt;
+            &lt;input
+              formControlName="accountNumber"
+              class="form-control my-2 col-12 col-sm-8"
+              data-role="account-number-input"
+              aria-label="Account number"
+              i18n-aria-label="aria label|Aria label for account number field@@billpay-manual-payee-form.account-number-aria-label"
+            &gt;
+            &lt;span
+              class="text-support mt-1 d-block"
+              i18n="label|Label for account number info message@@billpay-manual-payee-form.account-number-info"
+              data-role="account-number-help-text"
+            &gt;If you have an account number for this payee, enter it as it appears on your bill
+            &lt;/span&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('accountNumber', 'minlength')"
+              i18n="error text|Account number minlength error text@@billpay-manual-payee-form.error.account-number-minlength"
+              data-role="account-number-error-minlength"
+            &gt;
+              Account number must be at least 2 characters
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('accountNumber', 'maxlength')"
+              i18n="error text|Account number max length error text@@billpay-manual-payee-form.error.account-number-maxlength"
+              data-role="account-number-error-maxlength"
+            &gt;
+              Account number may not be over a hundred characters
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/label&gt;
+        &lt;/bb-fieldset-ui&gt;
+
+        &lt;bb-fieldset-ui
+          i18n-heading="Payee nickname@@billpay-manual-payee-form.payee-nickname-heading"
+          heading="Payee nickname"
+        &gt;
+          &lt;label
+            class="form-label my-2 d-block"
+            data-role="nickname-label"
+          &gt;
+            &lt;ng-container
+              i18n="label|Label for payee nickname field@@billpay-manual-payee-form.payee-nickname-label"
+            &gt;Create payee nickname&amp;nbsp;&lt;/ng-container&gt;&lt;span
+              i18n="label optional|Label for optional field@@billpay-manual-payee-form.optional-label"
+              class="text-support"
+            &gt;(optional)&lt;/span&gt;
+            &lt;input
+              formControlName="nickName"
+              class="form-control my-2 col-12 col-sm-8"
+              data-role="nickname-input"
+              aria-label="Create payee nickname"
+              i18n-aria-label="aria label|Aria label for create payee nickname field@@billpay-manual-payee-form.create-payee-nickname-aria-label"
+            &gt;
+            &lt;span
+              class="text-support mt-1 d-block"
+              i18n="label|Label for payee nickname info message@@billpay-manual-payee-form.payee-nickname-info"
+              data-role="nickname-help-text"
+            &gt;Choose how you want this payee to appear in bill pay. Only you can see this.&lt;/span&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('nickName', 'minlength')"
+              i18n="error text|Nickname min length error text@@billpay-manual-payee-form.error.nickname-minlength"
+              data-role="nickname-error-minlength"
+            &gt;
+              Nickname must be at least 2 characters
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('nickName', 'maxlength')"
+              i18n="error text|Nickname max length error text@@billpay-manual-payee-form.error.nickname-maxlength"
+              data-role="nickname-error-maxlength"
+            &gt;
+              Nickname may not be over a hundred characters
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/label&gt;
+        &lt;/bb-fieldset-ui&gt;
+
+        &lt;button bbButton
+          type="submit"
+          data-role="continue-button"
+          i18n="Label for button|Manual payee continue button@@billpay-manual-payee-form.continue"
+          class="mr-sm-3 col-sm-auto col-xs-12"
+        &gt;Continue&lt;/button&gt;
+        &lt;button
+          *ngIf="!host.editForm"
+          bbButton
+          data-role="back-button"
+          i18n="Label for button|Find a different payee button@@billpay-manual-payee-form.find-different-payee"
+          (click)="host.toSearch()"
+          class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          color="secondary"
+        &gt;Find a different payee&lt;/button&gt;
+
+        &lt;button bbButton
+          data-role="cancel-button"
+          color="link"
+          class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          (click)="hostRef.cancelForm()"
+        &gt;
+        &lt;span i18n="Cancel edit|Label for a button that cancels form changes@@billpay-electronic-payee-form.cancel"&gt;Cancel&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2Form&gt;
+    &lt;div class="card card-lg"&gt;
+      &lt;section class="card-body"&gt;
+        &lt;form
+          #form
+          data-role="manual-payee-form"
+          (ngSubmit)="host.onSubmit(host.payeeForm)"
+          [formGroup]="host.payeeForm"&gt;
+
+          &lt;bb-alert-ui
+            *ngIf="!host.editForm"
+            modifier="warning"
+            title="Please note that payees entered manually will have a longer payment processing time and no eBill functionality"
+            i18n-title="alert title|For create payee form alert@@billpay-manual-payee-form.alert"
+            data-role="alert-message"
+          &gt;
+          &lt;/bb-alert-ui&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;div class="bb-form-field bb-form-field--md"&gt;
+              &lt;bb-input-text-ui
+                formControlName="name"
+                data-role="name-input"
+                label="Company, organisation or individual's name"
+                i18n-label="label|Label for company, organisation, individual's name field@@billpay-manual-payee-form.name"
+                aria-label="Company, organisation or individual's name"
+                i18n-aria-label="aria label|Aria label for company or organisation field@@billpay-manual-payee-form.company-aria-label"
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('name', 'required')"
+              i18n="error text|Name is required error text@@billpay-manual-payee-form.error.name-required"
+              data-role="name-error-required"
+            &gt;
+              Please enter a name
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('name', 'minlength')"
+              i18n="error text|Name minlength error text@@billpay-manual-payee-form.error.name-minlength"
+              data-role="name-error-minlength"
+            &gt;
+              Name must be at least 2 characters
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="host.hasError('name', 'maxlength')"
+              i18n="error text|Name max length error text@@billpay-manual-payee-form.error.name-maxlength"
+              data-role="name-error-maxlength"
+            &gt;
+              Name may not be over a hundred characters
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+          &lt;bb-fieldset-ui&gt;
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;bb-header-ui
+                headingType="h2"
+                heading="Payee contact details"
+                i18n-heading="Payee contact details heading@@billpay-manual-payee-form.payee-details-heading"
+                data-role="payee-details-heading"
+              &gt;&lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+            &lt;bb-billpay-address-form formGroupName="address"&gt;&lt;/bb-billpay-address-form&gt;
+
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;div class="bb-form-field bb-form-field--sm"&gt;
+                &lt;label
+                for="billpay-phone-number-input"
+                data-role="phone-number-label"
+              &gt;
+                &lt;ng-container
+                  i18n="label|Label for phone number field@@billpay-manual-payee-form.phone-label"
+                &gt;Phone number&amp;nbsp;&lt;/ng-container&gt;&lt;span
+                  i18n="label optional|Label for optional field@@billpay-manual-payee-form.optional-label"
+                &gt;(optional)&lt;/span&gt;&lt;/label&gt;
+                &lt;input
+                  class="form-control"
+                  id="billpay-phone-number-input"
+                  formControlName="phoneNumber"
+                  data-role="phone-number-input"
+                  type="tel"
+                  aria-label="Phone number"
+                  i18n-aria-label="aria label|Aria label for phone number field@@billpay-manual-payee-form.phone-number-aria-label"
+                /&gt;
+              &lt;/div&gt;
+              &lt;span
+                class="bb-subtitle bb-text-support"
+                i18n="label|Label for phone number format info message@@billpay-manual-payee-form.phone-format"
+                data-role="phone-number-help-text"
+              &gt;
+                Format +1 XXX XXX XXXX
+              &lt;/span&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="host.hasError('phoneNumber', 'pattern')"
+                i18n="error text|Phone number format error text@@billpay-manual-payee-form.error.phone-number-format"
+                data-role="phone-number-error-pattern"
+              &gt;
+                Phone number format should be +1 xxx xxx xxxx
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+
+            &lt;div&gt;
+              &lt;div class="bb-form-field bb-form-field--md"&gt;
+                &lt;bb-input-text-ui
+                  formControlName="accountNumber"
+                  data-role="account-number-input"
+                  label="Account number (optional)"
+                  i18n-label="label|Label for account number field@@billpay-manual-payee-form.account-number-label"
+                  aria-label="Account number"
+                  i18n-aria-label="aria label|Aria label for account number field@@billpay-manual-payee-form.account-number-aria-label"
+                &gt;
+                &lt;/bb-input-text-ui&gt;
+              &lt;/div&gt;
+              &lt;span
+                class="bb-subtitle bb-text-support"
+                i18n="label|Label for account number info message@@billpay-manual-payee-form.account-number-info"
+                data-role="account-number-help-text"
+              &gt;If you have an account number for this payee, enter it as it appears on your bill
+              &lt;/span&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="host.hasError('accountNumber', 'minlength')"
+                i18n="error text|Account number minlength error text@@billpay-manual-payee-form.error.account-number-minlength"
+                data-role="account-number-error-minlength"
+              &gt;
+                Account number must be at least 2 characters
+              &lt;/bb-input-validation-message-ui&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="host.hasError('accountNumber', 'maxlength')"
+                i18n="error text|Account number max length error text@@billpay-manual-payee-form.error.account-number-maxlength"
+                data-role="account-number-error-maxlength"
+              &gt;
+                Account number may not be over a hundred characters
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+          &lt;/bb-fieldset-ui&gt;
+
+          &lt;bb-fieldset-ui&gt;
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;bb-header-ui
+                headingType="h2"
+                heading="Payee nickname"
+                i18n-heading="Payee nickname@@billpay-manual-payee-form.payee-nickname-heading"
+                data-role="payee-nickname-heading"
+              &gt;&lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+
+          &lt;div class="bb-block bb-block--md"&gt;
+            &lt;div class="bb-form-field bb-form-field--md"&gt;
+              &lt;bb-input-text-ui
+                formControlName="nickName"
+                data-role="nickname-input"
+                label="Create payee nickname (optional)"
+                i18n-label="label|Label for payee nickname field@@billpay-manual-payee-form.payee-nickname-label"
+                aria-label="Create payee nickname"
+                i18n-aria-label="aria label|Aria label for create payee nickname field@@billpay-manual-payee-form.create-payee-nickname-aria-label"
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+            &lt;/div&gt;
+              &lt;span
+                class="bb-subtitle bb-text-support"
+                i18n="label|Label for payee nickname info message@@billpay-manual-payee-form.payee-nickname-info"
+                data-role="nickname-help-text"
+              &gt;Choose how you want this payee to appear in bill pay. Only you can see this.&lt;/span&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="host.hasError('nickName', 'minlength')"
+                i18n="error text|Nickname min length error text@@billpay-manual-payee-form.error.nickname-minlength"
+                data-role="nickname-error-minlength"
+              &gt;
+                Nickname must be at least 2 characters
+              &lt;/bb-input-validation-message-ui&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="host.hasError('nickName', 'maxlength')"
+                i18n="error text|Nickname max length error text@@billpay-manual-payee-form.error.nickname-maxlength"
+                data-role="nickname-error-maxlength"
+              &gt;
+                Nickname may not be over a hundred characters
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+          &lt;/bb-fieldset-ui&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button bbButton
+              type="submit"
+              data-role="continue-button"
+              i18n="Label for button|Manual payee continue button@@billpay-manual-payee-form.continue"
+              class="bb-button-bar__button"
+            &gt;Continue&lt;/button&gt;
+            &lt;button
+              *ngIf="!host.editForm"
+              bbButton
+              data-role="back-button"
+              i18n="Label for button|Find a different payee button@@billpay-manual-payee-form.find-different-payee"
+              (click)="host.toSearch()"
+              class="bb-button-bar__button"
+              color="secondary"
+            &gt;Find a different payee&lt;/button&gt;
+            &lt;button
+              bbButton
+              data-role="cancel-button"
+              i18n="Label for button|Cancel button@@billpay-manual-payee-form.cancel"
+              (click)="host.cancelForm()"
+              class="bb-button-bar__button"
+              color="link"
+            &gt;Cancel&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayManualPayeeReviewCustomizable" class="discrete">bbBillpayManualPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayManualPayeeReviewCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayManualPayeeReviewCustomizable
+  let-host&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Preview"&gt;
+    &lt;div
+      *ngIf="host.payeeFormState as payee"
+      class="pb-3"&gt;
+      &lt;h5
+        class="pb-2 border-bottom border-secondary"
+        i18n="Manual payee review heading|Label for group of data related to the payee details@@billpay-manual-payee-review.details-heading"
+        data-role="payee-review-heading"&gt;Payee details&lt;/h5&gt;
+      &lt;div class="my-3"&gt;
+        &lt;div i18n="label|Label for payee name@@billpay-manual-payee-review.name"
+          class="font-weight-bold"
+          data-role="payee-name-label"&gt;Payee name
+        &lt;/div&gt;
+        &lt;div data-role="payee-name"&gt;{{ payee.name }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="my-3"&gt;
+        &lt;div i18n="label|Label for payee address@@billpay-manual-payee-review.address"
+          class="font-weight-bold "
+          data-role="payee-address-label"&gt;Address
+        &lt;/div&gt;
+        &lt;div data-role="payee-address-address1"&gt;{{ payee.address.address1 }}&lt;/div&gt;
+        &lt;div data-role="payee-address-address2"&gt;{{ payee.address.address2 }}&lt;/div&gt;
+        &lt;div data-role="payee-address-city"&gt;{{ payee.address.city }}&lt;/div&gt;
+        &lt;div data-role="payee-address-state"&gt;{{ payee.address.state }}&lt;/div&gt;
+        &lt;div data-role="payee-address-postal-code"&gt;{{ payee.address.postalCode }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.phoneNumber"
+        class="my-3"&gt;
+        &lt;div i18n="label|Label for payee phone number@@billpay-manual-payee-review.phone-number"
+          class="font-weight-bold "
+          data-role="payee-phone-number-label"&gt;Phone number
+        &lt;/div&gt;
+        &lt;div data-role="payee-phone-number"&gt;{{ payee.phoneNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.accountNumber"
+        class="my-3"&gt;
+        &lt;div i18n="label|Label for payee account number@@billpay-manual-payee-review.account-number"
+          class="font-weight-bold "
+          data-role="payee-account-number-label"&gt;Account number
+        &lt;/div&gt;
+        &lt;div data-role="payee-account-number"&gt;{{ payee.accountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.nickName"
+        class="my-3"&gt;
+        &lt;div i18n="label|Label for payee nickname@@billpay-manual-payee-review.nickname"
+          class="font-weight-bold "
+          data-role="payee-nickname-label"&gt;Payee nickname
+        &lt;/div&gt;
+        &lt;div data-role="payee-nickname"&gt;{{ payee.nickName }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2Preview&gt;
+    &lt;div
+      *ngIf="host.payeeFormState as payee"
+      class="bb-block bb-block--xl"&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;bb-header-ui
+          headingType="h2"
+          heading="Payee details"
+          i18n-heading="Manual payee review heading|Label for group of data related to the payee details@@billpay-manual-payee-review.details-heading"
+          data-role="payee-review-heading"
+        &gt;&lt;/bb-header-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee name@@billpay-manual-payee-review.name"
+          class="bb-text-semi-bold"
+          data-role="payee-name-label"&gt;Payee name
+        &lt;/div&gt;
+        &lt;div data-role="payee-name"&gt;{{ payee.name }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee address@@billpay-manual-payee-review.address"
+          class="bb-text-semi-bold"
+          data-role="payee-address-label"&gt;Address
+        &lt;/div&gt;
+        &lt;div data-role="payee-address-address1"&gt;{{ payee.address.address1 }}&lt;/div&gt;
+        &lt;div data-role="payee-address-address2"&gt;{{ payee.address.address2 }}&lt;/div&gt;
+        &lt;div&gt;
+          &lt;span data-role="payee-address-city"&gt;{{ payee.address.city }} &lt;/span&gt;
+          &lt;span data-role="payee-address-state"&gt;{{ payee.address.state }} &lt;/span&gt;
+          &lt;span data-role="payee-address-postal-code"&gt;{{ payee.address.postalCode }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.phoneNumber"
+        class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee phone number@@billpay-manual-payee-review.phone-number"
+          class="bb-text-semi-bold"
+          data-role="payee-phone-number-label"&gt;Phone number
+        &lt;/div&gt;
+        &lt;div data-role="payee-phone-number"&gt;{{ payee.phoneNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.accountNumber"
+        class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee account number@@billpay-manual-payee-review.account-number"
+          class="bb-text-semi-bold"
+          data-role="payee-account-number-label"&gt;Account number
+        &lt;/div&gt;
+        &lt;div data-role="payee-account-number"&gt;{{ payee.accountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.nickName"&gt;
+        &lt;div i18n="label|Label for payee nickname@@billpay-manual-payee-review.nickname"
+          class="bb-text-semi-bold"
+          data-role="payee-nickname-label"&gt;Payee nickname
+        &lt;/div&gt;
+        &lt;div data-role="payee-nickname"&gt;{{ payee.nickName }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentFormCustomizable_manage_payee" class="discrete">bbBillpayPaymentFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentFormCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPaymentFormCustomizable let-hostRef&gt;
+  &lt;form
+    data-role="payment-form"
+    [formGroup]="hostRef.paymentForm"
+    (ngSubmit)="hostRef.handleSubmit()"
+  &gt;
+    &lt;!-- Payee To edit Label --&gt;
+    &lt;ng-container
+      *ngIf="hostRef.isEditPayment"&gt;
+      &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2FormTitle"&gt;
+        &lt;h3 *ngIf="hostRef.selectedPayee | async as payee" class="mb-4" data-role="payee-to-edit-header"&gt;
+          &lt;span i18n="Payment to|Payee to edit label@@billpay-manage-payment.payee-to.edit.header"
+          &gt;Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}&lt;/span&gt;
+        &lt;/h3&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-template #themeV2FormTitle&gt;
+        &lt;div class="bb-block bb-block--lg"&gt;
+          &lt;bb-header-ui
+            *ngIf="hostRef.selectedPayee | async as payee"
+            data-role="payee-to-edit-header"
+            headingType="h1"
+            heading="Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}"
+            i18n-heading="Payment to|Payee to edit label@@billpay-manage-payment.payee-to.edit.header"
+          &gt;&lt;/bb-header-ui&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ng-container&gt;
+    &lt;div class="{{hostRef.isThemeV2Enabled ? 'card' : ''}}"&gt;
+      &lt;div class="{{hostRef.isThemeV2Enabled ? 'card-body' : ''}}"&gt;
+        &lt;!-- Account From --&gt;
+        &lt;ng-container bbBillpayPaymentFormAccountFromCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payee To --&gt;
+        &lt;ng-container bbBillpayPaymentFormPayeeToCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payment details --&gt;
+        &lt;ng-container bbBillpayPaymentFormDetailsCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payment overnight delivery address --&gt;
+        &lt;ng-container bbBillpayPaymentFormOvernightAddressCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2FormButtons"&gt;
+          &lt;button
+            bbButton
+            i18n="Make payment button|Button text to make a payment@@bb-billpay-payment-form.button.submit"
+            data-role="button-submit"
+            class="mr-sm-3 col-sm-auto col-xs-12"
+            color="primary"
+            type="submit"
+          &gt;
+            Continue
+          &lt;/button&gt;
+          &lt;button
+            bbButton
+            i18n="Make payment cancel button|Button text to make cancel a payment@@bb-billpay-payment-form.button.cancel"
+            data-role="cancel-payment-button"
+            class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+            (click)="hostRef.cancel()"
+            color="link"
+          &gt;
+            Cancel
+          &lt;/button&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2FormButtons&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              i18n="Make payment button|Button text to make a payment@@bb-billpay-payment-form.button.submit"
+              data-role="button-submit"
+              class="bb-button-bar__button"
+              color="primary"
+              type="submit"
+            &gt;
+              Continue
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              i18n="Make payment cancel button|Button text to make cancel a payment@@bb-billpay-payment-form.button.cancel"
+              data-role="cancel-payment-button"
+              class="bb-button-bar__button"
+              (click)="hostRef.cancel()"
+              color="link"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable" class="discrete">bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable
+    [bbHostRef]="hostRef"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable
+  let-host
+&gt;
+  &lt;ng-container *ngIf="host.payee as payee"&gt;
+    &lt;span
+      data-role="notification-message"
+      i18n="Payee notification message|Payee has created successfully notification@@billpay-create-manual-payee-review.notification.message"
+    &gt;The payee ‘{{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}‘ has been created successfully &lt;/span&gt;
+    &lt;ng-container *ngIf="!host.isThemeV2Enabled; else themeV2PreviewConfirmation"&gt;
+      &lt;div class="d-flex justify-content-end"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-add-payee-button"
+          color="secondary"
+          class="mr-2 mt-2"
+          i18n="notification button|Add another payee@@billpay-create-manual-payee-review.notification.add-button"
+          (click)="hostRef.navigateToPayee()"
+        &gt;
+          Add another payee
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          data-role="notification-payee-button"
+          class="mr-2 mt-2"
+          i18n="notification button|Pay button@@billpay-create-manual-payee-review.notification.pay-button"
+          (click)="hostRef.navigateToNewPayment()"
+        &gt;
+          Pay
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2PreviewConfirmation&gt;
+      &lt;div class="bb-button-bar"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-payee-button"
+          class="bb-button-bar__button"
+          i18n="notification button|Pay button@@billpay-create-manual-payee-review.notification.pay-button"
+          (click)="hostRef.navigateToNewPayment()"
+        &gt;
+          Pay
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          data-role="notification-add-payee-button"
+          color="secondary"
+          class="bb-button-bar__button"
+          i18n="notification button|Add another payee@@billpay-create-manual-payee-review.notification.add-button"
+          (click)="hostRef.navigateToPayee()"
+        &gt;
+          Add another payee
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable" class="discrete">bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable
+    [bbHostRef]="hostRef"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayCreateManualPayeeReviewNotificationHeaderCustomizable
+  let-hostRef
+&gt;
+  &lt;span
+    class="{{hostRef.isThemeV2Enabled ? '' : 'text-dark'}}"
+    i18n="Payee notification header|Payee created success notification header@@billpay-create-manual-payee-review.notification.header"
+  &gt;Payee created&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCancelNewPayeeModalCustomizable" class="discrete">bbBillpayCancelNewPayeeModalCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCancelNewPayeeModalCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayCancelNewPayeeModalCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-modal-ui
+    [isOpen]="true"
+    (cancel)="hostRef.cancelModal()"
+    data-role="cancel-new-payee-modal"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;span
+          *ngIf="!hostRef.findPayee"
+          class="{{hostRef.isThemeV2Enabled ? 'bb-heading-2' : 'text-large font-weight-bold'}}"
+          i18n="Cancel new payee modal header@@billpay.manage-payee.cancel-new-payee-modal.header"
+          data-role="cancel-new-payee-modal-header"
+        &gt;Cancel new payee?&lt;/span&gt;
+        &lt;span
+          *ngIf="hostRef.findPayee"
+          class="{{hostRef.isThemeV2Enabled? 'bb-heading-2': 'text-large font-weight-bold'}}"
+          i18n="Find different payee modal header@@billpay.manage-payee.cancel-new-payee-modal.findheader"
+          data-role="cancel-new-payee-modal-header"
+        &gt;Find different payee?&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;span
+          i18n="Cancel new payee modal body@@billpay.manage-payee.cancel-new-payee-modal.body"
+          data-role="cancel-new-payee-modal-body"
+        &gt;The new payee will be canceled and any details entered will be lost.&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Modal"&gt;
+          &lt;div class="d-flex flex-wrap flex-row-reverse w-100"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="col-sm-auto col-xs-12"
+              (click)="hostRef.confirmModal()"
+              data-role="cancel-new-payee-modal-confirm-button"
+            &gt;
+            &lt;span *ngIf="!hostRef.findPayee"
+            i18n="confirm modal button|Cancel payee confirmation button@@billpay.manage-payee.cancel-new-payee-modal.confirm-button"&gt;
+              Cancel new payee
+            &lt;/span&gt;
+            &lt;span *ngIf="hostRef.findPayee"
+              i18n="confirm modal button|Cancel payee confirmation button@@billpay.manage-payee.cancel-new-payee-modal.confirm-button2"
+            &gt;
+            Find a different payee
+            &lt;/span&gt;&lt;/button&gt;
+            &lt;button
+              bbButton
+              color="secondary"
+              class="mt-2 mt-sm-0 mr-sm-3 col-sm-auto col-xs-12"
+              i18n="cancel modal button|Continue with current payee button@@billpay.manage-payee.cancel-new-payee-modal.cancel-button"
+              (click)="hostRef.cancelModal()"
+              data-role="cancel-new-payee-modal-cancel-button"
+            &gt;Continue adding details&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2Modal&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="bb-button-bar__button"
+              (click)="hostRef.confirmModal()"
+              data-role="cancel-new-payee-modal-confirm-button"
+            &gt;
+            &lt;span *ngIf="!hostRef.findPayee"
+            i18n="confirm modal button|Cancel payee confirmation button@@billpay.manage-payee.cancel-new-payee-modal.confirm-button"&gt;
+              Cancel new payee
+            &lt;/span&gt;
+            &lt;span *ngIf="hostRef.findPayee"
+              i18n="confirm modal button|Cancel payee confirmation button@@billpay.manage-payee.cancel-new-payee-modal.confirm-button2"
+            &gt;
+            Find a different payee
+            &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              color="link"
+              class="bb-button-bar__button"
+              i18n="cancel modal button|Continue with current payee button@@billpay.manage-payee.cancel-new-payee-modal.cancel-button"
+              (click)="hostRef.cancelModal()"
+              data-role="cancel-new-payee-modal-cancel-button"
+            &gt;Continue with this payee&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCancelEditPayeeModalCustomizable" class="discrete">bbBillpayCancelEditPayeeModalCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCancelEditPayeeModalCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayCancelEditPayeeModalCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-modal-ui
+    [isOpen]="true"
+    (cancel)="hostRef.cancelModal()"
+    data-role="cancel-edit-payee-modal"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;span
+          class="{{hostRef.isThemeV2Enabled ? 'bb-heading-2' : 'text-large font-weight-bold'}}"
+          i18n="Lose changes modal header@@billpay.cancel-edit-payee.modal.header"
+          data-role="cancel-edit-payee-modal-header"
+        &gt;Lose changes?&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;span
+          i18n="Lose changes modal body@@billpay.cancel-edit-payee.modal.body"
+          data-role="cancel-edit-payee-modal-body"
+        &gt;Are you sure you want to cancel editing this payee? You will lose any changes made.&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Modal"&gt;
+          &lt;div class="d-flex flex-wrap flex-row-reverse w-100"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="col-sm-auto col-xs-12"
+              i18n="confirm modal button|Cancel edit payee confirmation button@@billpay.cancel-edit-payee.modal.confirm-button"
+              (click)="hostRef.confirmModal()"
+              data-role="cancel-edit-payee-modal-confirm-button"
+            &gt;Lose changes&lt;/button&gt;
+            &lt;button
+              bbButton
+              color="secondary"
+              class="mt-2 mt-sm-0 mr-sm-3 col-sm-auto col-xs-12"
+              i18n="cancel modal button|Continue edit with current payee button@@billpay.cancel-edit-payee.modal.cancel-button"
+              (click)="hostRef.cancelModal()"
+              data-role="cancel-edit-payee-modal-cancel-button"
+            &gt;Continue editing&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2Modal&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="bb-button-bar__button"
+              i18n="confirm modal button|Cancel edit payee confirmation button@@billpay.cancel-edit-payee.modal.confirm-button"
+              (click)="hostRef.confirmModal()"
+              data-role="cancel-edit-payee-modal-confirm-button"
+            &gt;Lose changes&lt;/button&gt;
+            &lt;button
+              bbButton
+              color="link"
+              class="bb-button-bar__button"
+              i18n="cancel modal button|Continue edit with current payee button@@billpay.cancel-edit-payee.modal.cancel-button"
+              (click)="hostRef.cancelModal()"
+              data-role="cancel-edit-payee-modal-cancel-button"
+            &gt;Continue editing&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayElectronicPayeeReviewCustomizable" class="discrete">bbBillpayElectronicPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayElectronicPayeeReviewCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="payee"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayElectronicPayeeReviewCustomizable
+  let-hostRef
+  let-payee="context"
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Preview"&gt;
+    &lt;div
+      *ngIf="payee"
+      class="pb-3"&gt;
+      &lt;bb-header-ui
+        headingType="h5"
+        heading="Payee details"
+        class="d-block pb-2 border-bottom border-secondary"
+        i18n-heading="Electronic payee review heading|Label for group of data related to the payee details@@billpay-electronic-payee-review.details-heading"
+        data-role="payee-review-heading"
+      &gt;&lt;/bb-header-ui&gt;
+      &lt;div class="my-3"&gt;
+        &lt;div i18n="label|Label for payee name@@billpay-electronic-payee-review.name"
+          class="font-weight-bold"
+          data-role="payee-name-label"&gt;Payee name
+        &lt;/div&gt;
+        &lt;div data-role="payee-name"&gt;{{ payee.name }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="my-3"&gt;
+        &lt;div i18n="label|Label for payee account number@@billpay-electronic-payee-review.account-number"
+          class="font-weight-bold "
+          data-role="payee-account-number-label"&gt;Account number
+        &lt;/div&gt;
+        &lt;div data-role="payee-account-number"&gt;{{ payee.accountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.merchantZipCode"
+        class="my-3"&gt;
+        &lt;div i18n="label|Label for payee address@@billpay-electronic-payee-review.address"
+          class="font-weight-bold "
+          data-role="payee-zip-code-label"&gt;Payee ZIP code
+        &lt;/div&gt;
+        &lt;div data-role="payee-zip-code"&gt;{{ payee.merchantZipCode }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.nickName"
+        class="my-3"&gt;
+        &lt;div i18n="label|Label for payee nickname@@billpay-electronic-payee-review.nickname"
+          class="font-weight-bold "
+          data-role="payee-nickname-label"&gt;Payee nickname
+        &lt;/div&gt;
+        &lt;div data-role="payee-nickname"&gt;{{ payee.nickName }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2Preview&gt;
+    &lt;div
+      *ngIf="payee" class="bb-block bb-block--xl"&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;bb-header-ui
+          headingType="h2"
+          heading="Payee details"
+          i18n-heading="Electronic payee review heading|Label for group of data related to the payee details@@billpay-electronic-payee-review.details-heading"
+          data-role="payee-review-heading"
+        &gt;&lt;/bb-header-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee name@@billpay-electronic-payee-review.name"
+          class="bb-text-semi-bold"
+          data-role="payee-name-label"&gt;Payee name
+        &lt;/div&gt;
+        &lt;div data-role="payee-name"&gt;{{ payee.name }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee account number@@billpay-electronic-payee-review.account-number"
+          class="bb-text-semi-bold"
+          data-role="payee-account-number-label"&gt;Account number
+        &lt;/div&gt;
+        &lt;div data-role="payee-account-number"&gt;{{ payee.accountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.merchantZipCode"
+        class="bb-block bb-block--md"&gt;
+        &lt;div i18n="label|Label for payee address@@billpay-electronic-payee-review.address"
+          class="bb-text-semi-bold"
+          data-role="payee-zip-code-label"&gt;Payee ZIP code
+        &lt;/div&gt;
+        &lt;div data-role="payee-zip-code"&gt;{{ payee.merchantZipCode }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="payee.nickName"&gt;
+        &lt;div i18n="label|Label for payee nickname@@billpay-electronic-payee-review.nickname"
+          class="bb-text-semi-bold"
+          data-role="payee-nickname-label"&gt;Payee nickname
+        &lt;/div&gt;
+        &lt;div data-role="payee-nickname"&gt;{{ payee.nickName }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayElectronicPayeeFormCustomizable" class="discrete">bbBillpayElectronicPayeeFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayElectronicPayeeFormCustomizable
+  [bbHostRef]="this"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayElectronicPayeeFormCustomizable
+  let-hostRef
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+    &lt;section class="container-small"&gt;
+      &lt;form
+        data-role="electronic-payee-form"
+        (ngSubmit)="hostRef.onSubmit(hostRef.payeeForm)"
+        [formGroup]="hostRef.payeeForm"
+      &gt;
+        &lt;bb-fieldset-ui
+          i18n-heading="Fieldset heading|Account name heading@@billpay-electronic-payee-form.payee-details-heading"
+          heading="Account details for '{{ hostRef.payee.name }}'"
+          data-role="payee-name-heading"
+        &gt;
+          &lt;div
+            class="form-group"
+            data-role="account-number-label"
+          &gt;
+            &lt;div class="mt-2 px-0 col-12 col-sm-4"&gt;
+                &lt;bb-input-text-ui
+                  labelClasses="form-label"
+                  label="Account number"
+                  i18n-label="label|Label for account number field@@billpay-electronic-payee-form.account-number-label"
+                  class="d-block mt-2"
+                  formControlName="accountNumber"
+                  data-role="account-number-input"
+                &gt;
+                &lt;/bb-input-text-ui&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="text-support"
+              i18n="label|Label for account number info message@@billpay-electronic-payee-form.account-number-info"
+              data-role="account-number-help-text"
+            &gt;Enter account number as it appears on your bill
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'required')"
+              i18n="error text|Account number required error text@@billpay-electronic-payee-form.error.account-number-required"
+              data-role="account-number-error-required"
+            &gt;
+              Please enter an account number
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'minlength')"
+              i18n="error text|Account number minlength error text@@billpay-electronic-payee-form.error.account-number-minlength"
+              data-role="account-number-error-minlength"
+            &gt;
+              Account number must be at least 2 characters
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'maxlength')"
+              i18n="error text|Account number max length error text@@billpay-electronic-payee-form.error.account-number-maxlength"
+              data-role="account-number-error-maxlength"
+            &gt;
+              Account number may not be over a hundred characters
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+
+          &lt;div
+            *ngIf="hostRef.zipCodeRequired"
+            class="form-group"
+            data-role="zip-code-label"
+          &gt;
+            &lt;div class="px-0 col-12 col-sm-3"&gt;
+                &lt;bb-input-text-ui
+                  labelClasses="form-label"
+                  label="Payee ZIP Code"
+                  i18n-label="label|Label for ZIP code field@@billpay-electronic-payee-form.zip-label"
+                  class="d-block mt-2"
+                  formControlName="merchantZipCode"
+                  data-role="zip-code-input"
+                &gt;
+                &lt;/bb-input-text-ui&gt;
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('merchantZipCode', 'required')"
+              i18n="error text|Zip code is required error text@@billpay-electronic-payee-form.error.zip-code-required"
+              data-role="zip-code-error-required"
+            &gt;
+              Please enter a Zip Code
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('merchantZipCode', 'pattern')"
+              i18n="error text|Zip code format error text@@billpay-electronic-payee-form.error.zip-code-format"
+              data-role="zip-code-error-pattern"
+            &gt;
+              ZIP code should be 5 or 9 digits long
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+        &lt;/bb-fieldset-ui&gt;
+
+        &lt;bb-fieldset-ui
+          i18n-heading="Payee nickname@@billpay-electronic-payee-form.payee-nickname-heading"
+          heading="Payee nickname"
+        &gt;
+          &lt;div class="form-group"&gt;
+            &lt;label
+              class="form-label"
+              data-role="nickname-label"
+            &gt;
+              &lt;ng-container
+                i18n="label|Label for payee nickname field@@billpay-electronic-payee-form.payee-nickname-label"
+              &gt;Create payee nickname&amp;nbsp;&lt;/ng-container&gt;&lt;span
+              i18n="label optional|Label for optional field@@billpay-electronic-payee-form.optional-label"
+              class="text-support"
+            &gt;(optional)&lt;/span&gt;
+              &lt;div class="my-2 px-0 col-12 col-sm-8"&gt;
+                &lt;bb-input-text-ui
+                  formControlName="nickName"
+                  data-role="nickname-input"
+                  aria-label="Create payee nickname, optional"
+                  i18n-aria-label="aria label|Aria label for payee nickname field@@billpay-electronic-payee-form.payee-nickname-aria-label"
+                &gt;&lt;/bb-input-text-ui&gt;
+              &lt;/div&gt;
+              &lt;div
+                class="text-support"
+                i18n="label|Label for payee nickname info message@@billpay-electronic-payee-form.payee-nickname-info"
+                data-role="nickname-help-text"
+              &gt;Choose how you want this payee to appear in bill pay. Only you can see this.&lt;/div&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="hostRef.hasError('nickName', 'minlength')"
+                i18n="error text|Nickname min length error text@@billpay-electronic-payee-form.error.nickname-minlength"
+                data-role="nickname-error-minlength"
+              &gt;
+                Nickname must be at least 2 characters
+              &lt;/bb-input-validation-message-ui&gt;
+              &lt;bb-input-validation-message-ui
+                role="alert"
+                [showErrors]="hostRef.hasError('nickName', 'maxlength')"
+                i18n="error text|Nickname max length error text@@billpay-electronic-payee-form.error.nickname-maxlength"
+                data-role="nickname-error-maxlength"
+              &gt;
+                Nickname may not be over a hundred characters
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/bb-fieldset-ui&gt;
+
+        &lt;button bbButton
+          type="submit"
+          data-role="continue-button"
+          i18n="Label for button|Electronic payee continue button@@billpay-electronic-payee-form.continue"
+          class="mr-sm-3 col-sm-auto col-xs-12"
+        &gt;Continue&lt;/button&gt;
+        &lt;button bbButton
+          *ngIf="hostRef.backButtonShown"
+          data-role="back-button"
+          i18n="Label for button|Find a different payee button@@billpay-electronic-payee-form.find-different-payee"
+          (click)="hostRef.toSearch()"
+          class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          color="secondary"
+        &gt;Find a different payee&lt;/button&gt;
+        &lt;button bbButton
+          data-role="cancel-button"
+          color="link"
+          class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          (click)="hostRef.cancelForm()"
+        &gt;
+        &lt;span i18n="Cancel edit|Label for a button that cancels form changes@@billpay-electronic-payee-form.cancel"&gt;Cancel&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2Form&gt;
+    &lt;div class="card card-lg"&gt;
+      &lt;section class="card-body"&gt;
+        &lt;form
+          data-role="electronic-payee-form"
+          (ngSubmit)="hostRef.onSubmit(hostRef.payeeForm)"
+          [formGroup]="hostRef.payeeForm"
+          &gt;
+          &lt;bb-fieldset-ui&gt;
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;bb-header-ui
+                headingType="h2"
+                heading="Account details for {{ hostRef.payee.name }}"
+                i18n-heading="Fieldset heading|Account name heading@@billpay-electronic-payee-form.payee-details-heading"
+                data-role="payee-name-heading"
+              &gt;&lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+            &lt;div
+              [class.bb-block--lg]="hostRef.zipCodeRequired"
+              data-role="account-number-label"
+            &gt;
+            &lt;div class="bb-form-field bb-form-field--md"&gt;
+              &lt;bb-input-text-ui
+                formControlName="accountNumber"
+                data-role="account-number-input"
+                label="Account number"
+                i18n-label="label|Label for account number field@@billpay-electronic-payee-form.account-number-label"
+                aria-label="Account number"
+                i18n-aria-label="aria label|Aria label for account number field@@billpay-electronic-payee-form.account-number-aria-label"
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="bb-subtitle bb-text-support"
+              i18n="label|Label for account number info message@@billpay-electronic-payee-form.account-number-info"
+              data-role="account-number-help-text"
+            &gt;Enter account number as it appears on your bill
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'required')"
+              i18n="error text|Account number required error text@@billpay-electronic-payee-form.error.account-number-required"
+              data-role="account-number-error-required"
+            &gt;
+              Please enter an account number
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'minlength')"
+              i18n="error text|Account number minlength error text@@billpay-electronic-payee-form.error.account-number-minlength"
+              data-role="account-number-error-minlength"
+            &gt;
+              Account number must be at least 2 characters
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('accountNumber', 'maxlength')"
+              i18n="error text|Account number max length error text@@billpay-electronic-payee-form.error.account-number-maxlength"
+              data-role="account-number-error-maxlength"
+            &gt;
+              Account number may not be over a hundred characters
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+          &lt;div
+            *ngIf="hostRef.zipCodeRequired"
+            data-role="zip-code-label"
+          &gt;
+          &lt;div class="bb-form-field bb-form-field--xs"&gt;
+            &lt;bb-input-text-ui
+              formControlName="merchantZipCode"
+              data-role="zip-code-input"
+              aria-label="Payee ZIP code"
+              i18n-aria-label="Aria label|Aria Label for ZIP code field@@billpay-electronic-payee-form.zip-aria-label"
+              label="Payee ZIP code"
+              i18n-label="label|Label for ZIP code field@@billpay-electronic-payee-form.zip-label"
+            &gt;
+            &lt;/bb-input-text-ui&gt;
+          &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('merchantZipCode', 'required')"
+              i18n="error text|Zip code is required error text@@billpay-electronic-payee-form.error.zip-code-required"
+              data-role="zip-code-error-required"
+            &gt;
+              Please enter a Zip Code
+            &lt;/bb-input-validation-message-ui&gt;
+            &lt;bb-input-validation-message-ui
+              role="alert"
+              [showErrors]="hostRef.hasError('merchantZipCode', 'pattern')"
+              i18n="error text|Zip code format error text@@billpay-electronic-payee-form.error.zip-code-format"
+              data-role="zip-code-error-pattern"
+            &gt;
+              ZIP code should be 5 or 9 digits long
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+        &lt;/bb-fieldset-ui&gt;
+
+          &lt;bb-fieldset-ui&gt;
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;bb-header-ui
+                headingType="h2"
+                heading="Payee nickname"
+                i18n-heading="Payee nickname@@billpay-electronic-payee-form.payee-nickname-heading"
+                data-role="payee-name-heading"
+              &gt;&lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;div class="bb-form-field bb-form-field--md"&gt;
+                &lt;bb-input-text-ui
+                  formControlName="nickName"
+                  data-role="nickname-input"
+                  aria-label="Create payee nickname, optional"
+                  i18n-aria-label="aria label|Aria label for payee nickname field@@billpay-electronic-payee-form.payee-nickname-aria-label"
+                  label="Create payee nickname (optional)"
+                  i18n-label="label|Label for payee nickname field@@billpay-electronic-payee-form.payee-nickname-label"
+                &gt;&lt;/bb-input-text-ui&gt;
+              &lt;/div&gt;
+                &lt;div
+                  class="bb-subtitle bb-text-support"
+                  i18n="label|Label for payee nickname info message@@billpay-electronic-payee-form.payee-nickname-info"
+                  data-role="nickname-help-text"
+                &gt;Choose how you want this payee to appear in bill pay. Only you can see this.&lt;/div&gt;
+                &lt;bb-input-validation-message-ui
+                  role="alert"
+                  [showErrors]="hostRef.hasError('nickName', 'minlength')"
+                  i18n="error text|Nickname min length error text@@billpay-electronic-payee-form.error.nickname-minlength"
+                  data-role="nickname-error-minlength"
+                &gt;
+                  Nickname must be at least 2 characters
+                &lt;/bb-input-validation-message-ui&gt;
+                &lt;bb-input-validation-message-ui
+                  role="alert"
+                  [showErrors]="hostRef.hasError('nickName', 'maxlength')"
+                  i18n="error text|Nickname max length error text@@billpay-electronic-payee-form.error.nickname-maxlength"
+                  data-role="nickname-error-maxlength"
+                &gt;
+                  Nickname may not be over a hundred characters
+                &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+          &lt;/bb-fieldset-ui&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button bbButton
+              type="submit"
+              data-role="continue-button"
+              i18n="Label for button|Electronic payee continue button@@billpay-electronic-payee-form.continue"
+              class="bb-button-bar__button"
+            &gt;Continue&lt;/button&gt;
+            &lt;button bbButton
+              *ngIf="hostRef.backButtonShown"
+              data-role="back-button"
+              i18n="Label for button|Find a different payee button@@billpay-electronic-payee-form.find-different-payee"
+              (click)="hostRef.toSearch()"
+              class="bb-button-bar__button"
+              color="secondary"
+            &gt;Find a different payee&lt;/button&gt;
+            &lt;button
+              bbButton
+              data-role="cancel-button"
+              color="link"
+              class="bb-button-bar__button"
+              (click)="hostRef.cancelForm()"
+            &gt;
+            &lt;span i18n="Cancel edit|Label for a button that cancels form changes@@billpay-electronic-payee-form.cancel"&gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayElectronicPayeeSearchCustomizable" class="discrete">bbBillpayElectronicPayeeSearchCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayElectronicPayeeSearchCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayElectronicPayeeSearchCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-search-box-ui
+    *ngIf="!hostRef.isThemeV2Enabled; else themeV2SearchBox"
+    class="d-block mt-2 mb-4"
+    showClear="true"
+    label="Payee name"
+    labelClasses="form-label mt-2 w-100"
+    i18n-label="Payee name|Label for electronic search input @@billpay-manage-payee.electronic-payee-search.form.search-label"
+    clearLabel="Clear search"
+    i18n-clearLabel="The aria label used when the clear button is in focus@@billpay-manage-payee.electronic-payee-search.clear-label"
+    [typeaheadOptions]="hostRef.typeaheadOptions"
+  &gt;&lt;/bb-search-box-ui&gt;
+  &lt;ng-template #themeV2SearchBox&gt;
+    &lt;div class="bb-block bb-block--xl"&gt;
+      &lt;bb-search-box-ui
+        showClear="true"
+        label="Payee name"
+        i18n-label="Payee name|Label for electronic search input @@billpay-manage-payee.electronic-payee-search.form.search-label"
+        clearLabel="Clear search"
+        i18n-clearLabel="The aria label used when the clear button is in focus@@billpay-manage-payee.electronic-payee-search.clear-label"
+        [typeaheadOptions]="hostRef.typeaheadOptions"
+      &gt;&lt;/bb-search-box-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateElectronicPayeeCustomizable" class="discrete">bbBillpayCreateElectronicPayeeCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCreateElectronicPayeeCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="payee$ | async"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayCreateElectronicPayeeCustomizable
+  let-hostRef
+  let-payee="context"
+&gt;
+  &lt;bb-billpay-electronic-payee-form
+    [payee]="payee"
+    [zipCodeRequired]="hostRef.zipRequired$ | async"
+    (formSubmitted)="hostRef.onFormSubmitted($event)"
+    (formCanceled)="hostRef.onFormCanceled()"
+    (backToSearch)="hostRef.onBackToSearch()"
+    (valueChanged)="hostRef.onFormValueChanged()"
+  &gt;
+  &lt;/bb-billpay-electronic-payee-form&gt;
+
+  &lt;bb-billpay-cancel-new-payee-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    [findPayee]="hostRef.isFindPayeeModal"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-new-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateElectronicPayeeReviewCustomizable" class="discrete">bbBillpayCreateElectronicPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCreateElectronicPayeeReviewCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    payee: payee$ | async,
+    id: id$ | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayCreateElectronicPayeeReviewCustomizable
+  let-hostRef
+  let-payee="context.payee"
+  let-id="context.id"
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2PreviewPage"&gt;
+    &lt;section
+      class="container-small"
+    &gt;
+      &lt;bb-billpay-electronic-payee-review
+        [payee]="payee"
+      &gt;
+      &lt;/bb-billpay-electronic-payee-review&gt;
+      &lt;button bbButton
+        data-role="add-payee-button"
+        i18n="Label for button|Electronic payee continue button@@billpay-create-electronic-payee-review.add-payee"
+        (click)="hostRef.submitPayee(id, payee)"
+        class="mr-sm-3 col-sm-auto col-xs-12"
+      &gt;Add payee&lt;/button&gt;
+      &lt;button bbButton
+        data-role="back-button"
+        i18n="Label for button|Edit payee details button@@billpay-create-electronic-payee-review.edit-payee"
+        (click)="hostRef.navigateBack(id)"
+        class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        color="secondary"
+      &gt;Edit payee details&lt;/button&gt;
+      &lt;button bbButton
+        data-role="cancel-button"
+        color="link"
+        class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        (click)="hostRef.cancel()"
+      &gt;
+        &lt;span i18n="Cancel edit|Label for a button that cancels form changes@@billpay-electronic-payee-form.cancel"&gt;Cancel&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2PreviewPage&gt;
+    &lt;div class="card card-lg"&gt;
+      &lt;section
+        class="card-body"
+      &gt;
+        &lt;bb-billpay-electronic-payee-review
+          [payee]="payee"
+        &gt;
+        &lt;/bb-billpay-electronic-payee-review&gt;
+        &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+          &lt;button bbButton
+            data-role="add-payee-button"
+            i18n="Label for button|Electronic payee continue button@@billpay-create-electronic-payee-review.add-payee"
+            (click)="hostRef.submitPayee(id, payee)"
+            class="bb-button-bar__button"
+          &gt;Add payee&lt;/button&gt;
+          &lt;button bbButton
+            data-role="back-button"
+            i18n="Label for button|Edit button@@billpay-create-electronic-payee-review.edit-payee"
+            (click)="hostRef.navigateBack(id)"
+            class="bb-button-bar__button"
+            color="secondary"
+          &gt;Edit&lt;/button&gt;
+          &lt;button
+            bbButton
+            data-role="cancel-button"
+            color="link"
+            class="bb-button-bar__button"
+            (click)="hostRef.cancel()"
+            i18n="Label for button|Cancel button@@billpay-create-electronic-payee-review.cancel-payee"
+          &gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-cancel-new-payee-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-new-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable" class="discrete">bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable
+    [bbHostRef]="this"
+    [bbTemplateContext]="payee$ | async"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable
+  let-hostRef
+  let-payee="context"
+&gt;
+  &lt;span
+    data-role="notification-message"
+    i18n="Payee notification message|Payee has created successfully notification@@billpay-create-electronic-payee-review.notification.message"
+  &gt;The payee ‘{{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}‘ has been created successfully &lt;/span&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Buttons"&gt;
+    &lt;div class="d-flex justify-content-end"&gt;
+      &lt;button
+        bbButton
+        data-role="notification-add-payee-button"
+        color="secondary"
+        class="mr-2 mt-2"
+        i18n="notification button|Add another payee@@billpay-create-electronic-payee-review.notification.add-button"
+        (click)="hostRef.navigateToPayee()"
+      &gt;
+        Add another payee
+      &lt;/button&gt;
+      &lt;button
+        bbButton
+        data-role="notification-payee-button"
+        class="mr-2 mt-2"
+        i18n="notification button|Pay button@@billpay-create-electronic-payee-review.notification.pay-button"
+        (click)="hostRef.navigateToNewPayment()"
+      &gt;
+        Pay
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Buttons&gt;
+    &lt;div class="bb-button-bar"&gt;
+      &lt;button
+        bbButton
+        data-role="notification-payee-button"
+        class="bb-button-bar__button"
+        i18n="notification button|Pay button@@billpay-create-electronic-payee-review.notification.pay-button"
+        (click)="hostRef.navigateToNewPayment()"
+      &gt;
+        Pay
+      &lt;/button&gt;
+      &lt;button
+        bbButton
+        data-role="notification-add-payee-button"
+        color="secondary"
+        class="bb-button-bar__button"
+        i18n="notification button|Add another payee@@billpay-create-electronic-payee-review.notification.add-button"
+        (click)="hostRef.navigateToPayee()"
+      &gt;
+        Add another payee
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable" class="discrete">bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayCreateElectronicPayeeReviewNotificationHeaderCustomizable
+  let-hostRefRef
+&gt;
+  &lt;span
+    class="text-dark"
+    i18n="Payee notification header|Payee created success notification header@@billpay-create-electronic-payee-review.notification.header"
+  &gt;Payee created&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditElectronicPayeeCustomizable" class="discrete">bbBillpayEditElectronicPayeeCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayEditElectronicPayeeCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="payee$ | async"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayEditElectronicPayeeCustomizable
+  let-hostRef
+  let-payee="context"
+&gt;
+  &lt;ng-container *ngIf="!hostRef.hasLoadingError; else errorState"&gt;
+    &lt;ng-container *ngIf="payee; else loadingState"&gt;
+      &lt;bb-billpay-electronic-payee-form
+        [payee]="payee"
+        [zipCodeRequired]="false"
+        [backButtonShown]="false"
+        (formSubmitted)="hostRef.onFormSubmitted($event)"
+        (formCanceled)="hostRef.onFormCanceled()"
+        (valueChanged)="hostRef.onFormValueChanged()"
+      &gt;
+      &lt;/bb-billpay-electronic-payee-form&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui loaderSize="lg"&gt;
+    &lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;bb-empty-state-ui
+      data-role="error-state"
+      iconSize="xxl"
+      iconModifier="error"
+      title="Payee is not loading"
+      i18n-title="Payee is not loading title@@billpay-manage-payee.edit-electronic.error-state.title"
+      subtitle="Try to reload the page or contact support"
+      i18n-subtitle="Payments list is not loading subtitle@@billpay-manage-payee.edit-electronic.error-state.subtitle"&gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-cancel-edit-payee-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-edit-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditElectronicPayeeReviewCustomizable" class="discrete">bbBillpayEditElectronicPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayEditElectronicPayeeReviewCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    payee: payee$ | async,
+    id: id$ | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayEditElectronicPayeeReviewCustomizable
+  let-hostRef
+  let-payee="context.payee"
+  let-id="context.id"
+&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2PreviewPage"&gt;
+    &lt;section
+      class="container-small"
+    &gt;
+      &lt;bb-billpay-electronic-payee-review
+        [payee]="payee"
+      &gt;
+      &lt;/bb-billpay-electronic-payee-review&gt;
+      &lt;button bbButton
+        data-role="add-payee-button"
+        i18n="Label for button|Electronic payee confirm edit button@@billpay-edit-electronic-payee-review.confirm-payee"
+        (click)="hostRef.submitPayee(payee)"
+        class="mr-sm-3 col-sm-auto col-xs-12"
+      &gt;Confirm payee details&lt;/button&gt;
+      &lt;button bbButton
+        data-role="back-button"
+        i18n="Label for button|Edit payee details button@@billpay-edit-electronic-payee-review.edit-payee"
+        (click)="hostRef.navigateBack(id)"
+        class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        color="secondary"
+      &gt;Edit payee details&lt;/button&gt;
+      &lt;button bbButton
+        data-role="cancel-button"
+        color="link"
+        class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        (click)="hostRef.cancel()"
+      &gt;
+        &lt;span i18n="Cancel edit|Label for a button that cancels form changes@@billpay-electronic-payee-form.cancel"&gt;Cancel&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2PreviewPage&gt;
+    &lt;div class="card card-lg"&gt;
+      &lt;section
+        class="card-body"
+      &gt;
+        &lt;bb-billpay-electronic-payee-review
+          [payee]="payee"
+        &gt;
+        &lt;/bb-billpay-electronic-payee-review&gt;
+        &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+          &lt;button bbButton
+            data-role="add-payee-button"
+            i18n="Label for button|Electronic payee confirm edit button@@billpay-edit-electronic-payee-review.confirm-payee"
+            (click)="hostRef.submitPayee(payee)"
+            class="bb-button-bar__button"
+          &gt;Confirm payee details&lt;/button&gt;
+          &lt;button bbButton
+            data-role="back-button"
+            i18n="Label for button|Edit payee details button@@billpay-edit-electronic-payee-review.edit-payee"
+            (click)="hostRef.navigateBack(id)"
+            class="bb-button-bar__button"
+            color="secondary"
+          &gt;Edit payee details&lt;/button&gt;
+          &lt;button
+            bbButton
+            data-role="cancel-button"
+            color="link"
+            class="bb-button-bar__button"
+            (click)="hostRef.cancel()"
+            i18n="Cancel edit|Label for a button that cancels form changes@@billpay-edit-electronic-payee-review.cancel"
+          &gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-cancel-edit-payee-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-edit-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable" class="discrete">bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable
+    [bbHostRef]="this"
+    [bbTemplateContext]="payee$ | async"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayEditElectronicPayeeReviewNotificationMessageCustomizable
+  let-hostRef
+  let-payee="context"
+&gt;
+  &lt;span
+    data-role="notification-message"
+    i18n="Payee notification message|Payee has been changed successfully notification@@billpay-edit-electronic-payee-review.notification.message"
+  &gt;The payee ‘{{ payee.nickName ? payee.nickName + ' (' + payee.name + ')' : payee.name }}‘ has been changed successfully &lt;/span&gt;
+  &lt;div class="d-flex justify-content-end"&gt;
+    &lt;button
+      bbButton
+      data-role="notification-payee-button"
+      class="mt-2"
+      i18n="notification button|Pay button@@billpay-edit-electronic-payee-review.notification.pay-button"
+    &gt;
+      Pay
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable" class="discrete">bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayEditElectronicPayeeReviewNotificationHeaderCustomizable
+  let-hostRef
+&gt;
+  &lt;span
+    class="text-dark"
+    i18n="Payee notification header|Payee edited success notification header@@billpay-edit-electronic-payee-review.notification.header"
+  &gt;Payee edited&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditManualPayeeCustomizable" class="discrete">bbBillpayEditManualPayeeCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayEditManualPayeeCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    payeeState: payeeFormState | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayEditManualPayeeCustomizable
+  let-host
+  let-payeeState="context.payeeState"
+&gt;
+  &lt;ng-container *ngIf="payeeState; else loadingState"&gt;
+    &lt;ng-container *ngIf="!host.hasLoadingError; else errorState"&gt;
+      &lt;bb-billpay-manual-payee-form
+        [editForm]="true"
+        [payeeFormState]="payeeState"
+        (formSubmitted)="host.onFormSubmitted($event)"
+        (formCanceled)="host.onFormCanceled()"
+        (valueChanged)="host.onFormValueChanged()"
+      &gt;
+      &lt;/bb-billpay-manual-payee-form&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-billpay-cancel-edit-payee-modal
+    *ngIf="host.isDiscardModalOpen"
+    (resolve)="host.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-edit-payee-modal&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui loaderSize="lg"&gt;
+    &lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;bb-empty-state-ui
+      data-role="error-state"
+      iconSize="xxl"
+      iconModifier="error"
+      subtitle="Try to reload the page or contact support"
+      i18n-subtitle="Try to reload the page or contact support|Edit manual payee subtitle@@bb-billpay-manage-payee-widget-ang.loading.subtitle"
+      title="Payee is not loading"
+      i18n-title="Payee is not loading|Edit manual payee loading title@@bb-billpay-manage-payee-widget-ang.loading.title"&gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditManualPayeeReviewCustomizable" class="discrete">bbBillpayEditManualPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayEditManualPayeeReviewCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayEditManualPayeeReviewCustomizable let-host&gt;
+  &lt;ng-container *ngIf="!host.isThemeV2Enabled; else themeV2PreviewPage"&gt;
+    &lt;section
+      *ngIf="host.payee as payee"
+      class="container-small"
+    &gt;
+      &lt;bb-billpay-manual-payee-review
+        [payeeFormState]="payee"
+      &gt;
+      &lt;/bb-billpay-manual-payee-review&gt;
+      &lt;button bbButton
+        data-role="save-payee-button"
+        i18n="Label for button|Manual payee continue button@@billpay-edit-manual-payee-review.save-payee"
+        (click)="host.submitPayee(payee)"
+        class="mr-sm-3 col-sm-auto col-xs-12"
+      &gt;Confirm payee details&lt;/button&gt;
+      &lt;button bbButton
+        data-role="back-button"
+        i18n="Label for button|Find a different payee button@@billpay-edit-manual-payee-review.edit-payee"
+        (click)="host.navigateBack()"
+        class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        color="secondary"
+      &gt;Edit payee details&lt;/button&gt;
+      &lt;button
+        bbButton
+        data-role="cancel-button"
+        color="link"
+        class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        (click)="host.cancel()"
+        i18n="Cancel edit|Label for a button that cancels form changes@@billpay-edit-manual-payee-review.cancel"
+      &gt;Cancel&lt;/button&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2PreviewPage&gt;
+    &lt;div
+      class="card card-lg"
+      *ngIf="host.payee as payee"&gt;
+      &lt;section
+        class="card-body"
+      &gt;
+        &lt;bb-billpay-manual-payee-review
+          [payeeFormState]="payee"
+        &gt;
+        &lt;/bb-billpay-manual-payee-review&gt;
+        &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+          &lt;button bbButton
+            data-role="save-payee-button"
+            i18n="Label for button|Manual payee continue button@@billpay-edit-manual-payee-review.save-payee"
+            (click)="host.submitPayee(payee)"
+            class="bb-button-bar__button"
+          &gt;Confirm payee details&lt;/button&gt;
+          &lt;button bbButton
+            data-role="back-button"
+            i18n="Label for button|Find a different payee button@@billpay-edit-manual-payee-review.edit-payee"
+            (click)="host.navigateBack()"
+            class="bb-button-bar__button"
+            color="secondary"
+          &gt;Edit payee details&lt;/button&gt;
+          &lt;button
+            bbButton
+            data-role="cancel-button"
+            color="link"
+            class="bb-button-bar__button"
+            (click)="host.cancel()"
+            i18n="Cancel edit|Label for a button that cancels form changes@@billpay-edit-manual-payee-review.cancel"
+          &gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+  &lt;bb-billpay-cancel-edit-payee-modal
+    *ngIf="host.isDiscardModalOpen"
+    (resolve)="host.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-edit-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable" class="discrete">bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayEditManualPayeeReviewNotificationHeaderCustomizable
+  let-hostRef
+&gt;
+  &lt;span
+    class="{{hostRef.isThemeV2Enabled ? '' : 'text-dark'}}"
+    i18n="Payee notification header|Payee edited notification header@@billpay-edit-manual-payee-review.notification.header"
+  &gt;Payee edited&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEditManualPayeeReviewNotificationMessageCustomizable" class="discrete">bbBillpayEditManualPayeeReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayEditManualPayeeReviewNotificationMessageCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayEditManualPayeeReviewNotificationMessageCustomizable
+  let-host
+&gt;
+  &lt;ng-container *ngIf="host.payee as payee"&gt;
+    &lt;span
+      data-role="notification-message"
+      i18n="Payee notification message|Payee edited notification@@billpay-edit-manual-payee-review.notification.message"
+    &gt;The payee ‘{{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}‘ has been changed successfully&lt;/span&gt;
+    &lt;ng-container *ngIf="!host.isThemeV2Enabled; else themeV2PreviewConfirmation"&gt;
+      &lt;div class="d-flex justify-content-end"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-payee-button"
+          class="mr-2 mt-2"
+          i18n="notification button|Pay button@@billpay-edit-manual-payee-review.notification.pay-button"
+        &gt;
+          Pay
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2PreviewConfirmation&gt;
+      &lt;div class="bb-button-bar"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-payee-button"
+          class="bb-button-bar__button"
+          i18n="notification button|Pay button@@billpay-edit-manual-payee-review.notification.pay-button"
+        &gt;
+          Pay
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayAddressFormCustomizable" class="discrete">bbBillpayAddressFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayAddressFormCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayAddressFormCustomizable
+  let-host&gt;
+  &lt;ng-container [formGroup]="host.formGroup"&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+      &lt;label
+        class="form-label my-2 d-block"
+        data-role="address1-label"
+      &gt;
+        &lt;ng-container
+          i18n="label|Label for Address line 1 field@@billpay-manual-payee-form.address-line-1-label"
+        &gt;Address line 1&lt;/ng-container&gt;
+        &lt;input
+          formControlName="address1"
+          class="form-control my-2"
+          data-role="address1-input"&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address1', 'required')"
+          i18n="error text|Address line 1 is required error text@@billpay-manual-payee-form.error.address1-required"
+          data-role="address1-error-required"
+        &gt;
+          Please enter a street number and name
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address1', 'maxlength')"
+          i18n="error text|Address line max length error text@@billpay-manual-payee-form.error.address-maxlength"
+          data-role="address1-error-maxlength"
+        &gt;
+          Address may not be over forty characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/label&gt;
+
+      &lt;label
+        class="form-label my-2 d-block"
+        data-role="address2-label"
+      &gt;
+        &lt;ng-container
+          i18n="label|Label for Address line 2 field@@billpay-manual-payee-form.address-line-2-label"
+        &gt;Address line 2 &lt;/ng-container&gt;&lt;span
+        i18n="label optional|Label for optional field@@billpay-manual-payee-form.optional-label"
+        class="text-support"
+      &gt;(optional)&lt;/span&gt;
+        &lt;input
+          formControlName="address2"
+          class="form-control my-2"
+          data-role="address2-input"&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address2', 'maxlength')"
+          i18n="error text|Address line max length error text@@billpay-manual-payee-form.error.address-maxlength"
+          data-role="address2-error-maxlength"
+        &gt;
+          Address may not be over forty characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/label&gt;
+
+      &lt;label
+        class="form-label my-2 d-block"
+        data-role="city-label"
+      &gt;
+        &lt;ng-container
+          i18n="label|Label for city field@@billpay-manual-payee-form.city-label"
+        &gt;City&lt;/ng-container&gt;
+        &lt;input
+          formControlName="city"
+          class="form-control my-2 col-12 col-sm-6"
+          data-role="city-input"&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('city', 'required')"
+          i18n="error text|City is required error text@@billpay-manual-payee-form.error.city-required"
+          data-role="city-error-required"
+        &gt;
+          Please enter a City
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('city', 'maxlength')"
+          i18n="error text|City max length error text@@billpay-manual-payee-form.error.city-maxlength"
+          data-role="city-error-maxlength"
+        &gt;
+          City may not be over thirty-two characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/label&gt;
+
+      &lt;label
+        class="form-label my-2 d-block"
+        data-role="state-label"
+      &gt;
+        &lt;ng-container
+          i18n="label|Label for state field@@billpay-manual-payee-form.state-label"
+        &gt;State&lt;/ng-container&gt;
+        &lt;bb-dropdown-single-select-ui
+          class="d-block my-2 col-12 col-sm-4 p-0"
+          [options]="states"
+          placeholder="- please select -"
+          i18n-placeholder="state placeholder|text displayed in dropdown when no state is selected@@billpay-manual-payee-form.state-placeholder"
+          aria-label="States select"
+          i18n-aria-label="state aria label|text state dropdown aria label@@billpay-manual-payee-form.state-aria-label"
+          formControlName="state"
+          data-role="state-select"
+        &gt;
+        &lt;/bb-dropdown-single-select-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('state', 'required')"
+          i18n="error text|State is required error text@@billpay-manual-payee-form.error.state-required"
+          data-role="state-error-required"
+        &gt;
+          Please enter a State
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/label&gt;
+
+      &lt;label
+        class="form-label my-2 d-block"
+        data-role="postal-code-label"
+      &gt;
+        &lt;ng-container
+          i18n="label|Label for ZIP code field@@billpay-manual-payee-form.zip-label"
+        &gt;ZIP Code&lt;/ng-container&gt;
+        &lt;input
+          formControlName="postalCode"
+          class="form-control my-2 col-12 col-sm-3"
+          data-role="postal-code-input"&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('postalCode', 'required')"
+          i18n="error text|Zip code is required error text@@billpay-manual-payee-form.error.zip-code-required"
+          data-role="postal-code-error-required"
+        &gt;
+          Please enter a Zip Code
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('postalCode', 'pattern')"
+          i18n="error text|Zip code format error text@@billpay-manual-payee-form.error.zip-code-format"
+          data-role="postal-code-error-pattern"
+        &gt;
+          ZIP code should be 5 or 9 digits long
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/label&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2Form&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div class="bb-form-field bb-form-field--md"&gt;
+          &lt;bb-input-text-ui
+            formControlName="address1"
+            data-role="address1-input"
+            label="Address line 1"
+            i18n-label="label|Label for Address line 1 field@@billpay-manual-payee-form.address-line-1-label"
+            aria-label="Address line 1"
+            i18n-aria-label="aria label|Aria label for Address line 1 field@@billpay-manual-payee-form.address-line-1-aria-label"
+          &gt;
+          &lt;/bb-input-text-ui&gt;
+        &lt;/div&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address1', 'required')"
+          i18n="error text|Address line 1 is required error text@@billpay-manual-payee-form.error.address1-required"
+          data-role="address1-error-required"
+        &gt;
+          Please enter a street number and name
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address1', 'maxlength')"
+          i18n="error text|Address line max length error text@@billpay-manual-payee-form.error.address-maxlength"
+          data-role="address1-error-maxlength"
+        &gt;
+          Address may not be over forty characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div class="bb-form-field bb-form-field--md"&gt;
+          &lt;bb-input-text-ui
+            formControlName="address2"
+            data-role="address2-input"
+            label="Address line 2 (optional)"
+            i18n-label="label|Label for Address line 2 (optional) field@@billpay-manual-payee-form.address-line-2-label"
+            aria-label="Address line 1"
+            i18n-aria-label="aria label|Aria label for Address line 2 (optional) field@@billpay-manual-payee-form.address-line-2-aria-label"
+          &gt;
+          &lt;/bb-input-text-ui&gt;
+        &lt;/div&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('address2', 'maxlength')"
+          i18n="error text|Address line max length error text@@billpay-manual-payee-form.error.address-maxlength"
+          data-role="address2-error-maxlength"
+        &gt;
+          Address may not be over forty characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div class="bb-form-field bb-form-field--sm"&gt;
+          &lt;bb-input-text-ui
+            formControlName="city"
+            data-role="city-input"
+            label="City"
+            i18n-label="label|Label for city field@@billpay-manual-payee-form.city-label"
+            aria-label="City"
+            i18n-aria-label="aria label|Aria label for City field@@billpay-manual-payee-form.city-aria-label"
+          &gt;
+          &lt;/bb-input-text-ui&gt;
+        &lt;/div&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('city', 'required')"
+          i18n="error text|City is required error text@@billpay-manual-payee-form.error.city-required"
+          data-role="city-error-required"
+        &gt;
+          Please enter a City
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('city', 'maxlength')"
+          i18n="error text|City max length error text@@billpay-manual-payee-form.error.city-maxlength"
+          data-role="city-error-maxlength"
+        &gt;
+          City may not be over thirty-two characters
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div class="bb-form-field bb-form-field--xs"&gt;
+          &lt;bb-dropdown-single-select-ui
+            label="State"
+            i18n-label="label|Label for state field@@billpay-manual-payee-form.state-label"
+            [options]="states"
+            aria-label="States select"
+            i18n-aria-label="state aria label|text state dropdown aria label@@billpay-manual-payee-form.state-aria-label"
+            formControlName="state"
+            data-role="state-select"
+          &gt;
+          &lt;/bb-dropdown-single-select-ui&gt;
+        &lt;/div&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('state', 'required')"
+          i18n="error text|State is required error text@@billpay-manual-payee-form.error.state-required"
+          data-role="state-error-required"
+        &gt;
+          Please enter a State
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;div class="bb-form-field bb-form-field--xs"&gt;
+          &lt;bb-input-text-ui
+            formControlName="postalCode"
+            data-role="postal-code-input"
+            label="ZIP Code"
+            i18n-label="label|Label for ZIP code field@@billpay-manual-payee-form.zip-label"
+            aria-label="ZIP Code"
+            i18n-aria-label="aria label|Aria label for ZIP Code field@@billpay-manual-payee-form.zip-code-aria-label"
+          &gt;
+          &lt;/bb-input-text-ui&gt;
+        &lt;/div&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('postalCode', 'required')"
+          i18n="error text|Zip code is required error text@@billpay-manual-payee-form.error.zip-code-required"
+          data-role="postal-code-error-required"
+        &gt;
+          Please enter a Zip Code
+        &lt;/bb-input-validation-message-ui&gt;
+        &lt;bb-input-validation-message-ui
+          role="alert"
+          [showErrors]="host.hasError('postalCode', 'pattern')"
+          i18n="error text|Zip code format error text@@billpay-manual-payee-form.error.zip-code-format"
+          data-role="postal-code-error-pattern"
+        &gt;
+          ZIP code should be 5 or 9 digits long
+        &lt;/bb-input-validation-message-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayCreateManualPayeeReviewCustomizable" class="discrete">bbBillpayCreateManualPayeeReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayCreateManualPayeeReviewCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayCreateManualPayeeReviewCustomizable let-host&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2PreviewPage"&gt;
+    &lt;section
+      *ngIf="host.payee as payee"
+      class="container-small"
+    &gt;
+      &lt;bb-billpay-manual-payee-review
+        [payeeFormState]="payee"
+      &gt;
+      &lt;/bb-billpay-manual-payee-review&gt;
+      &lt;button bbButton
+        data-role="add-payee-button"
+        i18n="Label for button|Manual payee continue button@@billpay-create-manual-payee-review.add-payee"
+        (click)="host.submitPayee(payee)"
+        class="mr-sm-3 col-sm-auto col-xs-12"
+      &gt;Add payee&lt;/button&gt;
+      &lt;button bbButton
+        data-role="back-button"
+        i18n="Label for button|Find a different payee button@@billpay-create-manual-payee-review.edit-payee"
+        (click)="host.navigateBack()"
+        class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+        color="secondary"
+      &gt;Edit payee details&lt;/button&gt;
+      &lt;button
+          bbButton
+          data-role="cancel-button"
+          color="link"
+          class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          (click)="hostRef.cancel()"
+          i18n="Label for button|Cancel button@@billpay-create-manual-payee-review.cancel-payee"
+        &gt;Cancel&lt;/button&gt;
+    &lt;/section&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2PreviewPage&gt;
+    &lt;div
+      class="card card-lg"
+      *ngIf="host.payee as payee"&gt;
+      &lt;section
+        class="card-body"
+      &gt;
+        &lt;bb-billpay-manual-payee-review
+          [payeeFormState]="payee"
+        &gt;
+        &lt;/bb-billpay-manual-payee-review&gt;
+        &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+          &lt;button bbButton
+            data-role="add-payee-button"
+            i18n="Label for button|Manual payee continue button@@billpay-create-manual-payee-review.add-payee"
+            (click)="host.submitPayee(payee)"
+            class="bb-button-bar__button"
+          &gt;Add payee&lt;/button&gt;
+          &lt;button bbButton
+            data-role="back-button"
+            i18n="Label for button|Find a different payee button@@billpay-create-manual-payee-review.edit-payee"
+            (click)="host.navigateBack()"
+            class="bb-button-bar__button"
+            color="secondary"
+          &gt;Edit&lt;/button&gt;
+          &lt;button
+            bbButton
+            data-role="cancel-button"
+            color="link"
+            class="bb-button-bar__button"
+            (click)="hostRef.cancel()"
+            i18n="Label for button|Cancel button@@billpay-create-manual-payee-review.cancel-payee"
+          &gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-cancel-new-payee-modal
+    *ngIf="host.isDiscardModalOpen"
+    (resolve)="host.onModalResolve($event)"
+  &gt;&lt;/bb-billpay-cancel-new-payee-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="manage_bill_pay_payee_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>BillpaySearchPayeePageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbBillpaySearchPayeeCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPayeeSelected(payee: PayeeSearch): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the electronic payee form with the selected payee payload.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createManualPayee(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function yo navigate to the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCanceled(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list upon cancellation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly searchAvailable: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean getter to render the error template in case of error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>BillpayCreateManualPayeePageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>bbBillpayCreateManualPayeeCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly payeeFormState: Observable&lt;ManualPayeeFormState | undefined&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payee form state for the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormSubmitted(payee: ManualPayeeFormState): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the submission of the manual payee form state, therefore navigating to the manual payee review.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormCanceled(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the payee list page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onBackToSearch(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the payee search page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormValueChanged(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to set the <code>isFormTouched</code> as <code>true</code>, which is used to open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isDiscardModalOpen(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>BillpayDiscardChangesModalService.isDiscardModalOpen</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isFindPayeeModal: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show different texts in the cancel payee modal, defaults to <code>false</code>. If the user returns to the search page, it is set to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(resolvedWith: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function that is triggered from the <code>cancelModal</code> to close/open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>BillpayManualPayeeFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>bbBillpayManualPayeeFormCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form group for the manual payee.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(payeeForm: FormGroup): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the submission of the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editForm: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean input value to show relevant text in the form, defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasError(controlName: string, errorName: string): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean whether there is a error in the form control with given parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toSearch(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate the search page by emitting the <code>backToSearch</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelForm(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle form cancelling by emitting the <code>formCanceled</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayManualPayeeReviewComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbBillpayManualPayeeReviewCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly payeeFormState: Observable&lt;ManualPayeeFormState | undefined&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payee form state for the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>BillpayPaymentFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">bbBillpayPaymentFormCustomizable`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form group for the payment form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditPayment: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activates payment editing elements. Defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedPayee: BehaviorSubject&lt;PayeeSummary | undefined&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected payee as <code>toPayee</code>, default is set when the user is navigated from the payee list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to cancel payment by emitting the <code>cancelPayment</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayCreateManualPayeeReviewPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>bbBillpayCreateManualPayeeReviewNotificationMessageCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payee?: ManualPayeeFormState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payee form state which is filled in the form. If there is none, then navigates to the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToPayee(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the manage payee page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToNewPayment(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayCancelNewPayeeModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>bbBillpayCancelNewPayeeModalCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the cancellation modal by emitting the <code>resolve</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findPayee: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal navigation routes to the payee search. Defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the confirmation modal by emitting the <code>resolve</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayCancelEditPayeeModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayCancelEditPayeeModalCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the confirmation modal by emitting the <code>resolve</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the cancellation modal by emitting the <code>resolve</code> EventEmitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>BillpayElectronicPayeeFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>bbBillpayElectronicPayeeFormCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(payeeForm: FormGroup): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the form value with the <code>formSubmitted</code> event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form group for the electronic payee.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payee?: ElectronicPayeeForm;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input</code> for the details of the electronic payee to be created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasError(controlName: string, errorName: string): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean whether there is an error in the form control with given parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>zipCodeRequired: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input</code>, whether to display the zip code input field. Defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>backButtonShown: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input</code>, whether to display the <strong>Back</strong> button which returns to payee search. Defaults to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toSearch(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to go to the search screen by emitting the <code>backToSearch</code> event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelForm(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the cancellation form by emitting the <code>formCanceled</code> event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayElectronicPayeeSearchComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbBillpayElectronicPayeeSearchCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get typeaheadOptions(): {
+        ngbTypeahead: (text$: Observable&lt;string&gt;) &#8658; Observable&lt;PayeeSearch[]&gt;;
+        selectItem: (event: {
+            item: PayeeSearch;
+            preventDefault: () &#8658; void;
+        }) &#8658; void;
+        resultFormatter: (payee: PayeeSearch) &#8658; string;
+        inputFormatter: (payee: PayeeSearch) &#8658; string;
+    };</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of options to use when the typeahead is available in <code>bb-search-box-ui</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>BillpayCreateElectronicPayeePageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>bbBillpayCreateElectronicPayeeCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly zipRequired$: Observable&lt;boolean&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The observable of the route query <code>zipRequired</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormSubmitted(payee: ElectronicPayeeForm): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to set the electronic payee to state and navigate to the review on submimission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormCanceled(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list on cancel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onBackToSearch(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the payee search page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormValueChanged(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to set <code>isFormTouched</code> as <code>true</code>, which is used to open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>BillpayCreateElectronicPayeeReviewPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>bbBillpayCreateElectronicPayeeReviewCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitPayee(id: string, payee: ElectronicPayeeForm): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the newly created electronic payee with <code>payeeSubmit$</code> event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateBack(id: string): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the electronic payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list upon cancellation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayCreateElectronicPayeeReviewNotificationMessageCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToPayee(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the manage payee page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToNewPayment(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>BillpayEditElectronicPayeePageComponent</code>, <code>BillpayEditManualPayeePageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbBillpayEditElectronicPayeeCustomizable, bbBillpayEditManualPayeeCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasLoadingError: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error flag showing whether an error was catched from the electronic payee request response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormSubmitted(payee: PayeeElectronicCreate): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to set the electronic payee to state and navigate to the review pagee upon form submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormCanceled(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the payee list page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormValueChanged(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to set <code>isFormTouched</code> as <code>true</code>, which is used to open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayEditElectronicPayeeReviewPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>bbBillpayEditElectronicPayeeReviewCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitPayee(payee: ElectronicPayeeForm): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the payee value with <code>payeeSubmit$</code> emitter on submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateBack(id: string): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the electronic payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list upon cancellation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>BillpayEditManualPayeeReviewPageComponent</code>, <code>BillpayCreateManualPayeeReviewPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbBillpayEditManualPayeeReviewCustomizable</code>, <code>bbBillpayCreateManualPayeeReviewCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payee?: ManualPayeeFormState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payee form state filled in the form. If there is none, then navigates to the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitPayee(payee: ManualPayeeFormState): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the payee value with <code>payeeSubmit$</code> emitter on submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateBack(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the manual payee form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to navigate to the payee list on cancellation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayAddressFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayAddressFormCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formGroup?: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form group for address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasError(controlName: string, errorName: string): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a boolean value of whether there is an error in the form control with given parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manage_bill_pay_payee_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { MyCustomWidgetComponent } from './my-custom-widget.component';
+import { BillpayDataHttpModule } from '@backbase/data-ang/billpay';
+import { BillpayCommonModule } from '@backbase/billpay-common';
+import { BillpayManagePayeeWidgetModule } from '@backbase/billpay-manage-payee-widget-ang';
+import { BillpayEnrolmentWidgetModule } from '@backbase/billpay-enrolment-widget-ang';
+
+@NgModule({
+  declarations: [MyCustomWidgetComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { MyCustomWidgetComponent },
+    }),
+    BillpayDataHttpModule,
+    BillpayCommonModule,
+    BillpayManagePayeeWidgetModule,
+    BillpayEnrolmentWidgetModule,
+  ],
+})
+export class MyCustomWidgetModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">"@Component({
+  selector: 'bp-my-custom-widget',
+  template: `&lt;bb-billpay-manage-payee-widget&gt;&lt;/bb-billpay-manage-payee-widget&gt;`,
+  styles: [],
+})
+@CopyRoutes(BillpayManagePayeeWidgetComponent)
+export class MyCustomWidgetComponent {}"</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="manage_bill_pay_payee_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification dismiss time</strong></p>
+<p class="tableblock">Sets the number of seconds that notifications triggered by this widget are visible.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payee added</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when a manage payee operation is completed. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.PayeeAdded</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

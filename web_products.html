@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_products" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html"><span class="toc-current">Web widgets</span></a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_products" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p><a href="product_summary_understand.html">Understand Products</a> describes the functionalities of Products.
+The following web widgets deliver these functionalities:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">List products</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_products.html#product_summary_list_retail_web_widgets">View retail account list</a>: View of all banking products grouped by product kind</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Select products</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_products.html#product_summary_account_selector_retail_web_widgets">Select retail account</a>: Select an account from a drop-down</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Display product details</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_products.html#wc3_ps_view_details_retail_web_widgets">View retail account details</a>: View details of a selected product</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Manage products</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_products.html#product_summary_manage_accounts_retail_web_widgets">Manage retail account settings</a>: Manage your accounts</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<h2 id="product_summary_account_selector_retail_web_widgets" class="discrete">Select retail account</h2>
+<div class="paragraph">
+<p>The <strong>Select retail account</strong> widget of the Products capability allows
+bank customers to select an account from their account list. The drop-down shows
+the name and the current account balance.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/product_summary_account_selector_understand.svg?ver=3.10.1" alt="product summary account selector understand">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/product_summary_account_selector_closed_understand.svg?ver=3.10.1" alt="product summary account selector closed understand">
+</div>
+</div>
+<div class="paragraph">
+<p>This widget is used in combination with several other widgets. When
+both widgets are placed on the same page, they can communicate with each
+other. For example, if the <strong>Select retail account</strong> widget is
+placed on the same page as the <strong>View transaction list</strong> widget, and the bank customer
+selects an account, the <strong>Select retail account</strong> widget
+publishes an event. The <strong>View transaction list</strong> widget subscribes to this event
+and changes its view to display the transactions of the selected
+account.</p>
+</div>
+<div class="paragraph">
+<p>The widget displays the status of the account along with an icon. The possible statuses are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Active</strong></p>
+</li>
+<li>
+<p><strong>Inactive</strong></p>
+</li>
+<li>
+<p><strong>Closed</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/product_summary_account_selector_status_understand.svg?ver=3.10.1" alt="product summary account selector status understand">
+</div>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/product_summary_understand.html">Products</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/arrangement-client-api.html">Products client API</a>.</p>
+</div>
+<h3 id="_features_52" class="discrete">Features</h3>
+<div class="paragraph">
+<p>The following features are configurable in Experience Manager:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable or turn off backend account masking.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If enabled, the widget requests account masking from the backend service,
+and if the backend service supports this feature, the backend service
+sends a masked account number to the widget. DBS supports this feature,
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products">see this page for more information</a>.</p>
+</li>
+<li>
+<p>If turned off, the widget does not request account masking from the backend service,
+but instead, the widget itself masks the account number, see <a href="product_summary_account_selector_reference.html">Select retail account</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Allow the bank customer to filter the arrangements that are presented, without additional server requests.</p>
+</li>
+<li>
+<p>Allow the bank customer to select more than one arrangement.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_56" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="product_summary_account_selector_reference.html">Select retail account</a></p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="wc3_ps_view_details_retail_web_widgets">View retail account details</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>View retail account details</strong> widget of the Products
+capability displays detailed information for a selected product.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/product_summary_view_details.png?ver=3.10.1" alt="product summary view details">
+</div>
+</div>
+<div class="paragraph">
+<p>The actual set of information shown depends on the type of the selected
+product. Information available to this widget includes the following
+details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>General: Account type, IBAN, and available balance.</p>
+</li>
+<li>
+<p>Interest-related: Interest rate, accrued interest, and minimum required balance.</p>
+</li>
+<li>
+<p>Maturity: Monthly installment amount, principal amount, interest rate, and term.</p>
+</li>
+<li>
+<p>Overdraft: Overdraft limit, and expiry date.</p>
+</li>
+<li>
+<p>Interest and Redemption Settlement Account: Details of the account for receiving interest and for settling.</p>
+</li>
+<li>
+<p>Associated Debit Cards: Masked card number and expiry date.</p>
+</li>
+<li>
+<p>Account Opening Date and Last Updated Date: Date the account was opened and the last time account details were updated.</p>
+</li>
+<li>
+<p>Status of the account: <strong>Active</strong>, <strong>Inactive</strong>, or <strong>Closed</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/product_summary_understand.html">Products</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/arrangement-client-api.html">Products client API</a>..</p>
+</div>
+<h3 id="_features_53" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Display the details of a selected product.</p>
+</li>
+<li>
+<p>Unmask the account number. Click on the eye icon and
+the widget requests the unmasked account number from the server and displays it.
+This feature is only available if backend account masking is enabled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following features are configurable in Experience Manager:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable or turn off backend account masking.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If enabled, the widget requests account masking from the backend service,
+and if the backend service supports this feature, the backend service
+sends a masked account number to the widget. DBS supports this feature,
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products">see this page for more information</a>.</p>
+</li>
+<li>
+<p>If turned off, the widget does not request account masking from the backend service,
+but instead, the widget itself masks the account number, see <a href="product_summary_view_details_reference.html">View retail account details</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_57" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="product_summary_view_details_reference.html">View retail account details</a></p>
+</li>
+</ul>
+</div>
+<h2 id="product_summary_list_retail_web_widgets" class="discrete">View retail account list</h2>
+<div class="paragraph">
+<p>A product is a financial service offered by a bank or other financial
+institution to their customers. Backbase Platform classifies products by
+Product Kind. Product kinds are predefined categories that cannot be
+altered. These are the product kinds that the Backbase Platform
+supports:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Current Account –  is a transactional, non-interest bearing account
+wherein a deposit is placed with the Bank for an unspecified period of
+time and the depositor can withdraw or transfer the funds whenever
+required through different means.</p>
+</li>
+<li>
+<p>Savings Account –  is an interest-bearing deposit account held at a
+bank or another financial institution that provides a modest interest
+rate. A savings account is the most basic type of account at a bank or
+credit union, allowing to deposit money and withdraw funds as needed.</p>
+</li>
+<li>
+<p>Term Deposit –  is a fixed-term deposit held at a financial
+institution. They are generally short-term deposits with maturities
+ranging anywhere from a month to a few years. When a term deposit is
+purchased, the money can only be withdrawn after the term has ended
+or by giving a predetermined number of days notice.</p>
+</li>
+<li>
+<p>Debit Cards - is a payment card that is directly connected to the
+consumer’s checking account. During the transaction the amount of a
+transaction is withdrawn from the available balance in the cardholder&#8217;s
+account.</p>
+</li>
+<li>
+<p>Credit Cards – is a payment card issued by a financial company which
+enables the cardholder to borrow funds which may further be used as
+payment for goods and services.</p>
+</li>
+<li>
+<p>Loan – is a debt provided by a financial organization to another
+entity at an interest rate, specified by the attributes of the loan such
+as: Principal amount of money borrowed, the interest rate the lender is
+charging, and date of repayment. A loan may be for a specific, one-time
+amount or can be available as an open-ended line of credit up to a
+specified limit or ceiling amount.</p>
+</li>
+<li>
+<p>Investment Account – is a type of financial account that contains a
+deposit of funds and/or securities that is held at a financial
+institution. The typical objectives of an Investment Account are to
+achieve long term growth, income or capital preservation from the
+deposited asset portfolio.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/view_retail_account_list_understand.svg?ver=3.10.1" alt="view retail account list understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The widget displays the status of the account along with an icon. The possible statuses are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Active</strong></p>
+</li>
+<li>
+<p><strong>Inactive</strong></p>
+</li>
+<li>
+<p><strong>Closed</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/view_retail_account_list_status.svg?ver=3.10.1" alt="view retail account list status">
+</div>
+</div>
+<div class="paragraph">
+<p>Banks can also integrate their existing systems with the Products DBS capability
+in Backbase to catalog products, store arrangement details, and
+provide redundancy, that is, enrich and expand their existing systems with
+myriad of new features. The widgets in the widget collections related to
+the Products capability are made to work with DBS, which in turn
+can integrate with the existing systems at the bank and thus provide
+richer banking experience for the user.</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/product_summary_understand.html">Products</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/arrangement-client-api.html">Products client API</a>.</p>
+</div>
+<h3 id="_features_54" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Display an overview of all banking products grouped by product kind.</p>
+</li>
+<li>
+<p>Display aggregated balances at the product kind level.</p>
+</li>
+<li>
+<p>Display a total aggregated balance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following features are configurable in Experience Manager:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable or turn off backend account masking.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If enabled, the widget requests account masking from the backend service,
+and if the backend service supports this feature, the backend service
+sends a masked account number to the widget. DBS supports this feature,
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products">see this page for more information</a>.</p>
+</li>
+<li>
+<p>If turned off, the widget does not request account masking from the backend service,
+but instead, the widget itself masks the account number, see <a href="product_summary_list_reference.html">View retail account list</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_58" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="product_summary_list_reference.html">View retail account list</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="product_summary_manage_accounts_retail_web_widgets">Manage retail account settings</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>This widget enables bank customers to view and manage their accounts.
+Customers can set an alias for an account, and change its visibility.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/manage_retail_account_settings_understand.svg?ver=3.10.1" alt="manage retail account settings understand">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/manage_retail_account_settings_mob_understand.svg?ver=3.10.1" alt="manage retail account settings mob understand">
+</div>
+</div>
+<div class="paragraph">
+<p>If an alias, that is, a custom name is set for the account, it is displayed instead of the default account name.
+To set a custom name, the bank customer clicks the pencil icon next to the account name.
+To save the changes, users click the green ✔. To cancel, they click the red ✗.</p>
+</div>
+<div class="paragraph">
+<p>To hide or show an account in the <strong>View retail account list</strong> widget,
+the bank customer clicks the slide control next to the account in <strong>Manage retail account settings</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The widget displays the status of the account along with an icon. The possible statuses are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Active</strong></p>
+</li>
+<li>
+<p><strong>Inactive</strong></p>
+</li>
+<li>
+<p><strong>Closed</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The widget has pagination in the web view and a <strong>Load more</strong> button in the mobile view.</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/product_summary_understand.html">Products</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/arrangement-client-api.html">Products client API</a>.</p>
+</div>
+<h3 id="_features_55" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget offers the following features to bank customers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View and manage accounts.</p>
+</li>
+<li>
+<p>View the status of the account.</p>
+</li>
+<li>
+<p>Set an alias for an account.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following features are configurable in Experience Manager:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable or disable backend account masking.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If enabled, the widget requests account masking from the backend service,
+and if the backend service supports this feature, the backend service
+sends a masked account number to the widget. DBS supports this feature,
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products">see this page for more information</a>.</p>
+</li>
+<li>
+<p>If disabled, the widget does not request account masking from the backend service,
+but instead, the widget itself masks the account number, see <a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_59" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_payments" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html"><span class="toc-current">Web widgets</span></a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_payments" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p><a href="payments_understand.html">Understand Payments</a> describes the functionalities of Payments.
+The following web widgets deliver these functionalities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Initiate payment</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#omni_payment">Initiate omni payment</a>: Dynamic payment widget that you can easily configure for various payment types.
+It comes with out-of-the-box configurations for internal transfer and A2A external transfer.</p>
+</li>
+<li>
+<p><a href="web_payments.html#quick_transfer">Quick transfer</a>: Transfer funds to internal, connected, or a contact&#8217;s US account with minimum fields.</p>
+</li>
+<li>
+<p><a href="web_payments.html#initiate_payment_wizard_retail_web_widgets">Initiate payment wizard</a>: A single universal interface that guides the bank account user through the initiate payment process.
+Supports SEPA credit transfer, Faster Payments, CHAPS, and international transfers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Connect an account for A2A external transfer</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#link_external_account_retail_web_widgets">Connect external account</a>: Connect an external account that you hold in a different bank.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Manage payment orders</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#upcoming_payments_retail_web_widgets">Manage upcoming payments</a>: View all future dated payments in a list.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stop checks</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#request_stop_checks_retail_web_widgets">Request stop checks</a>: Submit a request to stop the clearance of an issued or lost check.</p>
+</li>
+<li>
+<p><a href="web_payments.html#stop_checks_list_retail_web_widgets">View stop check payment requests</a>: View submitted stop check requests.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="initiate_payment_wizard_retail_web_widgets" class="discrete">Initiate payment wizard</h2>
+<div class="paragraph">
+<p>The <strong>Initiate payment wizard</strong> uses is a UI that guides the account user through creating a payment in any payment type the bank supports.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/initiate_payment_wizard_SEPA_understand.svg?ver=3.10.1" alt="initiate payment wizard SEPA understand">
+</div>
+</div>
+<div class="paragraph">
+<p>In contrast to the omni-payment widget solution where the account user can define separate entry points for each payment type, the <strong>Initiate payment wizard</strong> widget offers a single unified UI that guides the user to the correct payment types based on the initial inputs. The widget also provides possible delivery options for each possible payment types such as instruction priority, transfer fee, fee sharing options, the execution timeframe, and the cutoff time.</p>
+</div>
+<div class="paragraph">
+<p>This helps the user to make an informed choice while maintaining the control over the payment method.
+You can re-use the omni payment configurations for the supported payment types or methods to power the payment wizard widget.
+Payment types supported by the <strong>Initiate payment wizard</strong> widget are SEPA CT, Faster Payments, CHAPS and International transfers.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/create_international_transfer.svg?ver=3.10.1" alt="create international transfer">
+</div>
+</div>
+<div class="paragraph">
+<p>When the account user opens the payment wizard, they will see the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>From account</strong>: Required, select an account.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select shows all accounts the user has access to and are allowed to debit, across all supported payment types.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Amount</strong> and currency: Required, choose currency and a enter an amount to pay.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set to default currency set up by the bank.</p>
+</li>
+<li>
+<p>Change currency to a different available currency.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Most popular currencies displayed at the top of the list.</p>
+</li>
+<li>
+<p>Displays country three letter ISO code and name of currency.</p>
+</li>
+<li>
+<p>Search for a currency by its ISO code and name.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Transfer to</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Beneficiary&#8217;s name</strong>: Required, select a saved beneficiary or enter a new one.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shows all accounts the user has access to and are allowed to credit, except the account currently selected, in the <strong>From account</strong> field.</p>
+</li>
+<li>
+<p>Shows all beneficiary accounts listed in users contacts.</p>
+</li>
+<li>
+<p>Auto-populates beneficiary name, account, bank country and bank branch code, if available.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Country</strong>: Required, appears when initiating an international transfer.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shows by default the beneficiary bank&#8217;s home country.</p>
+</li>
+<li>
+<p>Change the country to another available country.</p>
+</li>
+<li>
+<p>Displays the name and national flag of the country, and the country&#8217;s ISO code.</p>
+</li>
+<li>
+<p>Search for a country by its ISO code and name.</p>
+</li>
+<li>
+<p>Changing the country shall also change the account credentials required for
+ each country.
+For example, IBAN for Belgium, or BBAN and BSB code for Australia.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Delivery</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Frequency: Required, how often the payment is made. Once for a singular payment.</p>
+</li>
+<li>
+<p>Execution date: Required, The date the payment shall be made.</p>
+</li>
+<li>
+<p>Standard and Urgent delivery selection: Required, displayed with cost and time taken to deliver payments.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bank customer may click the <strong>X Clear</strong> button next to the <strong>Transfer to</strong> section of the payment form to remove entered beneficiary details without clearing the entered information in <strong>From account</strong> and <strong>Payment details</strong>.</p>
+</div>
+<div class="paragraph">
+<p>For the international transfer type, the user may enter a <strong>Purpose of payment</strong>. The <strong>Purpose of payment</strong> field will have different formats depending on the country of the payment beneficiary, these are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.</p>
+</li>
+<li>
+<p>A mandatory free text field.</p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user is sees an explanatory description of each of the available codes.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The format is determined by receiving the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_options#payments_options_countries">sanctioned countries endpoint</a>.</p>
+</div>
+<div class="paragraph">
+<p>For certain countries, a <strong>Purpose of payment</strong> is a mandatory requirement, and some will require specific responses from the pre-defined list in the drop-down.
+In others, the <strong>Purpose of payment</strong> is entirely optional and can be authored by the payee.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_optional_understand.svg?ver=3.10.1" alt="Purpose of payment optional"></span></p>
+</li>
+<li>
+<p>A mandatory free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_mandatory_freetext_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory free text"></span></p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_code_list_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory code list dropdown"></span></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the account user has entered all required details,
+the available payment type, or types if there are multiple, display.
+In the case that there are multiple payment types and the required fields for the payment types are different,
+such as ACH Credit or a domestic wire,
+the user is asked to select from different delivery options for each displayed payment type.
+Once the user selects a delivery option, the user is shown additional fields specific to that payment type.
+The user will see a cost overview for the transfer and the cost of selected delivery option.
+If available, the user is also shown a fee sharing option.</p>
+</div>
+<div class="paragraph">
+<p>The account user has the option to add their own description of their payment for reference purposes.</p>
+</div>
+<h3 id="_features_34" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Single universal user interface guides the user to initiate a payment.</p>
+</li>
+<li>
+<p>Supports SEPA CT, Faster Payments, CHAPS, International transfer types.</p>
+</li>
+<li>
+<p>Select from saved contacts or enter new payment details.</p>
+</li>
+<li>
+<p>Save payment details as a new contact.</p>
+</li>
+<li>
+<p>Set up a <a href="glossary.html#glossary_standing_order">standing order</a>.</p>
+</li>
+<li>
+<p>Save a created payment as a payment template for future payments.</p>
+</li>
+<li>
+<p>Search for payment template.</p>
+</li>
+<li>
+<p>Select and apply saved payment template to complete a new payment.</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="omni_payment">Initiate omni payment</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Initiate omni payment</strong> widget is a base widget that is fully customizable with a TypeScript configuration to support different payment types. It comes with out-of-the-box configurations for common payment types.</p>
+</div>
+<h3 id="_supported_payment_types" class="discrete">Supported payment types</h3>
+<div class="paragraph">
+<p>The widget supports the following payment types out of the box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Internal transfer</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>A single payment type for transferring funds between the accounts of the same bank customer in the same financial institution.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_select_account.png?ver=3.10.1" alt="initiate omni payment select account"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_internal_transfer.png?ver=3.10.1" alt="initiate omni payment internal transfer"></span></p>
+</div>
+<div class="paragraph">
+<p>Use this payment type if you do not require specific validations for different internal account types, for example, checking, savings, or else. You can implement your own logic to filtering of the account types in the <strong>To</strong> and <strong>From</strong> drop-downs, as well as prohibiting transfers between certain account types. See <a href="omni_payment_reference.html">widget reference</a>, <strong>Internal account selector</strong> component, for configuration.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Intrabank transfer</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>A payment type to allow a bank customer to transfer money to someone in the same bank.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_intrabank_transfer.png?ver=3.10.1" alt="initiate omni payment intrabank transfer"></span></p>
+</div>
+<div class="paragraph">
+<p>When initiating an intrabank transfer, the bank customer can save the manually entered name and account number as a new contact by selecting the
+<strong>Save to contacts</strong> checkbox. Once the payment is executed, the bank customer sees a notification in the success screen, confirming whether the contact was successfully saved.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_intrabank_transfer_save_contact.png?ver=3.10.1" alt="initiate omni payment intrabank transfer save contact"></span></p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>A2A external transfer</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Payment type for transfers between accounts that the customer has in the different financial institutions. The available transfers allow users to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Transfer money from an internal account to a connected account</p>
+</li>
+<li>
+<p>Pull funds from a connected account to an internal account</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_a2a_transfer.png?ver=3.10.1" alt="initiate omni payment a2a transfer"></span></p>
+</div>
+<div class="paragraph">
+<p>See <a href="omni_payment_reference.html">widget reference</a>, <strong>Internal account selector</strong> component, for configuration.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_features_35" class="discrete">Features</h3>
+<div class="paragraph">
+<p>When making a payment, the bank customer specifies the <strong>To</strong> and <strong>From</strong> accounts and the amount, adds an optional memo, and sets the payment schedule. All those fields are configurable. See <a href="omni_payment_reference.html">widget reference</a> for details.</p>
+</div>
+<div class="paragraph">
+<p>By default, the widget displays currency symbols (for example, $) for <strong>To</strong> and <strong>From</strong> account balances. However, developers can configure the widget to display currency
+codes (for example, USD) instead.</p>
+</div>
+<div class="paragraph">
+<p>When a bank customer selects a loan or a credit card account in the <strong>To</strong> drop-down, the widget displays a <strong>Payment details</strong> section with predefined payment amounts mapped to backend attributes. For example, a minimum due payment for a credit card account. The customer can select from the predefined options or enter an amount manually. See <a href="omni_payment_reference.html">Initiate omni payment</a> for the list of the OOTB mapped backend attributes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_amount_options.png?ver=3.10.1" alt="initiate omni payment amount options"></span></p>
+</div>
+<div class="paragraph">
+<p>The <strong>Schedule</strong> section allows the bank customer to select the date and frequency of the transfer.</p>
+</div>
+<div class="paragraph">
+<p>For convenience, the OOTB configuration of the <strong>Schedule</strong> section is the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For credit card accounts, the widget displays a switch to pay monthly for any predefined payment amount. If the bank customer switches it on, then the payment frequency is automatically set to <strong>Monthly</strong>. Otherwise, it is set to <strong>Once</strong>.</p>
+</li>
+<li>
+<p>For loan accounts, the widget displays the switch to pay monthly for the <strong>Other amount</strong> option (manual entering). If the bank customer switches it on, then the payment frequency is automatically set to <strong>Monthly</strong>. For full and principal amount options, the widget displays only the execution date and automatically sets the frequency to <strong>Once</strong>.</p>
+</li>
+<li>
+<p>For other types of accounts, the widget displays the regular <strong>Schedule</strong> component with the date picker and frequency drop-down containing the <strong>Once</strong>, <strong>Daily</strong>, <strong>Weekly</strong>, <strong>Biweekly</strong>, <strong>Monthly</strong>, <strong>Quarterly</strong>, and <strong>Annually</strong> options.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the customer selects a credit card or a loan account in the <strong>To</strong> drop-down, the widget compares the current date and the payment due date, and displays corresponding messages. The message can be either a blue info box, if the due date has not passed yet, or a yellow warning, if the payment is already late. The title, text, and icon of the messages are configurable.</p>
+</div>
+<div class="paragraph">
+<p>Once the customer selects a payment date, the widget compares this date to the due date and shows a text warning about a late payment fee under the <strong>Execution date</strong> field.</p>
+</div>
+<div class="paragraph">
+<p>Once all the information is provided, the bank customer reviews the payment details and confirms it.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_review.png?ver=3.10.1" alt="initiate omni payment review"></span></p>
+</div>
+<div class="paragraph">
+<p>If the payment type is an internal transfer or an intrabank transfer, the bank customer can edit previously scheduled payments. The bank customer initiates this the process in the <strong>Manage upcoming payments</strong> widget, and makes the changes in the pre-filled payment form of the <strong>Initiate omni payment</strong> widget. All fields are editable. Once the bank customer submits their changes, they see a success screen with an option to navigate back to the list of upcoming payments in <strong>Manage upcoming payments</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/initiate_omni_payment_edit_scheduled.png?ver=3.10.1" alt="initiate omni payment edit scheduled"></span></p>
+</div>
+<div class="paragraph">
+<p>For a smooth experience, a developer can set up navigation from an accounts widget (for example, <strong>View retail account list</strong>), where the customer selects an account for transfer, and the <strong>Initiate omni payment</strong> widget. <strong>Initiate omni payment</strong> listens to the <code>transferFrom</code> parameter that contains the selected account ID, and preselects this account in the <strong>From</strong> drop-down.</p>
+</div>
+<div class="paragraph">
+<p>Developers customize the widget with either out-of-the-box, or custom configurations.
+See: <a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>.</p>
+</div>
+<h3 id="_endpoints" class="discrete">Endpoints</h3>
+<div class="paragraph">
+<p>This widget uses the following endpoints out of the box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Retrieve internal accounts</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/arrangement-client-api.html#api-ProductSummary-getArrangementsByBusinessFunction">GET https://ips_host:ips_port/gateway/api/arrangement-manager/client-api/v2/productsummary/context/arrangements</a></p>
+</div>
+</li>
+<li>
+<p>Retrieve connected accounts</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-a2a-client-api.html#api-A2aClient-getAll">GET https://ips_host:ips_port/gateway/api/payment-order-a2a/client-api/v1/external-accounts</a></p>
+</div>
+</li>
+<li>
+<p>Execute payment</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-client-api.html#api-PaymentOrders-postPaymentOrders">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-orders</a></p>
+</div>
+</li>
+<li>
+<p>Update a payment order</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-client-api.html#api-PaymentOrders-putPaymentOrderById">PUT https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-orders/{paymentOrderId}</a></p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_36" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="omni_payment_reference.html">Initiate omni payment</a></p>
+</li>
+</ul>
+</div>
+<h2 id="quick_transfer" class="discrete">Quick transfer</h2>
+<div class="paragraph">
+<p>In the <strong>Quick transfer</strong> widget, the bank customer transfers money by providing
+minimum required information, which includes the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>From</strong>: Sending US account.</p>
+</li>
+<li>
+<p><strong>To</strong>: Receiving US account.</p>
+</li>
+<li>
+<p><strong>Amount</strong>: The amount of transfer.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_understand.svg?ver=3.10.1" alt="quick transfer understand"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_from_account_view.png?ver=3.10.1" alt="quick transfer from account view"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_to_account_view.svg?ver=3.10.1" alt="quick transfer to account view"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_accounts_selected_view.svg?ver=3.10.1" alt="quick transfer accounts selected view"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_review.svg?ver=3.10.1" alt="quick transfer review"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/quick_transfer_success_view.svg?ver=3.10.1" alt="quick transfer success view"></span></p>
+</div>
+<div class="paragraph">
+<p>For the <strong>From</strong> account, the customer can select one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An internal account</p>
+</li>
+<li>
+<p>A connected account</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the <strong>To</strong> account, the customer can select one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An internal account</p>
+</li>
+<li>
+<p>A connected account</p>
+</li>
+<li>
+<p>A contact account, that is, an account of another customer of the same bank</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the out-of-the-box configuration, transfers between connected accounts are turned off.</p>
+</div>
+<div class="paragraph">
+<p>A developer can configure the following features of the widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accounts shown in the <strong>From</strong> and <strong>To</strong> account drop-downs.</p>
+</li>
+<li>
+<p>Allowed <strong>From</strong> and <strong>To</strong> account type combinations.</p>
+</li>
+<li>
+<p>Required business functions.</p>
+</li>
+<li>
+<p>Currency in the amount input field, before the <strong>From</strong> account is selected.</p>
+</li>
+<li>
+<p>Payment types. See <a href="quick_transfer_reference.html">reference documentation</a> for available OOTB payment types.</p>
+</li>
+</ul>
+</div>
+<h3 id="_features_36" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the bank customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select a sending account from the customer&#8217;s internal accounts or connected accounts.</p>
+</li>
+<li>
+<p>Select a receiving account from the internal, connected, or contact accounts.</p>
+</li>
+<li>
+<p>Review payment details.</p>
+</li>
+<li>
+<p>Confirm or discard the payment.</p>
+</li>
+<li>
+<p>See a success or error message depending on the success or failure of the operation.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_37" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="quick_transfer_reference.html">Quick transfer</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="link_external_account_retail_web_widgets">Connect external account</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>In this widget, the bank customer connects an external account that they hold in a different bank
+to make an external A2A transfer in the United States.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/a2a_transfer_understand.png?ver=3.10.1" alt="a2a transfer understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The bank customer specifies the following information to connect an external account:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account number</p>
+</li>
+<li>
+<p>Account type</p>
+</li>
+<li>
+<p>Routing transit number (ABA)</p>
+</li>
+<li>
+<p>Account name or alias</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once the external account is connected, the bank customer can view it in the list of accounts with the status <strong>Pending Activation</strong>.
+To be able to make an external A2A transfer, the bank customer must activate their previously connected external account.
+To do so, the bank customer enters two different micro-deposit amounts greater than 0 cents and less than or equal to 50 cents,
+and clicks <strong>Activate</strong>. The sum of these micro-deposits must not exceed 99 cents, and the two amounts must not be equal.</p>
+</div>
+<div class="paragraph">
+<p>To cancel the activation process, the bank customer clicks <strong>Cancel</strong>,
+and confirms the action in the subsequent modal dialog.
+Upon successful activation, the customer sees a confirmation message, and is navigated back to the list view,
+where the updated status of the external account is visible.
+If the activation attempt failed, the customer is notified by an error message.</p>
+</div>
+<div class="paragraph">
+<p>To remove a connected external account that is no longer required, the customer clicks <strong>Remove</strong>.
+It is possible to remove an account in any status, for example, if it is <strong>Pending Activation</strong>, or <strong>Failed Verification</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/a2a_transfer_list_view.svg?ver=3.10.1" alt="a2a transfer list view">
+</div>
+</div>
+<div class="paragraph">
+<p>To view the details of an external account, the customer selects the account in the list.
+The following details are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account type</p>
+</li>
+<li>
+<p>Account number</p>
+</li>
+<li>
+<p>Bank name</p>
+</li>
+<li>
+<p>Routing transit number (ABA)</p>
+</li>
+<li>
+<p>Account name or alias</p>
+</li>
+<li>
+<p>Status</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To transfer funds to and from a connected external account, the bank customer selects
+the <strong>make transfer</strong> option.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/a2a_transfer_details.png?ver=3.10.1" alt="a2a transfer details">
+</div>
+</div>
+<h3 id="_features_37" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Connect an external account</p>
+</li>
+<li>
+<p>Activate a connected account</p>
+</li>
+<li>
+<p>Remove a connected account</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with
+the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a>
+DBS capability using the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">Payments client API</a>.</p>
+</div>
+<h3 id="_related_topics_38" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="link_external_account_reference.html">Connect external account</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="request_stop_checks_retail_web_widgets">Request stop checks</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>In this widget, the bank customer submits requests to the bank to stop check payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/request_stop_checks_business_understand.svg?ver=3.10.1" alt="request stop checks business understand"></span></p>
+</div>
+<div class="paragraph">
+<p>If the bank customer issued a check, but wants to request the bank to not honor the payments,
+they submit a request to stop the clearance of an issued or lost check. This feature is helpful in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The customer is short of funds, and wants to avoid the scenario of a bounced check.</p>
+</li>
+<li>
+<p>The customer lost a signed check, and wants to prevent the bank from honoring it.</p>
+</li>
+<li>
+<p>The customer lost an entire check book, and requests a bank to not honor checks that fall within a range of serial numbers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To submit a stop check request, the bank customer fills in the check details form.
+If the request concerns a single check, the customer selects <strong>Single</strong>. If the request concerns multiple checks,
+the customer selects <strong>Multiple</strong>, and specifies the range of serial numbers.</p>
+</div>
+<div class="paragraph">
+<p>To specify the reason of the request, the customer has the following options to choose from in a drop-down:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Insufficient funds</p>
+</li>
+<li>
+<p>Incorrect amount or other details</p>
+</li>
+<li>
+<p>Lost or stolen checks or check books</p>
+</li>
+<li>
+<p>Checks mailed to wrong address</p>
+</li>
+<li>
+<p>Dispute over purchases</p>
+</li>
+<li>
+<p>Lost in mail</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once the check details form is completed, the bank customer clicks <strong>Continue</strong>,
+and reviews the details of the request. To confirm the request, they click <strong>Submit</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/request_stop_checks_business_understand.svg?ver=3.10.1" alt="request stop checks business understand"></span></p>
+</div>
+<h3 id="_features_38" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget has the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Submit a stop check request for one or multiple checks.</p>
+</li>
+<li>
+<p>Review the details of the request.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_39" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="request_stop_checks_reference.html">Request stop checks</a></p>
+</li>
+</ul>
+</div>
+<h2 id="stop_checks_list_retail_web_widgets" class="discrete">View stop check payment requests</h2>
+<div class="paragraph">
+<p>In this widget, the bank customer views their submitted requests to the bank to stop check payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/stop_checks_understand.svg?ver=3.10.1" alt="stop checks understand"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/stop_checks_details_view.svg?ver=3.10.1" alt="stop checks details view"></span></p>
+</div>
+<div class="paragraph">
+<p>If the bank customer issued a check, but wants to request the bank to not honor the payments,
+they submit a request to stop the clearance of an issued or lost check.
+This feature is helpful in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The customer is short of funds, and wants to avoid the scenario of a bounced check.</p>
+</li>
+<li>
+<p>The customer lost a signed check, and wants to prevent the bank from honoring it.</p>
+</li>
+<li>
+<p>The customer lost an entire check book, and requests a bank to not honor checks that fall within a range of serial numbers.</p>
+</li>
+</ul>
+</div>
+<h3 id="_features_39" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget has the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View stop check requests.</p>
+</li>
+<li>
+<p>View details of a specific stop check request.</p>
+</li>
+<li>
+<p>Print the details of a stop check request.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_40" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="stop_checks_list_reference.html">View stop check payment requests</a></p>
+</li>
+</ul>
+</div>
+<h2 id="upcoming_payments_retail_web_widgets" class="discrete">Manage upcoming payments</h2>
+<div class="paragraph">
+<p>The <strong>Manage upcoming payments</strong> widget displays all the future dated one-off payments and <a href="glossary.html#glossary_standing_order">standing order</a>s in a list for a selected account.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/upcoming_payments_understand.svg?ver=3.10.1" alt="upcoming payments understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The list is sorted in a descending order by requested execution date.</p>
+</div>
+<div class="paragraph">
+<p>By default, the following information is available in the list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Execution Date</strong>: The requested debit date of the payment.</p>
+</li>
+<li>
+<p><strong>Counter Party Name</strong>: The name of the recipient of the payment order.</p>
+</li>
+<li>
+<p><strong>Recurring Frequency</strong>: Frequency of recurrence of the payment order, if a payment order is submitted as recurring.</p>
+</li>
+<li>
+<p><strong>Instructed Amount</strong>: Amount of the payment order.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To view more information about a payment order, the bank customer clicks the payment order in the list.</p>
+</div>
+<div class="paragraph">
+<p>Additional information can include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Paying From Account</strong>: The account from the which the payment will be debited.</p>
+</li>
+<li>
+<p><strong>Counter Party Name</strong>: The name of the recipient of the payment order.</p>
+</li>
+<li>
+<p><strong>Counter Party Account</strong>: The account number of the recipient of the payment order.</p>
+</li>
+<li>
+<p><strong>Execution Date</strong>: The requested debit date of the payment.</p>
+</li>
+<li>
+<p><strong>Instructed Currency</strong>: Currency of the payment order.</p>
+</li>
+<li>
+<p><strong>Instructed Amount</strong>: Amount of the payment order.</p>
+</li>
+<li>
+<p><strong>Reference</strong>: Payment reference of the payment order.</p>
+</li>
+<li>
+<p><strong>Start date</strong>: The first requested execution date, if a payment order is submitted as recurring.</p>
+</li>
+<li>
+<p><strong>End date</strong>: The end date of a standing order, if set.</p>
+</li>
+<li>
+<p><strong>Recurring Frequency</strong>: Frequency of recurrence of the payment order, if a payment order is submitted as recurring.</p>
+</li>
+<li>
+<p><strong>Description</strong>: Free text description, if provided in the payment during submission.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To cancel a payment order or a payment schedule, the bank customer clicks the <strong>Cancel Payment</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>To edit an intrabank or an internal payment, the bank customer selects the <strong>Edit</strong> button. The bank customer is then redirected to the pre-filled payment form of the <strong>Initiate omni payment</strong> widget. All fields are editable. Once the bank customer submits their changes, they see a success screen with an option to navigate back to the list of upcoming payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/upcoming_payments_edit_scheduled.png?ver=3.10.1" alt="upcoming payments edit scheduled"></span></p>
+</div>
+<h3 id="_features_40" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View a list of future dated payment orders for a selected account.</p>
+</li>
+<li>
+<p>Load payment orders incrementally.</p>
+</li>
+<li>
+<p>Display complete details of a payment order if selected from the list.</p>
+</li>
+<li>
+<p>Display the currency exchange rate in payment details
+if the currency of the instructed amount is different from the currency of the debtor account.</p>
+</li>
+<li>
+<p>Cancel a one-off upcoming payment before execution.</p>
+</li>
+<li>
+<p>Cancel the payment schedule when canceling a standing order.</p>
+</li>
+<li>
+<p>Edit scheduled internal and intrabank transfers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with
+the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a>
+DBS capability using the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-order-client-api.html">Payments client API</a>.</p>
+</div>
+<h3 id="_related_topics_41" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="upcoming_payments_reference.html">Manage upcoming payments</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

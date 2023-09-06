@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Widget Collection Retail Banking v3.5.3</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="rb_353" class="book toc2 toc-left">
+<div id="header">
+<h1>Widget Collection Retail Banking v3.5.3</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html"><span class="toc-current">Widget Collection Retail Banking v3.5.3</span></a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="rb_353" class="sect0">Widget Collection Retail Banking v3.5.3</h1>
+          <div class="paragraph">
+<p>The highlights for this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Capabilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Access control - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_account_statements_353">Account Statements v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify a name for the downloaded file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Actions - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_authentication_3531">Authentication v3.5.3.1</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Improved widget title</p>
+</li>
+<li>
+<p>Fixed custom provider issue</p>
+</li>
+<li>
+<p>Fixed log in issue</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_authentication_353">Authentication v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Config providers, services, and components are now exported from the public API</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_bill_pay_353">Bill Pay v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Improved widget navigation</p>
+</li>
+<li>
+<p>Bill Pay Payee Summary text improvements</p>
+</li>
+<li>
+<p>Native Bill Pay widget now sends an event when payee with eBills enabled is selected</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Card management - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_consents_353">Consents v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Widgets migrated to Theme 2.0</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_contacts_353">Contacts v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed ContactList slot errors</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_messages_3532">Messages v3.5.3.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The exposed <code>isMyMessage</code> flag in the Android client is fully accessible</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_messages_3531">Messages v3.5.3.1</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>isMyMessage</code> flag is exposed for the Android client</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Notifications - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_payments_353">Payments v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Initiate an external A2A transfer</p>
+</li>
+<li>
+<p>New Omni-payment widget</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Personal finance management -  no changes</p>
+</li>
+<li>
+<p>Places - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_products_353">Products v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated UI component</p>
+</li>
+<li>
+<p>Added BBAN account number to Term Deposit account</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remote deposit capture - no changes</p>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_self_enrollment_353">Self Enrollment v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>New feature service for Theme 2.0 support</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_transactions_353">Transactions v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a note to a transaction</p>
+</li>
+<li>
+<p>View the geolocation and address of a transaction</p>
+</li>
+<li>
+<p>View the running balance in transactions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_user_management_353">User Self Service v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>User Identity Security Center widget updated for Theme 2.0</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_user_profile_353">User Profile v3.5.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Additional Theme 2.0 updates in the User Manage Profile widget</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_353.html#rb3_migrate_353">Migration</a></p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_account_statements_353" class="discrete">Account Statements v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_80" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-8790: Allow the file name to be set when downloading files</p>
+<div class="paragraph">
+<p>In the <code>account-statement-download-doc</code> directive, the downloaded file
+had no name.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_authentication_3531" class="discrete">Authentication v3.5.3.1</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_68" class="discrete">New features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Improved widget title</strong></p>
+<div class="paragraph">
+<p>To make its purpose clearer and improve consistency among widget collections,
+the <strong>Login</strong> widget has been retitled to <strong>Log in user</strong> widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_81" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>The following issues have been fixed in this patch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-9389: Unable to use custom provider tokens for the <strong>Log in user</strong> widget</p>
+<div class="paragraph">
+<p>To resolve this, providers are now added at the module level instead of the component level.</p>
+</div>
+</li>
+<li>
+<p>MAINT-9415: Users could only log in on the second attempt</p>
+<div class="paragraph">
+<p>To resolve this, the <strong>Log in user</strong> widget has been updated so that the
+login post request now includes the <code>responseType</code> set to text.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To update to v3.5.3-sp.1, run the following command from your
+project application directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm i --save @backbase/retail-ang@3.5.3-sp.1</code></pre>
+</div>
+</div>
+<h2 id="rb3_authentication_353" class="discrete">Authentication v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_69" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Config providers, services, and components are now exported from the public API</strong></p>
+<div class="paragraph">
+<p>Configuration providers, services, and components are now exported from the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_authentication#login">Login</a> widget public API.
+Including these elements in the API ensures that they are publicly accessible.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_bill_pay_353" class="discrete">Bill Pay v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_70" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Improved widget navigation</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-3/web_billpay#billpay_payee_summary">Bill Pay Payee Summary</a>
+widget now navigates to the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3-5-3/web_billpay#billpay_manage_payee">Bill Pay Manage Payee</a> widget when no payees exist.</p>
+</li>
+<li>
+<p>Cancel buttons have been added to the Bill Pay Manage Payee widget&#8217;s manual payee, electronic payee, and search payee
+screens. Clicking <strong>Cancel</strong> returns the user to the payee list screen.</p>
+</li>
+<li>
+<p>Navigation handling has been standardised throughout the widgets.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Bill Pay Payee Summary text improvements</strong></p>
+<div class="paragraph">
+<p>The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_billpay#billpay_payee_summary">Bill Pay Payee Summary</a> widget has the following text improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text for payee stepper has changed from <code>1 of 3 Payees</code> to <code>Payee 1 of 3</code>.</p>
+</li>
+<li>
+<p>The text for error and empty states now refers to <code>support</code> instead of <code>system administrator</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Native Bill Pay widget now sends an event when payee with eBills enabled is selected</strong></p>
+<div class="paragraph">
+<p>The native <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/native_bill_pay#bill_pay_widget">Bill Pay widget</a> now publishes a new
+event, <code>bb.action.bill-pay.pay-payee-with-active-ebill</code>. This is
+sent on selection of a payee with eBills enabled. The event&#8217;s payload contains a Payee Summary object. The native
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/native_bill_pay#bill_pay_form_widget">Bill Pay Form widget</a> subscribes to this event.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_82" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fix:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OBPAY-2290: Extra eBill icon displayed when SSO enabled</p>
+<div class="paragraph">
+<p>The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_billpay#billpay_payee_list">Bill Pay Payee
+List</a> widget displayed an additional eBill icon when the <code>backbase.payveris.sso</code> property was enabled.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_consents_353" class="discrete">Consents v3.5.3</h2>
+<h3 id="_new_features_71" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Widgets migrated to Theme 2.0</strong></p>
+<div class="paragraph">
+<p>For more information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/account_information_consent_reference">Account Information Consent widget</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/account_information_dashboard_revoke_reference">Account Information Dashboard and Revoke widget</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/payment_initiation_consent_reference">Payment initiation Consent widget</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/list_account_information_consents_reference">List Account Information Consents widget</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_contacts_353" class="discrete">Contacts v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_83" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-9003: ContactList slot errors when customizing.</p>
+<div class="paragraph">
+<p>When customizing <code>bbContactsListContainerCustomizable</code>, the compiler requests to import a service (ContactsService) that is not exposed by the contacts commons and makes the slot widget not customizable.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_messages_3532" class="discrete">Messages v3.5.3.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_84" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>The following issue has been fixed in this patch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>isMyMessage</code> flag of the <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-3/message_center_client_reference">Android Message center client</a> exposed in the previous
+patch was not fully accessible. It is now properly exposed and accessible.</p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_messages_3531" class="discrete">Messages v3.5.3.1</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_85" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>The following issue has been fixed in this patch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For better alignment between iOS and Android, the <code>isMyMessage</code> flag is now exposed for the
+<a href="message_center_client_reference.html">Android Message center client</a> as well as the iOS one.</p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_payments_353" class="discrete">Payments v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_72" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Initiate an external A2A transfer (web)</strong></p>
+<div class="paragraph">
+<p>Users can now transfer funds to their own accounts at another bank.
+A prerequisite is that the user first connects and activates the external account.
+If you&#8217;re using DBS, note that DBS does not yet support initiating payments
+to external accounts. Banks need to implement their own custom solution to provide A2A transfers to their customers.</p>
+</div>
+</li>
+<li>
+<p><strong>Omni-payment widget (web)</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The Omni-payment widget is a base widget that is fully customizable with a TypeScript configuration.
+The Omni-payment widget always requires a developer to either configure an out-of-the-box payment type,
+or to create and configure a custom payment type. For more information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/configure_ootb_payment_type">Configure an out-of-the-box payment type (beta)</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/configure_custom_payment_type">Configure a custom payment type (beta)</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This is a beta (sample code) release. This feature may, unless otherwise authorized by Backbase, be used for testing
+purposes only, and is provided on an "AS IS" basis without support of any kind. You should not use this feature in a
+production environment.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_products_353" class="discrete">Products v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_73" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Updated UI component</strong></p>
+<div class="paragraph">
+<p>All Products widgets are now updated to use <code>bb-loading-indicator-ui</code> instead of the deprecated <code>bb-loading-state-ui</code>:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_list">Product Summary List</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_account_selector">Product Summary Account Selector</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#wc3_ps_view_details">Product Summary View Details</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_manage_accounts">Product Summary Manage Accounts</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>BBAN account number is added to Term Deposit account</strong></p>
+<div class="paragraph">
+<p>BBAN account number is now added to <code>TermDeposit</code> account in the Android <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/products_client_reference">Products client</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_86" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-9039: Common business and retail banking ui-ang library <code>@backbase/product-summary-common-ang</code> was missing from Retail ui-ang dependencies.</p>
+<div class="paragraph">
+<p>When using Widget Collection Retail Banking only, there was a compilation error in the application.
+The common library <code>@backbase/product-summary-common-ang</code> is now added to <code>retail-ang/package.json</code> as a dependency of <code>collections-banking-ang</code> to eliminate this issue.</p>
+</div>
+</li>
+<li>
+<p>MAINT-8873: Customization for <code>bb-product-summary-account-selector-widget</code> replaced with an out-of-the-box template when bank customer is navigating in Product Summary widgets</p>
+<div class="paragraph">
+<p>Preferences for <code>bb-product-summary-account-selector-widget</code> were reset to the out-of-the-box default templates when a bank user was navigating in between Account Details, My Accounts, and Accounts list. This issue is now fixed and customizations are no longer reset to default templates on user navigation.</p>
+</div>
+</li>
+<li>
+<p>MAINT-9016: - Product Summary widgets using deprecated UI component</p>
+<div class="paragraph">
+<p>All Products widgets are now updated to use <code>bb-loading-indicator-ui</code> instead of the deprecated <code>bb-loading-state-ui</code>:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_list">Product Summary List</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_account_selector">Product Summary Account Selector</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#wc3_ps_view_details">Product Summary View Details</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_products#product_summary_manage_accounts">Product Summary Manage Accounts</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_self_enrollment_353" class="discrete">Self Enrollment v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_74" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>New feature service for Theme 2.0 support</strong></p>
+<div class="paragraph">
+<p>To support Backbase Theme 2.0, a feature service has been added to the common library for the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_self_enrollment">Self Enrollment</a> widgets. This new service determines
+whether Theme 2.0 is enabled.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_transactions_353" class="discrete">Transactions v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_75" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ability to add a note to a transaction (native mobile)</strong></p>
+<div class="paragraph">
+<p>The native mobile <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/native_transactions#transactions_widget">Transactions</a> now provides the ability to add, edit and delete notes for transactions.</p>
+</div>
+</li>
+<li>
+<p><strong>Ability to view the geolocation and address of a transaction (native mobile)</strong></p>
+<div class="paragraph">
+<p>The native mobile <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/native_transactions#transactions_widget">Transactions</a> now provides the ability to view the geolocation of a transactions in a map along with the open address so that users of banks can easily identify their transactions.</p>
+</div>
+</li>
+<li>
+<p><strong>Ability to view the running balance in transactions (iOS native mobile)</strong></p>
+<div class="paragraph">
+<p>The native mobile <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/native_transactions#transactions_widget">Transactions</a> now provides the ability view the running balance - the balance recorded after a transaction took place.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_87" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-8919: Extending bbTransactionsListItemGroupCustomizable breaks the page. Extension slot has been updated to not cause the breaking.</p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_user_management_353" class="discrete">User Self Service v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_76" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User Identity Security Center widget updated for Theme 2.0</strong></p>
+<div class="paragraph">
+<p>The Backbase Theme 2.0 style is now available in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_user_management#user_identity_security_center">User Identity Security Center</a> widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_user_profile_353" class="discrete">User Profile v3.5.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_77" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release includes the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Additional Theme 2.0 updates in the User Manage Profile widget</strong></p>
+<div class="paragraph">
+<p>Additional updates for Backabase Theme 2.0 have been made to the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.3/web_user_profile#user_manage_profile">User Manage Profile</a> widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_migrate_353" class="discrete">Migration</h2>
+<div class="paragraph">
+<p>There are no migration steps specific to this release.</p>
+</div>
+</div>
+</body>
+</html>

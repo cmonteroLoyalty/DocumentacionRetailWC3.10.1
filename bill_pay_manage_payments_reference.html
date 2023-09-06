@@ -1,0 +1,3007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Manage bill payments</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="bill_pay_manage_payments_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage bill payments</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html"><span class="toc-current">Manage bill payments</span></a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="bill_pay_manage_payments_reference" class="sect0">Manage bill payments</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentsselector">Selector name</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentsrequired_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentsextension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentshostref_api">API</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentsimplementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#manage_bill_paymentspreferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="manage_bill_paymentsselector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-billpay-manage-payment-widget&gt;</code>.</p>
+</div>
+<h2 id="manage_bill_paymentsrequired_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BillpayManagePaymentWidgetModule } from '@backbase/billpay-manage-payment-widget-ang';</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>For standalone use and testing of this widget, import <code>BillpayEnrolmentWidgetModule</code> in the <code>app.module.ts</code> of your app. All Bill Pay widgets are closely related to each other, so it is recommended to use them together as well.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="manage_bill_paymentsextension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payments_slots_1_2_3_4_5_6.svg?ver=3.10.1" alt="billpay manage payments slots 1 2 3 4 5 6"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payments_slots_7_8_9.svg?ver=3.10.1" alt="billpay manage payments slots 7 8 9"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payments_slots_10_11.svg?ver=3.10.1" alt="billpay manage payments slots 10 11"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_manage_payments_slots_12.svg?ver=3.10.1" alt="billpay manage payments slots 12"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentFormCustomizable">bbBillpayPaymentFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentFormAccountFromCustomizable">bbBillpayPaymentFormAccountFromCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentFormPayeeToCustomizable">bbBillpayPaymentFormPayeeToCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentFormDetailsCustomizable">bbBillpayPaymentFormDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentScheduleCustomizable">bbBillpayPaymentScheduleCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayEbillPaymentUICustomizable">bbBillpayEbillPaymentUICustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentReviewCustomizable">bbBillpayPaymentReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentReviewContentCustomizable">bbBillpayPaymentReviewContentCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentReviewButtonsCustomizable">bbBillpayPaymentReviewButtonsCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentReviewNotificationMessageCustomizable">bbBillpayPaymentReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentReviewNotificationHeaderCustomizable">bbBillpayPaymentReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentDiscardChangesModalCustomizable">bbBillpayPaymentDiscardChangesModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentOneOffEditReviewCustomizable">bbBillpayPaymentOneOffEditReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentOneOffEditReviewContentCustomizable">bbBillpayPaymentOneOffEditReviewContentCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentOneOffEditReviewButtonsCustomizable">bbBillpayPaymentOneOffEditReviewButtonsCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable">bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable">bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditReviewCustomizable">bbBillpayPaymentRecurringEditReviewCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable">bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable">bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditReviewContentCustomizable">bbBillpayPaymentRecurringEditReviewContentCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditReviewButtonsCustomizable">bbBillpayPaymentRecurringEditReviewButtonsCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentRecurringEditFormContainerCustomizable">bbBillpayPaymentRecurringEditFormContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_manage_payments_reference.html#bbBillpayPaymentFormOvernightAddressCustomizable">bbBillpayPaymentFormOvernightAddressCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBillpayPaymentFormCustomizable" class="discrete">bbBillpayPaymentFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentFormCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPaymentFormCustomizable let-hostRef&gt;
+  &lt;form
+    data-role="payment-form"
+    [formGroup]="hostRef.paymentForm"
+    (ngSubmit)="hostRef.handleSubmit()"
+  &gt;
+    &lt;!-- Payee To edit Label --&gt;
+    &lt;ng-container
+      *ngIf="hostRef.isEditPayment"&gt;
+      &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2FormTitle"&gt;
+        &lt;h3 *ngIf="hostRef.selectedPayee | async as payee" class="mb-4" data-role="payee-to-edit-header"&gt;
+          &lt;span i18n="Payment to|Payee to edit label@@billpay-manage-payment.payee-to.edit.header"
+          &gt;Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}&lt;/span&gt;
+        &lt;/h3&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-template #themeV2FormTitle&gt;
+        &lt;div class="bb-block bb-block--lg"&gt;
+          &lt;bb-header-ui
+            *ngIf="hostRef.selectedPayee | async as payee"
+            data-role="payee-to-edit-header"
+            headingType="h1"
+            heading="Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }}"
+            i18n-heading="Payment to|Payee to edit label@@billpay-manage-payment.payee-to.edit.header"
+          &gt;&lt;/bb-header-ui&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ng-container&gt;
+    &lt;div class="{{hostRef.isThemeV2Enabled ? 'card' : ''}}"&gt;
+      &lt;div class="{{hostRef.isThemeV2Enabled ? 'card-body' : ''}}"&gt;
+        &lt;!-- Account From --&gt;
+        &lt;ng-container bbBillpayPaymentFormAccountFromCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payee To --&gt;
+        &lt;ng-container bbBillpayPaymentFormPayeeToCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payment details --&gt;
+        &lt;ng-container bbBillpayPaymentFormDetailsCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Payment overnight delivery address --&gt;
+        &lt;ng-container bbBillpayPaymentFormOvernightAddressCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2FormButtons"&gt;
+          &lt;button
+            bbButton
+            i18n="Make payment button|Button text to make a payment@@bb-billpay-payment-form.button.submit"
+            data-role="button-submit"
+            class="mr-sm-3 col-sm-auto col-xs-12"
+            color="primary"
+            type="submit"
+          &gt;
+            Continue
+          &lt;/button&gt;
+          &lt;button
+            bbButton
+            i18n="Make payment cancel button|Button text to make cancel a payment@@bb-billpay-payment-form.button.cancel"
+            data-role="cancel-payment-button"
+            class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+            (click)="hostRef.cancel()"
+            color="link"
+          &gt;
+            Cancel
+          &lt;/button&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2FormButtons&gt;
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              i18n="Make payment button|Button text to make a payment@@bb-billpay-payment-form.button.submit"
+              data-role="button-submit"
+              class="bb-button-bar__button"
+              color="primary"
+              type="submit"
+            &gt;
+              Continue
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              i18n="Make payment cancel button|Button text to make cancel a payment@@bb-billpay-payment-form.button.cancel"
+              data-role="cancel-payment-button"
+              class="bb-button-bar__button"
+              (click)="hostRef.cancel()"
+              color="link"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentFormAccountFromCustomizable" class="discrete">bbBillpayPaymentFormAccountFromCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentFormAccountFromCustomizable let-hostRef&gt;
+  &lt;bb-fieldset-ui
+    i18n-heading="From|From section title@@billpay-manage-payment.section.from"
+    heading="From"
+    class="bb-block bb-block--lg"&gt;
+    &lt;label
+      data-role="select-account-label"
+      aria-live="polite" class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label mb-2 mt-2'}}"
+      i18n="Select an account to move money from|From account label @@bb-billpay-manage-payment.form.account-from.label"
+    &gt;
+      Select an account to move money from
+    &lt;/label&gt;
+    &lt;bb-product-selector-ui&gt;
+      &lt;ng-container bbDropdownToggle&gt;
+        &lt;bb-product-item-basic-account-ui
+          *ngIf="hostRef.selectedAccount | async as selectedAccount"
+          [title]="selectedAccount.accountNickName"
+          [productNumber]="selectedAccount.accountNumber"
+          [productNumberFormat]="hostRef.accountNumberFormatConfig"
+          [amount]="selectedAccount.accountBalance?.amount"
+          [currency]="selectedAccount.accountBalance?.currencyCode"
+          [highlight]="false"
+          data-role="account-from-selected"
+          class="bb-text-align-left"&gt;
+        &lt;/bb-product-item-basic-account-ui&gt;
+
+        &lt;div
+          *ngIf="!(hostRef.selectedAccount | async)"
+          data-role="select-account-option"
+          i18n-aria-label="Account selector aria label|Aria label to show when no account is being selected@@bb-billpay-manage-payment.account.placeholder.label"
+          aria-label="Select a debit account"
+          i18n="Account selector placeholder|Text to show when no account is being selected@@bb-billpay-manage-payment.payee.placeholder"
+          class="bb-text-align-left"
+        &gt;
+          Select an account
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container bbDropdownMenu&gt;
+        &lt;button #listItem
+          bbButton
+          class="bb-product-selector__dropdown-item"
+          color="unstyled"
+          [block]="true"
+          *ngFor="let account of hostRef.accounts"
+          (click)="hostRef.selectAccount(account)"
+          data-role="account-item"
+        &gt;
+          &lt;bb-product-item-basic-account-ui
+            [title]="account.accountNickName"
+            [productNumber]="account.accountNumber"
+            [productNumberFormat]="hostRef.accountNumberFormatConfig"
+            [amount]="account.accountBalance?.amount"
+            [currency]="account.accountBalance?.currencyCode"
+            [highlight]="false"
+            [active]="false"
+            class="bb-stack__item bb-stack__item--fill bb-text-align-left"
+          &gt;
+          &lt;/bb-product-item-basic-account-ui&gt;
+        &lt;/button&gt;
+      &lt;/ng-container&gt;
+    &lt;/bb-product-selector-ui&gt;
+    &lt;bb-input-validation-message-ui
+      role="alert"
+      [showErrors]="hostRef.isInvalidControl(hostRef.paymentForm?.get('accountFrom'))"
+    &gt;
+      &lt;span
+        *ngIf="!hostRef.paymentForm?.get('accountFrom').errors?.notEmptyObject"
+        i18n="Account from required error message@@bb-billpay-payment-form.error.account-from"
+        data-role="invalid-account-from"
+      &gt;Please select an account&lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/bb-fieldset-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentFormPayeeToCustomizable" class="discrete">bbBillpayPaymentFormPayeeToCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentFormPayeeToCustomizable let-hostRef&gt;
+  &lt;bb-fieldset-ui
+    *ngIf="!hostRef.isEditPayment"
+    data-role="payee-to-product-selector"
+    i18n-heading="To|To section title@@billpay-manage-payment.section.to"
+    heading="To" class="bb-block bb-block--lg"&gt;
+    &lt;label
+      data-role="select-payee-label"
+      aria-live="polite" class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label mb-2 mt-2'}}"
+      i18n="Select a payee|To payee label @@bb-billpay-manage-payment.form.payee-to.label"
+    &gt;
+      Select a payee
+    &lt;/label&gt;
+    &lt;bb-product-selector-ui&gt;
+      &lt;ng-container bbDropdownToggle&gt;
+        &lt;bb-product-item-current-account-ui
+          *ngIf="hostRef.selectedPayee | async as selectedPayee"
+          [title]="selectedPayee.nickName || selectedPayee.name"
+          [mainSectionTitle]="selectedPayee.nickName &amp;&amp; selectedPayee.name || ''"
+          [highlight]="false"
+          data-role="payee-to-selected"
+          [active]="false"
+          class="bb-text-align-left"
+        &gt;
+          &lt;ng-template bbCustomProductItemCurrentAccountMainSection let-mainSectionTitle="mainSectionTitle"&gt;
+            &lt;div&gt;
+              &lt;span class="bb-text-support bb-subtitle"&gt;{{mainSectionTitle}}&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-product-item-current-account-ui&gt;
+
+        &lt;div
+          *ngIf="!(hostRef.selectedPayee | async)"
+          data-role="select-payee-label" class="bb-text-align-left"
+          [class.product-item-content]="!hostRef.isThemeV2Enabled"
+          i18n-aria-label="Payee selector aria label|Aria label to show when no payee is being selected@@bb-billpay-manage-payment.payee.placeholder.label"
+          aria-label="Select a payee" i18n="Payee selector placeholder|Text to show when no payee is being selected@@bb-billpay-manage-payment.payee.placeholder"
+        &gt;
+          Select a payee
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container bbDropdownMenu&gt;
+        &lt;button
+          #listItem
+          bbButton
+          class="bb-product-selector__dropdown-item"
+          color="unstyled"
+          [block]="true"
+          *ngFor="let payee of hostRef.payeeSummaries"
+          (click)="hostRef.selectPayee(payee)"
+          data-role="payee-item"
+        &gt;
+          &lt;bb-product-item-current-account-ui
+            [title]="payee.nickName || payee.name"
+            [mainSectionTitle]="payee.nickName &amp;&amp; payee.name || ''"
+            [highlight]="false"
+            [active]="false"
+            class="bb-stack__item bb-stack__item--fill bb-text-align-left"
+          &gt;
+            &lt;ng-template bbCustomProductItemCurrentAccountMainSection
+              let-mainSectionTitle="mainSectionTitle"
+            &gt;
+              &lt;div&gt;
+                &lt;span class="bb-text-support bb-subtitle"&gt;
+                  {{mainSectionTitle}}
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-item-current-account-ui&gt;
+        &lt;/button&gt;
+      &lt;/ng-container&gt;
+    &lt;/bb-product-selector-ui&gt;
+    &lt;bb-input-validation-message-ui
+      role="alert"
+      [showErrors]="hostRef.isInvalidControl(hostRef.paymentForm?.get('payeeTo'))"
+    &gt;
+        &lt;span
+          *ngIf="!hostRef.paymentForm?.get('payeeTo').errors?.notEmptyObject"
+          i18n="Payee to required error message@@bb-billpay-payment-form.error.payee-to"
+          data-role="invalid-payee-to"
+        &gt;
+          Please select a payee
+        &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/bb-fieldset-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentFormDetailsCustomizable" class="discrete">bbBillpayPaymentFormDetailsCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentFormDetailsCustomizable let-hostRef&gt;
+  &lt;bb-fieldset-ui i18n-heading="Payment details|ext for the 'payment details' payment@@bb-billpay-payment-form.payment-details" heading="Payment details" class="bb-block bb-block--lg"&gt;
+
+    &lt;bb-billpay-ebill-payment
+      *ngIf="hostRef.ebillPayment"
+      [control]="hostRef.paymentForm?.get('amount')"
+      [latestBill]="hostRef.ebillSummary?.latestBill"
+      [isSubmitted]="hostRef.formSubmitted"
+    &gt;&lt;/bb-billpay-ebill-payment&gt;
+
+    &lt;div
+      class="{{hostRef.isThemeV2Enabled ? 'bb-block bb-block--md' : 'd-block mb-3 pb-3 mt-2'}}"
+      [formGroup]="hostRef.paymentForm"
+      *ngIf="!hostRef.ebillPayment"&gt;
+
+      &lt;label
+        class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label'}}"
+        data-role="payment-amount-label"
+        aria-label="Payment amount"
+        i18n-aria-label="Amount label|Label for payment amount@@bb-billpay-payment-form.aria-label.amount"
+      &gt;Payment amount in USD
+      &lt;/label&gt;
+      &lt;div class="bb-form-field bb-form-field--sm"&gt;
+        &lt;bb-currency-input-ui
+          data-role="amount"
+          required
+          formControlName="amount"
+        &gt;
+        &lt;/bb-currency-input-ui&gt;
+      &lt;/div&gt;
+      &lt;bb-input-validation-message-ui role="alert" [showErrors]="hostRef.isInvalidControl(hostRef.paymentForm?.get('amount'))"&gt;
+        &lt;span *ngIf="!hostRef.paymentForm?.get('amount').errors?.amountInvalid" i18n="Payment amount cannot be zero|Error zero amount@@bb-billpay-payment-form.error.amount" data-role="invalid-amount"&gt;
+          Payment amount cannot be zero.
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      class="{{hostRef.isThemeV2Enabled ? 'bb-fieldset' : 'form-group'}}"
+      [formGroup]="hostRef.paymentForm"
+    &gt;
+      &lt;label
+        class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label'}}"
+        data-role="add-memo-label"
+        i18n="Memo label|Label for payment memo@@bb-billpay-payment-form.label.memo"
+        for="bb-billpay-payment-form-memo"
+      &gt;
+        Add a memo
+        &lt;span class="bb-text-support"&gt;(optional)&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;div class="bb-form-field {{hostRef.isThemeV2Enabled ? 'bb-form-field--md' : 'col-sm-6 col-lg-4 p-0'}}"&gt;
+        &lt;input
+          class="form-control"
+          id="bb-billpay-payment-form-memo"
+          data-role="memo"
+          formControlName="memo"
+          [maxLength]="hostRef.memoMaxLength"
+          #memo
+        &gt;
+      &lt;/div&gt;
+        &lt;bb-char-counter-ui
+          class="bb-text-support {{hostRef.isThemeV2Enabled ? 'bb-subtitle': ''}}"
+          [element]="memo"
+          [maxLength]="hostRef.memoMaxLength"
+          [blockTyping]="true"&gt;
+        &lt;/bb-char-counter-ui&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Payment scheduler --&gt;
+    &lt;bb-collapsible-ui
+      *ngIf="!hostRef.isEditPayment || (hostRef.paymentType$ | async) !== 'oneOff'; else editOneOffPaymentSchedule"
+      data-role="schedule-toggle"
+      [isOpen]="(hostRef.paymentType$ | async) === 'recurring'"
+    &gt;
+      &lt;ng-template bbCollapsibleHeader let-toggle="toggle" let-isOpen="isOpen"&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2FormCollapsibleButton"&gt;
+          &lt;div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-2 mb-3"&gt;
+            &lt;div&gt;
+              &lt;span
+                class="font-weight-bold"
+                i18n="Schedule section title|Title of the form section with payment schedule fields@@bb-billpay-payment-form.section.schedule.title"
+              &gt;
+                Schedule
+              &lt;/span&gt;
+              &lt;span class="text-support"&gt;
+                (&lt;bb-schedule-label-ui
+                [item]="hostRef.scheduleLabelData"
+                [minOccurrences]="hostRef.minOccurs"
+                [isSingleTransfer]="hostRef.schedule.frequency.value === hostRef.frequencyKeys.Once"
+              &gt;
+                &lt;/bb-schedule-label-ui&gt;)
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;button
+              bbButton class="bg-transparent"
+              (click)="toggle()"
+              type="button"
+              color="light"
+            &gt;
+              &lt;bb-icon-ui
+                data-role="schedule-toggle-icon"
+                aria-label="Schedule toggle"
+                i18n-aria-label="Schedule toggle label|Aria label for schedule toggle@@bb-billpay-payment-form.bb-schedule-ui.label.toggle"
+                [name]="isOpen ? 'toggle-up' : 'toggle-down'"
+              &gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2FormCollapsibleButton&gt;
+          &lt;div class="border-bottom bb-block bb-block--md"&gt;
+            &lt;button
+              bbButton
+              class="bb-stack bb-product-selector__item-content"
+              (click)="toggle()"
+              type="button"
+              color="unstyled"
+            &gt;
+            &lt;div class="bb-stack__item bb-stack__item--fill bb-text-align-left"&gt;
+              &lt;div class="bb-block bb-block--sm"&gt;
+                &lt;span
+                  class="bb-heading-2"
+                  i18n="Schedule section title|Title of the form section with payment schedule fields@@bb-billpay-payment-form.section.schedule.title"
+                &gt;
+                  Schedule
+                &lt;/span&gt;
+                &lt;span class="bb-text-support bb-text-default"&gt;
+                  (&lt;bb-schedule-label-ui
+                  [item]="hostRef.scheduleLabelData"
+                  [minOccurrences]="hostRef.minOccurs"
+                  [isSingleTransfer]="hostRef.schedule.frequency.value === hostRef.frequencyKeys.Once"
+                &gt;
+                  &lt;/bb-schedule-label-ui&gt;)
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;bb-icon-ui
+              class="bb-stack__item"
+              cropped
+              data-role="schedule-toggle-icon"
+              aria-label="Schedule toggle"
+              i18n-aria-label="Schedule toggle label|Aria label for schedule toggle@@bb-billpay-payment-form.bb-schedule-ui.label.toggle"
+              [name]="isOpen ? 'toggle-up' : 'toggle-down'"
+            &gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template bbCollapsibleBody&gt;
+        &lt;bb-schedule-ui
+          [scheduleForm]="hostRef.paymentForm.get('schedule')"
+          [paymentServices]="(hostRef.selectedPayee | async)?.paymentServices"
+          [defaultPaymentServiceType]="hostRef.defaultPaymentServiceType"
+          [frequencies]="hostRef.frequencies"
+          [minOccurs]="hostRef.minOccurs"
+          [maxOccurs]="hostRef.maxOccurs"
+          [minDate]="hostRef.minDate | async"
+          [formSubmitted]="hostRef.formSubmitted"
+          data-role="payment-schedule"
+        &gt;
+        &lt;/bb-schedule-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-collapsible-ui&gt;
+
+    &lt;ng-template #editOneOffPaymentSchedule&gt;
+      &lt;div class="bb-block bb-block--md" [formGroup]="hostRef.paymentForm.get('schedule')"&gt;
+        &lt;label
+          class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label'}}"
+          data-role="deliver-payment-by-date"
+        &gt;
+          &lt;span
+            i18n="Deliver payment by label|Edit one off payment date@@bb-billpay-payment-form.label.deliver-payment-by"
+          &gt;Deliver payment by&lt;/span&gt;
+          &lt;div&gt;
+            &lt;bb-input-datepicker-ui
+              formControlName="startDate"
+              [minDate]="hostRef.minDate | async"
+              data-role="once-start-date-calendar"
+              aria-label="start-date"
+            &gt;&lt;/bb-input-datepicker-ui&gt;
+          &lt;/div&gt;
+          &lt;bb-input-validation-message-ui
+            aria-live="polite"
+            [showErrors]="hostRef.paymentForm.get('schedule.startDate').invalid &amp;&amp; hostRef.formSubmitted"
+          &gt;
+            &lt;span
+              *ngIf="hostRef.paymentForm.get('schedule.startDate').hasError('required')"
+              i18n="Execution date required error text|Error required message for Execution date input field@@bb-billpay-payment-form.error.required.startDate"
+              data-role="missing-schedule-execution-date"
+            &gt;
+              Execution date is required.
+            &lt;/span&gt;
+            &lt;span
+              *ngIf="hostRef.paymentForm.get('schedule.startDate').hasError('pastDate') || hostRef.paymentForm.get('schedule.startDate').hasError('dateLessThanMinDate')"
+              i18n="Execution date past date error text |Error past date message for Execution date input field@@bb-billpay-payment-form.error.pastDate.startDate"
+              data-role="past-date-schedule-execution-date"
+            &gt;
+              Execution date could not be in a past.
+            &lt;/span&gt;
+            &lt;span
+              *ngIf="hostRef.paymentForm.get('schedule.startDate').hasError('invalidDateFormat')"
+              i18n="Execution date invalid date error text |Error invalid date format message for Execution date input field@@bb-billpay-payment-form.error.invalidDateFormat"
+              data-role="invalid-date-schedule-execution-date"
+            &gt;
+              Invalid date format.
+            &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-fieldset-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentScheduleCustomizable" class="discrete">bbBillpayPaymentScheduleCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPaymentScheduleCustomizable
+  [bbHostRef]="this"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPaymentScheduleCustomizable
+  let-hostRef
+&gt;
+
+  &lt;div [formGroup]="hostRef.scheduleForm" class="bb-block bb-block--md"&gt;
+    &lt;div class="bb-form-field bb-form-field--md  bb-block bb-block--md"&gt;
+      &lt;label
+        data-role="frequency-label"
+        class="form-label"
+        i18n="Schedule frequency label|Label for a frequency dropdown in the component@@billpay.bb-schedule-ui.label.frequency"
+      &gt;
+        Frequency
+      &lt;/label&gt;
+      &lt;bb-dropdown-single-select-ui
+        data-role="frequency-dropdown"
+        aria-label="frequency"
+        formControlName="frequency"
+        displayAttributePath="name"&gt;
+        &lt;ng-container *ngFor="let item of hostRef.frequencies; index as i"&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            *ngIf="hostRef.frequencyValues.Once === item.value"
+            [value]="hostRef.frequencies[i]"
+            [label]="hostRef.frequencies[i].name"
+            i18n-label="Once|Option Label@@billpay.bb-schedule-ui.frequency.option.label.once"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            *ngIf="hostRef.frequencyValues.Weekly === item.value"
+            [value]="hostRef.frequencies[i]"
+            [label]="hostRef.frequencies[i].name"
+            i18n-label="Weekly|Option Label@@billpay.bb-schedule-ui.frequency.option.label.weekly"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            *ngIf="hostRef.frequencyValues.Biweekly === item.value"
+            [value]="hostRef.frequencies[i]"
+            [label]="hostRef.frequencies[i].name"
+            i18n-label="Every to weeks|Option Label@@billpay.bb-schedule-ui.frequency.option.label.biweekly"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            *ngIf="hostRef.frequencyValues.Monthly === item.value"
+            [value]="hostRef.frequencies[i]"
+            [label]="hostRef.frequencies[i].name"
+            i18n-label="Monthly|Option Label@@billpay.bb-schedule-ui.frequency.option.label.monthly"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+        &lt;/ng-container&gt;
+      &lt;/bb-dropdown-single-select-ui&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-block bb-block--md" [hidden]="hostRef.item?.frequency.value !== hostRef.frequencyValues.Once"&gt;
+      &lt;label
+        data-role="payment-date-label"
+        class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label'}}"
+        i18n="Schedule once payment section name|Label for the section containing inputs that determine way of once payment the scheduled payments@@billpay.bb-schedule-ui.label.once-date"&gt;
+        Choose payment date
+      &lt;/label&gt;
+      &lt;bb-input-radio-group-ui
+        data-role="once-payment-group"
+        formControlName="paymentService"
+        [required]="true"
+        aria-label="once-date-type"&gt;
+        &lt;bb-input-radio-ui
+          *ngFor="let radio of hostRef.paymentServiceRadios"
+          [value]="radio"
+          aria-invalid="false"
+          [labelTemplate]="radio.index !== 'OTHER' ? paymentServiceLabelTemplate : paymentServiceOtherLabelTemplate"
+        &gt;
+          &lt;ng-template #paymentServiceLabelTemplate&gt;
+            &lt;div class="bb-text-align-left"&gt;
+              &lt;div&gt;
+                &lt;span
+                  data-role="payment-option"
+                  i18n="Service label list|Radio Label@@billpay.bb-input-radio-ui.radio.label.once-date.service"&gt;
+                  {
+                    radio.service.paymentServiceType, select,
+                    REGULAR_PAYMENT {Earliest free delivery}
+                    EXPEDITED_PAYMENT {Rush payment}
+                    OVERNIGHT_CHECK {Overnight check}
+                    }
+                &lt;/span&gt;
+                &lt;span
+                  *ngIf="radio.service.paymentServiceType === hostRef.paymentServicesTypes.Expedited || radio.service.paymentServiceType === hostRef.paymentServicesTypes.Overnight"
+                  i18n="Service label fee text|Radio Label fee@@billpay.bb-input-radio-ui.radio.label.once-date.service.fee"
+                &gt;&amp;nbsp;-&amp;nbsp;{{ radio.service.fee.amount | currency: radio.service.fee.currencyCode : 'symbol-narrow' }}&amp;nbsp;fee&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div
+                data-role="delivery-by"
+                class="bb-text-support bb-subtitle"
+                i18n="Service label subtext|Radio Label subtext@@billpay.bb-input-radio-ui.radio.label.once-date.service.subtext"&gt;
+                Delivery by {{ hostRef.getEstimatedStartDate(radio.service.paymentServiceType) | date:'longDate' }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+          &lt;ng-template #paymentServiceOtherLabelTemplate&gt;
+            &lt;div class="bb-stack"&gt;
+              &lt;span
+                class="bb-stack__item bb-text-bold"
+                i18n="Other date|Radio Label@@billpay.bb-input-radio-ui.radio.label.once-date.other"
+                data-role="other-date-label"
+              &gt;Other date&lt;/span&gt;
+              &lt;span class="bb-stack__item"&gt;
+                &lt;bb-input-datepicker-ui
+                  (click)="$event.preventDefault()"
+                  formControlName="startDate"
+                  [minDate]="hostRef.minDate"
+                  data-role="once-start-date-calendar"
+                  aria-label="start-date"
+                &gt;&lt;/bb-input-datepicker-ui&gt;
+                &lt;bb-input-validation-message-ui
+                  role="alert"
+                  [showErrors]="hostRef.scheduleForm.get('startDate').invalid &amp;&amp; hostRef.formSubmitted"
+                &gt;
+                  &lt;span
+                    *ngIf="hostRef.scheduleForm.get('startDate').errors?.required"
+                    i18n="Execution date required error text|Error required message for Execution date input field@@billpay.bb-schedule-ui.error.required.startDate"
+                    data-role="missing-schedule-execution-date"
+                  &gt;
+                    Execution date is required.
+                  &lt;/span&gt;
+                  &lt;span
+                    *ngIf="hostRef.scheduleForm.get('startDate').errors?.pastDate"
+                    i18n="Execution date past date error text |Error past date message for Execution date input field@@billpay.bb-schedule-ui.error.pastDate.startDate"
+                    data-role="past-date-schedule-execution-date"
+                  &gt;
+                    Execution date could not be in a past.
+                  &lt;/span&gt;
+                  &lt;span
+                    *ngIf="hostRef.scheduleForm.get('startDate').errors?.invalidDateFormat"
+                    i18n="Execution date invalid date error text |Error invalid date format message for Execution date input field@@billpay.bb-schedule-ui.error.invalidDateFormat"
+                    data-role="invalid-date-schedule-execution-date"
+                  &gt;
+                    Invalid date format.
+                  &lt;/span&gt;
+                &lt;/bb-input-validation-message-ui&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-input-radio-ui&gt;
+      &lt;/bb-input-radio-group-ui&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-block bb-block--md" *ngIf="hostRef.item?.frequency.value !== hostRef.frequencyValues.Once"&gt;
+      &lt;label for="start-date-calendar" class="bb-text-bold"&gt;
+        &lt;span
+          *ngIf="true"
+          i18n-label="Schedule start label|Label for an start date in scheduling component@@billpay.bb-schedule-ui.label.start"
+          data-role="start-date-label"
+        &gt;
+          Choose start date
+        &lt;/span&gt;
+      &lt;/label&gt;
+      &lt;div class="bb-form-field bb-form-field--sm"&gt;
+        &lt;bb-input-datepicker-ui
+          id="start-date-calendar"
+          formControlName="startDate"
+          [minDate]="hostRef.minDate"
+          data-role="start-date-calendar"
+          aria-label="start-date"
+        &gt;&lt;/bb-input-datepicker-ui&gt;
+      &lt;/div&gt;
+
+      &lt;bb-input-validation-message-ui
+        role="alert"
+        [showErrors]="hostRef.scheduleForm.get('startDate').invalid &amp;&amp; hostRef.formSubmitted"
+      &gt;
+        &lt;span
+          *ngIf="hostRef.scheduleForm.get('startDate').errors?.required"
+          i18n="Execution date required error text|Error required message for Execution date input field@@billpay.bb-schedule-ui.error.required.startDate"
+          data-role="missing-schedule-execution-date"
+        &gt;
+          Execution date is required.
+        &lt;/span&gt;
+        &lt;span
+          *ngIf="hostRef.scheduleForm.get('startDate').errors?.pastDate || hostRef.scheduleForm.get('startDate').errors?.dateLessThanMinDate"
+          i18n="Execution date past date error text |Error past date message for Execution date input field@@billpay.bb-schedule-ui.error.pastDate.startDate"
+          data-role="past-date-schedule-execution-date"
+        &gt;
+          Execution date could not be in a past.
+        &lt;/span&gt;
+        &lt;span
+          *ngIf="hostRef.scheduleForm.get('startDate').errors?.invalidDateFormat"
+          i18n="Execution date invalid date error text |Error invalid date format message for Execution date input field@@billpay.bb-schedule-ui.error.invalidDateFormat"
+          data-role="invalid-date-schedule-execution-date"
+        &gt;
+          Invalid date format.
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-block bb-block--md" [hidden]="hostRef.item?.frequency.value == hostRef.frequencyValues.Once"&gt;
+      &lt;label
+        data-role="ending-label"
+        class="{{hostRef.isThemeV2Enabled ? 'bb-label' : 'form-label'}}"
+        i18n="Schedule ending section name|Label for the section containing inputs that determine way of ending of the scheduled payments@@billpay.bb-schedule-ui.label.ending"&gt;
+        Ending
+      &lt;/label&gt;
+      &lt;div class="bb-stack bb-stack--align-bottom"&gt;
+        &lt;div class="bb-stack__item"&gt;
+          &lt;bb-input-radio-group-ui
+            [required]="true"
+            aria-label="end-type"
+            formControlName="endType"&gt;
+            &lt;bb-input-radio-ui
+              [value]="hostRef.endTypes.Never"
+              label="Never"
+              aria-invalid="false"
+              data-role="ending-never-selector"
+              i18n-label="Schedule never ends|Label for an option to never end the payment schedule@@billpay.bb-schedule-ui.label.ending.never"&gt;
+            &lt;/bb-input-radio-ui&gt;
+            &lt;bb-input-radio-ui
+              [value]="hostRef.endTypes.On"
+              aria-invalid="false"
+              [labelTemplate]="endingTemplate"
+              data-role="ending-on-selector"&gt;
+            &lt;/bb-input-radio-ui&gt;
+            &lt;bb-input-radio-ui
+              [value]="hostRef.endTypes.After"
+              aria-invalid="false"
+              data-role="ending-after-selector"
+              [labelTemplate]="afterTemplate"&gt;
+            &lt;/bb-input-radio-ui&gt;
+            &lt;ng-template #endingTemplate&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;span
+                  data-role="ending-date-on-label"
+                  class="bb-stack__item bb-stack__item--spacing-lg"
+                  i18n="Schedule end date|Label for an option to end the payment schedule on a specific date@@billpay.bb-schedule-ui.label.ending.on"
+                &gt;On&lt;/span&gt;
+                &lt;div class="bb-stack__item"&gt;
+                  &lt;bb-input-datepicker-ui
+                    formControlName="endDate"
+                    data-role="ending-end-date"
+                    i18n-aria-label="Schedule end date datepicker label|Aria label for end date payment schedule control@@billpay.bb-schedule-ui.label.end-date"
+                    aria-label="end-date"
+                    [minDate]="hostRef.scheduleForm.get('startDate').value"
+                  &gt;&lt;/bb-input-datepicker-ui&gt;
+                  &lt;bb-input-validation-message-ui
+                    role="alert"
+                    *ngIf="hostRef.scheduleForm.get('endDate') as control"
+                    [showErrors]="control.invalid &amp;&amp; hostRef.formSubmitted"
+                  &gt;
+                  &lt;span
+                    *ngIf="control.errors?.pastDate || control.errors?.dateLessThanMinDate"
+                    i18n="End date past date error text |Error past date message for End date input field@@billpay.bb-schedule-ui.end-date.past-date-error"
+                    data-role="past-date-ending-end-date"
+                  &gt;
+                    End date could not be lower than start date.
+                  &lt;/span&gt;
+                    &lt;span
+                      *ngIf="control.errors?.invalidDateFormat"
+                      i18n="End date invalid date error text |Error invalid date format message for End date input field@@billpay.bb-schedule-ui.end-date.invalid-date-format-error"
+                      data-role="invalid-date-schedule-end-date"
+                    &gt;
+                    Invalid date format.
+                  &lt;/span&gt;
+                    &lt;span
+                      *ngIf="control.errors?.required"
+                      i18n="End date invalid date error text |Date is required for End date input field@@billpay.bb-schedule-ui.end-date.date-required-error"
+                      data-role="required-date-schedule-end-date"
+                    &gt;
+                    End date is required.
+                  &lt;/span&gt;
+                  &lt;/bb-input-validation-message-ui&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+            &lt;ng-template #afterTemplate&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;span
+                  class="bb-stack__item bb-stack__item--spacing-sm"
+                  i18n="Schedule number of occurrences|Label for an option to end the payment schedule after some number of occurrences@@billpay.bb-schedule-ui.label.ending.after"
+                &gt;
+                  After
+                &lt;/span&gt;
+                &lt;div class="bb-stack__item"&gt;
+                  &lt;div class="bb-stack"&gt;
+                    &lt;bb-input-number-ui
+                      class="bb-stack__item {{hostRef.isThemeV2Enabled ? 'bb-text-align-right' : ''}}"
+                      formControlName="repeat"
+                      [min]="hostRef.minOccurs"
+                      [max]="hostRef.maxOccurs"
+                      data-role="ending-occurrences"
+                      aria-label="occurrences"
+                    &gt;&lt;/bb-input-number-ui&gt;
+                    &lt;span
+                      class="bb-stack__item"
+                      i18n-label="Schedule occurrences text|Text to be appended after schedule end after some number of occurrences input@@billpay.bb-schedule-ui.label.ending.occurrences"
+                    &gt;
+                    Occurrences
+                  &lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-input-radio-group-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      *ngIf="hostRef.item?.frequency.value !== hostRef.frequencyValues.Once &amp;&amp; hostRef.item?.endType !== hostRef.endTypes.Never &amp;&amp; hostRef.item?.startDate"&gt;
+      &lt;bb-alert-ui
+        modifier="info"
+        title=""&gt;
+        &lt;span class="bb-text-bold" *ngIf="hostRef.item?.endType === hostRef.endTypes.After" data-role="estimated-end-date-label"&gt;
+          &lt;span i18n="Estimated end date|Label for estimated end date section@@billpay.bb-schedule-ui.label.estimated.date"&gt;
+            Estimated end date {{ hostRef.getEstimatedEndDate() | date: 'longDate' }}
+          &lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="bb-text-bold" *ngIf="hostRef.item?.endType === hostRef.endTypes.On"&gt;
+          &lt;ng-container i18n="Estimated payment in total|Label for estimated payment in total section@@billpay.bb-schedule-ui.label.estimated.occurs"&gt;
+            { hostRef.getEstimatedOccurs(), plural, =1 { {{hostRef.getEstimatedOccurs()}} payment in total } other { {{hostRef.getEstimatedOccurs()}} payments in total }}
+          &lt;/ng-container&gt;
+        &lt;/span&gt;
+      &lt;/bb-alert-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-block bb-block--md" [hidden]="hostRef.item?.frequency.value == hostRef.frequencyValues.Once"&gt;
+      &lt;label
+        data-role="notify-me-label"
+        class="bb-text-bold"
+        i18n="Notify me section name|Label for the section notify containing checkboxes @@billpay.bb-schedule-ui.label.notify"&gt;
+        Notify me
+      &lt;/label&gt;
+      &lt;div&gt;
+        &lt;div class="bb-block bb-block--xs"&gt;
+          &lt;bb-input-checkbox-ui
+            [id]="'alertPendingCheckbox'"
+            label="When a payment is pending"
+            i18n-label="When a payment is pending|Checkbox Label@@bb-input-checkbox-ui.checkbox.label.pending"
+            formControlName="alertPendingCheckbox"&gt;
+          &lt;/bb-input-checkbox-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-block bb-block--xs"&gt;
+          &lt;bb-input-checkbox-ui
+            [id]="'alertSentCheckbox'"
+            label="When a payment has been sent"
+            i18n-label="When a payment has been sent|Checkbox Label@@bb-input-checkbox-ui.checkbox.label.sent"
+            formControlName="alertSentCheckbox"&gt;
+          &lt;/bb-input-checkbox-ui&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;bb-input-checkbox-ui
+            [id]="'alertLastPendingCheckbox'"
+            label="When the last payment is pending"
+            i18n-label="When the last payment is pending|Checkbox Label@@bb-input-checkbox-ui.checkbox.label.last-pending"
+            formControlName="alertLastPendingCheckbox"&gt;
+          &lt;/bb-input-checkbox-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayEbillPaymentUICustomizable" class="discrete">bbBillpayEbillPaymentUICustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayEbillPaymentUICustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayEbillPaymentUICustomizable
+  let-hostRef
+&gt;
+  &lt;bb-alert-ui
+    modifier="info"
+    title=""&gt;
+      &lt;span
+        data-role="ebill-info-alert"
+        class="bb-text-bold"
+        i18n="eBill payment alert|Alert for eBill information@@billpay.bb-payment-ebill.alert"&gt;
+        eBill due on {{ hostRef.latestBill?.paymentDate | bbDate: 'fullDate' }}.
+      &lt;/span&gt;
+  &lt;/bb-alert-ui&gt;
+
+  &lt;bb-input-radio-group-ui
+    data-role="ebill-payment-group"
+    [required]="true"
+    [ngModel]="hostRef.control?.value?.type"
+    (ngModelChange)="hostRef.setAmount($event)"
+  &gt;
+    &lt;bb-input-radio-ui
+      value="Due"
+      [labelTemplate]="ebillPaymentDueLabelTemplate"
+    &gt;
+      &lt;ng-template #ebillPaymentDueLabelTemplate&gt;
+          &lt;span
+            class="{{hostRef.isThemeV2Enabled ? 'bb-text-default' : 'font-weight-normal'}}"
+            data-role="ebill-due-message"
+            i18n="eBill due amount radio label|Label for the radio button for selecting the eBill due amount@@bb-billpay-payment-ebill.radio.due-amount"&gt;
+            eBill amount due
+            &lt;span class="bb-text-bold" data-role="ebill-due-message-amount"&gt;
+              ${{hostRef.latestBill?.amount.amount}}
+            &lt;/span&gt;
+          &lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-input-radio-ui&gt;
+
+    &lt;bb-input-radio-ui
+      value="Minimum"
+      *ngIf="hostRef.showMinumum"
+      [labelTemplate]="ebillPaymentMinimumLabelTemplate"
+    &gt;
+      &lt;ng-template #ebillPaymentMinimumLabelTemplate&gt;
+          &lt;span
+            class="{{hostRef.isThemeV2Enabled ? 'bb-text-default' : 'font-weight-normal'}}"
+            data-role="ebill-minimum-message"
+            i18n="eBill minimum amount radio label|Label for the radio button for selecting the eBill minimum amount@@bb-billpay-payment-ebill.radio.minimum-amount"&gt;
+            eBill minimum payment
+            &lt;span class="bb-text-bold" data-role="ebill-minimum-message-amount"&gt;
+              ${{hostRef.latestBill?.minAmountDue.amount}}
+            &lt;/span&gt;
+          &lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-input-radio-ui&gt;
+
+    &lt;bb-input-radio-ui
+      value="Balance"
+      *ngIf="hostRef.showBalance"
+      [labelTemplate]="ebillPaymentBalanceLabelTemplate"
+    &gt;
+      &lt;ng-template #ebillPaymentBalanceLabelTemplate&gt;
+          &lt;span
+            class="{{hostRef.isThemeV2Enabled ? 'bb-text-default' : 'font-weight-normal'}}"
+            data-role="ebill-balance-message"
+            i18n="eBill outstanding balance amount radio label|Label for the radio button for selecting the eBill outstanding balance amount@@bb-billpay-payment-ebill.radio.outstanding-balance-amount"&gt;
+            Total payee balance
+            &lt;span class="bb-text-bold" data-role="ebill-balance-message-amount"&gt;
+              ${{hostRef.latestBill?.outstandingBalance.amount}}
+            &lt;/span&gt;
+          &lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-input-radio-ui&gt;
+
+    &lt;bb-input-radio-ui
+      value="Custom"
+      [labelTemplate]="ebillPaymentOtherLabelTemplate"
+    &gt;
+      &lt;ng-template #ebillPaymentOtherLabelTemplate&gt;
+        &lt;div class="bb-stack"&gt;
+          &lt;span
+            class="bb-stack__item font-weight-normal"
+            data-role="ebill-custom-message"
+            i18n="eBill other amount radio label|Label for the radio button for selecting an eBill other amount@@bb-billpay-payment-ebill.radio.other-amount"&gt;
+            Other amount in USD
+          &lt;/span&gt;
+          &lt;bb-currency-input-ui
+            data-role="ebill-amount-input"
+            class="bb-stack__item"
+            required
+            [ngModel]="hostRef.customValue"
+            (ngModelChange)="hostRef.setCustomAmount($event)"
+          &gt;
+          &lt;/bb-currency-input-ui&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-input-radio-ui&gt;
+  &lt;/bb-input-radio-group-ui&gt;
+
+  &lt;bb-input-validation-message-ui role="alert" [showErrors]="hostRef.isSubmitted &amp;&amp; hostRef.control?.invalid"&gt;
+    &lt;p *ngIf="!hostRef.control?.errors?.amountInvalid"
+      i18n="Payment amount cannot be zero|Error zero amount@@bb-billpay-payment-form.error.amount"
+      data-role="invalid-amount"&gt;
+      Payment amount cannot be zero.
+    &lt;/p&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentReviewCustomizable" class="discrete">bbBillpayPaymentReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentReviewCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPaymentReviewCustomizable
+             let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.payment"&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewCard"&gt;
+
+      &lt;ng-container bbBillpayPaymentReviewContentCustomizable
+          [bbHostRef]="hostRef"
+          [bbTemplateContext]="{
+          payment: hostRef.payment
+        }"
+      &gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container bbBillpayPaymentReviewButtonsCustomizable
+            [bbHostRef]="hostRef"
+            [bbTemplateContext]="{
+            payment: hostRef.payment
+          }"
+      &gt;
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2ReviewCard&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;ng-container bbBillpayPaymentReviewContentCustomizable
+                [bbHostRef]="hostRef"
+                [bbTemplateContext]="{
+                payment: hostRef.payment
+              }"
+            &gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+          &lt;ng-container bbBillpayPaymentReviewButtonsCustomizable
+                [bbHostRef]="hostRef"
+                [bbTemplateContext]="{
+                payment: hostRef.payment
+              }"
+          &gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentReviewContentCustomizable" class="discrete">bbBillpayPaymentReviewContentCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentReviewContentCustomizable
+             let-hostRef
+             let-payment="context.payment"&gt;
+  &lt;bb-billpay-payment-review-card
+    [accountNumberMask]="hostRef.accountNumberMask | async"
+    [paymentReview]="hostRef.paymentReview"&gt;
+  &lt;/bb-billpay-payment-review-card&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentReviewButtonsCustomizable" class="discrete">bbBillpayPaymentReviewButtonsCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentReviewButtonsCustomizable
+             let-hostRef
+             let-payment="context.payment"&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewButtons"&gt;
+    &lt;button bbButton
+            data-role="confirm-payment-button"
+            i18n="Payment details confirm button|Label for confirm payment button@@billpay-payment-review.confirm"
+            (click)="hostRef.confirmPayment(payment)"
+            class="mr-sm-3 col-sm-auto col-xs-12"
+    &gt;Confirm payment&lt;/button&gt;
+    &lt;button bbButton
+            data-role="edit-payment-button"
+            i18n="Payment details edit button|Label for edit payment button@@billpay-payment-review.edit"
+            (click)="hostRef.navigateToForm()"
+            class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+            color="secondary"
+    &gt;Edit payment&lt;/button&gt;
+    &lt;button bbButton
+            data-role="cancel-payment-button"
+            i18n="Payment details cancel button|Label for cancel payment button@@billpay-payment-review.cancel"
+            (click)="hostRef.cancel()"
+            class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+            color="link"
+    &gt;Cancel&lt;/button&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2ReviewButtons&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;button bbButton
+              data-role="confirm-payment-button"
+              i18n="Payment details confirm button|Label for confirm payment button@@billpay-payment-review.confirm"
+              (click)="hostRef.confirmPayment(payment)"
+              class="bb-button-bar__button"
+      &gt;Confirm payment&lt;/button&gt;
+      &lt;button bbButton
+              data-role="edit-payment-button"
+              i18n="Payment details edit button|Label for edit payment button@@billpay-payment-review.edit"
+              (click)="hostRef.navigateToForm()"
+              class="bb-button-bar__button"
+              color="secondary"
+      &gt;Edit payment&lt;/button&gt;
+      &lt;button bbButton
+              data-role="cancel-payment-button"
+              i18n="Payment details cancel button|Label for cancel payment button@@billpay-payment-review.cancel"
+              (click)="hostRef.cancel()"
+              class="bb-button-bar__button"
+              color="link"
+      &gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentReviewNotificationMessageCustomizable" class="discrete">bbBillpayPaymentReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayPaymentReviewNotificationMessageCustomizable
+    [bbHostRef]="hostRef"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentReviewNotificationMessageCustomizable
+             let-hostRef
+&gt;
+  &lt;ng-container *ngIf="hostRef.payment?.payeeTo as payee"&gt;
+    &lt;span
+      i18n="payment notification message|Payment confirmation success notification message@@billpay-payment-review.confirm.notification.message"
+    &gt;Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }} has been scheduled successfully&lt;/span&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewConfirmation"&gt;
+      &lt;div class="d-flex justify-content-end"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-secondary-button"
+          class="mr-2 mt-2"
+          (click)="hostRef.navigateToPayments()"
+          i18n="payment notification button|Navigate to scheduled payments@@billpay-payment-review.confirm.notification.button"
+        &gt;
+          View scheduled payments
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2ReviewConfirmation&gt;
+      &lt;div class="bb-button-bar"&gt;
+        &lt;button
+          bbButton
+          data-role="notification-secondary-button"
+          class="bb-button-bar__button"
+          (click)="hostRef.navigateToPayments()"
+          i18n="payment notification button|Navigate to scheduled payments@@billpay-payment-review.confirm.notification.button"
+        &gt;
+          View scheduled payments
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentReviewNotificationHeaderCustomizable" class="discrete">bbBillpayPaymentReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayPaymentReviewNotificationHeaderCustomizable
+    [bbHostRef]="hostRef"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentReviewNotificationHeaderCustomizable
+             let-hostRef
+&gt;
+  &lt;span
+    class="{{hostRef.isThemeV2Enabled ? '' : 'text-dark'}}"
+    i18n="payment notification header|Payment confirmation success notification header@@billpay-payment-review.confirm.notification.header"
+  &gt;Payment scheduled&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentDiscardChangesModalCustomizable" class="discrete">bbBillpayPaymentDiscardChangesModalCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentDiscardChangesModalCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPaymentDiscardChangesModalCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-modal-ui
+    [isOpen]="true"
+    (cancel)="hostRef.cancelModal()"
+    data-role="discard-payment-modal"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;span
+          class="bb-heading-2"
+          data-role="discard-payment-modal-header"
+        &gt;{{ hostRef.title }}&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;span
+          data-role="discard-payment-modal-body"
+        &gt;{{ hostRef.subtitle }}&lt;/span&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ModalButtons"&gt;
+          &lt;div class="d-flex flex-wrap flex-row-reverse w-100"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="col-sm-auto col-xs-12"
+              (click)="hostRef.confirmModal()"
+              data-role="discard-payment-modal-confirm-button"
+            &gt;{{ hostRef.confirmButtonLabel }}&lt;/button&gt;
+            &lt;button
+              bbButton
+              color="secondary"
+              class="mt-2 mt-sm-0 mr-sm-3 col-sm-auto col-xs-12"
+              (click)="hostRef.cancelModal()"
+              data-role="discard-payment-modal-cancel-button"
+            &gt;{{ hostRef.cancelButtonLabel }}&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #themeV2ModalButtons&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              color="danger"
+              class="bb-button-bar__button"
+              (click)="hostRef.confirmModal()"
+              data-role="discard-payment-modal-confirm-button"
+            &gt;{{ hostRef.confirmButtonLabel }}&lt;/button&gt;
+            &lt;button
+              bbButton
+              color="secondary"
+              class="bb-button-bar__button"
+              (click)="hostRef.cancelModal()"
+              data-role="discard-payment-modal-cancel-button"
+            &gt;{{ hostRef.cancelButtonLabel }}&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentOneOffEditReviewCustomizable" class="discrete">bbBillpayPaymentOneOffEditReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentOneOffEditReviewCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPaymentOneOffEditReviewCustomizable
+             let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.payment"&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewCard"&gt;
+      &lt;ng-container bbBillpayPaymentOneOffEditReviewContentCustomizable
+                    [bbHostRef]="hostRef"
+                    [bbTemplateContext]="{
+                      payment: hostRef.payment
+                    }"
+      &gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container bbBillpayPaymentOneOffEditReviewButtonsCustomizable
+                    [bbHostRef]="hostRef"
+                    [bbTemplateContext]="{
+                      payment: hostRef.payment,
+                      id: hostRef.id$ | async
+                    }"
+      &gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #themeV2ReviewCard&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;ng-container bbBillpayPaymentOneOffEditReviewContentCustomizable
+              [bbHostRef]="hostRef"
+              [bbTemplateContext]="{
+                payment: hostRef.payment
+              }"
+              &gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+
+          &lt;ng-container bbBillpayPaymentOneOffEditReviewButtonsCustomizable
+          [bbHostRef]="hostRef"
+          [bbTemplateContext]="{
+            payment: hostRef.payment,
+            id: hostRef.id$ | async
+          }"
+          &gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-billpay-payment-discard-changes-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    data-role="billpay-payment-edit-review-page-lose-changes-modal"
+    (resolve)="hostRef.onModalResolve($event)"
+    title="Lose changes?"
+    i18n-title="Lose changes modal header@@billpay.manage-payment.lose-changes-modal.header"
+    subtitle="Are you sure you want to cancel editing this payment? You will lose any changes made."
+    i18n-subtitle="Lose changes modal body@@billpay.manage-payment.lose-changes-modal.body"
+    confirm-button-label="Lose changes"
+    i18n-confirm-button-label="confirm modal button|Cancel payment confirmation button@@billpay.manage-payment.lose-changes-modal.confirm-button"
+    cancel-button-label="Continue editing"
+    i18n-cancel-button-label="cancel modal button|Continue with current payment button@@billpay.manage-payment.lose-changes-modal.cancel-button"
+  &gt;&lt;/bb-billpay-payment-discard-changes-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentOneOffEditReviewContentCustomizable" class="discrete">bbBillpayPaymentOneOffEditReviewContentCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentOneOffEditReviewContentCustomizable
+             let-hostRef
+             let-payment="context.payment"&gt;
+  &lt;bb-billpay-payment-review-card
+    [accountNumberMask]="hostRef.accountNumberMask | async"
+    [paymentReview]="hostRef.paymentReview"&gt;
+  &lt;/bb-billpay-payment-review-card&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentOneOffEditReviewButtonsCustomizable" class="discrete">bbBillpayPaymentOneOffEditReviewButtonsCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentOneOffEditReviewButtonsCustomizable
+             let-hostRef
+             let-paymentId="context.id"
+             let-payment="context.payment"&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewButtons"&gt;
+    &lt;button bbButton
+            data-role="confirm-payment-button"
+            i18n="Payment details confirm button|Label for confirm payment oneOff button@@billpay-payment-oneOff-review.confirm"
+            (click)="hostRef.confirmPayment(payment)"
+            class="mr-sm-3 col-sm-auto col-xs-12"
+    &gt;Confirm payment&lt;/button&gt;
+    &lt;button bbButton
+            data-role="edit-payment-button"
+            i18n="Payment details edit button|Label for edit payment payment oneOff button@@billpay-payment-oneOff-review.edit"
+            (click)="hostRef.navigateToForm(paymentId)"
+            class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+            color="secondary"
+    &gt;Edit payment&lt;/button&gt;
+    &lt;button bbButton
+          data-role="cancel-payment-button"
+          i18n="Payment details cancel button|Label for cancel payment payment oneOff button@@billpay-payment-oneOff-review.cancel"
+          (click)="hostRef.cancel()"
+          class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+          color="link"
+    &gt;Cancel&lt;/button&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2ReviewButtons&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;button bbButton
+        data-role="confirm-payment-button"
+        i18n="Payment details confirm button|Label for confirm payment oneOff button@@billpay-payment-oneOff-review.confirm"
+        (click)="hostRef.confirmPayment(payment)"
+        class="bb-button-bar__button"
+      &gt;Confirm payment&lt;/button&gt;
+      &lt;button bbButton
+            data-role="edit-payment-button"
+            i18n="Payment details edit button|Label for edit payment payment oneOff button@@billpay-payment-oneOff-review.edit"
+            (click)="hostRef.navigateToForm(paymentId)"
+            class="bb-button-bar__button"
+            color="secondary"
+      &gt;Edit payment&lt;/button&gt;
+      &lt;button bbButton
+            data-role="cancel-payment-button"
+            i18n="Payment details cancel button|Label for cancel payment payment oneOff button@@billpay-payment-oneOff-review.cancel"
+            (click)="hostRef.cancel()"
+            class="bb-button-bar__button"
+            color="link"
+      &gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable" class="discrete">bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentOneOffEditReviewNotificationMessageCustomizable
+             let-hostRef
+&gt;
+  &lt;ng-container *ngIf="hostRef.payment?.payeeTo as payee"&gt;
+    &lt;span
+      i18n="payment notification message|Payment confirmation success notification message@@billpay-payment-oneOff-review.confirm.notification.message"
+    &gt;Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }} has been edited successfully&lt;/span&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable" class="discrete">bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentOneOffEditReviewNotificationHeaderCustomizable
+             let-hostRef
+&gt;
+  &lt;span
+    class="{{hostRef.isThemeV2Enabled ? '' : 'text-dark'}}"
+    i18n="payment notification header|Payment confirmation success notification header@@billpay-payment-oneOff-review.confirm.notification.header"
+  &gt;Payment edited&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditReviewCustomizable" class="discrete">bbBillpayPaymentRecurringEditReviewCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPaymentRecurringEditReviewCustomizable [bbHostRef]="this"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPaymentRecurringEditReviewCustomizable
+             let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.payment"&gt;
+    &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewCard"&gt;
+      &lt;ng-container bbBillpayPaymentRecurringEditReviewContentCustomizable
+                    [bbHostRef]="hostRef"
+                    [bbTemplateContext]="{
+                      payment: hostRef.payment
+                    }"
+      &gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container bbBillpayPaymentRecurringEditReviewButtonsCustomizable
+                    [bbHostRef]="hostRef"
+                    [bbTemplateContext]="{
+                      payment: hostRef.payment,
+                      id: hostRef.id$ | async
+                    }"
+      &gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #themeV2ReviewCard&gt;
+      &lt;div class="card card-lg"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;ng-container bbBillpayPaymentRecurringEditReviewContentCustomizable
+                          [bbHostRef]="hostRef"
+                          [bbTemplateContext]="{
+                            payment: hostRef.payment
+                          }"
+            &gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+
+          &lt;ng-container bbBillpayPaymentRecurringEditReviewButtonsCustomizable
+                        [bbHostRef]="hostRef"
+                        [bbTemplateContext]="{
+                          payment: hostRef.payment,
+                          id: hostRef.id$ | async
+                        }"
+          &gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-billpay-payment-discard-changes-modal
+    *ngIf="hostRef.isDiscardModalOpen"
+    data-role="billpay-payment-edit-form-page-lose-changes-modal"
+    (resolve)="hostRef.onModalResolve($event)"
+    title="Lose changes?"
+    i18n-title="Lose changes modal header@@billpay.manage-payment.lose-changes-modal.header"
+    subtitle="Are you sure you want to cancel editing this payment? You will lose any changes made."
+    i18n-subtitle="Lose changes modal body@@billpay.manage-payment.lose-changes-modal.body"
+    confirm-button-label="Lose changes"
+    i18n-confirm-button-label="confirm modal button|Cancel payment confirmation button@@billpay.manage-payment.lose-changes-modal.confirm-button"
+    cancel-button-label="Continue editing"
+    i18n-cancel-button-label="cancel modal button|Continue with current payment button@@billpay.manage-payment.lose-changes-modal.cancel-button"
+  &gt;&lt;/bb-billpay-payment-discard-changes-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable" class="discrete">bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationMessage&gt;
+  &lt;ng-container bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentRecurringEditReviewNotificationMessageCustomizable
+             let-hostRef
+&gt;
+  &lt;ng-container *ngIf="hostRef.payment?.payeeTo as payee"&gt;
+    &lt;span
+      i18n="payment notification message|Payment confirmation success notification message@@billpay-payment-recurring-review.confirm.notification.message"
+    &gt;Payment to {{ payee.nickName &amp;&amp; payee.nickName + ' (' + payee.name + ')' || payee.name }} has been edited successfully&lt;/span&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable" class="discrete">bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template #notificationHeader&gt;
+  &lt;ng-container bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable
+    [bbHostRef]="this"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template bbBillpayPaymentRecurringEditReviewNotificationHeaderCustomizable
+             let-hostRef
+&gt;
+  &lt;span
+    class="{{hostRef.isThemeV2Enabled ? '' : 'text-dark'}}"
+    i18n="payment notification header|Payment confirmation success notification header@@billpay-payment-recurring-review.confirm.notification.header"
+  &gt;Payment edited&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditReviewContentCustomizable" class="discrete">bbBillpayPaymentRecurringEditReviewContentCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentRecurringEditReviewContentCustomizable
+             let-hostRef
+             let-payment="context.payment"&gt;
+  &lt;bb-billpay-payment-review-card
+    [accountNumberMask]="hostRef.accountNumberMask | async"
+    [paymentReview]="hostRef.paymentReview"&gt;
+  &lt;/bb-billpay-payment-review-card&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditReviewButtonsCustomizable" class="discrete">bbBillpayPaymentRecurringEditReviewButtonsCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentRecurringEditReviewButtonsCustomizable
+  let-hostRef
+  let-paymentId="context.id"
+  let-payment="context.payment"&gt;
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2ReviewButtons"&gt;
+    &lt;button bbButton
+      data-role="confirm-payment-button"
+      i18n="Payment details confirm button|Label for confirm payment recurring button@@billpay-payment-recurring-review.confirm"
+      (click)="hostRef.confirmPayment(payment)"
+      class="mr-sm-3 col-sm-auto col-xs-12"
+    &gt;Confirm payment&lt;/button&gt;
+    &lt;button bbButton
+      data-role="edit-payment-button"
+      i18n="Payment details edit button|Label for edit payment payment recurring button@@billpay-payment-recurring-review.edit"
+      (click)="hostRef.navigateToForm(paymentId)"
+      class="mr-sm-3 mt-2 mt-sm-0 col-sm-auto col-xs-12"
+      color="secondary"
+    &gt;Edit payment&lt;/button&gt;
+    &lt;button bbButton
+      data-role="cancel-payment-button"
+      i18n="Payment details cancel button|Label for cancel payment payment recurring button@@billpay-payment-recurring-review.cancel"
+      (click)="hostRef.cancel()"
+      class="mt-2 mt-sm-0 col-sm-auto col-xs-12"
+      color="link"
+    &gt;Cancel&lt;/button&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #themeV2ReviewButtons&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;button bbButton
+        data-role="confirm-payment-button"
+        i18n="Payment details confirm button|Label for confirm payment recurring button@@billpay-payment-recurring-review.confirm"
+        (click)="hostRef.confirmPayment(payment)"
+        class="bb-button-bar__button"
+      &gt;Confirm payment&lt;/button&gt;
+      &lt;button bbButton
+        data-role="edit-payment-button"
+        i18n="Payment details edit button|Label for edit payment payment recurring button@@billpay-payment-recurring-review.edit"
+        (click)="hostRef.navigateToForm(paymentId)"
+        class="bb-button-bar__button"
+        color="secondary"
+      &gt;Edit payment&lt;/button&gt;
+      &lt;button bbButton
+        data-role="cancel-payment-button"
+        i18n="Payment details cancel button|Label for cancel payment payment recurring button@@billpay-payment-recurring-review.cancel"
+        (click)="hostRef.cancel()"
+        class="bb-button-bar__button"
+        color="link"
+      &gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentRecurringEditFormContainerCustomizable" class="discrete">bbBillpayPaymentRecurringEditFormContainerCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPaymentRecurringEditFormContainerCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    paymentState: paymentRecurringState$ | async,
+    payeesAndAccounts: payeesAndAccounts$ | async,
+    paymentId: id$ | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbBillpayPaymentRecurringEditFormContainerCustomizable
+  let-host
+  let-state="context.paymentState"
+  let-payeeSummaries="context.payeesAndAccounts.payeeSummaries"
+  let-accounts="context.payeesAndAccounts.accounts"
+  let-paymentId="context.paymentId"
+&gt;
+  &lt;ng-container *ngIf="state; else loadingState"&gt;
+    &lt;ng-container *ngIf="!host.hasLoadingError; else errorState"&gt;
+      &lt;bb-billpay-payment-form
+        [payeeSummaries]="payeeSummaries"
+        [accounts]="accounts"
+        [selectedPayeeId]="state?.payeeTo?.id"
+        [paymentState]="state"
+        [isEditPayment]="true"
+        [paymentType]="'recurring'"
+        (cancelPayment)="onCancelForm()"
+        [accountNumberMask]="host.accountNumberMask | async"
+        (submitPayment)="host.onPaymentSubmitted($event, paymentId)"
+        (valueChanged)="host.onFormValueChanged()"
+      &gt;
+      &lt;/bb-billpay-payment-form&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui loaderSize="lg" data-role="loading-state"&gt;
+    &lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;bb-empty-state-ui
+      data-role="error-state"
+      iconSize="xxl"
+      iconModifier="error"
+      subtitle="Try to reload the page or contact support"
+      i18n-subtitle="Try to reload the page or contact support|Payee List loading subtitle@@bb-billpay-manage-payment-widget-ang.loading.subtitle"
+      title="Form is not loading"
+      i18n-title="Form is not loading|Form List loading title@@bb-billpay-manage-payment-widget-ang.loading.title"&gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payment-discard-changes-modal
+    *ngIf="host.isDiscardModalOpen"
+    data-role="billpay-payment-edit-review-page-lose-changes-modal"
+    (resolve)="host.onModalResolve($event)"
+    title="Lose changes?"
+    i18n-title="Lose changes modal header@@billpay.manage-payment.lose-changes-modal.header"
+    subtitle="Are you sure you want to cancel editing this payment? You will lose any changes made."
+    i18n-subtitle="Lose changes modal body@@billpay.manage-payment.lose-changes-modal.body"
+    confirm-button-label="Lose changes"
+    i18n-confirm-button-label="confirm modal button|Cancel payment confirmation button@@billpay.manage-payment.lose-changes-modal.confirm-button"
+    cancel-button-label="Continue editing"
+    i18n-cancel-button-label="cancel modal button|Continue with current payment button@@billpay.manage-payment.lose-changes-modal.cancel-button"
+  &gt;&lt;/bb-billpay-payment-discard-changes-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPaymentFormOvernightAddressCustomizable" class="discrete">bbBillpayPaymentFormOvernightAddressCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBillpayPaymentFormOvernightAddressCustomizable let-hostRef&gt;
+  &lt;ng-container
+    *ngIf="hostRef.schedule.paymentService?.service?.paymentServiceType === 'OVERNIGHT_CHECK'"
+    [formGroup]="hostRef.paymentForm"
+  &gt;
+    &lt;bb-fieldset-ui
+      i18n-heading="Overnight check address|Text for the payment overnight address@@bb-billpay-payment-form.payment-overnight-address"
+      heading="Overnight check address" class="{{hostRef.isThemeV2Enabled ? 'bb-block bb-block-xl' : 'd-block mb-4'}}"&gt;
+      &lt;bb-alert-ui
+        modifier="info"
+        class="d-block"
+        title="This address might be a dedicated PO box for overnight payments. Please check with your biller"
+        i18n-title="alert title|Address alert@@bb-billpay-payment-form.payment-overnight-address.alert"
+        data-role="overnight-alert-message"
+      &gt;
+      &lt;/bb-alert-ui&gt;
+      &lt;bb-billpay-address-form
+        [formGroup]="hostRef.paymentForm.get('overnightDeliveryAddress')"
+        formGroupName="overnightDeliveryAddress"
+      &gt;&lt;/bb-billpay-address-form&gt;
+    &lt;/bb-fieldset-ui&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="manage_bill_paymentshostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>ScheduleLabelComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>item?: Schedule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details of the payment schedule.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSingleTransfer: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean input that selects elements appropriate to a one-off payment. Defaults to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minOccurrences: Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The minimum number of occurrences for recurring payments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isToday(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to check if the start date is today.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasEnd(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to check if the item has a end date.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasLimit(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to check if the item has an end date and it&#8217;s a single, not repeated operation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>ScheduleComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPaymentScheduleCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getEstimatedStartDate(serviceType: PaymentServicesTypes): string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get the estimated start date for the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getEstimatedEndDate(): number | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get the estimated end date for the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>frequencies?: Array&lt;Frequency&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The array of valid frequencies that can be used to schedule payments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minOccurs?: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum number of occurrences for the input box.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxOccurs?: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of occurrences for the occurrences input box.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scheduleForm?: FormGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The schedule form to be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minDate?: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The minimum start date for the datepicker elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultPaymentServiceType: PaymentServicesTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the initial payment service for the initial component state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formSubmitted: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean input to check the state of the form submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getEstimatedOccurs(): number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to check the payment start date and end date and frequencies, and return the estimated occurences.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>BillpayEbillPaymentUIComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>BillpayEbillPaymentUIComponentCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setAmount(type: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to set the amount to the currency object.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCustomAmount({ amount, currency }: CurrencyUI): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to set the amount to the currency object that has the type of <code>Custom</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>latestBill: LatestBill;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that carries the details of the latest ebill to be paid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>control?: FormControl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form control for the ebill payment form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSubmitted: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean input to check the state of the form submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>BillpayPaymentDiscardChangesModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>BillpayPaymentDiscardChangesModalCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title?: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal&#8217;s title.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subtitle?: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal&#8217;s subtitle.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmButtonLabel?: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal&#8217;s confirmation button text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelButtonLabel?: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal&#8217;s cancellation button text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModal(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to emit the resolving of the modal with the <code>false</code> value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to emit the resolving of the modal with the <code>true</code> value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="30"><p class="tableblock"><code>BillpayPaymentFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="30"><p class="tableblock"><code>BillpayPaymentFormCustomizableDirective</code>, <code>BillpayPaymentFormAccountFromCustomizableDirective</code>, <code>BillpayPaymentFormPayeeToCustomizableDirective</code>, <code>BillpayPaymentFormDetailsCustomizableDirective</code>, <code>BillpayPaymentFormOvernightAddressCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeSummaries?: PayeeSummary[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input()</code> for the array of payee summary details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accounts?: Account[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input()</code> for the array of user&#8217;s accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedPayeeId: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input()</code> for the identifier for the payee that is currently selected to be paid from.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentState?: PaymentFormState</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The details of the payment form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentId: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input()</code> for the identifier for the payment when the form is in edit payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountNumberMask: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input()</code> whether the account number should be masked. Defaults to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType?: PaymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input()</code> for the payment type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditPayment: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input()</code>, the boolean flag to check if the form is in the edit mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formSubmitted: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean flag to check if the form is sumitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType$: BehaviorSubject&lt;PaymentType | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minDate: BehaviorSubject&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The closest payment date. Defaults to <code>today</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedAccount: BehaviorSubject&lt;Account | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected account.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedAccount: BehaviorSubject&lt;PayeeSummary | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected payee.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ebillSummary: EbillSummary | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ebill information summary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel():void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to cancel the current payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get defaultPaymentServiceType(): PaymentServicesTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the default service for the current payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get accountNumberFormatConfig(): AccountNumberFormat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the right number format according to the <code>@input accountNumberMask</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get ebillPayment(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean to check if it&#8217;s an ebill payment or a regular payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get frequencyKeys()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>FrequencyKeys</code> enum.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get frequencies(): Array&lt;Frequency&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the right payment recurring frequencies according to the form editing state and payment type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get schedule()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the value of the schedule from if it exists.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get startDateControl()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>startDate</code> value from the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get endDateControl()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>endDate</code> value from the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get scheduleLabelData(): Schedule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the updated schedule with the new start and end dates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createForm(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to build the payment form with the defined fields and
+initital state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amountValidator(fg: AbstractControl): ValidationErrors | null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates the amount field value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isInvalidControl(control: FormControl): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates controls in the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handleSubmit(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to handle the form submission. It emits an event with the form values when it&#8217;s a valid form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectAccount(account: Account | undefined): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the selected account into the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectPayee(payee: PayeeSummary | undefined): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the selected payee into the form and <code>ebillsummary</code>, and updates the start and end dates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock"><code>BillpayPaymentFormContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="13"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentRouteObservable: Observable&lt;PaymentRouteParams&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of payment route parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentDataObservable: Observable&lt;(PayeesSummaryGetResponse &amp; AccountsGetResponse) | undefined&gt; | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payment data to be sent to the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isDiscardModalOpen()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean flag to check the state of the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasNoErrorState(data: PayeesSummaryGetResponse &amp; AccountsGetResponse)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean to check the form error state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmittedFormData(data: PaymentFormState)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to update the payment service with the state of the payment after submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get accountNumberMask(): Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the account number mask.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get paymentState()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the payment state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get payeesLoadingState()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the loading state of fetching payees.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get accountsLoadingState()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retruns the loading state of the accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openModal(): Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(isConfirmed: boolean)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to take action after the modal is closed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFormValueChanged()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean to check if the form is in the <code>touched</code> state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCancelForm()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the payee list after cancelling the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentOneOffEditFormContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentOneOffEditFormContainerCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentOneOffState$?: Observable&lt;PaymentFormState | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payment form state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasLoadingError: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean to check the loading error. Defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPaymentSubmitted(payment: PaymentFormState, id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to update the <code>stateService</code> and <code>routerService</code> after a payment is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPaymentOneOffEditReviewContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentOneOffEditReviewCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToForm(id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the form route.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentOneOffEditReviewContentCustomizableDirective</code>,
+<code>BillpayPaymentOneOffEditReviewButtonsCustomizableDirective</code>,
+<code>BillpayPaymentOneOffEditReviewNotificationMessageCustomizableDirective</code>,
+<code>BillpayPaymentOneOffEditReviewNotificationHeaderCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected onPaymentConfirm(payment: PaymentFormState, id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to call the <code>dataService</code> and then update the route and notification service to show the confirmation meessage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentRecurringEditFormContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentRecurringEditFormContainerCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentRecurringState$?: Observable&lt;PaymentFormState | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payment form state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasLoadingError: Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean flag to check if there&#8217;s a loading error. Defaults to <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPaymentSubmitted(data: PaymentFormState, id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to the <code>stateService</code> and <code>routerService</code> after submission of the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPaymentRecurringEditReviewContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentRecurringEditReviewCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToForm(id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the form route.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentRecurringEditReviewContentCustomizableDirective</code>,
+<code>BillpayPaymentRecurringEditReviewButtonsCustomizableDirective</code>,
+<code>BillpayPaymentRecurringEditReviewNotificationMessageCustomizableDirective</code>,
+<code>BillpayPaymentRecurringEditReviewNotificationHeaderCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected onPaymentConfirm(payment: PaymentFormState, id: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to call the <code>dataService</code> and then update the route and notification service to show the confirmation meessage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPaymentReviewContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPaymentReviewCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payment?: PaymentFormState</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current payment form data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentReview?: PaymentReview</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current payment review data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentReviewContentCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isDiscardModalOpen(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean flag for the discard modal open state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillpayPaymentReviewButtonsCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get accountNumberMask(): Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean to check if the account mask is configured in the widget.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentReviewNotificationMessageCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToForm()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to the form route.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigateToPayments()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to navigate to payments route.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancel()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to cancel the payment and return to payee list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><code>BillpayPaymentReviewNotificationHeaderCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmPayment(payment: PaymentFormState)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to confirm the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openModal(): Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(isConfirmed: boolean)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to take action after the modal is closed.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manage_bill_paymentsimplementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">"import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { MyCustomWidgetComponent } from './my-custom-widget.component';
+import { BillpayDataHttpModule } from '@backbase/data-ang/billpay';
+import { BillpayCommonModule } from '@backbase/billpay-common';
+import { BillpayManagePaymentWidgetModule } from '@backbase/billpay-manage-payment-widget-ang';
+import { BillpayEnrolmentWidgetModule } from '@backbase/billpay-enrolment-widget-ang';
+
+@NgModule({
+  declarations: [MyCustomWidgetComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { MyCustomWidgetComponent },
+    }),
+    BillpayDataHttpModule,
+    BillpayCommonModule,
+    BillpayManagePaymentWidgetModule,
+    BillpayEnrolmentWidgetModule,
+  ],
+})
+export class MyCustomWidgetModule {}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">"@Component({
+  selector: 'bp-my-custom-widget',
+  template: `&lt;bb-billpay-manage-payment-widget&gt;&lt;/bb-billpay-manage-payment-widget&gt;`,
+  styles: [],
+})
+@CopyRoutes(BillpayManagePaymentWidgetComponent)
+export class MyCustomWidgetComponent {}"</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="manage_bill_paymentspreferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification dismiss time</strong></p>
+<p class="tableblock">Sets the number of seconds that notifications triggered by this widget are visible.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mask account number</strong></p>
+<p class="tableblock">Mask the first 6 numbers of account numbers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.billpay.managePayment.accountNumberMask</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payment confirmed</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when a payment is successful. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.paymentConfirmed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payments list</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when a manage payment operation is completed. Takes the form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.paymentsList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payment default currency</strong></p>
+<p class="tableblock">Sets the default payment currency. When a <strong>From</strong> account is selected, the widget uses the currency specified for that account.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentDefaultCurrency</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>USD</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payment details title</strong></p>
+<p class="tableblock">Sets the title of the <strong>Payment details</strong> section of the widget.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentDetailsTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Payment details</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

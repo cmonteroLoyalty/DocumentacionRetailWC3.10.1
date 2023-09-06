@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>View transactions list</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="transactions_list_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View transactions list</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html"><span class="toc-current">View transactions list</span></a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="transactions_list_reference" class="sect0">View transactions list</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="transactions_list_reference.html#view_transactions_list_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#view_transactions_list_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#view_transactions_list_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#view_transactions_list_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#view_transactions_list_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="view_transactions_list_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-transactions-list-widget&gt;</code>.</p>
+</div>
+<h2 id="view_transactions_list_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Widget component import</p>
+<div class="paragraph">
+<p>Import the following components into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { TransactionsListWidgetComponent } from '@backbase/retail-ang/transactions';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Data module imports</p>
+<div class="paragraph">
+<p>Import the following data modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { AccountDataHttpModule } from '@backbase/data-ang/account';
+import { TransactionsDataHttpModule } from '@backbase/data-ang/transactions';
+import { CategoriesManagementDataHttpModule } from '@backbase/data-ang/categories-management';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_transactions_list_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_1_2_4_6_7_15.svg?ver=3.10.1" alt="transactions list slots 1 2 4 6 7 15"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_3.svg?ver=3.10.1" alt="transactions list slots 3"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_5_12.svg?ver=3.10.1" alt="transactions list slots 5 12"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_8.svg?ver=3.10.1" alt="transactions list slots 8"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_9.svg?ver=3.10.1" alt="transactions list slots 9"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_10_11.svg?ver=3.10.1" alt="transactions list slots 10 11"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_13.svg?ver=3.10.1" alt="transactions list slots 13"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/transactions_list_slots_14.svg?ver=3.10.1" alt="transactions list slots 14"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListControlsButtonsCustomizable">bbTransactionsListControlsButtonsCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListControlsCustomizable">bbTransactionsListControlsCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListFilterCustomizable">bbTransactionsListFilterCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListItemCustomizable">bbTransactionsListItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListItemDetailsCustomizable">bbTransactionsListItemDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListItemGroupCustomizable">bbTransactionsListItemGroupCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListItemHeaderCustomizable">bbTransactionsListItemHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListPaginationCustomizable">bbTransactionsListPaginationCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsErrorStateCustomizable">bbTransactionsErrorStateCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListEmptyStateCustomizable">bbTransactionsListEmptyStateCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsNoAccountSelectedStateCustomizable">bbTransactionsNoAccountSelectedStateCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionDetailCategoryCustomizable">bbTransactionDetailCategoryCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsCategoryCustomizable">bbTransactionsCategoryCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbPendingTransactionsListCustomizable">bbPendingTransactionsListCustomizable</a></p>
+</li>
+<li>
+<p><a href="transactions_list_reference.html#bbTransactionsListListCustomizable">bbTransactionsListListCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbTransactionsListControlsButtonsCustomizable" class="discrete">bbTransactionsListControlsButtonsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListControlsButtonsCustomizable let-hostRef&gt;
+  &lt;!-- Print button --&gt;
+  &lt;button
+    bbButton
+    aria-label="Print"
+    i18n-aria-label="Print button@@transactions.print.button"
+    class="bb-stack__item"
+    color="secondary"
+    [circle]="true"
+    (click)="hostRef.onPrint()"
+  &gt;
+    &lt;bb-icon-ui name="print"&gt;&lt;/bb-icon-ui&gt;
+  &lt;/button&gt;
+  &lt;!-- Export button --&gt;
+  &lt;bb-dropdown-menu-ui
+    *ngIf="hostRef.exportConfig?.length"
+    container="body"
+    icon="expand-more"
+    btnColor="secondary"
+    ariaLabel="available export types"
+    i18n-ariaLabel="Currently available export types dropdown@@transactions.list.exportList.ariaLabel"
+    btnCircle="true"
+    icon="get-app"
+    iconSize="md"
+  &gt;
+    &lt;ng-template bbDropdownMenuItem&gt;
+      &lt;a
+        *ngFor="let exportType of hostRef.exportConfig"
+        role="menuitem"
+        class="dropdown-item"
+        (click)="hostRef.onExport(exportType)"
+        href="javaScript:void(0);"
+      &gt;
+        &lt;span&gt;{{ exportType.name }}&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-dropdown-menu-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListControlsCustomizable" class="discrete">bbTransactionsListControlsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListControlsCustomizable let-hostRef&gt;
+  &lt;div class="card-header" [ngClass]="{'bb-block--lg': hostRef.isFilterOpen}"&gt;
+    &lt;div class="bb-stack bb-stack--wrap"&gt;
+      &lt;!-- Search button --&gt;
+      &lt;div class="bb-transaction-list-controls__search-box bb-stack__item"&gt;
+        &lt;div class="input-group"&gt;
+          &lt;label class="sr-only" bbDynamicId #searchLabel i18n="search transaction filter@@transactions.search.label"&gt;
+            Search transaction filter
+          &lt;/label&gt;
+          &lt;bb-search-box-ui
+            [showSearch]="true"
+            [showClear]="true"
+            placeholder="Search"
+            [aria-labelledby]="searchLabel?.id"
+            searchLabel="search"
+            i18n-searchLabel="search label when button in focus@@transactions.searchLabel.search.box "
+            i18n-placeholder="search transactions placeholder@@transactions.ariaLabel.search.placeholder"
+            (submit)="hostRef.onSearch($event)"
+            (clear)="hostRef.onSearch('')"&gt;
+          &lt;/bb-search-box-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Filter button --&gt;
+      &lt;div class="bb-stack__item bb-stack__item--fill--md-up align-self-start bb-transaction-list-controls__filter-buttons"&gt;
+        &lt;div class="bb-stack"&gt;
+          &lt;div class="bb-stack__item bb-stack__item--fill--md-up"&gt;
+            &lt;button
+              bbButton
+              *ngIf="hostRef.activeFilters"
+              [attr.aria-expanded]="!!hostRef.isFilterOpen"
+              [color]="hostRef.isFilterApplied || hostRef.isFilterOpen ? 'primary' : 'secondary'"
+              data-role="filter"
+              (click)="hostRef.toggleFilter()"
+            &gt;
+              &lt;bb-icon-ui name="filter"&gt;&lt;/bb-icon-ui&gt;
+              &lt;span class="bb-transaction-list-controls__long-button" i18n="Filter toggle button@@transactions.filtersApplied.button"&gt;Filters applied&lt;/span&gt;
+              &lt;span class="bb-transaction-list-controls__short-button" i18n="Filter toggle button@@transactions.filters.button"&gt;Filters&lt;/span&gt;
+              &lt;span&gt;&amp;nbsp;({{hostRef.activeFilters}})&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              *ngIf="!hostRef.activeFilters"
+              [attr.aria-expanded]="!!hostRef.isFilterOpen"
+              [color]="hostRef.isFilterApplied || hostRef.isFilterOpen ? 'primary' : 'secondary'"
+              data-role="filter"
+              (click)="hostRef.toggleFilter()"
+            &gt;
+              &lt;bb-icon-ui name="filter"&gt;&lt;/bb-icon-ui&gt;
+              &lt;ng-container i18n="Filter toggle button@@transactions.filter.button"&gt;Filter&lt;/ng-container&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;ng-container bbTransactionsListControlsButtonsCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;bb-transactions-filter
+    (filter)="hostRef.onFilter($event)"
+    (filterCount)="hostRef.onFilterCount($event)"
+    (closeFilter)="hostRef.onClose()"
+    [hidden]="!hostRef.isFilterOpen"
+    [hideBillingStatus]="hostRef.hideBillingStatus"
+  &gt;&lt;/bb-transactions-filter&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListFilterCustomizable" class="discrete">bbTransactionsListFilterCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListFilterCustomizable let-hostRef&gt;
+  &lt;div class="bb-transactions-list-filter"&gt;
+    &lt;form
+      class="card-body"
+      [formGroup]="hostRef.transactionsFilterForm"
+      (ngSubmit)="hostRef.onFilter(hostRef.transactionsFilterForm.value)"
+      novalidate
+      autocomplete="off"
+      &gt;
+      &lt;div class="bb-block bb-block--sm"&gt;
+        &lt;div class="row"&gt;
+          &lt;!-- Date range --&gt;
+          &lt;div class="col-lg-8"&gt;
+            &lt;div class="row" formGroupName="date"&gt;
+              &lt;div class="col-12 col-sm-6"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;bb-input-datepicker-ui
+                    name="dateRange"
+                    label="Start date"
+                    i18n-label="Transaction filter for the start Date Range@@transactions.filter.form.label.startDate"
+                    formControlName="from"
+                    [maxDate]="hostRef.formatDateToString(hostRef.toDate?.value)"
+                  &gt;&lt;/bb-input-datepicker-ui&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class="col-12 col-sm-6"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;bb-input-datepicker-ui
+                    name="dateRange"
+                    label="End date"
+                    i18n-label="Transaction filter for the end Date Range@@transactions.filter.form.label.endDate"
+                    formControlName="to"
+                    [minDate]="hostRef.formatDateToString(hostRef.fromDate?.value)"
+                  &gt;&lt;/bb-input-datepicker-ui&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!-- Credit/debit indicator --&gt;
+          &lt;div class="col-lg-4"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;bb-dropdown-single-select-ui
+                label="Credit or debit"
+                i18n-label="Transactions filter for credit or debit@@transactions.filter.form.label.creditDebitIndicator"
+                [options]="hostRef.creditDebitIndicatorOptions"
+                displayAttributePath="name"
+                formControlName="creditDebitIndicator"
+                [compareWithFn]="hostRef.compareByValue"
+              &gt;&lt;/bb-dropdown-single-select-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+          &lt;!-- Amount range --&gt;
+          &lt;div class="col-lg-6 form-group" bbDynamicId #amountGroup&gt;
+            &lt;div class="bb-stack" formGroupName="amount"&gt;
+              &lt;div class="bb-stack__item bb-transactions-list-filter__field"&gt;
+                &lt;label bbDynamicId #fromAmountLabel&gt;
+                  &lt;abbr title="Minimum"&gt;Min.&lt;/abbr&gt; amount
+                &lt;/label&gt;
+                &lt;bb-input-number-ui
+                  formControlName="from"
+                  data-role="amountFrom"
+                  [aria-labelledby]="fromAmountLabel?.id"
+                  placeholder="From"
+                  i18n-placeholder="Initial filtering value|Starting value|Lower amount@@transactions.filter.form.placeholder.amountFrom"
+                  aria-describedby="{{amountGroup?.id}}-error"
+                  min="0"
+                &gt;&lt;/bb-input-number-ui&gt;
+              &lt;/div&gt;
+
+              &lt;div class="bb-stack__item bb-transactions-list-filter__field"&gt;
+                &lt;label bbDynamicId #toAmountLabel&gt;
+                  &lt;abbr title="Maximum"&gt;Max.&lt;/abbr&gt; amount
+                &lt;/label&gt;
+                &lt;bb-input-number-ui
+                  formControlName="to"
+                  data-role="amountTo"
+                  placeholder="To"
+                  i18n-placeholder="Ending filtering value|End value|Higher amount@@transactions.filter.form.placeholder.amountTo"
+                  [aria-labelledby]="toAmountLabel?.id"
+                  aria-describedby="{{amountGroup?.id}}-error"
+                  min="0"
+                &gt;&lt;/bb-input-number-ui&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              [showErrors]="!hostRef.isFieldValid('amount', 'from') || !hostRef.isFieldValid('amount', 'to')"
+              messageId="{{amountGroup?.id}}-error"
+            &gt;
+              &lt;span i18n="Max. amount cannot be smaller than the min. amount|Error Message when max amount is smaller than min amount@@transactions.filter.form.error.amountRange"&gt;
+                Maximum amount cannot be smaller than the minimum amount
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+          &lt;!-- Transaction Type --&gt;
+          &lt;div class="col-lg-6"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;bb-dropdown-single-select-ui
+                label="Transaction type"
+                i18n-label="Transaction filter for the types of transaction@@transactions.filter.form.label.transactionType"
+                [options]="hostRef.transactionTypeOptions | async"
+                displayAttributePath="name"
+                formControlName="types"
+                [compareWithFn]="hostRef.compareByValue"
+              &gt;&lt;/bb-dropdown-single-select-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+          &lt;!-- Billing status --&gt;
+          &lt;div class="col-lg-6" *ngIf="!hideBillingStatus"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;bb-dropdown-single-select-ui
+                label="Billing status"
+                i18n-label="Transactions filter for Billing Status@@transactions.filter.form.label.billingStatus"
+                [options]="hostRef.billingStatusOptions | async"
+                displayAttributePath="name"
+                formControlName="billingStatus"
+                [compareWithFn]="hostRef.compareByValue"
+              &gt;&lt;/bb-dropdown-single-select-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!-- Check range --&gt;
+          &lt;div class="col-lg-6 form-group"&gt;
+            &lt;div class="bb-stack" formGroupName="checkSerialNumber" bbDynamicId #rangeGroup&gt;
+              &lt;div class="bb-stack__item bb-transactions-list-filter__field"&gt;
+                &lt;label bbDynamicId #fromCheckLabel&gt;
+                  First check &lt;abbr title="Number"&gt;Nº&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;bb-input-number-ui
+                  [aria-labelledby]="fromCheckLabel?.id"
+                  formControlName="from"
+                  placeholder="From"
+                  i18n-placeholder="'From' number range input@@transactions.filter.form.placeholder.rangeFrom"
+                  aria-describedby="{{rangeGroup?.id}}-error"
+                  min="0"
+                &gt;&lt;/bb-input-number-ui&gt;
+              &lt;/div&gt;
+              &lt;div class="bb-stack__item bb-transactions-list-filter__field"&gt;
+                &lt;label bbDynamicId #toCheckLabel&gt;
+                  Last check &lt;abbr title="Number"&gt;Nº&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;bb-input-number-ui
+                  [aria-labelledby]="toCheckLabel?.id"
+                  formControlName="to"
+                  placeholder="To"
+                  i18n-placeholder="'To' number range input@@transactions.filter.form.placeholder.rangeTo"
+                  aria-describedby="{{rangeGroup?.id}}-error"
+                  min="0"
+                &gt;&lt;/bb-input-number-ui&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;bb-input-validation-message-ui
+              [showErrors]="!hostRef.isFieldValid('checkSerialNumber', 'from') || !hostRef.isFieldValid('checkSerialNumber', 'to')"
+              messageId="{{rangeGroup?.id}}-error"
+            &gt;
+              &lt;span i18n="Last check nº cannot be smaller than first check nº|Error Message when last check nº is smaller than first check nº@@transactions.filter.form.error.checkSerialRange"&gt;
+                Last check number cannot be smaller than first check number
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+        &lt;!-- Apply --&gt;
+        &lt;button
+          bbButton
+          type="submit"
+          color="primary"
+          class="bb-button-bar__button"
+          data-role="apply"
+          i18n-title="Apply button|Apply selected filters@@transactions.filter.form.button.apply"
+          title="Apply"
+          i18n="Apply button|Apply selected filters@@transactions.filter.form.button.apply"
+        &gt;
+          Apply
+        &lt;/button&gt;
+
+        &lt;!-- Close --&gt;
+        &lt;button
+          bbButton
+          type="button"
+          color="secondary"
+          class="bb-button-bar__button"
+          data-role="cancel"
+          i18n-title="Close button|Close filter menu@@transactions.filter.form.button.close"
+          title="Close"
+          i18n="Close button|Close filter menu@@transactions.filter.form.button.close"
+          (click)="hostRef.onCloseFilter()"
+        &gt;
+          Close
+        &lt;/button&gt;
+
+        &lt;!-- Clear filters --&gt;
+        &lt;button
+          bbButton
+          type="button"
+          color="link"
+          class="bb-button-bar__button"
+          data-role="clear-all"
+          i18n-title="Clear Filters button|Clean filters@@transactions.filter.form.button.clearAll"
+          title="Clear filters"
+          (click)="hostRef.onClearFilter()"
+          *ngIf="hostRef.transactionsFilterForm.dirty"
+          i18n="Clear filters button|Clean filters@@transactions.filter.form.button.clearAll"
+        &gt;
+          Clear filters
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListItemCustomizable" class="discrete">bbTransactionsListItemCustomizable</h3>
+<div class="paragraph">
+<p>To customize the behavior of the list item, This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListItemCustomizable let-hostRef&gt;
+  &lt;div
+    bbAccessibilityKeyboard
+    (click)="hostRef.openDetails()"
+  &gt;
+    &lt;ng-container
+      bbTransactionsListItemHeaderCustomizable
+      [bbHostRef]="hostRef"
+    &gt;&lt;/ng-container&gt;
+    &lt;span
+      i18n="Transaction selector button@@transactions.list.transaction.label"
+      i18n-aria-label="Transaction selector button label@@transactions.list.transaction.label"
+      class="sr-only"
+      role="button"
+    &gt;
+      Select transaction
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;bb-transaction-details-modal
+    *ngIf="hostRef.showDetailsConfig"
+    [transaction]="hostRef.transaction"
+    [showBillingStatus]="hostRef.showBillingStatus"
+    [showChangeCategory]="hostRef.showChangeCategory"
+    [checkImagesList]="hostRef.checkImagesList"
+    [transactionDetailsLoadingStatus]="hostRef.transactionDetailsLoadingStatus"
+    [isDetailsOpen]="hostRef.isDetailsOpen"
+    [inquireAndDisputeTopics]="hostRef.inquireAndDisputeTopics"
+    (detailsOpen)="hostRef.openDetails($event)"
+    (close)="hostRef.closeDetails()"
+  &gt;&lt;/bb-transaction-details-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListItemDetailsCustomizable" class="discrete">bbTransactionsListItemDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListItemDetailsCustomizable let-hostRef&gt;
+  &lt;div class="bb-transaction-list-item-details"&gt;
+    &lt;div class="bb-block bb-block--lg"&gt;
+      &lt;div class="bb-text-align-center bb-stack bb-stack--center"&gt;
+        &lt;!-- Add note button --&gt;
+        &lt;div class="bb-stack__item bb-transaction-list-item-details-controls-container"&gt;
+          &lt;button
+            bbButton
+            [circle]="true"
+            data-role="control-note-btn"
+            class="bb-block bb-block--md"
+            (click)="hostRef.openEditNotes()"
+          &gt;
+            &lt;bb-icon-ui name="subject"&gt;&lt;/bb-icon-ui&gt;
+          &lt;/button&gt;
+          &lt;div class="bb-transaction-list-item-details-controls-label"&gt;
+            &lt;label
+              data-role="add-note-label"
+              *ngIf="!hostRef.transaction.notes; else editNoteLabel"
+              i18n="Add note to the current transaction@@transactions.list.details.addNote.label"
+            &gt;Add note&lt;/label&gt;
+            &lt;ng-template #editNoteLabel&gt;
+              &lt;label
+                data-role="edit-note-label"
+                i18n="Edit note of the current transaction@@transactions.list.details.editNote.label"
+              &gt;Edit note&lt;/label&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Report button --&gt;
+        &lt;div
+          *ngIf="hostRef.transactionDetailsLoadingStatus?.enableDisputeAndInquiry === hostRef.loadingStateEnum.done"
+          class="bb-stack__item bb-transaction-list-item-details-controls-container"
+        &gt;
+          &lt;button
+            bbButton
+            [circle]="true"
+            class="bb-block bb-block--md"
+            data-role="report-button"
+            (click)="hostRef.showReportForm(true)"
+          &gt;
+            &lt;bb-icon-ui name="sms-failed"&gt;&lt;/bb-icon-ui&gt;
+          &lt;/button&gt;
+          &lt;div class="bb-transaction-list-item-details-controls-label"&gt;
+            &lt;label
+              data-role="report-label"
+              i18n="Report the current transaction@@transactions.list.details.report.label"
+            &gt;
+              Report
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Dispute and inquiry alerts --&gt;
+      &lt;div class="bb-block bb-block--lg bb-text-align-left"&gt;
+        &lt;ng-container *ngIf="hostRef.reportState === hostRef.loadingStateEnum.done"&gt;
+          &lt;bb-alert-ui
+            *ngIf="hostRef.savedReportType === 'dispute'; else inquirySuccess"
+            modifier="info"
+            data-role="send-dispute-success"
+            title="You’ve disputed this transaction"
+            i18n-title="
+              Send dispute report success notification|Message for a notification displayed when sending transaction
+              dispute report request has succeed@@transactions.notification.success.send.dispute.title"
+
+            message="Please go to Messages to view any responses to your request."
+            i18n-message="Send dispute report success notification message@@transactions.notification.success.send.dispute.message"
+          &gt;&lt;/bb-alert-ui&gt;
+          &lt;ng-template #inquirySuccess&gt;
+            &lt;bb-alert-ui
+              modifier="info"
+              data-role="send-inquiry-success"
+              title="The bank is reviewing your transaction"
+              i18n-title="
+                Send inquiry report success notification|Message for a notification displayed when sending transaction
+                inquiry report request has succeed@@transactions.notification.success.send.inquiry.title"
+              message="Please go to Messages to view any responses to your request."
+              i18n-message="Send inquiry report success notification message@@transactions.notification.success.send.inquiry.message"
+            &gt;&lt;/bb-alert-ui&gt;
+          &lt;/ng-template&gt;
+        &lt;/ng-container&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Dispute and inquiry component --&gt;
+      &lt;div *ngIf="hostRef.showInquiryAndDispute"&gt;
+        &lt;bb-transactions-inquiry-dispute
+          [(message)]="hostRef.message"
+          [enableDispute]="hostRef.transactionDetailsLoadingStatus.disputeOption === hostRef.loadingStateEnum.done &amp;&amp; (hostRef.transaction.disputeStatus === 'UNDISPUTED' || hostRef.transaction.disputeStatus === 'REJECTED')"
+          [state]="hostRef.reportState"
+          [inquireAndDisputeTopics]="inquireAndDisputeTopics"
+          (submitReport)="hostRef.saveReport($event)"
+          (cancelReport)="hostRef.cancelReport()"
+          (fileChange)="hostRef.fileChange($event)"
+          (fileRemoved)="hostRef.fileRemoved($event)"
+        &gt;&lt;/bb-transactions-inquiry-dispute&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-block--lg"&gt;
+      &lt;!-- Type --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction?.type &amp;&amp; (!!hostRef.transaction?.category || !!hostRef.transaction.isPending)"
+        data-role="list-details-type-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Type of the selected transaction@@transactions.details.label.transactionType"
+          data-role="section-title"
+        &gt;
+          Type
+        &lt;/div&gt;
+        &lt;div class="break-word" data-role="section-content"&gt;{{ hostRef.transaction?.type }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Currency Exchange --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction.currencyExchangeAvailability"
+        data-role="list-details-currency-exchange-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Transaction type of the selected transaction@@transactions.details.label.currencyExchange"
+          data-role="section-title"
+        &gt;
+          Currency exchange
+        &lt;/div&gt;
+        &lt;div class="break-word" data-role="section-content"&gt;
+          &lt;bb-amount-ui
+            amount="1"
+            [currency]="hostRef.transaction?.instructedAmountCurrency.currencyCode"
+          &gt;&lt;/bb-amount-ui&gt;
+          &lt;span&gt; = &lt;/span&gt;
+          &lt;bb-amount-ui
+            [amount]="hostRef.transaction?.currencyExchangeRate"
+            [currency]="hostRef.transaction?.transactionAmountCurrency.currencyCode"
+            [decimalPlaces]="6"
+            [trailingZeroes]="false"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Instructed amount --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction?.instructedAmountCurrency?.amount"
+        data-role="list-details-instructed-amount-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Instructed Amount of the selected transaction@@transactions.details.label.instructedAmount"
+          data-role="section-title"
+        &gt;
+          Instructed amount
+        &lt;/div&gt;
+        &lt;div class="break-word"&gt;
+          &lt;bb-amount-ui
+            data-role="section-content"
+            [amount]="hostRef.transaction?.instructedAmountCurrency?.amount"
+            [currency]="hostRef.transaction?.instructedAmountCurrency?.currencyCode"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Counter party account number --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction?.counterPartyAccountNumber"
+        data-role="list-details-counter-party-account-number-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Counter Party Account number of the selected transaction@@transactions.details.label.counterPartyAccountNumber"
+          data-role="section-title"
+        &gt;
+          Counter party account number
+        &lt;/div&gt;
+        &lt;div class="break-word" data-role="section-content"&gt;{{ hostRef.transaction?.counterPartyAccountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Description --&gt;
+      &lt;div class="bb-block--md" *ngIf="hostRef.transaction?.description" data-role="list-details-description-section"&gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Description of the selected transaction@@transactions.details.label.description"
+          data-role="section-title"
+        &gt;
+          Description
+        &lt;/div&gt;
+        &lt;div class="break-word" data-role="section-content"&gt;{{ hostRef.transaction?.description }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Original Description --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction?.originalDescription"
+        data-role="list-details-original-description-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Original description of the selected transaction@@transactions.details.label.originalDescription"
+          data-role="section-title"
+        &gt;
+          Original description
+        &lt;/div&gt;
+        &lt;div class="break-word" data-role="section-content"&gt;{{ hostRef.transaction?.originalDescription }}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Running balance --&gt;
+      &lt;div
+        class="bb-block--md"
+        *ngIf="hostRef.transaction?.runningBalance"
+        data-role="list-details-running-balance-section"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Running balance of the selected transaction@@transactions.details.label.runningBalance"
+          data-role="section-title"
+        &gt;
+          Running balance
+        &lt;/div&gt;
+        &lt;div class="break-word"&gt;
+          &lt;bb-amount-ui
+            data-role="section-content"
+            [currency]="hostRef.transaction?.transactionAmountCurrency?.currencyCode"
+            [amount]="hostRef.transaction?.runningBalance"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Check image --&gt;
+    &lt;ng-container *ngIf="hostRef?.transactionDetailsLoadingStatus?.checkImages!==hostRef.loadingStateEnum.notStarted"&gt;
+      &lt;ng-container *ngIf="hostRef?.transactionDetailsLoadingStatus?.checkImages!==hostRef.loadingStateEnum.notLoaded"&gt;
+        &lt;div
+          class="bb-block--lg"
+          *ngIf="hostRef.transaction &amp;&amp; hostRef.transaction.checkImageAvailability==='AVAILABLE'"
+        &gt;
+          &lt;span
+            class="bb-text-bold"
+            i18n="check images of the selected transaction@@transactions.details.label.check-img"
+          &gt;
+            Check images
+          &lt;/span&gt;
+          &lt;span&gt;
+            &lt;bb-icon-ui
+              class="bb-transactions-list-pending-header__tooltip"
+              role="tooltip"
+              name="info"
+              size="sm"
+              [bbTooltip]="tipContent"
+              triggers="hover click"
+              placement="right"
+              bbAccessibilityKeyboard
+            &gt;&lt;/bb-icon-ui&gt;
+          &lt;/span&gt;
+          &lt;bb-transaction-check-image
+            [transaction]="hostRef.transaction"
+            [checkImagesList]="hostRef.checkImagesList"
+            [transactionDetailsLoadingStatus]="hostRef.transactionDetailsLoadingStatus"
+          &gt;&lt;/bb-transaction-check-image&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+    &lt;!-- Geo location --&gt;
+    &lt;div *ngIf="hostRef.transaction?.location"&gt;
+      &lt;div
+        class="bb-text-bold bb-block bb-block--sm"
+        i18n="Geo location of the selected transaction@@transactions.details.label.geo-location"
+      &gt;
+        Location
+      &lt;/div&gt;
+      &lt;bb-transaction-geo-location-map
+        [transaction]="hostRef.transaction"
+        [loadingStatus]="hostRef.transactionDetailsLoadingStatus?.geolocation"
+      &gt;&lt;/bb-transaction-geo-location-map&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Notes --&gt;
+    &lt;ng-container *ngIf="!!hostRef.isEditingNotes || !!hostRef.transaction.notes"&gt;
+      &lt;div class="bb-block bb-block--lg"&gt;&lt;/div&gt;
+      &lt;div class="bb-transaction-list-item-detail-additional-info"&gt;
+        &lt;bb-transaction-notes
+          data-role="transaction-notes"
+          [transaction]="hostRef.transaction"
+          [isEditingNotes]="hostRef.isEditingNotes"
+          [isSavingNotes]="hostRef.isSavingNotes"
+          (isEditingNotesChange)="hostRef.isEditingNotes = $event; hostRef.isEditingNotesChange.emit($event)"
+          (changeNotes)="hostRef.onChangeNotes($event)"
+          (deleteNote)="hostRef.handleDelete($event)"
+        &gt;&lt;/bb-transaction-notes&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListItemGroupCustomizable" class="discrete">bbTransactionsListItemGroupCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListItemGroupCustomizable let-hostRef&gt;
+  &lt;div role="heading" aria-level="2" class="bb-transaction-group__date bb-block--md bb-subheader" i18n="Date of the selected transaction@@transactions.list.transactionDate" tabindex="0"&gt;
+    {hostRef.daysElapsed, plural, =0 {Today} =1 {Yesterday} other {{{ hostRef.transactionDate | date:'longDate' }}} }
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div role="list"&gt;
+      &lt;div class="bb-block--md" *ngFor="let transaction of hostRef.transactions; trackBy: hostRef.trackByFn" role="listitem"&gt;
+        &lt;bb-transactions-list-item
+          [showChangeCategory]="hostRef.showChangeCategory"
+          [transaction]="transaction"
+          [checkImagesList]="hostRef.checkImagesList"
+          [transactionDetailsLoadingStatus]="hostRef.transactionDetailsLoadingStatus"
+          [inquireAndDisputeTopics]="hostRef.inquireAndDisputeTopics"
+          (detailsOpen)="hostRef.onDetailOpen($event)"
+        &gt;&lt;/bb-transactions-list-item&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListItemHeaderCustomizable" class="discrete">bbTransactionsListItemHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Customize the appearance of the list item, This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListItemHeaderCustomizable let-hostRef&gt;
+  &lt;bb-transaction-header
+    [showBillingStatus]="hostRef.showBillingStatus"
+    [transaction]="hostRef.transaction"
+  &gt;&lt;/bb-transaction-header&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListListCustomizable" class="discrete">bbTransactionsListListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListListCustomizable let-hostRef&gt;
+  &lt;div class="bb-list bb-block--md"&gt;
+    &lt;div class="bb-list__item" *ngFor="let date of hostRef.transactionsGroupedByDate; trackBy: hostRef.trackByFn"&gt;
+      &lt;bb-transactions-list-item-group
+        [checkImagesList]="hostRef.checkImagesList"
+        [transactions]="date[1]"
+        [transactionDate]="date[0]"
+        [showChangeCategory]="hostRef.showChangeCategory"
+        [transactionDetailsLoadingStatus]="hostRef.transactionDetailsLoadingStatus"
+        [inquireAndDisputeTopics]="hostRef.inquireAndDisputeTopics"
+        (detailsOpen)="hostRef.onDetailOpen($event)"
+      &gt;&lt;/bb-transactions-list-item-group&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListPaginationCustomizable" class="discrete">bbTransactionsListPaginationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListPaginationCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-text-align-center"&gt;
+    &lt;bb-pagination-ui
+      class="bb-pagination"
+      [page]="hostRef.currentPage"
+      [boundaryLinks]="true"
+      [directionLinks]="true"
+      [totalItems]="hostRef.transactionsList.totalCount"
+      [itemsPerPage]="hostRef.pageSize"
+      [maxNavPages]="hostRef.maxNavPages"
+      (pageChange)="hostRef.onPageChange($event)"
+      *ngIf="hostRef.isPaginationPaged"
+    &gt;&lt;/bb-pagination-ui&gt;
+    &lt;div data-role="load-more" *ngIf="hostRef.isPaginationLoadMore"&gt;
+      &lt;bb-load-button-ui
+        color="link"
+        [isLoading]="hostRef.isLoadingMore"
+        [from]="hostRef.currentPage"
+        [size]="hostRef.pageSize"
+        [totalCount]="hostRef.transactionsList.totalCount"
+        (paramChange)="hostRef.onLoadMore($event)"
+        i18n="Load more button, when there are still transactions to be loaded@@transactions.list.loadMore"
+        *ngIf="!hostRef.hasLoadedAll()"
+      &gt;Load more&lt;/bb-load-button-ui&gt;
+      &lt;span
+        i18n="Displayed message when all transactions had been loaded@@transactions.list.loadedAll"
+        *ngIf="hostRef.hasLoadedAll()"
+      &gt;All transactions have been loaded.&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsErrorStateCustomizable" class="discrete">bbTransactionsErrorStateCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsErrorStateCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-empty-state-ui&gt;&lt;/bb-empty-state-ui&gt;
+    &lt;p *ngFor="let error of hostRef.errors" data-role="custom-error-state-message" class="bb-empty-state__message bb-empty-state"&gt;{{error?.message}}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="bb-text-align-center"&gt;
+    &lt;button i18n="Retry button@transactions-table.state.error.retry-button" bbButton (click)="hostRef.retry()"&gt;Retry&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsListEmptyStateCustomizable" class="discrete">bbTransactionsListEmptyStateCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsListEmptyStateCustomizable let-hostRef&gt;
+  &lt;div class="col-md-4 offset-md-4 bb-text-align-center card-body"&gt;
+    &lt;bb-empty-state-ui
+      i18n-title="No results are found@@transactions.state.noResultsFound.title"
+      title="No Results Found"
+      i18n-subtitle="Filter returned no results, try a different criteria@@transactions.state.noResultsFound.subtitle"
+      subtitle="We can't find what you are looking for. Please try a different criteria."
+      iconSize="xl"
+      iconModifier="search"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsNoAccountSelectedStateCustomizable" class="discrete">bbTransactionsNoAccountSelectedStateCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsNoAccountSelectedStateCustomizable let-hostRef&gt;
+  &lt;div&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        title="No Transactions"
+        i18n-title="Title of no transactions|No product selected@@transactions.state.noProductSelected.title"
+        subtitle="You don't have any transactions to be displayed."
+        i18n-subtitle="Subtitle of no selected product|Please select a product first@@transactions.state.noProductSelected.subtitle"
+        iconSize="xxl"
+        iconModifier="transactions"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionDetailCategoryCustomizable" class="discrete">bbTransactionDetailCategoryCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionDetailCategoryCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.displayChangeCategory &amp;&amp;  !hostRef.transaction.isPending"&gt;
+    &lt;ng-container *ngIf="hostRef.transactionCategoryIcon.type === transactionIconType.category; else fallbackCategory"&gt;
+      &lt;button
+        bbButton
+        class="bb-transaction-list-item-detail-header__category-badge"
+        (click)="hostRef.openTransactionsCategory()"
+        buttonSize="sm"
+      &gt;
+        &lt;span data-role="list-details-category"&gt;{{ hostRef.categoryTitle | bbCapitalizePipe }}&lt;/span&gt;
+        &lt;span&gt;
+          &lt;bb-icon-ui
+            class="bb-transactions-list-pending-header__tooltip"
+            name="edit"
+            size="sm"
+            color="muted"
+          &gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            class="sr-only"
+            i18n="Change transaction category|Change the category of a transaction@@transactions.details.changeCategory"
+          &gt;
+            Change category
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #fallbackCategory&gt;
+      &lt;div class="bb-transaction-list-item-detail-header__category-badge-fallback bb-transaction-list-item-detail-header__category-badge"&gt;
+        &lt;span data-role="list-details-category"&gt;{{ hostRef.categoryTitle | titlecase }}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-modal-ui
+    [isOpen]="hostRef.isTransactionsCategoryOpen"
+    [modalOptions]="{centered: true}"
+    (cancel)="hostRef.closeTransactionsCategory()"
+  &gt;
+    &lt;bb-transactions-categories
+      [transaction]="hostRef.transaction"
+      (categoryChange)="hostRef.closeTransactionsCategory($event)"
+    &gt;&lt;/bb-transactions-categories&gt;
+  &lt;/bb-modal-ui&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTransactionsCategoryCustomizable" class="discrete">bbTransactionsCategoryCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbTransactionsCategoryCustomizable let-hostRef&gt;
+  &lt;form
+    [formGroup]="hostRef.changeTransactionsCategoryForm"
+    (ngSubmit)="hostRef.changeCategory()"
+  &gt;
+  &lt;div class="modal-header"&gt;
+    &lt;div class="form-group col-12 col-md-9"&gt;
+      &lt;bb-header-ui
+        headingType="h3"
+        heading="Change Category"
+        i18n-heading="Change Category|Change Category in change transactions category form@@transactions.form.name"
+      &gt;&lt;/bb-header-ui&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="close" color="muted" aria-label="Close" i18n-aria-label="Close button@@transactions.form.close" (click)="hostRef.cancelSaveCategory()"&gt;
+      &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+    &lt;div class="modal-body modal-body-scrollable"&gt;
+      &lt;div class="bb-list"&gt;
+        &lt;div class="bb-list__item--no-separator" *ngFor="let category of categoriesList | async" &gt;
+          &lt;label class="bb-stack" [for]="hostRef.getCategoryIconClass(category.categoryName)"&gt;
+            &lt;bb-icon-ui
+              class="bb-stack__item"
+              name="category-{{hostRef.getCategoryIconClass(category.categoryName)}}"
+              backgroundType="circle"
+              size="sm"
+            &gt;&lt;/bb-icon-ui&gt;
+            &lt;span class="font-weight-bold bb-stack__item"&gt;{{ category.categoryName }}&lt;/span&gt;
+            &lt;div class="bb-stack__item bb-stack__item--fill bb-text-align-right"&gt;
+              &lt;input
+                [id]="hostRef.getCategoryIconClass(category.categoryName)"
+                type="radio"
+                name="categoryName"
+                formControlName="categoryName"
+                [value]="category.categoryName"
+              &gt;
+            &lt;/div&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="modal-footer"&gt;
+      &lt;button
+        bbButton
+        data-role="cancel"
+        color="secondary"
+        (click)="hostRef.cancelSaveCategory()"
+        i18n="Cancel|Cancel button label@@transactions.category.modal.cancel.button"
+      &gt;
+        Cancel
+      &lt;/button&gt;
+
+      &lt;button
+        bbButton
+        type="submit"
+        color="primary"
+        [disabled]="hostRef.transaction.category === hostRef.changeTransactionsCategoryForm.value.categoryName"
+        i18n="Save|Save button label@@transactions.category.modal.save.button"
+      &gt;
+        Save
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbPendingTransactionsListCustomizable" class="discrete">bbPendingTransactionsListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbPendingTransactionsListCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;strong
+      role="heading"
+      class="bb-block bb-block--md"
+      aria-level="2"
+      aria-label=" A pending transaction is a payment that has been authorized but has not been processed. For
+      instance, a transaction that is still waiting for the merchant to process it or a transaction requiring overnight
+      processing because it was made after the cutoff time of the financial institution."
+      i18n-aria-label="Pending transactions header aria-label@@transactions.list.pending.header.aria-label"
+      tabindex="0"
+    &gt;
+      &lt;div class="bb-transactions-list-pending-header bb-block--md"&gt;
+        &lt;span class="bb-subheader" i18n="Pending transactions header@@transactions.list.pending.header"&gt;Pending&lt;/span&gt;
+        &lt;span class="bb-transactions-list-pending-header__tooltip"&gt;
+          &lt;bb-icon-ui
+            role="tooltip"
+            name="info"
+            size="sm"
+            [bbTooltip]="tipContent"
+            placement="right"
+            triggers="hover click"
+            bbAccessibilityKeyboard
+          &gt;&lt;/bb-icon-ui&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/strong&gt;
+    &lt;div class="bb-list"&gt;
+      &lt;div class="bb-list__item"&gt;
+        &lt;div class="bb-block--md" *ngFor="let transaction of hostRef.transactionsList?.items; trackBy: hostRef.trackByFn"&gt;
+          &lt;bb-transactions-list-item
+            [transaction]="transaction"
+            [showBillingStatus]="true"
+            [showChangeCategory]="hostRef.showChangeCategory"
+            [inquireAndDisputeTopics]="hostRef.inquireAndDisputeTopics"
+            (detailsOpen)="hostRef.onDetailOpen($event)"
+          &gt;&lt;/bb-transactions-list-item&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- forcing a line separator in bb-list--&gt;
+      &lt;div class="bb-list__item"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="view_transactions_list_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">NewExtensionSlot.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';
+import { TransactionsListMySelectorComponent } from './NewExtensionSlot.component'
+
+@NgModule({
+  declarations: [TransactionsListMySelectorComponent],
+  imports: [
+    CommonModule,
+    TransactionsListWidgetModule,
+  ],
+})
+export class CustomAngModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">NewExtensionSlot.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/core-ang';
+import { TransactionsListWidgetComponent } from '@backbase/retail-ang/transactions';
+
+@Component({
+  selector: 'bb-my-selector',
+  templateUrl: 'my-selector.component.html',
+})
+@CopyRoutes(TransactionsListWidgetComponent)
+export class TransactionsListMySelectorComponent {
+  // include your customization here
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>TransactionsListWidgetComponent</code> is the name of the <strong>View transactions list</strong> widget component.</p>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">NewExtensionSlot.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-transactions-list-widget&gt;&lt;/bb-transactions-list-widget&gt;
+
+&lt;!-- override the empty state for the Transactions List widget --&gt;
+&lt;ng-template bbExtensionSlot let-hostRef&gt;
+  &lt;!-- place your customization here --&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_transactions_list_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 57.9999%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 10.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Editable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of history transaction records per page</strong></p>
+<p class="tableblock">The number of history transactions that are loaded, both initially and
+when new transactions are added. History transactions are transactions
+that have already been billed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. number of navigation pages</strong></p>
+<p class="tableblock">The number of displayed page numbers including the currently visible one
+when using Pagination as pagination type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.maxNavPages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Pagination type (pagination, load-more)</strong></p>
+</div>
+<div class="paragraph">
+<p>Select one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Load more - A <strong>Load more</strong> button is displayed under the list, which
+when clicked displays additional notifications. The button remains until
+there are no more entries to display</p>
+</li>
+<li>
+<p>Pagination - An index of available pages is displayed under the list,
+which always provides links to the first and last page, as well as to a
+number of pages adjacent to the current one.</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.paginationType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Load more</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Initial filter parameters</strong></p>
+<p class="tableblock">Initialize the transactions list with a set of filter options.
+Pass the query parameters in a string. For example: <code>creditDebitIndicator=DBIT&amp;amountGreaterThan=9000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.initialFilterOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Options to initialize the sorting (for example, 'bookingDate DESC' or empty)</strong></p>
+<p class="tableblock">Set the default sorting field and direction. When this field is empty, the sorting is controlled by the backend systems
+and it is expected that the sort field and direction are returned in the header of the transaction <code>GET</code> response.</p>
+<p class="tableblock">For the list of sortable fields see the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/transaction-manager-client-api.html">Transactions client API</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.initialSortOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bookingDate DESC</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Show/hide transaction controls</strong></p>
+<p class="tableblock">Set the value to <code>true</code> to display filter, search, export and print controls. Set the value to <code>false</code> to hide them.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.showControls</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Enable change category</strong></p>
+<p class="tableblock">Set the value to <code>true</code> to display the change category option in the transaction details.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.showChangeCategory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Show pending transactions on top</strong></p>
+<p class="tableblock">Set to <code>true</code> to show all the transactions with billing status <code>pending</code> or <code>unbilled</code> on the top of the page, and hide the <code>billingStatus</code> filter.
+Make sure the <code>BILLING_STATUS</code> column in the <a href="https://community.backbase.com/documentation/DBS/2.21.1/transactions_reference#transactions_database_description">transactions database table</a> is not <code>NULL</code> if this preference is set to <code>true</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.showPendingTransactionsOnTop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Shows the check images inside the details of a transaction</strong></p>
+<p class="tableblock">Set the value to <code>true</code> to display check images for transactions with associated check images.
+Set the value to <code>false</code> to hide the check images and to not send an additional request to the backend to retrieve them.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.transaction.showCheckImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Google maps API key input</strong></p>
+<p class="tableblock">Set the
+<a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps API key</a>
+to communicate with Google services. Google maps API key can be provided from app level as input
+by setting the value to <code>app-config googleAPIKey</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>input.googleAPIKey</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma separated list of event names to subscribe to perform transactions refresh</strong></p>
+<p class="tableblock">Set the event or events the widget subscribes to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event.refreshTransactionsList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

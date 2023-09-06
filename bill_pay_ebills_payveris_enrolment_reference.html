@@ -1,0 +1,3331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Enroll Payveris eBills</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="bill_pay_ebills_payveris_enrolment_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Enroll Payveris eBills</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html"><span class="toc-current">Enroll Payveris eBills</span></a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="bill_pay_ebills_payveris_enrolment_reference" class="sect0">Enroll Payveris eBills</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#enroll_payveris_ebills_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="enroll_payveris_ebills_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-billpay-payveris-ebills-enrolment-widget&gt;</code>.</p>
+</div>
+<h2 id="enroll_payveris_ebills_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BillpayPayverisEbillsEnrolmentWidgetModule } from '@backbase/billpay-payveris-ebills-enrolment-widget-ang';</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>All Bill Pay widgets are closely related to each other, so it is recommended to use them together.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="enroll_payveris_ebills_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>The extension slots for the Ebills Payveris Enrollment widget are the following:</p>
+</div>
+<h3 id="_ebills_payveris_enrollment_widget_container_and_login_form" class="discrete">Ebills Payveris Enrollment widget container and login form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_1_2.svg?ver=3.10.1" alt="billpay ebills enrollment slots 1 2"></span></p>
+</div>
+<h3 id="_biller_selection_form" class="discrete">Biller selection form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_3.svg?ver=3.10.1" alt="billpay ebills enrollment slots 3"></span></p>
+</div>
+<h3 id="_one_time_passcode_selection_form" class="discrete">One-time passcode selection form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_4.svg?ver=3.10.1" alt="billpay ebills enrollment slots 4"></span></p>
+</div>
+<h3 id="_one_time_passcode_entry_form" class="discrete">One-time passcode entry form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_5.svg?ver=3.10.1" alt="billpay ebills enrollment slots 5"></span></p>
+</div>
+<h3 id="_mfa_entry_form" class="discrete">MFA entry form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_6.svg?ver=3.10.1" alt="billpay ebills enrollment slots 6"></span></p>
+</div>
+<h3 id="_captcha_entry_form" class="discrete">CAPTCHA entry form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_7.svg?ver=3.10.1" alt="billpay ebills enrollment slots 7"></span></p>
+</div>
+<h3 id="_account_selection_form" class="discrete">Account selection form</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_8.svg?ver=3.10.1" alt="billpay ebills enrollment slots 8"></span></p>
+</div>
+<h3 id="_error_information" class="discrete">Error information</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/billpay_ebills_enrollment_slots_9.svg?ver=3.10.1" alt="billpay ebills enrollment slots 9"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentWidgetCustomizable">bbBillpayPayverisEbillsEnrolmentWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentLoginCustomizable">bbBillpayPayverisEbillsEnrolmentLoginCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable">bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable">bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable">bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable">bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable">bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable">bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="bill_pay_ebills_payveris_enrolment_reference.html#bbBillpayPayverisEbillsEnrolmentErrorCustomizable">bbBillpayPayverisEbillsEnrolmentErrorCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentWidgetCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentWidgetCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbBillpayPayverisEbillsEnrolmentWidgetCustomizable
+  [bbHostRef]="hostRef"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentWidgetCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;div class="w-100"&gt;
+
+      &lt;p class="mb-4 clearfix"&gt;
+        &lt;button bbButton
+                color="link"
+                (click)="hostRef.returnToPayeeList()"
+                class="float-left"
+                data-role="payveris-payee-login-return-to-payee-list-link"
+        &gt;
+          &lt;span
+            i18n="Back to payee list button|Button on login page for returning to payee list @@bb-billpay-payveris-ebills-enrolment-login.button.back-to-payee-list"
+          &gt;&amp;larr; Back to payee list&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/p&gt;
+
+      &lt;h2 data-role="payveris-payee-login-header" class="font-weight-bold"&gt;
+            &lt;span
+              i18n="Get ebills for payee|Header on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.main-header.get-ebills-for-payee"
+            &gt;Get eBills for &amp;apos;{{hostRef.payeeName | async}}&amp;apos;&lt;/span&gt;
+      &lt;/h2&gt;
+
+      &lt;hr&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="row my-2 pl-5"&gt;
+
+      &lt;div class="col-12 col-md-8 col-lg-6"&gt;
+
+        &lt;ng-container [ngSwitch]="hostRef.currentState"&gt;
+
+          &lt;ng-container *ngSwitchCase="hostRef.EnrolmentStates.Initialize"&gt;
+
+            &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+              &lt;bb-loading-indicator-ui
+                *ngSwitchCase="hostRef.ComponentStates.Checking"
+                loaderSize="lg"
+                text="Initializing..."
+                i18n-text="Initializing...|Ebill Payveris Enrolment Widget initializing text@@bb-billpay-ebills-payveris-enrolment-widget-ang.initializing.text"
+              &gt;
+              &lt;/bb-loading-indicator-ui&gt;
+
+              &lt;bb-loading-indicator-ui
+                *ngSwitchCase="hostRef.ComponentStates.Callback"
+                text="eBill enrolment is taking a little longer than usual, please be patient..."
+                i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.initializing-callback.text"
+                loaderSize="lg"
+                data-role="payveris-callback-info"
+              &gt;&lt;/bb-loading-indicator-ui&gt;
+
+            &lt;/ng-container&gt;
+
+          &lt;/ng-container&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-select-biller
+            *ngSwitchCase="hostRef.EnrolmentStates.SelectBiller"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [billers]="hostRef.billers"
+            (billerSelect)="hostRef.submitBiller($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-select-biller&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-login
+            *ngSwitchCase="hostRef.EnrolmentStates.Login"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [credentialsFailed]="hostRef.userInputFailed"
+            [credentialsArray]="hostRef.loginCredentialsArray"
+            (payeeLogin)="hostRef.submitPayeeLogin($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-login&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-mfa-entry
+            *ngSwitchCase="hostRef.EnrolmentStates.Mfa"
+            [payeeName]="hostRef.payeeName | async"
+            [mfaArray]="hostRef.mfaArray"
+            [componentState]="hostRef.componentState"
+            [mfaFailed]="hostRef.userInputFailed"
+            (mfaEntry)="hostRef.submitMfa()"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-mfa-entry&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-otp-select
+            *ngSwitchCase="hostRef.EnrolmentStates.OtpSelect"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [transports]="hostRef.otpTransports"
+            (transportSelect)="hostRef.submitOtpTransport($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-otp-select&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-otp-entry
+            *ngSwitchCase="hostRef.EnrolmentStates.OtpEntry"
+            [payeeName]="hostRef.payeeName | async"
+            [optTransportMethod]="hostRef.otpTransportMethodSelected"
+            [componentState]="hostRef.componentState"
+            [passcodeFailed]="hostRef.userInputFailed"
+            (passcodeEntry)="hostRef.submitOtpPasscode($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-otp-entry&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-captcha
+            *ngSwitchCase="hostRef.EnrolmentStates.Captcha"
+            [payeeName]="hostRef.payeeName | async"
+            [captchaImageType]="hostRef.captchaImageType"
+            [captchaImageSrc]="hostRef.captchaImageSrc"
+            [componentState]="hostRef.componentState"
+            [captchaFailed]="hostRef.userInputFailed"
+            (captchaEntry)="hostRef.submitCaptcha($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-captcha&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-select-account
+            *ngSwitchCase="hostRef.EnrolmentStates.SelectAccounts"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [accounts]="hostRef.accounts"
+            (accountSelect)="hostRef.submitPayverisEbillAccountSelection($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-select-account&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-error
+            *ngSwitchCase="hostRef.EnrolmentStates.ErrorState"
+            [errorState]="hostRef.errorState"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-error&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-notification-success
+            *ngSwitchCase="hostRef.EnrolmentStates.Success"
+            [ttl]="hostRef.dismissTimeout | async"
+            [header]="payverisEnrolmentSuccessHeaderMessage"
+            [message]="payverisEnrolmentSuccessMessage"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-notification-success&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;div class="bb-block bb-block--xl"&gt;
+      &lt;button
+        bbButton
+        class="btn-unstyled"
+        color="link"
+        (click)="hostRef.returnToPayeeList()"
+        data-role="payveris-payee-login-return-to-payee-list-link"
+      &gt;
+        &lt;div class="bb-stack"&gt;
+          &lt;bb-icon-ui
+            class="bb-stack__item bb-stack__item--spacing-xs"
+            name="arrow-back"
+            size="md"&gt;
+          &lt;/bb-icon-ui&gt;
+          &lt;span
+            class="bb-stack__item bb-subtitle"
+            i18n="Back to payee list button|Button on login page for returning to payee list @@bb-billpay-payveris-ebills-enrolment-login.button.back-to-payee-list"
+          &gt;Back to payee list&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-block bb-block--lg"&gt;
+      &lt;bb-header-ui
+        headingType="h1"
+        heading="Get eBills for '{{hostRef.payeeName | async}}'"
+        i18n-heading="Get ebills for payee|Header on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.main-header.get-ebills-for-payee"
+        data-role="payveris-payee-login-header"&gt;
+      &lt;/bb-header-ui&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card card-lg"&gt;
+      &lt;div class="card-body"&gt;
+
+        &lt;ng-container [ngSwitch]="hostRef.currentState"&gt;
+
+          &lt;ng-container *ngSwitchCase="hostRef.EnrolmentStates.Initialize"&gt;
+
+            &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+              &lt;bb-loading-indicator-ui
+                *ngSwitchCase="hostRef.ComponentStates.Checking"
+                loaderSize="lg"
+                text="Initializing..."
+                i18n-text="Initializing...|Ebill Payveris Enrolment Widget initializing text@@bb-billpay-ebills-payveris-enrolment-widget-ang.initializing.text"
+              &gt;
+              &lt;/bb-loading-indicator-ui&gt;
+
+              &lt;bb-loading-indicator-ui
+                *ngSwitchCase="hostRef.ComponentStates.Callback"
+                text="eBill enrolment is taking a little longer than usual, please be patient..."
+                i18n-text="eBill enrolment is taking a little longer than usual, please be patient...|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.initializing-callback.text"
+                loaderSize="lg"
+                data-role="payveris-callback-info"
+              &gt;&lt;/bb-loading-indicator-ui&gt;
+
+            &lt;/ng-container&gt;
+
+          &lt;/ng-container&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-select-biller
+            *ngSwitchCase="hostRef.EnrolmentStates.SelectBiller"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [billers]="hostRef.billers"
+            (billerSelect)="hostRef.submitBiller($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-select-biller&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-login
+            *ngSwitchCase="hostRef.EnrolmentStates.Login"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [credentialsFailed]="hostRef.userInputFailed"
+            [credentialsArray]="hostRef.loginCredentialsArray"
+            (payeeLogin)="hostRef.submitPayeeLogin($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-login&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-mfa-entry
+            *ngSwitchCase="hostRef.EnrolmentStates.Mfa"
+            [payeeName]="hostRef.payeeName | async"
+            [mfaArray]="hostRef.mfaArray"
+            [componentState]="hostRef.componentState"
+            [mfaFailed]="hostRef.userInputFailed"
+            (mfaEntry)="hostRef.submitMfa()"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-mfa-entry&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-otp-select
+            *ngSwitchCase="hostRef.EnrolmentStates.OtpSelect"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [transports]="hostRef.otpTransports"
+            (transportSelect)="hostRef.submitOtpTransport($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-otp-select&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-otp-entry
+            *ngSwitchCase="hostRef.EnrolmentStates.OtpEntry"
+            [payeeName]="hostRef.payeeName | async"
+            [optTransportMethod]="hostRef.otpTransportMethodSelected"
+            [componentState]="hostRef.componentState"
+            [passcodeFailed]="hostRef.userInputFailed"
+            (passcodeEntry)="hostRef.submitOtpPasscode($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-otp-entry&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-captcha
+            *ngSwitchCase="hostRef.EnrolmentStates.Captcha"
+            [payeeName]="hostRef.payeeName | async"
+            [captchaImageType]="hostRef.captchaImageType"
+            [captchaImageSrc]="hostRef.captchaImageSrc"
+            [componentState]="hostRef.componentState"
+            [captchaFailed]="hostRef.userInputFailed"
+            (captchaEntry)="hostRef.submitCaptcha($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-captcha&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-select-account
+            *ngSwitchCase="hostRef.EnrolmentStates.SelectAccounts"
+            [payeeName]="hostRef.payeeName | async"
+            [componentState]="hostRef.componentState"
+            [accounts]="hostRef.accounts"
+            (accountSelect)="hostRef.submitPayverisEbillAccountSelection($event)"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-select-account&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-error
+            *ngSwitchCase="hostRef.EnrolmentStates.ErrorState"
+            [errorState]="hostRef.errorState"
+            (returnToPayeeList)="hostRef.returnToPayeeList()"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-error&gt;
+
+          &lt;bb-billpay-payveris-ebills-enrolment-notification-success
+            *ngSwitchCase="hostRef.EnrolmentStates.Success"
+            [ttl]="hostRef.dismissTimeout | async"
+            [header]="payverisEnrolmentSuccessHeaderMessage"
+            [message]="payverisEnrolmentSuccessMessage"
+          &gt;&lt;/bb-billpay-payveris-ebills-enrolment-notification-success&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #payverisEnrolmentSuccessHeaderMessage&gt;
+    &lt;span
+      i18n="eBills enabled|eBills enabled successfully notification header@@bb-billpay-payveris-ebills-enrolment.notification.successHeader"&gt;eBills enabled&lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #payverisEnrolmentSuccessMessage&gt;
+    &lt;span
+      i18n="eBills enabled|eBills enabled successfully notification message@@bb-billpay-payveris-ebills-enrolment.notification.successBody"&gt;eBills for the payee &amp;apos;{{hostRef.payeeName| async}}&amp;apos;
+      have been enabled successfully&lt;/span&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentLoginCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentLoginCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentLoginCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentLoginCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking credentials ..."
+          i18n-text="Checking credentials...|Ebill Payveris Enrolment Widget checking credentials text@@bb-billpay-ebills-payveris-enrolment-widget-ang.checking-credentials.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.login-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.credentialsFailed"
+          title="The information you provided is incorrect. Please try again."
+          data-role="payveris-payee-login-credentials-warning"
+          i18n-title="Login credentials failed alert|Text for login credentials failed alert@@bb-billpay-payveris-ebills-enrolment-login.login-credentials-failed-alert"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;p
+          i18n="Login prompt|Login prompt for payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.note.login-prompt"
+        &gt;Please log in with your {{hostRef.payeeName}} credentials. We will only use them to retrieve information about
+          bills.&lt;/p&gt;
+
+        &lt;form (ngSubmit)="hostRef.onPayverisLoginSubmit(payverisLoginForm)" #payverisLoginForm="ngForm"&gt;
+
+          &lt;div class="w-50 mb-3"&gt;
+            &lt;bb-input-text-ui
+              name="id"
+              i18n-label="Login ID label|Label for login ID on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.label.login-id-label"
+              label="{{hostRef.loginLabel}}"
+              data-role="payveris-payee-login-id"
+              [required]="true"
+              [maxLength]="255"
+              labelClasses="font-weight-bold"
+              [(ngModel)]="hostRef.loginModel.id"
+              #id="ngModel"
+            &gt;
+            &lt;/bb-input-text-ui&gt;
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; id.invalid"&gt;
+            &lt;span
+              data-role="payveris-payee-login-id-blank-warning"
+              i18n="Login ID warning|Validity warning for login ID on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.warning.login-id-warning"
+            &gt;
+                You must enter {{hostRef.loginLabel}}
+            &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+
+          &lt;div class="w-50 mb-4"&gt;
+            &lt;bb-input-password-ui
+              name="password"
+              i18n-label="Password label|Label for password on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.label.password-label"
+              label="{{hostRef.passwordLabel}}"
+              data-role="payveris-payee-login-password"
+              [required]="true"
+              [maxLength]="255"
+              [showVisibilityControl]="true"
+              labelClasses="font-weight-bold"
+              [(ngModel)]="hostRef.loginModel.password"
+              #password="ngModel"
+            &gt;
+            &lt;/bb-input-password-ui&gt;
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; password.invalid"&gt;
+            &lt;span
+              data-role="payveris-payee-login-password-blank-warning"
+              i18n="Password warning|Validity warning for password on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.warning.password-warning"
+            &gt;
+                You must enter {{hostRef.passwordLabel}}
+            &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+
+          &lt;button bbButton
+                  color="light"
+                  (click)="hostRef.cancelModalOpen = true"
+                  class="float-left"
+                  data-role="payveris-payee-cancel-enrollment-init"
+                  color="link"
+          &gt;
+          &lt;span
+            i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.button.cancel-enrolment"
+          &gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;button
+            bbButton
+            type="submit"
+            class="float-right"
+            data-role="payveris-payee-login-continue"
+          &gt;
+          &lt;span
+            i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.button.continue-enrolment"
+          &gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking credentials..."
+          i18n-text="Ebill Payveris Enrolment Widget checking credentials text@@bb-billpay-ebills-payveris-enrolment-widget-ang.checking-credentials.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.login-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.credentialsFailed"
+          title="The information you provided is incorrect. Please try again."
+          data-role="payveris-payee-login-credentials-warning"
+          i18n-title="Login credentials failed alert|Text for login credentials failed alert@@bb-billpay-payveris-ebills-enrolment-login.login-credentials-failed-alert"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;div
+          class="bb-block bb-block--lg"
+          i18n="Login prompt|Login prompt for payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.note.login-prompt"
+        &gt;
+          Please log in with your {{hostRef.payeeName}} credentials. We will only use them to retrieve information
+          about bills.
+        &lt;/div&gt;
+
+        &lt;form (ngSubmit)="hostRef.onPayverisLoginSubmit(payverisLoginForm)" #payverisLoginForm="ngForm"&gt;
+
+          &lt;div class="bb-block bb-block--xl"&gt;
+
+            &lt;div class="bb-block bb-block--sm"&gt;
+              &lt;bb-input-text-ui
+                class="bb-form-field bb-form-field--md"
+                name="id"
+                i18n-label="Login ID label|Label for login ID on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.label.login-id-label"
+                label="{{hostRef.loginLabel}}"
+                data-role="payveris-payee-login-id"
+                [required]="true"
+                [maxLength]="255"
+                [(ngModel)]="hostRef.loginModel.id"
+                #id="ngModel"
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+
+              &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; id.invalid"&gt;
+                    &lt;span
+                      data-role="payveris-payee-login-id-blank-warning"
+                      i18n="Login ID warning|Validity warning for login ID on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.warning.login-id-warning"
+                    &gt;
+                      You must enter {{hostRef.loginLabel}}
+                    &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+
+            &lt;bb-input-password-ui
+              class="bb-form-field bb-form-field--md"
+              name="password"
+              i18n-label="Password label|Label for password on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.label.password-label"
+              label="{{hostRef.passwordLabel}}"
+              data-role="payveris-payee-login-password"
+              [required]="true"
+              [maxLength]="255"
+              [showVisibilityControl]="true"
+              [(ngModel)]="hostRef.loginModel.password"
+              #password="ngModel"
+            &gt;
+            &lt;/bb-input-password-ui&gt;
+
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; password.invalid"&gt;
+                  &lt;span
+                    data-role="payveris-payee-login-password-blank-warning"
+                    i18n="Password warning|Validity warning for password on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.warning.password-warning"
+                  &gt;
+                    You must enter {{hostRef.passwordLabel}}
+                  &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              type="submit"
+              data-role="payveris-payee-login-continue"
+              i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.button.continue-enrolment"
+            &gt;
+              Continue
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="light"
+              (click)="hostRef.cancelModalOpen = true"
+              data-role="payveris-payee-cancel-enrollment-init"
+              color="link"
+              i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment login form @@bb-billpay-payveris-ebills-enrolment-login.button.cancel-enrolment"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking biller selection..."
+          i18n-text="Checking biller selection|Ebill Payveris Enrolment Widget checking biller selection text@@bb-billpay-payveris-ebills-enrolment-select-biller.checking-biller.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.select-biller-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;p
+          class="mb-0"
+          i18n="Biller select prompt|Biller select prompt for payveris ebill enrolment biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.note.biller-select-prompt"
+        &gt;Select the biller you would like to get eBills for.&lt;/p&gt;
+
+        &lt;form name="selectBillerForm" #f="ngForm" (ngSubmit)="hostRef.onSelectBillerSubmit()"&gt;
+
+          &lt;div class="mb-4"&gt;
+
+            &lt;bb-input-radio-group-ui
+              name="billerID"
+              id="billerID"
+              aria-labelledby="bb-select-biller"
+              [preselect]="false"
+              [required]="true"
+              [(ngModel)]="hostRef.billerSelectedIndex"
+              #billerID="ngModel"
+              ngDefaultControl
+            &gt;
+              &lt;bb-input-radio-ui
+                *ngFor="let biller of hostRef.billers; let i = index"
+                value="{{i}}"
+                label="{{biller.value}}"
+              &gt;
+              &lt;/bb-input-radio-ui&gt;
+            &lt;/bb-input-radio-group-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"&gt;
+              &lt;span
+                i18n="Select biller warning|Warning on payveris ebill enrolment select biller form @@bb-billpay-payveris-ebills-enrolment-select-biller.warning.select-biller-warning"
+                data-role="payveris-payee-select-biller-multiple-no-selection-warning"
+              &gt;You must select a biller.
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+          &lt;span
+            i18n="Cancel enrolment multiple billers|Cancel enrolment button on payveris ebill enrolment multiple biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.button.cancel-enrolment-multiple-billers"
+          &gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;button bbButton type="submit" class="float-right"&gt;
+          &lt;span
+            i18n="Continue from biller selection|Continue from biller selection button on payveris ebill enrolment biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.button.continue-from-billers"
+            data-role="payveris-payee-select-biller-continue"
+          &gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking biller selection..."
+          i18n-text="Checking biller selection|Ebill Payveris Enrolment Widget checking biller selection text@@bb-billpay-payveris-ebills-enrolment-select-biller.checking-biller.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.select-biller-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+
+        &lt;div
+          i18n="Biller select prompt|Biller select prompt for payveris ebill enrolment biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.note.biller-select-prompt"
+        &gt;Select the biller you would like to get eBills for.
+        &lt;/div&gt;
+
+        &lt;form name="selectBillerForm" #f="ngForm" (ngSubmit)="hostRef.onSelectBillerSubmit()"&gt;
+
+          &lt;!-- lg is chosen as the last element of `bb-input-radio-ui` has 8px bottom margin totalling 32px --&gt;
+          &lt;div class="bb-block bb-block--lg"&gt;
+
+            &lt;bb-input-radio-group-ui
+              name="billerID"
+              id="billerID"
+              aria-labelledby="bb-select-biller"
+              [preselect]="false"
+              [required]="true"
+              [(ngModel)]="hostRef.billerSelectedIndex"
+              #billerID="ngModel"
+              ngDefaultControl
+            &gt;
+              &lt;bb-input-radio-ui
+                *ngFor="let biller of hostRef.billers; let i = index"
+                value="{{i}}"
+                label="{{biller.value}}"
+              &gt;
+              &lt;/bb-input-radio-ui&gt;
+            &lt;/bb-input-radio-group-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"
+              i18n="Select biller warning|Warning on payveris ebill enrolment select biller form @@bb-billpay-payveris-ebills-enrolment-select-biller.warning.select-biller-warning"
+              data-role="payveris-payee-select-biller-multiple-no-selection-warning"
+            &gt;
+              You must select a biller.
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              type="submit"
+              i18n="Continue from biller selection|Continue from biller selection button on payveris ebill enrolment biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.button.continue-from-billers"
+              data-role="payveris-payee-select-biller-continue"&gt;
+              Continue
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="link"
+              (click)="hostRef.cancelModalOpen = true"
+              i18n="Cancel enrolment multiple billers|Cancel enrolment button on payveris ebill enrolment multiple biller select form @@bb-billpay-payveris-ebills-enrolment-select-biller.button.cancel-enrolment-multiple-billers"&gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Submitting selection ..."
+          i18n-text="Submitting selection|Ebill Payveris Enrolment Widget submitting otp selection text@@bb-billpay-ebills-payveris-enrolment-otp-select.submit-otp-selection.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.otp-select-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;ng-container *ngIf="hostRef.transports.length &gt; 1"&gt;
+
+          &lt;p
+            i18n="Transport select prompt|Transport select prompt for payveris ebill enrolment transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.note.transport-select-prompt"
+          &gt;A one-time passcode (OTP) is required to verify your identity. Please select how you would like to receive
+            it.&lt;/p&gt;
+
+          &lt;form name="selectTransportForm" #f="ngForm" (ngSubmit)="hostRef.onSelectTransportSubmit()"&gt;
+
+            &lt;div class="mb-4"&gt;
+
+              &lt;bb-input-radio-group-ui
+                name="transportID"
+                id="transportID"
+                aria-labelledby="bb-select-transport"
+                [required]="true"
+                [preselect]="false"
+                [(ngModel)]="hostRef.transportSelectedIndex"
+                #transportID="ngModel"
+                ngDefaultControl
+              &gt;
+                &lt;bb-input-radio-ui
+                  *ngFor="let transport of hostRef.transports; let i = index"
+                  value="{{i}}"
+                  label="{{transport.value}}"
+                  i18n-label="Transport type of one-time-passcode radio button@@bb-billpay-payveris-ebills-enrolment-select-transport.radio.label"
+                &gt;
+                &lt;/bb-input-radio-ui&gt;
+              &lt;/bb-input-radio-group-ui&gt;
+
+              &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"&gt;
+                  &lt;span
+                    data-role="payveris-payee-select-transport-multiple-no-selection-warning"
+                    i18n="Select transport warning|Warning on payveris ebill enrolment select transport form @@bb-billpay-payveris-ebills-enrolment-select-transport.warning.select-transport-warning"
+                  &gt;
+                    You must select a passcode destination.
+                  &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;/div&gt;
+
+            &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+              &lt;span
+                i18n="Cancel enrolment multiple transports|Cancel enrolment button on payveris ebill enrolment multiple transports select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.cancel-enrolment-multiple-transports"
+              &gt;Cancel&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button bbButton type="submit" class="float-right"&gt;
+              &lt;span
+                i18n="Continue from multiple transports|Continue button on payveris ebill enrolment multiple transports select form @@bb-billpay-payveris-ebills-enrolment-select-transports.button.continue-multiple-transports"
+                data-role="payveris-payee-select-transports-multiple-continue"
+              &gt;Continue&lt;/span&gt;
+            &lt;/button&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="hostRef.transports.length === 1"&gt;
+
+          &lt;p
+            i18n="Check single transport prompt|Check single transport prompt on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.check-single-transport-prompt"
+            data-role="payveris-payee-select-transport-single-prompt"
+          &gt;A one-time passcode (OTP) is required to verify your identity. Please confirm the delivery method.&lt;/p&gt;
+
+          &lt;p
+            class="mb-4"
+            i18n="Check single transport sub-header|Check single transport sub-header on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.check-single-transport-sub-header"
+          &gt;{{hostRef.transports[0].value}}&lt;/p&gt;
+
+          &lt;form name="selectTransportForm" #f="ngForm" (ngSubmit)="hostRef.onSelectTransportSubmit()"&gt;
+
+            &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+            &lt;span
+              i18n="Cancel enrolment single transport|Cancel enrolment button on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.cancel-enrolment-single-transport"
+            &gt;Cancel&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button bbButton type="submit" class="float-right"&gt;
+            &lt;span
+              i18n="Continue from single transport|Continue ebills button on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.continue-single-transport"
+              data-role="payveris-payee-select-transport-single-continue"
+            &gt;Continue&lt;/span&gt;
+            &lt;/button&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Submitting selection..."
+          i18n-text="Submitting selection|Ebill Payveris Enrolment Widget submitting otp selection text@@bb-billpay-ebills-payveris-enrolment-otp-select.submit-otp-selection.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient...|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.otp-select-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;ng-container *ngIf="hostRef.transports.length &gt; 1"&gt;
+
+          &lt;div
+            class="bb-block bb-block--sm"
+            i18n="Transport select prompt|Transport select prompt for payveris ebill enrolment transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.note.transport-select-prompt"
+          &gt;
+            A one-time passcode (OTP) is required to verify your identity. Please select how you would like to
+            receive it.
+          &lt;/div&gt;
+
+          &lt;form name="selectTransportForm" #f="ngForm" (ngSubmit)="hostRef.onSelectTransportSubmit()"&gt;
+
+            &lt;div class="bb-block bb-block--lg"&gt;
+
+              &lt;bb-input-radio-group-ui
+                name="transportID"
+                id="transportID"
+                aria-labelledby="bb-select-transport"
+                [required]="true"
+                [preselect]="false"
+                [(ngModel)]="hostRef.transportSelectedIndex"
+                #transportID="ngModel"
+                ngDefaultControl
+              &gt;
+                &lt;bb-input-radio-ui
+                  *ngFor="let transport of hostRef.transports; let i = index"
+                  value="{{i}}"
+                  label="{{transport.value}}"
+                  i18n-label="Transport type of one-time-passcode radio button@@bb-billpay-payveris-ebills-enrolment-select-transport.radio.label"
+                &gt;
+                &lt;/bb-input-radio-ui&gt;
+              &lt;/bb-input-radio-group-ui&gt;
+
+              &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"&gt;
+                    &lt;span
+                      data-role="payveris-payee-select-transport-multiple-no-selection-warning"
+                      i18n="Select transport warning|Warning on payveris ebill enrolment select transport form @@bb-billpay-payveris-ebills-enrolment-select-transport.warning.select-transport-warning"
+                    &gt;
+                      You must select a passcode destination.
+                    &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+
+              &lt;button
+                class="bb-button-bar__button"
+                bbButton type="submit"
+                i18n="Continue from multiple transports|Continue button on payveris ebill enrolment multiple transports select form @@bb-billpay-payveris-ebills-enrolment-select-transports.button.continue-multiple-transports"
+                data-role="payveris-payee-select-transports-multiple-continue"
+              &gt;
+                Continue
+              &lt;/button&gt;
+
+              &lt;button
+                bbButton
+                class="bb-button-bar__button"
+                color="link"
+                (click)="hostRef.cancelModalOpen = true"
+                i18n="Cancel enrolment multiple transports|Cancel enrolment button on payveris ebill enrolment multiple transports select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.cancel-enrolment-multiple-transports"
+              &gt;
+                Cancel
+              &lt;/button&gt;
+
+            &lt;/div&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="hostRef.transports.length === 1"&gt;
+
+          &lt;div
+            class="bb-block bb-block--lg"
+            i18n="Check single transport prompt|Check single transport prompt on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.check-single-transport-prompt"
+            data-role="payveris-payee-select-transport-single-prompt"
+          &gt;
+            A one-time passcode (OTP) is required to verify your identity. Please confirm the delivery method.
+          &lt;/div&gt;
+
+          &lt;div
+            class="bb-block bb-block--xl"
+            i18n="Check single transport sub-header|Check single transport sub-header on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.check-single-transport-sub-header"
+          &gt;
+            {{hostRef.transports[0].value}}
+          &lt;/div&gt;
+
+          &lt;form name="selectTransportForm" #f="ngForm" (ngSubmit)="hostRef.onSelectTransportSubmit()"&gt;
+
+            &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+              &lt;button
+                bbButton
+                type="submit"
+                class="bb-button-bar__button"
+                i18n="Continue from single transport|Continue ebills button on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.continue-single-transport"
+                data-role="payveris-payee-select-transport-single-continue"
+              &gt;
+                Continue
+              &lt;/button&gt;
+
+              &lt;button
+                bbButton
+                color="link"
+                (click)="hostRef.cancelModalOpen = true"
+                class="bb-button-bar__button"
+                i18n="Cancel enrolment single transport|Cancel enrolment button on payveris ebill enrolment single transport select form @@bb-billpay-payveris-ebills-enrolment-select-transport.button.cancel-enrolment-single-transport"
+              &gt;
+                Cancel
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking passcode ..."
+          i18n-text="Checking passcode|Ebill Payveris Enrolment Widget checking otp passcode text@@bb-billpay-ebills-payveris-enrolment-otp-passcode.checking-otp-passcode.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.otp-entry-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.passcodeFailed"
+          title="The passcode you provided is incorrect. Please try again."
+          i18n-title="Passcode failed alert|Text for passcode failed alert@@bb-billpay-payveris-ebills-enrolment-otp-passcode.passcode-failed-alert"
+          data-role="payveris-payee-otp-passcode-warning"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;p
+          i18n="otp passcode prompt|otp passcode prompt for payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.note.otp-passcode-prompt"
+        &gt;A one-time passocde (OTP) has been sent to {{hostRef.optTransportMethod}}.&lt;/p&gt;
+
+        &lt;form [formGroup]="hostRef.passcodeForm" (ngSubmit)="hostRef.onPayverisOtpPasscodeSubmit()"&gt;
+          &lt;div class="form-group mb-4 w-50"&gt;
+
+            &lt;bb-input-text-ui
+              name="passcode"
+              i18n-label="otp passcode label|Label for otp passcode on payveris ebill otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.label.otp-passcode-label"
+              label="Passcode"
+              data-role="payveris-payee-otp-passcode-input"
+              [required]="true"
+              [maxLength]="255"
+              labelClasses="font-weight-bold"
+              formControlName="passcode"
+              ngDefaultControl
+            &gt;
+            &lt;/bb-input-text-ui&gt;
+
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; hostRef.passcodeForm.invalid"&gt;
+            &lt;span
+              data-role="payveris-payee-otp-passcode-blank-warning"
+              i18n="otp passcode  warning|Validity warning for otp passcode  on payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.warning.otp-passcode-warning"
+            &gt;
+                You must submit a passcode
+            &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+          &lt;span
+            i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.button.cancel-enrolment"
+          &gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;button
+            bbButton
+            type="submit"
+            class="float-right"
+            data-role="payveris-payee-otp-passcode-continue"
+          &gt;
+          &lt;span
+            i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment otp-passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.button.continue-enrolment"
+          &gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking passcode..."
+          i18n-text="Ebill Payveris Enrolment Widget checking otp passcode text@@bb-billpay-ebills-payveris-enrolment-otp-passcode.checking-otp-passcode.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.otp-entry-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.passcodeFailed"
+          title="The passcode you provided is incorrect. Please try again."
+          i18n-title="Text for passcode failed alert@@bb-billpay-payveris-ebills-enrolment-otp-passcode.passcode-failed-alert"
+          data-role="payveris-payee-otp-passcode-warning"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;div
+          class="bb-block bb-block--md"
+          i18n="otp passcode prompt|otp passcode prompt for payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.note.otp-passcode-prompt"
+        &gt;
+          A one-time passocde (OTP) has been sent to {{hostRef.optTransportMethod}}.
+        &lt;/div&gt;
+
+        &lt;form [formGroup]="hostRef.passcodeForm" (ngSubmit)="hostRef.onPayverisOtpPasscodeSubmit()"&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+
+            &lt;div class="bb-form-field bb-form-field--xs"&gt;
+
+              &lt;bb-input-text-ui
+                name="passcode"
+                label="Passcode"
+                i18n-label="otp passcode label|Label for otp passcode on payveris ebill otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.label.otp-passcode-label"
+                data-role="payveris-payee-otp-passcode-input"
+                [maxLength]="255"
+                formControlName="passcode"
+                ngDefaultControl
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+
+            &lt;/div&gt;
+
+            &lt;bb-input-validation-message-ui
+              *ngIf="hostRef.passcodeForm.controls['passcode'].invalid &amp;&amp; hostRef.passcodeRecentlyFailed; else submitPasscode"
+              [showErrors]="true"&gt;
+                  &lt;span
+                    i18n="Incorrect otp passcode warning|Validity warning for otp passcode on payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.warning.otp-passcode-incorrect"
+                  &gt;
+                    Incorrect passcode entered
+                  &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;ng-template #submitPasscode&gt;
+              &lt;bb-input-validation-message-ui
+                [showErrors]="hostRef.submitted &amp;&amp; hostRef.passcodeForm.controls['passcode'].invalid"&gt;
+                    &lt;span
+                      data-role="payveris-payee-otp-passcode-blank-warning"
+                      i18n="Empty otp passcode warning|Empty warning for otp passcode on payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.warning.otp-passcode-empty"
+                    &gt;
+                      You must submit a passcode
+                    &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/ng-template&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              type="submit"
+              data-role="payveris-payee-otp-passcode-continue"
+              i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment otp-passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.button.continue-enrolment"
+            &gt;
+              Continue
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="link"
+              i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment otp passcode form @@bb-billpay-payveris-ebills-enrolment-otp-passcode.button.cancel-enrolment"
+              (click)="hostRef.cancelModalOpen = true"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking answer ..."
+          i18n-text="Checking answer|Ebill Payveris Enrolment Widget checking mfa text@@bb-billpay-ebills-payveris-enrolment-mfa-entry.checking-mfa.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient...|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.mfa-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.mfaFailed"
+          title="The answer you provided is incorrect. Please try again."
+          data-role="payveris-payee-mfa-warning"
+          i18n-title="Mfa failed alert|Text for mfa failed alert@@bb-billpay-payveris-ebills-enrolment-mfa.mfa-failed-alert"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;p
+          i18n="mfa prompt|mfa prompt for payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.note.mfa-prompt"
+        &gt;Please answer the following security question(s).&lt;/p&gt;
+
+        &lt;form [formGroup]="hostRef.mfaForm" (ngSubmit)="hostRef.onMfaSubmit()"&gt;
+
+          &lt;div
+            class="form-group"
+            formArrayName="formQuestions"&gt;
+
+            &lt;div class="mb-3" *ngFor="let mfa of hostRef.mfaArray; let i = index"&gt;
+
+              &lt;bb-input-text-ui
+                i18n-label="mfa label|Label for mfa on payveris ebill mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.label.mfa-label"
+                label="{{hostRef.mfaArray[i].label}}"
+                data-role="payveris-payee-mfa-input"
+                [required]="true"
+                [maxLength]="255"
+                [formControlName]="i"
+                ngDefaultControl
+                class="mb-5"
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+
+            &lt;/div&gt;
+
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; hostRef.mfaForm.invalid"&gt;
+              &lt;span
+                data-role="payveris-payee-mfa-blank-warning"
+                i18n="mfa  warning|Validity warning for mfa on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.warning.mfa-warning"
+              &gt;
+                You must submit an answer per question
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+            &lt;span
+              i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.button.cancel-enrolment"
+            &gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;button
+            bbButton
+            type="submit"
+            class="float-right"
+            data-role="payveris-payee-mfa-continue"
+          &gt;
+            &lt;span
+              i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.button.continue-enrolment"
+            &gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking answer ..."
+          i18n-text="Checking answer|Ebill Payveris Enrolment Widget checking mfa text@@bb-billpay-ebills-payveris-enrolment-mfa-entry.checking-mfa.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.mfa-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.mfaFailed"
+          title="The answer you provided is incorrect. Please try again."
+          data-role="payveris-payee-mfa-warning"
+          i18n-title="Mfa failed alert|Text for mfa failed alert@@bb-billpay-payveris-ebills-enrolment-mfa.mfa-failed-alert"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;div
+          class="bb-block bb-block--lg"
+          i18n="mfa prompt|mfa prompt for payveris ebill enrolment mfa form@@bb-billpay-payveris-ebills-enrolment-mfa.note.mfa-prompt"
+        &gt;
+          Please answer the following security question(s).
+        &lt;/div&gt;
+
+        &lt;form [formGroup]="hostRef.mfaForm" (ngSubmit)="hostRef.onMfaSubmit()"&gt;
+
+          &lt;div
+            class="bb-block bb-block--xl"
+            formArrayName="formQuestions"&gt;
+
+            &lt;div
+              *ngFor="let mfa of hostRef.mfaArray; let i = index"
+              class="bb-block bb-block--md"
+            &gt;
+              &lt;bb-input-text-ui
+                class="bb-form-field bb-form-field--md"
+                i18n-label="mfa label|Label for mfa on payveris ebill mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.label.mfa-label"
+                label="{{hostRef.mfaArray[i].label}}"
+                data-role="payveris-payee-mfa-input"
+                [required]="true"
+                [maxLength]="255"
+                [formControlName]="i"
+                ngDefaultControl
+              &gt;
+              &lt;/bb-input-text-ui&gt;
+
+              &lt;bb-input-validation-message-ui
+                [showErrors]="hostRef.submitted &amp;&amp; hostRef.formQuestions.controls[i].invalid"&gt;
+                  &lt;span
+                    data-role="payveris-payee-mfa-blank-warning"
+                    i18n="mfa warning|Validity warning for mfa on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.warning.mfa-warning"
+                  &gt;
+                    You must submit an answer
+                  &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              type="submit"
+              data-role="payveris-payee-mfa-continue"
+              i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.button.continue-enrolment"
+            &gt;
+              Continue
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="link"
+              (click)="hostRef.cancelModalOpen = true"
+              i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment mfa form @@bb-billpay-payveris-ebills-enrolment-mfa.button.cancel-enrolment"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking text ..."
+          i18n-text="Checking text|Ebill Payveris Enrolment Widget checking captcha text text@@bb-billpay-ebills-payveris-enrolment-captcha-ang.checking-captcha-text.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.captcha-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.captchaFailed"
+          title="The text you provided is incorrect. Please try again."
+          i18n-title="Captcha failed alert|Text for captcha failed alert@@bb-billpay-payveris-ebills-enrolment-captcha.captcha-failed-alert"
+          data-role="payveris-payee-captcha-warning"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;p
+          i18n="captcha prompt|captcha prompt for payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.note.captcha-prompt"
+        &gt;Type the characters you see in this image.&lt;/p&gt;
+
+        &lt;p&gt;
+          &lt;img
+            [src]="hostRef.imageSrcData"
+            alt="Catcha image for payee."
+            i18n-alt="Catcha image|Catcha image for payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.image.captcha-image"
+          &gt;
+        &lt;/p&gt;
+
+        &lt;form [formGroup]="hostRef.captchaForm" (ngSubmit)="hostRef.onCaptchaSubmit()"&gt;
+          &lt;div class="form-group w-50 mb-4"&gt;
+
+            &lt;bb-input-text-ui
+              name="captcha"
+              i18n-label="captcha label|Label for captcha on payveris ebill captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.label.captcha-label"
+              label="Type characters"
+              data-role="payveris-payee-captcha-input"
+              [required]="true"
+              [maxLength]="255"
+              formControlName="captcha"
+              ngDefaultControl
+            &gt;
+            &lt;/bb-input-text-ui&gt;
+
+            &lt;bb-input-validation-message-ui [showErrors]="hostRef.submitted &amp;&amp; hostRef.captchaForm.invalid"&gt;
+            &lt;span
+              data-role="payveris-payee-captcha-blank-warning"
+              i18n="captcha warning|Validity warning for captcha on payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.warning.captcha-warning"
+            &gt;
+              Please enter the captcha text shown
+            &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+
+          &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+          &lt;span
+            i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.button.cancel-enrolment"
+          &gt;Cancel&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;button
+            bbButton
+            type="submit"
+            class="float-right"
+            data-role="payveris-payee-captcha-continue"
+          &gt;
+          &lt;span
+            i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.button.continue-enrolment"
+          &gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking text..."
+          i18n-text="Ebill Payveris Enrolment Widget checking captcha text text@@bb-billpay-ebills-payveris-enrolment-captcha-ang.checking-captcha-text.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.captcha-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.captchaFailed"
+          title="The text you provided is incorrect. Please try again."
+          i18n-title="Captcha failed alert|Text for captcha failed alert@@bb-billpay-payveris-ebills-enrolment-captcha.captcha-failed-alert"
+          data-role="payveris-payee-captcha-warning"
+        &gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;div
+          class="bb-block bb-block--lg"
+          i18n="captcha prompt|captcha prompt for payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.note.captcha-prompt"
+        &gt;
+          Type the characters you see in this image.
+        &lt;/div&gt;
+
+        &lt;div
+          class="bb-block bb-block--lg"&gt;
+          &lt;img
+            [src]="hostRef.imageSrcData"
+            alt="Catcha image for payee."
+            i18n-alt="Catcha image|Catcha image for payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.image.captcha-image"
+          &gt;
+        &lt;/div&gt;
+
+        &lt;form [formGroup]="hostRef.captchaForm" (ngSubmit)="hostRef.onCaptchaSubmit()"&gt;
+
+          &lt;div class="bb-block bb-block--xl"&gt;
+
+            &lt;bb-input-text-ui
+              class="bb-form-field bb-form-field--xs"
+              name="captcha"
+              i18n-label="captcha label|Label for captcha on payveris ebill captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.label.captcha-label"
+              label="Type characters"
+              data-role="payveris-payee-captcha-input"
+              [required]="true"
+              [maxLength]="255"
+              formControlName="captcha"
+              ngDefaultControl
+            &gt;
+            &lt;/bb-input-text-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              *ngIf="hostRef.captchaForm.controls['captcha'].invalid &amp;&amp; hostRef.captchaRecentlyFailed; else submitCaptcha"
+              [showErrors]="true"&gt;
+                  &lt;span
+                    i18n="Incorrect captcha warning|Validity warning for captcha on payveris ebill enrolment captcha form@@bb-billpay-payveris-ebills-enrolment-captcha.warning.captcha-incorrect"
+                  &gt;
+                    Incorrect captcha entered
+                  &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;ng-template #submitCaptcha&gt;
+              &lt;bb-input-validation-message-ui
+                [showErrors]="hostRef.submitted &amp;&amp; hostRef.captchaForm.controls['captcha'].invalid"&gt;
+                    &lt;span
+                      data-role="payveris-payee-captcha-blank-warning"
+                      i18n="Empty captcha warning|Empty warning for captcha on payveris ebill enrolment captcha form@@bb-billpay-payveris-ebills-enrolment-captcha.warning.captcha-empty"
+                    &gt;
+                      Please enter the captcha text shown
+                    &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/ng-template&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              type="submit"
+              data-role="payveris-payee-captcha-continue"
+              i18n="Continue enrolment|Continue enrolment button on payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.button.continue-enrolment"
+            &gt;
+              Continue
+            &lt;/button&gt;
+
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="link"
+              (click)="hostRef.cancelModalOpen = true"
+              i18n="Cancel enrolment|Cancel enrolment button on payveris ebill enrolment captcha form @@bb-billpay-payveris-ebills-enrolment-captcha.button.cancel-enrolment"
+            &gt;
+              Cancel
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/form&gt;
+
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+  &lt;/ng-template&gt;
+
+  &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+    *ngIf="hostRef.cancelModalOpen"
+    (resolve)="hostRef.onModalResolve($event)"
+  &gt;
+  &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable let-hostRef&gt;
+
+  &lt;ng-container *ngIf="!hostRef.isThemeV2Enabled; else themeV2Form"&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking account ..."
+          i18n-text="Checking account...|Ebill Payveris Enrolment Widget checking account text@@bb-billpay-ebills-payveris-enrolment-widget-ang.checking-account.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient......|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.select-account-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;ng-container *ngIf="hostRef.accounts.length &gt; 1"&gt;
+
+          &lt;p
+            i18n="Account select prompt|Account select prompt for payveris ebill enrolment account select form @@bb-billpay-payveris-ebills-enrolment-select-account.note.account-select-prompt"
+          &gt;There are multiple accounts associated with this login ID. Please choose the correct one.&lt;/p&gt;
+
+          &lt;form name="selectAccountForm" #f="ngForm" (ngSubmit)="hostRef.onSelectAccountSubmit()"&gt;
+
+            &lt;div class="mb-4"&gt;
+
+              &lt;bb-input-radio-group-ui
+                name="accountID"
+                id="accountID"
+                aria-labelledby="bb-select-account"
+                [preselect]="false"
+                [required]="true"
+                [(ngModel)]="hostRef.accountSelectedIndex"
+                #accountID="ngModel"
+              &gt;
+                &lt;bb-input-radio-ui
+                  *ngFor="let account of hostRef.accounts; let i = index"
+                  value="{{i}}"
+                  label="{{account.value}}"
+                &gt;
+                &lt;/bb-input-radio-ui&gt;
+              &lt;/bb-input-radio-group-ui&gt;
+
+              &lt;bb-input-validation-message-ui
+                [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"&gt;
+                  &lt;span
+                    i18n="Select account warning|Warning on payveris ebill enrolment select account form @@bb-billpay-payveris-ebills-enrolment-select-account.warning.select-account-warning"
+                    data-role="payveris-payee-select-account-multiple-no-selection-warning"
+                  &gt;You must select an account.
+                  &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+
+            &lt;/div&gt;
+
+            &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+              &lt;span
+                i18n="Cancel enrolment multiple accounts|Cancel enrolment button on payveris ebill enrolment multiple account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.cancel-enrolment-multiple-accounts"
+              &gt;Cancel&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button bbButton type="submit" class="float-right"&gt;
+              &lt;span
+                i18n="Enable ebills multiple accounts|Enable ebills button on payveris ebill enrolment multiple account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.enable-ebills-multiple-accounts"
+                data-role="payveris-payee-select-account-multiple-enable-ebills"
+              &gt;Enable eBills&lt;/span&gt;
+            &lt;/button&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="accounts.length === 1"&gt;
+
+          &lt;p
+            i18n="Check single account prompt|Check single account prompt on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.check-single-account-prompt"
+            data-role="payveris-payee-select-account-single-prompt"
+          &gt;Please check your account details to ensure you receive the correct bills for this payee.&lt;/p&gt;
+
+          &lt;p
+            class="mb-4"
+            i18n="Check single account sub-header|Check single account sub-header on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.check-single-account-sub-header"
+          &gt;{{hostRef.accounts[0].value}}&lt;/p&gt;
+
+          &lt;form name="selectAccountForm" #f="ngForm" (ngSubmit)="hostRef.onSelectAccountSubmit()"&gt;
+
+            &lt;button bbButton color="link" (click)="hostRef.cancelModalOpen = true" class="float-left"&gt;
+            &lt;span
+              i18n="Cancel enrolment single account|Cancel enrolment button on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.cancel-enrolment-single-account"
+            &gt;Cancel&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button bbButton type="submit" class="float-right"&gt;
+            &lt;span
+              i18n="Enable ebills single account|Enable ebills button on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.enable-ebills-single-account"
+              data-role="payveris-payee-select-account-single-enable-ebills"
+            &gt;Enable eBills&lt;/span&gt;
+            &lt;/button&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/ng-container&gt;
+
+    &lt;/ng-container&gt;
+
+    &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+      *ngIf="hostRef.cancelModalOpen"
+      (resolve)="hostRef.onModalResolve($event)"
+    &gt;
+    &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #themeV2Form&gt;
+
+    &lt;ng-container [ngSwitch]="hostRef.componentState"&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Checking"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="Checking account..."
+          i18n-text="Checking account...|Ebill Payveris Enrolment Widget checking account text@@bb-billpay-ebills-payveris-enrolment-widget-ang.checking-account.text"
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Callback"&gt;
+
+        &lt;bb-loading-indicator-ui
+          text="eBill enrolment is taking a little longer than usual, please be patient..."
+          i18n-text="eBill enrolment is taking a little longer than usual, please be patient...|Ebill Payveris Enrolment Widget taking longer than usual text@@bb-billpay-ebills-payveris-enrolment-widget-ang.select-account-call-back.text"
+          loaderSize="lg"
+          data-role="payveris-callback-info"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.ComponentStates.Ready"&gt;
+
+        &lt;ng-container *ngIf="hostRef.accounts.length &gt; 1"&gt;
+
+          &lt;div
+            i18n="Account select prompt|Account select prompt for payveris ebill enrolment account select form @@bb-billpay-payveris-ebills-enrolment-select-account.note.account-select-prompt"
+          &gt;There are multiple accounts associated with this login ID. Please choose the correct one.
+          &lt;/div&gt;
+
+          &lt;form name="selectAccountForm" #f="ngForm" (ngSubmit)="hostRef.onSelectAccountSubmit()"&gt;
+
+            &lt;div class="bb-block bb-block--lg"&gt;
+
+              &lt;bb-input-radio-group-ui
+                name="accountID"
+                id="accountID"
+                aria-labelledby="bb-select-account"
+                [preselect]="false"
+                [required]="true"
+                [(ngModel)]="hostRef.accountSelectedIndex"
+                #accountID="ngModel"
+              &gt;
+                &lt;bb-input-radio-ui
+                  *ngFor="let account of hostRef.accounts; let i = index"
+                  value="{{i}}"
+                  label="{{account.value}}"
+                &gt;
+                &lt;/bb-input-radio-ui&gt;
+              &lt;/bb-input-radio-group-ui&gt;
+
+              &lt;bb-input-validation-message-ui
+                [showErrors]="hostRef.submitted &amp;&amp; hostRef.noSelectionMade()"&gt;
+                    &lt;span
+                      i18n="Select account warning|Warning on payveris ebill enrolment select account form @@bb-billpay-payveris-ebills-enrolment-select-account.warning.select-account-warning"
+                      data-role="payveris-payee-select-account-multiple-no-selection-warning"
+                    &gt;
+                      You must select an account.
+                    &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+              &lt;button
+                bbButton
+                class="bb-button-bar__button"
+                type="submit"
+                i18n="Enable ebills multiple accounts|Enable ebills button on payveris ebill enrolment multiple account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.enable-ebills-multiple-accounts"
+                data-role="payveris-payee-select-account-multiple-enable-ebills"
+              &gt;
+                Enable eBills
+              &lt;/button&gt;
+
+              &lt;button
+                bbButton
+                class="bb-button-bar__button"
+                color="link"
+                (click)="hostRef.cancelModalOpen = true"
+                i18n="Cancel enrolment multiple accounts|Cancel enrolment button on payveris ebill enrolment multiple account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.cancel-enrolment-multiple-accounts"
+              &gt;
+                Cancel
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="accounts.length === 1"&gt;
+
+          &lt;div
+            class="bb-block bb-block--lg"
+            i18n="Check single account prompt|Check single account prompt on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.check-single-account-prompt"
+            data-role="payveris-payee-select-account-single-prompt"
+          &gt;
+            Please check your account details to ensure you receive the correct bills for this payee.
+          &lt;/div&gt;
+
+          &lt;div
+            class="bb-block bb-block--xl"
+            i18n="Check single account sub-header|Check single account sub-header on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.check-single-account-sub-header"
+          &gt;{{hostRef.accounts[0].value}}&lt;/div&gt;
+
+          &lt;form name="selectAccountForm" #f="ngForm" (ngSubmit)="hostRef.onSelectAccountSubmit()"&gt;
+
+            &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+              &lt;button
+                bbButton
+                class="bb-button-bar__button"
+                type="submit"
+                i18n="Enable ebills single account|Enable ebills button on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.enable-ebills-single-account"
+                data-role="payveris-payee-select-account-single-enable-ebills"
+              &gt;
+                Enable eBills
+              &lt;/button&gt;
+
+              &lt;button
+                bbButton
+                class="bb-button-bar__button"
+                color="link"
+                (click)="hostRef.cancelModalOpen = true"
+                i18n="Cancel enrolment single account|Cancel enrolment button on payveris ebill enrolment single account select form @@bb-billpay-payveris-ebills-enrolment-select-account.button.cancel-enrolment-single-account"
+              &gt;Cancel
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+          &lt;/form&gt;
+
+        &lt;/ng-container&gt;
+
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+    &lt;bb-billpay-payveris-ebills-enrolment-cancel-modal
+      *ngIf="hostRef.cancelModalOpen"
+      (resolve)="hostRef.onModalResolve($event)"
+    &gt;
+    &lt;/bb-billpay-payveris-ebills-enrolment-cancel-modal&gt;
+
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBillpayPayverisEbillsEnrolmentErrorCustomizable" class="discrete">bbBillpayPayverisEbillsEnrolmentErrorCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbBillpayPayverisEbillsEnrolmentErrorCustomizable [bbHostRef]="hostRef"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template bbBillpayPayverisEbillsEnrolmentErrorCustomizable let-hostRef&gt;
+
+  &lt;div [ngSwitch]="hostRef.errorState"&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchCase="'billpay.api.invalidCredentials'"
+      title="The information you entered is incorrect. Please try again."
+      i18n-title="The information you provided is incorrect. Please try again.|eBills Payveris Enrolment invalid credentials error@@bb-billpay-ebills-payveris-enrolment-error.title.invalid-credentials-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchCase="'billpay.api.ebillsAlreadyEnabled'"
+      title="eBills are already enabled for the payee."
+      i18n-title="eBills are already enabled for the payee.|eBills Payveris Enrolment eBills already enabled error@@bb-billpay-ebills-payveris-enrolment-error.title.ebills-already-enabled-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchCase="'billpay.api.ebillsNotEnabled'"
+      title="eBills are not enabled for the payee."
+      i18n-title="eBills are not enabled for the payee.|eBills Payveris Enrolment eBills not enabled error@@bb-billpay-ebills-payveris-enrolment-error.title.ebills-not-enabled-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchCase="'billpay.api.payeeNotEbillCapable'"
+      title="The payee does not support eBills."
+      i18n-title="The payee is not capable of eBills.|eBills Payveris Enrolment payee not eBill capable error@@bb-billpay-ebills-payveris-enrolment-error.title.payee-not-ebill-capable-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchCase="'billpay.api.noValidEbillAccounts'"
+      title="There are no accounts that support eBills for this payee."
+      i18n-title="There are no valid eBill accounts found for the payee.|eBills Payveris Enrolment no valid eBill accounts error@@bb-billpay-ebills-payveris-enrolment-error.title.payee-no-valid-ebill-accounts-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;bb-empty-state-ui
+      *ngSwitchDefault
+      title="An error occurred. Please try again later."
+      i18n-title="An error occurred. Please try again later.|eBills Payveris Enrolment general error@@bb-billpay-ebills-payveris-enrolment-error.title.general-error"
+      iconSize="lg"
+      iconModifier="{{ hostRef.isThemeV2Enabled ? 'error-outline' : 'error'}}"
+      iconColor="danger"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/div&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="enroll_payveris_ebills_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="23"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentCaptchaComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="23"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentWidgetCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentCaptchaComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>returnToPayeeList: EventEmitter&lt;{}&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event emitter to trigger the returning payee list page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeName: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the payee input.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly currentState: PayverisEnrolmentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state from <code>payverisEbillsEnrolmentWidgetService</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly EnrolmentStates: typeof PayverisEnrolmentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum for the enrolment status.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly billers: EbillBiller[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Billers that is returned from the Payveris request.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitBiller(billerSelectedIndex: number): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to submit the selected biller with the index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly userInputFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show that the Payveris request has failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly loginCredentialsArray: EbillCredential[] | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Login credentials on the payee login.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitPayeeLogin(login: PayverisLogin): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the payee login.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly mfaArray: EbillCredential[] | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multifactor authentication credentials.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitMfa(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to submit MFA credentials for Payveris.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly otpTransports: OtpDeliveryMethod[] | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Payveris response with the one-time pass code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitOtpTransport(transportSelectedIndex: number): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to submit the selected OTP transport method.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly captchaImageType: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Payveris authentication captcha image type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly captchaImageSrc: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Payveris authentication captcha image URL.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitCaptcha(captcha: PayverisCaptcha): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle captcha submission for Payveris authentication.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accounts: EbillAccount[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accounts returned from Payveris.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitPayverisEbillAccountSelection(accountSelectedIndex: number): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to submit the selected account to Payveris.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly errorState: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error flag for error handling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dismissTimeout: Observable&lt;number&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the dismissal timeout for notifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentLoginComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentLoginCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentLoginComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>credentialsFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>@Input</code> flag to show alert.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeName: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the payee input.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPayverisLoginSubmit(form: NgForm): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to handle the Payveris login submission credentials.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loginLabel: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The electronic payee credentials label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loginModel: PayverisLogin;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The electronic payee credentials name/ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show that Payveris login credentials are submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>passwordLabel: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The electronic payee credentials password.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function that is triggered from <code>cancelModal</code> to close/open the discard modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentSelectBillerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentSelectBillerCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentSelectBillerComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectBillerSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the selected biller by index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>billerSelectedIndex: number | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected biller index to be emitted to the parent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>billers: EbillBiller[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The array of the applicable payee eBillers to pay.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show that Payveris login credentials are submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>noSelectionMade(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if there is a biller selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function triggered from <code>cancelModal</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentOtpSelectComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentOtpSelectCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentOtpSelectComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transports: OtpDeliveryMethod[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Payveris response with the one-time pass code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectTransportSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the selected transport by index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transportSelectedIndex: number | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected transport index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the selected transport is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>noSelectionMade(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to return a boolean value if there is transport selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function triggered from <code>cancelModal</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentOtpEntryComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentOtpEntryCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentOtpEntryComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>passcodeFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Input setter, displays elements for a failed submission. Invalidates the passcode form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>optTransportMethod: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected OTP transport method.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>passcodeForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The formgroup that has the passcode form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPayverisOtpPasscodeSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the passcode form value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the form is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>passcodeRecentlyFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the element for the currently failed submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentMfaEntryComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentMfaEntryCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentMfaEntryComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mfaFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the elements for a failed submission. Defaults to false.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mfaForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The formgroup that has formquestions form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mfaArray: EbillCredential[] | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The array of MFA options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the form is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onMfaSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit a value with the <code>mfaEntry</code> emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly formQuestions: FormArray;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter to return the <code>mfaForm.formQuestions</code> value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function triggered from <code>cancelModal</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentCaptchaComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentCaptchaCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentMfaEntryComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>captchaFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the elements for a failed submission. Invalidates the captcha form. <code>@param hasFailed</code> captcha submission has failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imageSrcData: SafeResourceUrl | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Captcha image URL.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>captchaForm: FormGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The formgroup that has the captcha form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCaptchaSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the form value with <code>captchaEntry</code> emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the form is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>captchaRecentlyFailed: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the element for the currently failed submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function triggered from <code>cancelModal</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentSelectAccountComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentSelectAccountCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentSelectAccountComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly ComponentStates: typeof PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The enum of the component states.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly componentState: PayverisEnrolmentComponentState;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current state of the component. Controls loaded elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accounts: EbillAccount[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input</code>, the array of biller accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectAccountSubmit(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to emit the selected account index on submission with the <code>accountSelect</code> event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountSelectedIndex: number | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected account index to be emitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>noSelectionMade(): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function to return a boolean value if there is a biller account selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show if the form is submitted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cancelModalOpen: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to open/close the cancellation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onModalResolve(operationCancelled: boolean): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The function triggered from <code>cancelModal</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>BillpayPayverisEbillsEnrolmentSelectAccountComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbBillpayPayverisEbillsEnrolmentErrorCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: BillpayPayverisEbillsEnrolmentSelectAccountComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>errorState: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input</code>, selects the error element to display, based on the supported Bill Pay API error codes.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="enroll_payveris_ebills_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { MyCustomWidgetComponent } from './my-custom-widget.component';
+import { BillpayPayverisEbillsEnrolmentWidgetModule } from '@backbase/billpay-payveris-ebills-enrolment-widget-ang';
+import { BillpayDataHttpModule } from '@backbase/data-ang/billpay';
+import { BillpayCommonModule } from '@backbase/billpay-common';
+
+@NgModule({
+  declarations: [MyCustomWidgetComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { MyCustomWidgetComponent },
+    }),
+    BillpayPayverisEbillsEnrolmentWidgetModule,
+    BillpayDataHttpModule,
+    BillpayCommonModule,
+  ],
+})
+export class MyCustomWidgetModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">@Component({
+  selector: 'my-custom-widget',
+  template: '&lt;bb-billpay-payveris-ebills-enrolment-widget&gt;&lt;/bb-billpay-payveris-ebills-enrolment-widget&gt;',
+  styles: [],
+})
+export class MyCustomWidgetComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="enroll_payveris_ebills_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification dismiss time</strong></p>
+<p class="tableblock">Set the number of seconds that notifications triggered by this widget are visible.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Payee list</strong></p>
+<p class="tableblock">Sets the destination widget to navigate to when returning to payee list or successfully deleting a payee. Takes the
+form of <code>navigation:ID</code>, where ID is the identifier of the navigation target.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.payeeList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

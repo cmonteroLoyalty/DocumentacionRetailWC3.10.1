@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Customize the Create payment order widget</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="customize_payment_order_widget" class="book toc2 toc-left">
+<div id="header">
+<h1>Customize the Create payment order widget</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html"><span class="toc-current">Customize the Create payment order widget</span></a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="customize_payment_order_widget" class="sect0">Customize the Create payment order widget</h1>
+          <div class="paragraph">
+<p>This section shows you how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a payment order for a specific payment type.</p>
+</li>
+<li>
+<p>Validate the payment order for that specific payment type.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The supported payment types are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SEPA Credit Transfer</p>
+</li>
+<li>
+<p>US payments:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>US domestic wire transfer</p>
+</li>
+<li>
+<p>US foreign wire transfer (deprecated)</p>
+</li>
+<li>
+<p>A2A external transfer to an from an external account</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>UK payments:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Faster Payments</p>
+</li>
+<li>
+<p>BACS</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The widget handles the view creation and the validation of the required fields based on these payment types.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand">Understand Payments</a> for more information about payment types.</p>
+</div>
+<h2 id="_payment_type_selection" class="discrete">Payment type selection</h2>
+<div class="paragraph">
+<p>In order to select a supported payment type, execute the following implementation.
+For example, to create a SEPA payment:</p>
+</div>
+<h3 id="_android_2" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">paymentOrderContract.selectPaymentType(SupportedPaymentType.SEPA_CREDIT_TRANSFER);</code></pre>
+</div>
+</div>
+<h3 id="_ios_2" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">self.contract?.selectPaymentType(.SEPA)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can skip using the <code>selectPaymentType</code> method and configure the payment type manually by publishing the
+<code>bb.action.payment-order.select-payment-type</code> pub/sub event:</p>
+</div>
+<h3 id="_android_3" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">SEPAFormSpec sepaSpec = new SEPAFormSpec();
+backbase.publishEvent(PaymentOrderWidget.EVENT_SELECT_PAYMENT_TYPE, backbase.getCurrentModel().getExperience().getId(), sepaSpec);</code></pre>
+</div>
+</div>
+<h3 id="_ios_3" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">let sepaSpec = BBSEPAFormSpec()
+let payload = ["paymentOrderFormSpec" : sepaSpec]
+Backbase.publishEvent(PaymentOrderWidget.paymentOrderSelectPaymentTypeAction, object: self.contract as Any, payload: payload)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To learn how to set up the backend to support custom payment types, see
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_add_custom_payment_type">Add a custom payment type</a>.
+If you try to use the widget to create a payment of a custom type without configuring the backend first,
+you will get an error message. Once a custom payment type is added to the backend, the custom payment type can be
+selected in the widget as follows:</p>
+</div>
+<h3 id="_android_4" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">PaymentSpec paymentSpec = new PaymentSpec("GBP", "GB_TRANSFER");
+PaymentOrderFormSpec paymentOrderspec = new DefaultFormSpec(paymentSpec);
+paymentOrderContract.selectPaymentType(paymentOrderspec);</code></pre>
+</div>
+</div>
+<h3 id="_ios_4" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">let paymentSpec = BBPaymentSpec(currencyCode: "GBP", paymentType: "GB_TRANSFER")
+let paymentOrderspec = BBPaymentOrderFormSpec(paymentSpec: paymentSpec)
+self.contract?.selectPaymentType(with: paymentOrderspec)</code></pre>
+</div>
+</div>
+<h2 id="_register_view_in_the_cxp_model" class="discrete">Register view in the CXP model</h2>
+<div class="paragraph">
+<p>If you select the payment type in a different view from where you create the payment order, then add following preferences
+to the view which will load your create payment view:</p>
+</div>
+<h3 id="_cxp_model" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "mode": "initiate",
+  "maxAmountDigits": "10",
+  "navigation": "bb.action.payment-order.select-payment-type",
+  "native": "PaymentOrderWidget",
+  "native.view": "NameOfYourCustomView",
+  "native.package": "package.of.your.custom.view" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If selection of the payment type is in the same view as the creation, then you can add the following preferences to your CXP model.
+These preferences include a custom navigation pub/sub event. The most important factor is that you are adding the mode
+as <code>initiate</code> so that all the pub/sub events for the initiate mode are registered in the widget.</p>
+</div>
+<h3 id="_cxp_model_2" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "mode": "initiate",
+  "maxAmountDigits": "10",
+  "navigation": "flow.start.PaymentOrder",
+  "native": "PaymentOrderWidget",
+  "native.view": "NameOfYourCustomView",
+  "native.package": "package.of.your.custom.view" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<h2 id="_load_payment_configuration_in_the_create_view" class="discrete">Load payment configuration in the create view</h2>
+<div class="paragraph">
+<p>Once the view and the payment type are set up, render the view types for the selected payment type.
+When the <code>bb.action.payment-order.select-payment-type</code> pub/sub event is published (via selecting the payment type),
+the widget triggers the <code>updateViewWithPaymentOrderFormSpec</code> method. Therefore, you need to implement this method in the view.</p>
+</div>
+<h3 id="_android_5" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public void updateViewWithPaymentOrderFormSpec(@Nullable PaymentOrderFormSpec paymentOrderFormSpec) {
+	if(formSpec != null) {
+		setupViews(paymentOrderFormSpec);
+	}
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_5" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">public func update(with paymentOrderFormSpec: BBPaymentOrderFormSpec?) {
+	guard let paymentOrderFormSpec = paymentOrderFormSpec else {
+        return
+    }
+	self.setupViews(with: paymentOrderFormSpec)
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Optionally you can retrieve the view types that are required for this specific payment type. This view types are a
+list of <code>PaymentOrderFieldType</code> objects (for iOS <code>BBPaymentOrderFieldType</code>). With these view types you can create different types of list items.</p>
+</div>
+<h3 id="_android_6" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">final void setupViews(@Nonnull paymentOrderFormSpec: PaymentOrderFormSpec) {
+	PaymentOrderFieldType[] fieldTypes = paymentOrderFormSpec.getFieldTypes();
+	System.out.println(Arrays.toString(fieldTypes));
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_6" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">func setupViews(with paymentOrderFormSpec: BBPaymentOrderFormSpec) {
+    let fieldTypes = paymentOrderFormSpec.retrieveFieldTypes()
+	print(fieldTypes)
+}</code></pre>
+</div>
+</div>
+<h2 id="_assign_data" class="discrete">Assign data</h2>
+<div class="paragraph">
+<p>After creating the views assign the data via the user input. Since all properties of the <code>InitiatePaymentOrder</code> object
+are read-only, the widget provides an <code>InitiatePaymentOrderWrapper</code> class, which has all the fields as read-write properties.</p>
+</div>
+<div class="paragraph">
+<p>Note that <code>maxAmountDigits</code> preference is set in the CXP model, and it is used to limit the payment amount digits.
+It is not validated by the widget, which means you need to validate this in your view logic.</p>
+</div>
+<h3 id="_android_7" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">InitiatePaymentOrderWrapper initiatePaymentOrderWrapper =  new InitiatePaymentOrderWrapper(paymentOrderFormSpec, getContract().getMaxAmountDigits());</code></pre>
+</div>
+</div>
+<h3 id="_ios_7" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">self.paymentOrderWrapper = BBInitiatePaymentOrderWrapper(paymentSpec: paymentOrderFormSpec, maxAmountDigits: self.contract?.maxAmountDigits ?? 5)</code></pre>
+</div>
+</div>
+<h2 id="_validate" class="discrete">Validate</h2>
+<div class="paragraph">
+<p>Once the views and data assigning are completed, validate whether the assigned data is correct in the following way:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create an <code>InitiatePaymentOrder</code> object out of <code>InitiatePaymentOrderWrapper</code>.</p>
+<div class="paragraph">
+<p>The first part of the validation is done in this step, all the mandatory fields of the <code>InitiatePaymentOrder</code> object are checked.</p>
+</div>
+</li>
+<li>
+<p>Validate each required data field according to the payment type.</p>
+<div class="paragraph">
+<p>If validation fails, it will return an error object which has a validation status (for Android) or an error (for iOS),
+which includes the details of the validation failure.</p>
+</div>
+</li>
+<li>
+<p>Review the validated payment order</p>
+<div class="paragraph">
+<p>At this step, the payment order is also ready for submission. If you want to skip the review page, you can
+directly submit the payment order with the <code>createPaymentOrder</code> method.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_android_8" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">protected void validatePaymentOrder() {
+	try {
+		// Step 1
+		InitiatePaymentOrder initiatePaymentOrder = initiatePaymentOrderWrapper.createInitiatePaymentOrder();
+
+		// Step 2
+        ValidationStatus validation = paymentOrderFormSpec.validate(wrapper.createInitiatePaymentOrder(), getContext());
+    } catch (InvalidInitiatePaymentOrderException e) {
+        BBLogger.error(TAG, e);
+        validation = new PaymentOrderFormSpec.ValidationStatus(false, e.getMessage());
+    }
+
+
+	if (validation.isValid) {
+		// Step 3
+        getContract().reviewPaymentOrder(initiatePaymentOrderWrapper);
+    } else {
+        BBLogger.error(TAG, validation.message);
+        showSnackbar(validation.message);
+    }
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_8" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">func validatePaymentOrder() {
+	do {
+		// Step 1
+	    let initiatePaymentOrder = try self.paymentOrderWrapper.createInitiatePaymentOrder()
+
+		// Step 2
+	    guard let error = self.paymentOrderFormSpec?.validate(self.paymentOrderWrapper) else {
+			// Step 3
+	        self.contract?.reviewPaymentOrder(with: initiatePaymentOrder)
+	        return
+	    }
+	    self.presentError(error: error)
+	} catch {
+	    self.presentError(error: error)
+	}
+}
+
+func presentError(error:Error) {
+    let userInfo = (error as NSError).userInfo
+    self.bb_parentViewController()?.presentSimpleAlert(withTitle: "Error", message: userInfo.description)
+}</code></pre>
+</div>
+</div>
+<h2 id="_review" class="discrete">Review</h2>
+<div class="paragraph">
+<p>In case your review screen is separate from the validation screen, then the review screen should be registered in the
+CXP model as follows:</p>
+</div>
+<h3 id="_cxp_model_3" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "mode": "review",
+  "navigation": "bb.action.payment-order.review",
+  "native": "PaymentOrderWidget",
+  "native.view": "NameOfYourCustomView",
+  "native.package": "package.of.your.custom.view" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you register <code>bb.action.payment-order.review</code> pub/sub for mode <code>review</code>, you need to implement the view update
+method, which is part of <code>PaymentOrderView</code>. This method will return the <code>InitiatePaymentOrderWrapper</code> object.</p>
+</div>
+<h3 id="_android_9" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">@Override
+public void updateViewWithPaymentOrder(@NonNull InitiatePaymentOrderWrapper initiatePaymentOrderWrapper) {
+    this.initiatePaymentOrderWrapper = initiatePaymentOrderWrapper;
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_9" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">public func update(with initiatePaymentOrderWrapper: BBInitiatePaymentOrderWrapper) {
+    self.initiatePaymentOrderWrapper = initiatePaymentOrderWrapper
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This wrapper object can be used to recreate each view field and it also has a method called <code>createInitiatePaymentOrder</code>.
+This method can be used to recreate the <code>InitiatePaymentOrder</code> object, which is used in submitting the
+payment order in the submit step below.</p>
+</div>
+<h2 id="_submit" class="discrete">Submit</h2>
+<div class="paragraph">
+<p>To submit the data, you need the <code>InitiatePaymentOrder</code> object. As the view is updated with the wrapper object in the
+previous step, we can make use of the <code>InitiatePaymentOrder</code> object, which can be created by using the wrapper object.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create the <code>InitiatePaymentOrder</code> object by using the wrapper object and submit the payment order.</p>
+</li>
+<li>
+<p>Handle the received response.</p>
+<div class="paragraph">
+<p>In successful response, the flow can end or proceed to the overview screen as follows:</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_android_10" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">// Step 1
+private void submitPaymentOrder() {
+    InitiatePaymentOrder paymentOrder = initiatePaymentOrderWrapper.createInitiatePaymentOrder();
+    getContract().createPaymentOrder(paymentOrder, new PaymentListenerImpl());
+}
+
+// Step 2
+final class PaymentListenerImpl implements PaymentsListener {
+    @Override
+    public void onSuccess(PaymentOrdersPostResponse paymentOrdersPostResponse) {
+        getContract().overviewPaymentOrder(initiatePaymentOrderWrapper, paymentOrdersPostResponse);
+    }
+
+    @Override
+    public void onError(Response response) {
+        showSnackbar(response.getErrorMessage());
+    }
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_10" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">// Step 1
+@IBAction func submitButtonPressed(_ sender: Any) {
+  let paymentOrder = try? initiatePaymentOrderWrapper.createInitiatePaymentOrder()
+  guard let paymentOrder = paymentOrder else {
+    presentError(error: error)
+    return
+  }
+  self.paymentOrder = paymentOrder
+  self.contract?.createPaymentOrder(with: paymentOrder, delegate: self)
+}
+
+// Step 2
+extension PaymentOrderWidgetReviewView: PaymentOrderDelegate {
+    public func didCreatePaymentOrder(with paymentOrdersPostResponse: BBPaymentOrdersPostResponse) {
+        self.contract?.overviewPaymentOrder(with: self.paymentOrder, paymentOrdersPostResponse: paymentOrdersPostResponse)
+    }
+
+    public func didFailCreatingPaymentOrderWithError(_ error: Error) {
+        presentError(error: error)
+    }
+}</code></pre>
+</div>
+</div>
+<h2 id="_overview" class="discrete">Overview</h2>
+<div class="paragraph">
+<p>Just like in the review screen, in case if the overview is a separate screen, it needs to be registered in the CXP
+model as follows:</p>
+</div>
+<h3 id="_cxp_model_4" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "mode": "overview",
+  "navigation": "bb.action.payment-order.overview",
+  "native": "PaymentOrderWidget",
+  "native.view": "NameOfYourCustomView",
+  "native.package": "package.of.your.custom.view" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you register the <code>bb.action.payment-order.overview</code> pub/sub for the mode <code>overview</code>, you need to implement
+the view update method which is part of <code>PaymentOrderView</code>. This method will return the <code>InitiatePaymentOrderWrapper</code> and <code>Response</code> objects.</p>
+</div>
+<h3 id="_android_11" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">@Override
+public void updateViewWithPaymentOrder(@NonNull InitiatePaymentOrderWrapper initiatePaymentOrderWrapper, @NonNull PaymentOrdersPostResponse paymentOrdersPostResponse) {
+    //Assign your view fields.
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_11" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">func update(with initiatePaymentOrderWrapper: BBInitiatePaymentOrderWrapper, paymentOrdersPostResponse: BBPaymentOrdersPostResponse) {
+    //Assign your view fields.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At this step the payment order creation flows end. The following section explains how to use other functionallity of the widget.</p>
+</div>
+<h2 id="_select_a_sender_account" class="discrete">Select a sender account</h2>
+<div class="paragraph">
+<p>To select a sender account for the payment order, you need to use the <code>SelectorWidget</code>. This section explains how to
+make use of the <code>SelectorWidget</code> to select the sender account.</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Declare the <code>SelectorWidget</code> in the preferences of the CXP model and add the client that will be used in the
+<code>SelectorWidget</code>. In this case, since the sender account needs to be selected, this account should be one of the
+accounts of the person who is using the application. That is why <code>ProductSummaryClient</code> is used. On the other hand, to show the Selector Widget <code>bb.action.payment-order.select-product</code> pub/sub event is registered as a navigation event and <code>bb.event.payment-order.product-selected</code> pub/sub event is registered to save the sender account in the widget.</p>
+</div>
+<h3 id="_cxp_model_5" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "navigation": "bb.action.payment-order.select-product",
+  "native": "SelectorWidget",
+  "clients": "ProductSummaryClient",
+  "packages": "com.backbase.android.client.productsummary",
+  "events": "bb.event.payment-order.product-selected",
+  "listViewKey": "0",
+  "headers": "Products",
+  "size": "10",
+  "native.view": "DefaultSelectorWidgetView",
+  "native.package": "com.backbase.android.widget.selector.views" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: After implementing the preferences above, call <code>selectProduct</code> method to load the SelectorWidget. This method will show the SelectorWidget and also pre-select the previously(if any existing) selected accounts.</p>
+</div>
+<h3 id="_android_12" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">getContract().selectProduct();</code></pre>
+</div>
+</div>
+<h3 id="_ios_12" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">self.contract?.selectProduct()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 3: Optionally <code>bb.event.payment-order.product-selected</code> pub/sub event can be registered in your view, in case you need to handle the result of the selection of the sender account. This pub/sub event is registered in the <code>initiate</code> by considering you select sender account during the creation of the payment order wrapper.</p>
+</div>
+<h2 id="_select_recipient_account" class="discrete">Select recipient account</h2>
+<div class="paragraph">
+<p>Selecting a recipient follows exactly same steps with different navigation and event pub/sub events. On the other hand, considering that the user would like to select a contact from her/his contact list, we also register ContactsClient in the CXP model as follows:</p>
+</div>
+<div class="paragraph">
+<p>Step 1:</p>
+</div>
+<h3 id="_cxp_model_6" class="discrete">CXP model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "navigation": "bb.action.payment-order.select-recipient",
+  "native": "SelectorWidget",
+  "clients": "ProductSummaryClient, ContactsClient",
+  "packages": "com.backbase.android.client.productsummary, com.backbase.android.client.contacts",
+  "events": "bb.event.payment-order.recipient-selected, bb.event.payment-order.recipient-selected",
+  "listViewKey": "0,1",
+  "headers": "Products, Contacts",
+  "size": "10",
+  "native.view": "DefaultSelectorWidgetView",
+  "native.package": "com.backbase.android.widget.selector.views" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2:</p>
+</div>
+<h3 id="_android_13" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">getContract().selectRecipient();</code></pre>
+</div>
+</div>
+<h3 id="_ios_13" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">self.contract?.selectRecipient()</code></pre>
+</div>
+</div>
+<h2 id="_save_contact_only_for_sepa_payments" class="discrete">Save contact (only for SEPA payments)</h2>
+<div class="paragraph">
+<p>To implement creation of a contact to the user&#8217;s own contact lists, you need use <code>createContact</code> method, this method is using <code>ContactsClient</code> to create a contact.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get recipient from the wrapper object, there is a recipient object that can be assigned when the result is taken from the Selector Widget during the assignment of the payment order recipient.</p>
+</li>
+<li>
+<p>This is an optional step, by considering that your "create contact view" is part of the validation view, and you submit the contact in another view then you need to pass <code>shouldCreateContact</code> boolean with the wrapper object from the validation view. If <code>shouldCreateContact</code> is set to <code>true</code> then you can proceed with the creating the contact.</p>
+</li>
+<li>
+<p>Submit the contact.</p>
+</li>
+<li>
+<p>Handle result of the contact creation, if it returns error response as null, that means the contact is created successfully.</p>
+</li>
+</ol>
+</div>
+<h3 id="_android_14" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">// Step 1
+RecipientModel recipientModel = initiatePaymentOrderWrapper.getRecipientModel();
+// Step 2
+if(initiatePaymentOrderWrapper.shouldCreateContact() &amp;&amp; recipientModel != null) {
+    // Step 3
+    getContract().createContact(recipientModel);
+}
+
+// Step 4
+@Override
+public void onContactCreationFinished(Response errorResponse) {
+    if (errorResponse != null) {
+        showSnackbar(R.string.failed_to_create_contact);
+    }
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_14" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">// Step 1
+guard let recipientModel = self.initiatePaymentOrderWrapper.recipientModel else { return }
+// Step 2
+if initiatePaymentOrderWrapper.shouldCreateContact {
+    // Step 3
+    self.contract?.createContact(with: recipientModel)
+}
+
+// Step 4
+public func contactCreationFinished(_ error: Error?) {
+    guard let error = error else {
+        return
+    }
+    self.presentError(error: error)
+}</code></pre>
+</div>
+</div>
+<h2 id="_schedule_a_payment_order" class="discrete">Schedule a payment order</h2>
+<div class="paragraph">
+<p>To schedule a payment use the <code>PaymentOrderScheduleWidget</code> sub-widget, and implement the <code>PaymentOrderScheduleView</code> contract to set up your view.</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Set up the necessary CXP preferences. See the example below:</p>
+</div>
+<h3 id="_cxp_model_7" class="discrete">CXP Model</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "navigation": "bb.action.payment-order.select-schedule",
+  "native": "PaymentOrderScheduleWidget",
+  "native.view": "NameOfYourCustomView",
+  "native.package": "package.of.your.custom.view" //This preference is mandatory for your android implementation.
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: Call either of these widget methods to calculate and adjust the <code>Schedule</code> or <code>BBSchedule</code> object with user inputs from the view.</p>
+</div>
+<h3 id="_android_ios" class="discrete">Android &amp; iOS</h3>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.selectSchedule()</code> - publishes an event with the current schedule.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.getSchedule()</code> - retrieves the state of the current schedule.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.getMinimumEndDate()</code> - retrieves the minimum selectable end date.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.updateEndDate()</code> - updates the schedule with a given end date and adjusts the number of payments based on the transfer frequency.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.updateStartDate()</code> - updates the schedule with a given start date and adjusts the end based on the number of payments.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.updateFrequency()</code> - updates the schedule with a given transfer frequency and end date in relation to the start date.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.updateNumberOfPayments()</code> - updates the number of payments and adjusts the end date in relation to the start date and frequency.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;contract&gt;.reset()</code> - resets the schedule to default state.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: Implement the following callback methods from the <code>PaymentOrderScheduleView</code> contract.</p>
+</div>
+<h3 id="_android_15" class="discrete">Android</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">@Override
+public void updateViewWithEndDate(@Nullable Date endDate) {
+    // Update view with changes to the end date
+}
+
+@Override
+public void updateNumberOfPayments(@Nullable Integer payments) {
+    // Update view with changes to the number of payments
+}
+
+@Override
+public void updateViewWithSchedule(@Nullable Schedule schedule) {
+    // Update view with pre-filled schedule information when a schedule is selected from the PaymentOrderWidget.
+}</code></pre>
+</div>
+</div>
+<h3 id="_ios_15" class="discrete">iOS</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">func didUpdateEnd(_ date: Date?) {
+    // Update view with changes to the end date
+}
+
+func didUpdateNumber(ofPayments payments: NSNumber?) {
+    // Update view with changes to the number of payments
+}
+
+func didUpdate(_ schedule: BBSchedule) {
+    // Update view with pre-filled schedule information when a schedule is selected from the PaymentOrderWidget.
+}</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

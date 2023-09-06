@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Request stop checks</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="request_stop_checks_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Request stop checks</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html"><span class="toc-current">Request stop checks</span></a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="request_stop_checks_reference" class="sect0">Request stop checks</h1>
+          <h2 id="_preferences_11" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Editable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Resource name</strong></p>
+<p class="tableblock">Set the access control context resource identifier. If set, it overwrites the config provider&#8217;s value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business function</strong></p>
+<p class="tableblock">Set the access control context business function. If set, it overwrites the config provider&#8217;s value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>businessFunction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stop checks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Privilege</strong></p>
+<p class="tableblock">Set the access control context privilege. If set, it overwrites the config provider&#8217;s value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>privilege</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>create</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots_11" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/request_stop_checks_slot_1.svg?ver=3.10.1" alt="request stop checks slot 1"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/request_stop_checks_slot_2.svg?ver=3.10.1" alt="request stop checks slot 2"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="request_stop_checks_reference.html#bbStopCheckFormComponentCustomizable">bbStopCheckFormComponentCustomizable</a></p>
+</li>
+<li>
+<p><a href="request_stop_checks_reference.html#bbStopCheckReviewComponentCustomizable">bbStopCheckReviewComponentCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbStopCheckFormComponentCustomizable" class="discrete">bbStopCheckFormComponentCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbStopCheckFormComponentCustomizable let-hostRef&gt;
+  &lt;form
+    autocomplete="off"
+    [formGroup]="hostRef.relativeFormGroup"
+    (ngSubmit)="hostRef.onSubmit()"
+  &gt;
+    &lt;bb-fieldset-ui
+      id="stop-checks-form-heading-{{id}}"
+      heading="Check details"
+      i18n-heading="@@initiate-stop-check.check-details-fieldset-heading"&gt;
+      &lt;div class="form-row"&gt;
+        &lt;div class="form-group col-md-12"&gt;
+          &lt;label class="bb-form-field"&gt;
+            &lt;bb-account-selector-ui
+              [markFirst]="true"
+              [highlight]="false"
+              [filterItems]="true"
+              [closeOnSelect]="true"
+              dropdownPosition="bottom"
+              placeholder="Select check account"
+              data-role="pay-from-account-selector"
+              [selectedItems]="hostRef.selectedAccount"
+              [items]="hostRef.payFromAccounts$ | async"
+              [productNumberFormat]="hostRef.accountFormat"
+              (blur)="hostRef.onBlurAccount()"
+              (change)="hostRef.selectPayFromAccount($event)"
+              i18n-placeholder="@@initiate-stop-check.empty.state.placeholder"
+              [aria-describedby]="hostRef.getDescribedby('payFromAccount')"
+            &gt;&lt;/bb-account-selector-ui&gt;
+          &lt;/label&gt;
+
+          &lt;bb-input-validation-message-ui
+            [messageId]="hostRef.getIdByControl('payFromAccount')"
+            *ngIf="hostRef.payFromControl as payFromControlRef"
+            [showErrors]="payFromControlRef.invalid &amp;&amp; payFromControlRef.touched"&gt;
+              &lt;span
+                *ngIf="hostRef.payFromControl.errors?.required || !hostRef.selectedAccount"
+                data-role="missing-pay-from-account"
+                i18n="@@initiate-stop-check.error.required.pay-from-account"&gt;
+                Check account is required
+              &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-row"&gt;
+        &lt;div class="form-group col-md-12"&gt;
+          &lt;bb-input-radio-group-ui
+            horizontal="true"
+            data-role="radio-group"
+            formControlName="stopRangeType"
+            labelClasses="form-check-label"
+            aria-labelledby="stop-checks-form-heading-{{id}}"
+          &gt;
+            &lt;bb-input-radio-ui
+              value="single"
+              label="Single"
+              i18n-label="@@initiate-stop-check.range-type.single.label"
+            &gt;&lt;/bb-input-radio-ui&gt;
+            &lt;bb-input-radio-ui
+              value="multiple"
+              label="Multiple"
+              i18n-label="@@initiate-stop-check.radio.range-type.multiple.label"
+            &gt;&lt;/bb-input-radio-ui&gt;
+          &lt;/bb-input-radio-group-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-row"&gt;
+        &lt;div class="form-group col-md-12" *ngIf="hostRef.relativeFormGroup.get('stopRangeType')?.value === 'single'"&gt;
+          &lt;bb-input-text-ui
+            [maxLength]="15"
+            [aria-invalid]="hostRef.relativeFormGroup?.get('checkNumber').invalid"
+            [required]="true"
+            formControlName="checkNumber"
+            label="Check number"
+            i18n-label="@@initiate-stop-check.check-number-label"
+            data-role="check-number"
+            [aria-describedby]="hostRef.getDescribedby('checkNumber')"
+          &gt;&lt;/bb-input-text-ui&gt;
+
+          &lt;bb-input-validation-message-ui
+            *ngIf="hostRef.relativeFormGroup?.get('checkNumber') as checkNumberControl"
+            [messageId]="hostRef.getIdByControl('checkNumber')"
+            [showErrors]="checkNumberControl.invalid &amp;&amp; checkNumberControl.touched"
+          &gt;
+            &lt;span
+              *ngIf="checkNumberControl.errors?.required"
+              data-role="validation-error-single-check-number-required"
+              i18n="@@initiate-stop-check.check-number.validation-error.required"
+            &gt;
+              Check number is required
+            &lt;/span&gt;
+            &lt;span
+              *ngIf="checkNumberControl.errors?.pattern"
+              data-role="validation-error-check-number-digits-only"
+              i18n="@@initiate-stop-check.check-number.validation-error.pattern"
+            &gt;
+              Check number should be digits only
+            &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;ng-container *ngIf="hostRef.relativeFormGroup.get('stopRangeType')?.value === 'multiple'"&gt;
+        &lt;div class="form-row"&gt;
+          &lt;div class="form-group col-md-12"&gt;
+            &lt;bb-input-text-ui
+              [maxLength]="15"
+              [aria-invalid]="hostRef.relativeFormGroup?.get('firstCheckNumber').invalid &amp;&amp; hostRef.relativeFormGroup?.get('firstCheckNumber').touched"
+              [required]="true"
+              [aria-describedby]="hostRef.getDescribedby('firstCheckNumber')"
+              formControlName="firstCheckNumber"
+              label="First check number"
+              i18n-label="@@initiate-stop-check.first-check-number.label"
+              data-role="from-check-number"
+            &gt;&lt;/bb-input-text-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              *ngIf="hostRef.relativeFormGroup?.get('firstCheckNumber') as firstCheckNumberControl"
+              [messageId]="hostRef.getIdByControl('firstCheckNumber')"
+              [showErrors]="firstCheckNumberControl.invalid &amp;&amp; firstCheckNumberControl.touched"
+            &gt;
+              &lt;span
+                *ngIf="firstCheckNumberControl.errors?.required"
+                data-role="validation-error-first-check-number-required"
+                i18n="@@initiate-stop-check.first-check-number.validation-error.required"
+              &gt;
+                First check number is required
+              &lt;/span&gt;
+              &lt;span
+                *ngIf="firstCheckNumberControl.errors?.pattern"
+                data-role="validation-error-first-check-number-digits-only"
+                i18n="@@initiate-stop-check.first-check-number.validation-error.pattern"
+              &gt;
+                Check number should be digits only
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-row"&gt;
+          &lt;div class="form-group col-md-12"&gt;
+            &lt;bb-input-text-ui
+              [maxLength]="15"
+              [aria-invalid]="hostRef.relativeFormGroup?.get('lastCheckNumber').invalid &amp;&amp; hostRef.relativeFormGroup?.get('lastCheckNumber').touched"
+              [required]="true"
+              [aria-describedby]="hostRef.getDescribedby('lastCheckNumber')"
+              formControlName="lastCheckNumber"
+              label="Last check number"
+              i18n-label="@@initiate-stop-check.last-check-number.label"
+              data-role="to-check-number"
+            &gt;&lt;/bb-input-text-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              *ngIf="hostRef.relativeFormGroup?.get('lastCheckNumber') as lastCheckNumberControl"
+              [messageId]="hostRef.getIdByControl('lastCheckNumber')"
+              [showErrors]="lastCheckNumberControl.invalid &amp;&amp; lastCheckNumberControl.touched"
+            &gt;
+              &lt;span
+                *ngIf="lastCheckNumberControl.errors?.required"
+                data-role="validation-error-last-check-number-required"
+                i18n="@@initiate-stop-check.last-check-number.validation-error.required"
+              &gt;
+                Last check number is required
+              &lt;/span&gt;
+              &lt;span
+                *ngIf="lastCheckNumberControl.errors?.pattern"
+                data-role="validation-error-last-check-number-digits-only"
+                i18n="@@initiate-stop-check.last-check-number.validation-error.pattern"
+              &gt;
+                Check number should be digits only
+              &lt;/span&gt;
+              &lt;span
+                *ngIf="lastCheckNumberControl.errors?.biggerThenFirstCheckNumber"
+                data-role="validation-error-last-check-number-higher-than-previous"
+                i18n="@@initiate-stop-check.last-check-number.validation-error.bigger"
+              &gt;
+                This needs to be higher then previous check number
+              &lt;/span&gt;
+              &lt;span
+                *ngIf="lastCheckNumberControl.errors?.checkRangeError"
+                data-role="validation-error-last-check-number-out-of-range"
+                i18n="@@initiate-stop-check.last-check-number.validation-error.range"
+              &gt;
+                This request cannot exceed {{ hostRef.checksRangeNumber }} consecutive checks
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngIf="hostRef.relativeFormGroup.get('stopRangeType')?.value === 'single'"&gt;
+        &lt;div class="form-row"&gt;
+          &lt;div class="form-group col-md-12"&gt;
+            &lt;label #stopCheckAmountCurrencyLabel id="stop-check-amount-currency-label{{id}}"
+                   i18n="@@initiate-stop-check.check-amount"&gt;
+              Check amount
+            &lt;/label&gt;
+            &lt;ng-container [ngTemplateOutlet]="optionalField"&gt;&lt;/ng-container&gt;
+
+            &lt;bb-currency-input-ui
+              [currencies]="hostRef.currencies"
+              [integerLabelSrOnly]="true"
+              [decimalLabelSrOnly]="true"
+              [aria-labelledby]="stopCheckAmountCurrencyLabel.id"
+              resultType="string"
+              maxlength="18"
+              formControlName="amountGroup"
+            &gt;&lt;/bb-currency-input-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-row"&gt;
+          &lt;div class="form-group col-md-12"&gt;
+            &lt;label #stopCheckDateIssuedLabel id="stop-check-date-issued-label{{id}}"
+                   i18n="@@initiate-stop-check.date-issued"&gt;
+              Date issued
+            &lt;/label&gt;
+            &lt;ng-container [ngTemplateOutlet]="optionalField"&gt;&lt;/ng-container&gt;
+
+            &lt;bb-input-datepicker-ui
+              #dateIssued
+              name="dateIssued"
+              overrideDateFormat="MM/dd/y"
+              formControlName="dateIssued"
+              [aria-labelledby]="stopCheckDateIssuedLabel.id"
+              [aria-describedby]="hostRef.getDescribedby('dateIssued')"
+              [aria-invalid]="hostRef.relativeFormGroup?.get('dateIssued').invalid &amp;&amp; hostRef.relativeFormGroup?.get('dateIssued').touched"
+              [placeholder]="'MM/DD/YYYY'"
+              data-role="date-issued"
+            &gt;&lt;/bb-input-datepicker-ui&gt;
+
+            &lt;bb-input-validation-message-ui
+              *ngIf="hostRef.relativeFormGroup?.get('dateIssued') as dateIssuedControl"
+              [messageId]="hostRef.getIdByControl('dateIssued')"
+              [showErrors]="dateIssuedControl.invalid &amp;&amp; dateIssuedControl.touched"
+            &gt;
+              &lt;span
+                *ngIf="dateIssuedControl.errors?.required"
+                data-role="validation-error-date-issued-invalid-date-format"
+                i18n="@@initiate-stop-check.date-issued.validation-error.invalid-date-format"
+              &gt;
+                Invalid date format
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-row"&gt;
+          &lt;div class="form-group col-md-12"&gt;
+            &lt;label [attr.for]="payeeName.id" i18n="@@initiate-stop-check.payee-name"&gt;Payee name&lt;/label&gt;
+            &lt;ng-container [ngTemplateOutlet]="optionalField"&gt;&lt;/ng-container&gt;
+
+            &lt;bb-input-text-ui
+              #payeeName
+              [maxLength]="140"
+              formControlName="payeeName"
+              data-role="payee-name"
+            &gt;&lt;/bb-input-text-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+
+      &lt;div class="form-row"&gt;
+        &lt;div class="form-group col-md-12"&gt;
+          &lt;label [for]="stopReason.id" i18n="@@initiate-stop-check.select-reason"&gt;Stop reason&lt;/label&gt;
+          &lt;ng-container [ngTemplateOutlet]="optionalField"&gt;&lt;/ng-container&gt;
+          &lt;bb-dropdown-single-select-ui #stopReason data-role="stop-reason" formControlName="stopReason"&gt;
+            &lt;bb-dropdown-single-select-option-ui
+              value=""
+              label="- Select a reason -"
+              i18n-label="@@initiate-stop-check.reason.select"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Insufficient_funds"
+              label="Insufficient funds"
+              i18n-label="@@initiate-stop-check.reason-Insufficient_funds"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Incorrect_amount_or_other_details"
+              label="Incorrect amount or other details"
+              i18n-label="@@initiate-stop-check.reason-Incorrect_amount_or_other_details"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Lost_or_stolen_checks_or_check_books"
+              label="Lost or stolen checks or check books"
+              i18n-label="@@initiate-stop-check.reason-Lost_or_stolen_checks_or_check"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Checks_mailed_to_wrong_address"
+              label="Checks mailed to wrong address"
+              i18n-label="@@initiate-stop-check.reason-Checks_mailed_to_wrong_address"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Dispute_over_purchases"
+              label="Dispute over purchases"
+              i18n-label="@@initiate-stop-check.reason-Dispute_over_purchases"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Lost_in_mail"
+              label="Lost in mail"
+              i18n-label="@@initiate-stop-check.reason-Lost_in_Mail"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+
+            &lt;bb-dropdown-single-select-option-ui
+              value="Other"
+              label="Other"
+              i18n-label="@@initiate-stop-check.reason-Other"
+            &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;/bb-dropdown-single-select-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-row"&gt;
+        &lt;div class="form-group col-md-12" *ngIf="hostRef.relativeFormGroup?.get('stopReason')?.value === 'Other'"&gt;
+          &lt;bb-textarea-ui
+            wrap="hard"
+            [rows]="2"
+            [cols]="50"
+            [minLength]="3"
+            [maxLength]="140"
+            label="Please specify:"
+            [showCharCounter]="true"
+            formControlName="otherReason"
+            data-role="other-reason-text"
+            aria-label="Please specify other reason"
+            i18n-aria-label="@@initiate-stop-check.reason-other.aria-label"
+            i18n-label="@@initiate-stop-check.reason-other.label"
+          &gt;&lt;/bb-textarea-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-row"&gt;
+        &lt;div class="col-md-12"&gt;
+          &lt;label #stopChecksExpirationDateLabel id="stop-checks-expiration-date-label-{{id}}"
+                 i18n="@@initiate-stop-check.expiration-date"&gt;
+            Stop expiration date
+          &lt;/label&gt;
+          &lt;ng-container [ngTemplateOutlet]="optionalField"&gt;&lt;/ng-container&gt;
+
+          &lt;bb-input-datepicker-ui
+            overrideDateFormat="MM/dd/y"
+            formControlName="expirationDate"
+            [aria-labelledby]="stopChecksExpirationDateLabel.id"
+            [aria-describedby]="hostRef.getDescribedby('expirationDate')"
+            [aria-invalid]="hostRef.relativeFormGroup?.get('expirationDate').invalid &amp;&amp; hostRef.relativeFormGroup?.get('expirationDate').touched"
+            [placeholder]="'MM/DD/YYYY'"
+            data-role="expiration-date"
+          &gt;&lt;/bb-input-datepicker-ui&gt;
+
+          &lt;bb-input-validation-message-ui
+            *ngIf="hostRef.relativeFormGroup?.get('expirationDate') as expirationDateControl"
+            [messageId]="hostRef.getIdByControl('expirationDate')"
+            [showErrors]="expirationDateControl.invalid &amp;&amp; expirationDateControl.touched"
+          &gt;
+            &lt;span
+              *ngIf="expirationDateControl.errors?.pastDate"
+              i18n="Stop expiration date past date error text |Error past date message for Stop expiration date input field@@initiate-stop-check.error.pastDate.expirationDate"
+              data-role="validation-error-past-date-expiration-date"
+            &gt;
+              Stop expiration date cannot be in the past
+            &lt;/span&gt;
+            &lt;span
+              *ngIf="expirationDateControl.errors?.invalidDateFormat"
+              data-role="validation-error-expiration-date-invalid-date-format"
+              i18n="@@initiate-stop-check.expiration-date.validation-error.invalid-date-format"
+            &gt;
+              Invalid date format
+            &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/bb-fieldset-ui&gt;
+
+    &lt;div class="bb-stop-checks-control-buttons bb-button-bar"&gt;
+      &lt;button
+        bbButton
+        type="submit"
+        buttonSize="md"
+        [attr.aria-describedby]="hostRef.getDescribedbyBySubmit()"
+        class="bb-button-bar__button"
+        data-role="continue-btn"
+        i18n="@@initiate-stop-check.form-action.continue"&gt;
+        Continue
+      &lt;/button&gt;
+
+      &lt;button
+        bbButton
+        type="button"
+        color="link"
+        buttonSize="md"
+        class="bb-button-bar__button bb-stop-checks-control-buttons__cancel"
+        data-role="cancel-btn"
+        i18n="@@initiate-stop-check.form-action.cancel"
+        (click)="hostRef.onCancelForm()"
+      &gt;
+        Cancel
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;ng-template #optionalField&gt;
+    &lt;span class="bb-text-support"&gt;
+      (&lt;ng-container i18n="@@initiate-stop-check.optional-field-label"&gt;Optional&lt;/ng-container&gt;)
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbStopCheckReviewComponentCustomizable" class="discrete">bbStopCheckReviewComponentCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbStopCheckReviewComponentCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--xl"&gt;
+    &lt;div class="bb-block bb-block--md"&gt;
+      &lt;bb-header-ui
+        headingType="h2"
+        heading="Review and submit"
+        i18n-heading="@@initiate-stop-check.review-request-details-header"
+      &gt;&lt;/bb-header-ui&gt;
+    &lt;/div&gt;
+
+    &lt;bb-alert-ui
+      title=""
+      modifier="error"
+      [dismissible]="true"
+      *ngIf="hostRef.showAlert"
+      (close)="hostRef.hideAlert()"
+    &gt;
+      &lt;span
+        data-role="failed-to-submit-alert"
+        i18n="@@initiate-stop-check.review.failed-to-submit"
+      &gt;
+        Failed to submit stop check request, please try again later
+      &lt;/span&gt;
+    &lt;/bb-alert-ui&gt;
+  &lt;/div&gt;
+
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h3"
+      heading="Check details"
+      i18n-heading="@@initiate-stop-check.review-check-details-header"
+    &gt;&lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class="row bb-block--xl"&gt;
+    &lt;div class="col-md-12 form-group"&gt;
+      &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.check-account" data-role="check-account-label"&gt;
+        Check account
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;div data-role="account-name"&gt;{{ hostRef.request?.payFromAccount?.name }}&lt;/div&gt;
+        &lt;div data-role="account-number" class="bb-text-support"&gt;{{ hostRef.request?.payFromAccount?.accountNumber }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.checkNumber &amp;&amp; hostRef.request?.stopRangeType === 'single'"&gt;
+      &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.check-number" data-role="check-number-label"&gt;
+        Check number
+      &lt;/div&gt;
+      &lt;div data-role="check-number"&gt;
+        {{ hostRef.request?.checkNumber }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ng-container *ngIf="hostRef.request?.stopRangeType === 'multiple'"&gt;
+      &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.firstCheckNumber"&gt;
+        &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.first-check-number" data-role="first-check-number-label"&gt;
+          First check number
+        &lt;/div&gt;
+        &lt;div data-role="first-check-number"&gt;
+          {{ hostRef.request?.firstCheckNumber }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.lastCheckNumber"&gt;
+        &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.last-check-number" data-role="last-check-number-label"&gt;
+          Last check number
+        &lt;/div&gt;
+        &lt;div data-role="last-check-number"&gt;
+          {{ hostRef.request?.lastCheckNumber }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngIf="hostRef.request?.stopRangeType === 'single'"&gt;
+      &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.amountGroup.amount"&gt;
+        &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.check-amount" data-role="check-amount-label"&gt;
+          Check amount
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;bb-amount-ui
+            [mapCurrency]="false"
+            data-role="check-amount"
+            [amount]="hostRef.request?.amountGroup.amount"
+            [currency]="hostRef.request?.amountGroup.currency"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.dateIssued"&gt;
+        &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.check-issue-date" data-role="date-issued-label"&gt;
+          Date issued
+        &lt;/div&gt;
+        &lt;div data-role="stop-request-check-issue-date"&gt;
+          {{ hostRef.request?.dateIssued | date }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.payeeName"&gt;
+        &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.payee-name" data-role="payee-name-label"&gt;
+          Payee name
+        &lt;/div&gt;
+        &lt;div data-role="stop-request-payee-name" &gt;
+          {{ hostRef.request?.payeeName }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.stopReason"&gt;
+      &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review.stop-reason-label" data-role="stop-reason-label"&gt;
+        Stop reason
+      &lt;/div&gt;
+
+      &lt;ng-container
+        [ngSwitch]="hostRef.request?.stopReason"
+        *ngIf="hostRef.request?.stopReason !== 'Other'"
+      &gt;
+        &lt;div
+          *ngSwitchCase="'Insufficient_funds'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Insufficient funds
+        &lt;/div&gt;
+
+        &lt;div
+          *ngSwitchCase="'Incorrect_amount_or_other_details'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Incorrect amount or other details
+        &lt;/div&gt;
+
+        &lt;div
+          *ngSwitchCase="'Lost_or_stolen_checks_or_check_books'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Lost or stolen checks or check books
+        &lt;/div&gt;
+
+        &lt;div
+          *ngSwitchCase="'Checks_mailed_to_wrong_address'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Checks mailed to wrong address
+        &lt;/div&gt;
+
+        &lt;div
+          *ngSwitchCase="'Dispute_over_purchases'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Dispute over purchases
+        &lt;/div&gt;
+
+        &lt;div
+          *ngSwitchCase="'Lost_in_mail'"
+          data-role="stop-request-selected-reason"
+          i18n="@@initiate-stop-check.review.selected-reason"
+        &gt;
+          Lost in mail
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+
+      &lt;div
+        class="break-word"
+        *ngIf="hostRef.request?.stopReason === 'Other'"
+        data-role="stop-request-other-reason-text"
+        i18n="@@initiate-stop-check.review.other-reason-text"
+      &gt;
+        {{ hostRef.request?.otherReason.trim() || hostRef.request?.stopReason }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-6 form-group" *ngIf="hostRef.request?.expirationDate"&gt;
+      &lt;div class="bb-text-bold" i18n="@@initiate-stop-check.review" data-role="stop-request-expiration-date-label"&gt;
+        Stop expiration date
+      &lt;/div&gt;
+      &lt;div data-role="stop-request-expiration-date-value"&gt;
+        {{ hostRef.request?.expirationDate | date }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="bb-button-bar" *ngIf="!hostRef.stopRequestIsSubmitted"&gt;
+    &lt;button
+      bbButton
+      data-role="submit-button"
+      class="bb-button-bar__button"
+      (click)="hostRef.submitStopRequest()"
+      [disabled]="hostRef.disableSubmitAction"
+      i18n="@@initiate-stop-check.review.button.submit"
+    &gt;
+      Submit
+    &lt;/button&gt;
+
+    &lt;button
+      bbButton
+      color="secondary"
+      data-role="edit-button"
+      class="bb-button-bar__button"
+      (click)="hostRef.editStopRequest()"
+      i18n="@@initiate-stop-check.review.button.edit"
+    &gt;
+      Edit
+    &lt;/button&gt;
+
+    &lt;button
+      bbButton
+      color="link"
+      data-role="cancel-button"
+      (click)="hostRef.toggleConfirmationDialog()"
+      i18n="@@initiate-stop-check.review.button.discard"
+      class="bb-button-bar__button bb-button-bar__button--across"
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;bb-confirmation-dialog
+    confirmButtonColor="danger"
+    [isOpen]="hostRef.showConfirmation"
+    (confirm)="hostRef.resetStopRequest()"
+    (cancel)="hostRef.toggleConfirmationDialog()"
+  &gt;
+    &lt;span title i18n="@@initiate-stop-check.confirm-action-dialog.title"&gt;
+      Discard stop check request?
+    &lt;/span&gt;
+
+    &lt;span
+      body
+      i18n="@@initiate-stop-check.confirm-action-dialog.body"
+      data-role="confirmation-text"
+    &gt;
+      All entered information for this stop check request will be lost.
+    &lt;/span&gt;
+
+    &lt;span cancelActionName i18n="@@initiate-stop-check.confirm-action-dialog.button.cancel"&gt;Keep it&lt;/span&gt;
+    &lt;span confirmActionName i18n="@@initiate-stop-check.confirm-action-dialog.button.confirm"&gt;Discard stop check&lt;/span&gt;
+  &lt;/bb-confirmation-dialog&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

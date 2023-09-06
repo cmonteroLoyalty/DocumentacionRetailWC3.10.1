@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Account information consent</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="account_information_consent_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Account information consent</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html"><span class="toc-current">Account information consent</span></a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="account_information_consent_reference" class="sect0">Account information consent</h1>
+          <div class="ulist">
+<ul>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#account_information_consent_peferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="account_information_consent_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:
+<code>bb-consent-request-widget</code></p>
+</div>
+<h2 id="account_information_consent_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { ConsentRequestWidgetModule } from '@backbase/consent-request-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Data module imports</p>
+<div class="paragraph">
+<p>Import the following data modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { ConsentDataHttpModule } from '@backbase/data-ang/consent';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="account_information_consent_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/account_information_consent_slots_1-4.svg?ver=3.10.1" alt="account information consent slots 1 4"></span></p>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="account_information_consent_reference.html#bbConsentRequestWidgetCustomizable">bbConsentRequestWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#bbConsentRequestTppInformationCustomizable">bbConsentRequestTppInformationCustomizable</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#bbConsentRequestAccountSelectorCustomizable">bbConsentRequestAccountSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="account_information_consent_reference.html#bbConsentRequestPermissionsInformationCustomizable">bbConsentRequestPermissionsInformationCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbConsentRequestWidgetCustomizable" class="discrete">bbConsentRequestWidgetCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-container
+  bbConsentRequestWidgetCustomizable
+  [bbHostRef]="hostRef"
+  [bbTemplateContext]="{
+    consentRequest: consentRequest | async,
+    multiAccountSelection: multiAccountSelection$ | async
+  }"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbConsentRequestWidgetCustomizable
+  let-hostRef
+  let-consentRequest="context.consentRequest"
+  let-multiAccountSelection="context.multiAccountSelection"
+&gt;
+  &lt;ng-container *ngIf="hostRef.consentRequestId | async; else errorTemplate"&gt;
+    &lt;ng-container *ngIf="!(hostRef.loading | async) as loading; else loadingTemplate"&gt;
+      &lt;ng-container *ngIf="!(hostRef.error | async); else errorTemplate"&gt;
+        &lt;div class="bb-consent-request" *ngIf="consentRequest"&gt;
+          &lt;div class="bb-heading-2 bb-block--lg"
+            data-role="request-access-label"
+            i18n="Widget header|Third party request access message@@consent-request.label.header"&gt;
+            Third party requested access to your accounts
+          &lt;/div&gt;
+
+          &lt;ng-container *ngIf="!(hostRef.saving | async); else savingLoadingTemplate"&gt;
+            &lt;bb-alert-ui
+              *ngIf="hostRef.savingError | async"
+              title="Unknown error"
+              i18n-title="Unknown Error|Unknown Error Label@@consent-request.label.error.unknown"&gt;
+              &lt;span data-role="allow-consent-request-error"
+                i18n="Try again|Try again error message@@consent-request.label.error.tryAgain"&gt;
+                Try to make action again or contact your system administrator.
+              &lt;/span&gt;
+            &lt;/bb-alert-ui&gt;
+
+            &lt;div class="bb-block--lg"&gt;
+              &lt;bb-consent-request-tpp-information
+                [tpp]="consentRequest.tpp"
+              &gt;&lt;/bb-consent-request-tpp-information&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-block--lg"&gt;
+              &lt;bb-consent-request-account-selector
+                [multiAccountSelection]="multiAccountSelection"
+                [showError]="hostRef.showAccountError"
+                [accounts]="consentRequest.accounts"
+                [(selectedAccount)]="hostRef.selectedAccount"
+              &gt;&lt;/bb-consent-request-account-selector&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-block--lg"&gt;
+              &lt;bb-consent-request-permissions-information
+                [permissions]="consentRequest.permissions"
+              &gt;&lt;/bb-consent-request-permissions-information&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-block--lg"&gt;
+              &lt;div class="bb-block--sm bb-text-bold"
+                data-role="expiration-date-label"
+                i18n="Expiration date|Consent expiration date@@consent-request.label.expiryDate"&gt;
+                Expiration date
+              &lt;/div&gt;
+
+              &lt;div&gt;{{consentRequest.expiryDate | bbDate:'bbShort'}}&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-container&gt;
+
+          &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+            &lt;button
+              bbButton
+              [disabled]="hostRef.saving | async"
+              (click)="hostRef.allowConsentRequest()"
+              i18n="Allow button|Allow consent request@@consent-request.label.allow"
+              color="primary"
+              class="bb-button-bar__button"
+              data-role="allow-button"&gt;
+              Allow
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              [disabled]="hostRef.saving | async"
+              (click)="hostRef.rejectConsentRequest()"
+              i18n="Reject button|Reject consent request@@consent-request.label.reject"
+              color="secondary"
+              class="bb-button-bar__button"
+              data-role="reject-button"&gt;
+              Reject
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+          &lt;ng-template #savingLoadingTemplate&gt;
+            &lt;div class="bb-state-container"&gt;
+              &lt;bb-loading-indicator-ui
+                text="Processing the request..."
+                i18n-text="Processing|Processing the allow/reject request@@consent-request.label.processing"
+              &gt;&lt;/bb-loading-indicator-ui&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #loadingTemplate&gt;
+      &lt;div class="bb-state-container"&gt;
+        &lt;bb-loading-indicator-ui
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #errorTemplate&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-consent-request-error
+        [consentRequestId]="hostRef.consentRequestId | async"
+        [errorKind]="(hostRef.error | async)?.kind"
+      &gt;&lt;/bb-consent-request-error&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #notificationError&gt;
+    &lt;span i18n="Operation Failed|Error notification when failing to save request consent@@consent-request.label.notification.error"&gt;
+      Operation failed
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>consentRequest: ConsentRequest | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consent request body.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiAccountSelection: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multi-account selection usage flag. If <code>true</code>, multi-selection account selector is enabled. If <code>false</code> a single selection account selector is enabled. Retrieving value from CXP manager.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbConsentRequestTppInformationCustomizable" class="discrete">bbConsentRequestTppInformationCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-container
+  bbConsentRequestTppInformationCustomizable
+  [bbHostRef]="hostRef"
+  [bbTemplateContext]="tpp"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbConsentRequestTppInformationCustomizable
+  let-hostRef
+  let-tpp="context"&gt;
+  &lt;div class="bb-block--sm bb-text-bold"
+    i18n="Requested by|Third party information@@consent-request.label.requestedBy"
+    data-role="requested-by-label"&gt;
+    Requested by
+  &lt;/div&gt;
+
+  &lt;div class="card card-sm"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;bb-third-party-provider-ui
+        [name]="tpp.name"
+        [url]="tpp.website"
+        [verified]="tpp.isTrusted"
+        [image]="tpp.imageUrl"
+        data-role="third-party-provider-label"&gt;
+      &lt;/bb-third-party-provider-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestTppInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tpp: Tpp | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Third-party provider.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbConsentRequestAccountSelectorCustomizable" class="discrete">bbConsentRequestAccountSelectorCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-container
+  bbConsentRequestAccountSelectorCustomizable
+  [bbHostRef]="hostRef"
+  [bbTemplateContext]="accounts"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbConsentRequestAccountSelectorCustomizable
+  let-hostRef
+  let-accounts="context"&gt;
+  &lt;div class="bb-block bb-block--sm bb-text-bold"
+       *ngIf="!hostRef.selectedAccount || (hostRef.selectedAccount &amp;&amp; hostRef.selectedAccount.length &lt;= 1)"
+    i18n="Account Exposed|Account Exposed label@@consent-request.label.accountExposed"
+    data-role="account-exposed-label"&gt;
+    Account Exposed
+  &lt;/div&gt;
+  &lt;div class="bb-block bb-block--sm bb-text-bold"
+       *ngIf="hostRef.selectedAccount &amp;&amp; hostRef.selectedAccount.length &gt; 1"
+    i18n="Accounts Exposed|Account Exposed label@@consent-request.label.accountsExposed"
+    data-role="accounts-exposed-label"&gt;
+    Accounts Exposed
+  &lt;/div&gt;
+
+  &lt;div [ngClass]="{ 'border border-danger rounded': hostRef.showError }"&gt;
+    &lt;bb-account-selector-ui
+      data-role="account-selector"
+      [items]="accounts"
+      [disableScrollEnd]="false"
+      [multiple]="hostRef.multiAccountSelection"
+      [closeOnSelect]="!hostRef.multiAccountSelection"
+      [filterItems]="false"
+      [selectedItems]="hostRef.multiAccountSelection ? hostRef.selectedAccount : (hostRef.selectedAccount ? hostRef.selectedAccount[0] : undefined)"
+      [dropdownPosition]="'bottom'"
+      (change)="hostRef.onSelectAccount($event)"
+      placeholder="Select Accounts"
+      i18n-placeholder="Select Accounts placeholder@@consent-request.account-selector.placeholder"
+    &gt;
+      &lt;ng-template bbCustomSingleSelectedItemLabel let-item="item"&gt;
+        &lt;bb-product-item-basic-account-ui
+          [active]="true"
+          [amount]="item.balance"
+          [currency]="item.currency"
+          [productNumber]="item.IBAN || item.BBAN || item.number"
+          [title]="item.name"
+        &gt;
+          &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+            &lt;bb-amount-ui
+              class="font-weight-bold"
+              [amount]="amount"
+              [currency]="currency"
+              [mapCurrency]="false"
+            &gt;&lt;/bb-amount-ui&gt;
+          &lt;/ng-template&gt;
+
+        &lt;/bb-product-item-basic-account-ui&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template bbCustomOptionItem let-item$="item$" let-item="item"&gt;
+
+            &lt;bb-product-item-basic-account-ui
+              [active]="item$.selected"
+              [productNumber]="item.IBAN || item.BBAN || item.number"
+              [amount]="item.balance"
+              [currency]="item.currency"
+              [title]="item.name"
+            &gt;
+              &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+                &lt;bb-amount-ui
+                  class="bb-highlight bb-product-item__amount"
+                  [amount]="amount"
+                  [currency]="currency"
+                  [bbHighlight]="true"
+                &gt;&lt;/bb-amount-ui&gt;
+              &lt;/ng-template&gt;
+            &lt;/bb-product-item-basic-account-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-account-selector-ui&gt;
+  &lt;/div&gt;
+  &lt;div
+    *ngIf="hostRef.showError"
+    class="text-danger mt-2"
+    data-role="no-accounts-error-message"
+    i18n="Select an account|No account selected label@@consent-request.label.noAccountSelected"&gt;
+    Select an account.
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestAccountSelectorComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accounts: Account[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of accounts.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbConsentRequestPermissionsInformationCustomizable" class="discrete">bbConsentRequestPermissionsInformationCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-container
+  bbConsentRequestPermissionsInformationCustomizable
+  [bbHostRef]="hostRef"
+  [bbTemplateContext]="permissions"&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbConsentRequestPermissionsInformationCustomizable
+  let-hostRef
+  let-permissions="context"&gt;
+  &lt;div class="bb-block--sm bb-text-bold"
+    i18n="Permission you grant|Permissions you grant label@@consent-request.label.grantPermissions"
+    data-role="permissions-grant-label"&gt;
+    What permissions you grant
+  &lt;/div&gt;
+
+  &lt;div class="card"&gt;
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadAccountsDetail)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        data-role="account-information-label"
+        i18n="Account Information|Account Information Permission title@@consent-request.label.permission.ReadAccountsDetail.title"
+      &gt;
+        Account information
+      &lt;/div&gt;
+      &lt;div
+        class="bb-consent-request__account-information"
+        i18n="Account Information details|Account Information Permission subtitle@@consent-request.label.permission.ReadAccountsDetail.subtitle"
+      &gt;
+        Name, number
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadBalances)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        data-role="account-balance-label"
+        i18n="Account Balance|Account Balance Permission title@@consent-request.label.permission.ReadBalances.title"
+      &gt;
+        Account balance
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadTransactionsDetail)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        data-role="transactions-label"
+        i18n="Transactions|Transaction Details Permission title@@consent-request.label.permission.ReadTransactionsDetail.title"
+      &gt;
+        Transactions
+      &lt;/div&gt;
+      &lt;div
+        i18n="Transactions details |Transaction Details Permission subtitle@@consent-request.label.permission.ReadTransactionsDetail.subtitle"
+      &gt;
+        Category, amount, date, time, beneficiary details
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadBeneficiariesDetail)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Beneficiaries|Beneficiaries title@@consent-request.label.permission.ReadBeneficiariesDetail.title"
+      &gt;
+        Beneficiaries details
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadDirectDebits)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Direct Debits|Direct Debits Permission title@@consent-request.label.permission.ReadDirectDebits.title"
+      &gt;
+        Direct Debits
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadProducts)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Products|Products Permission title@@consent-request.label.permission.ReadProducts.title"
+      &gt;
+        Products
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadStandingOrdersDetail)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Standing Orders|Standing Orders Permission title@@consent-request.label.permission.ReadStandingOrdersDetail.title"
+      &gt;
+        Standing Orders
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadTransactionsCredits)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Transactions Credits|Transactions Credits Permission title@@consent-request.label.permission.ReadTransactionsCredits.title"
+      &gt;
+        Transactions Credits
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.hasPermission(hostRef.Permission.ReadTransactionsDebits)"&gt;
+      &lt;div class="bb-consent-request__information-label"
+        i18n="Transactions Debits|Transactions Debits Permission title@@consent-request.label.permission.ReadTransactionsDebits.title"
+      &gt;
+        Transactions Debits
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestPermissionsInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>permissions: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of permissions.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="account_information_consent_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock"><code>ConsentRequestContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock"><strong>bbConsentRequestWidgetCustomizable</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly multiAccountSelection$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream for Multi-account selection usage flag. If <code>true</code>, multi-selection account selector is enabled. If <code>false</code> a single selection account selector is enabled. Retrieving value from CXP manager.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirectToAllowUrl: EventEmitter&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emitter that fires when allowing consent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirectToRejectUrl: EventEmitter&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emitter that fires when rejecting consent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationErrorTemplate: TemplateRef&lt;any&gt; | string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notification error template reference.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly consentRequestId: Observable&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of Consent Request ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly loading: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of loading spinner visibility flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly error: Observable&lt;ConsentRequestError | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of Consent request errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly saving: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of saving state flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly savingError: Observable&lt;ConsentRequestError | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of saving consent request error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly consentRequest: Observable&lt;ConsentRequest | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of get consentRequest.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedAccount: Array&lt;Account&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of selected accounts from account selector.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showAccountError: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag for show account error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowConsentRequest(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function for allow consent request.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rejectConsentRequest(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function for reject consent request.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>ConsentRequestTppInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>bbConsentRequestTppInformationCustomizable</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestTppInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tpp: Tpp | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Third-party provider.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>ConsentRequestAccountSelectorComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><strong>bbConsentRequestAccountSelectorCustomizable</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestAccountSelectorComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showError: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If error should be shown.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiAccountSelection: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag for multi-account selection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accounts: Account[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedAccount: Array&lt;Account&gt; | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected Account.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedAccountChange: EventEmitter&lt;Array&lt;Account&gt;&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emitter that fires when you select an account.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectAccount(account: any): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emit selected accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>ConsentRequestPermissionsInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><strong>bbConsentRequestPermissionsInformationCustomizable</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly hostRef: ConsentRequestPermissionsInformationComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>permissions: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of permissions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly Permission</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Permission mapper.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasPermission(permission: string): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Check if permission contains provided permission.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="account_information_consent_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="paragraph">
+<p>For example:
+.NewExtensionSlot.module.ts</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { ConsentRequestWidgetModule } from '@backbase/consent-request-widget-ang';
+import { CustomWidgetComponent } from './custom-widget.component';
+
+@NgModule({
+  declarations: [CustomWidgetComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { CustomWidgetComponent },
+    }),
+    ConsentRequestWidgetModule,
+  ],
+  exports: [
+    ConsentRequestWidgetModule,
+    CustomWidgetComponent,
+  ],
+})
+export class CustomWidgetModule { }</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget component</p>
+<div class="paragraph">
+<p>For example:
+.NewExtensionSlot.component.ts</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>import { Component, EventEmitter, Output } from '@angular/core';
+
+@Component({
+  selector: 'bb-custom-widget',
+  templateUrl: './custom-widget.component.html',
+  styles: []
+})
+export class CustomWidgetComponent {
+  @Output() allowConsentRequestRedirectUrl = new EventEmitter&lt;string&gt;();
+  @Output() rejectConsentRequestRedirectUrl = new EventEmitter&lt;string&gt;();
+}</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Custom template
+For example:
+.NewExtensionSlot.component.html</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;bb-consent-request-widget
+  (allowConsentRequestRedirectUrl)="allowConsentRequestRedirectUrl.emit($event)"
+  (rejectConsentRequestRedirectUrl)="rejectConsentRequestRedirectUrl.emit($event)"
+&gt;&lt;/bb-consent-request-widget&gt;</pre>
+</div>
+</div>
+<div class="sect1">
+        <h2 id="account_information_consent_peferences">Preferences</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Allow consent redirect URL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.allowConsentRequestRedirectUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Reject consent redirect URL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.rejectConsentRequestRedirectUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Account multi-selection</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiAccountSelection</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+</tbody>
+</table>
+        </div>
+        </div>
+</div>
+</body>
+</html>

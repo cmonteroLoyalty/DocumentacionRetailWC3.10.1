@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Widget Collection Retail Banking v3.5.2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="rb_352" class="book toc2 toc-left">
+<div id="header">
+<h1>Widget Collection Retail Banking v3.5.2</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html"><span class="toc-current">Widget Collection Retail Banking v3.5.2</span></a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="rb_352" class="sect0">Widget Collection Retail Banking v3.5.2</h1>
+          <div class="paragraph">
+<p>The highlights for this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Capabilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Access Control - no changes</p>
+</li>
+<li>
+<p>Account Statements - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_actions_352">Actions v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Notification Settings widget migrating to Communication API</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_authentication_352">Authentication v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Login widget updated for Theme 2.0</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_bill_pay_352">Bill Pay v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>New Bill Pay Payee Summary widget</p>
+</li>
+<li>
+<p>New Bill Pay Schedule widget</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_card_management_352">Card Management v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Delete travel notices</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Consents - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_contacts_352_3">Contacts v3.5.2.3</a></p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_messages_352">Messages v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create and manage drafts</p>
+</li>
+<li>
+<p>Messages widgets migrating to Communication API</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Notifications - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_payments_352">Payments v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Submit a request to stop an issued check</p>
+</li>
+<li>
+<p>Remove the connection to an external account</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Personal Finance Management - no changes</p>
+</li>
+<li>
+<p>Places - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_products_352">Products v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Apply arrangement state indicator in Account Details, My Accounts, and Account Selector</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remote Deposit Capture - no changes</p>
+</li>
+<li>
+<p>Self-enrollment - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_transactions_352">Transactions v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Display pending transactions on top</p>
+</li>
+<li>
+<p>View the turnover for the last six months</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User Self Service - no changes</p>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_user_profile_352">User Profile v3.5.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>User Manage Profile widget updated for Theme 2.0</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="rb_352.html#rb3_migrate_352">Migration</a></p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_actions_352" class="discrete">Actions v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_deprecations_25" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for these features ceases in v3.7.0.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Old communication mechanism for the <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/web_actions#notification_settings">Notification Settings</a>
+widget. The widget
+is now migrating to Communication API.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To update an existing deployment to accommodate these deprecations, see <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/rb_352#rb3_migrate_352">Migration</a>.</p>
+</div>
+<h2 id="rb3_authentication_352" class="discrete">Authentication v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_78" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new feature in this release is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Login widget updated for Theme 2.0</strong></p>
+<div class="paragraph">
+<p>The Backbase Theme 2.0 style is now available in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_authentication#login">Login widget</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_bill_pay_352" class="discrete">Bill Pay v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_79" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new feature in this release is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bill Pay Payee Summary widget</strong></p>
+<div class="paragraph">
+<p>The new <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_billpay#billpay_payee_summary">Bill Pay Payee Summary</a> widget enables a Bill Pay customer to see a summary view containing
+the payee details. It also introduces a way to quickly navigate between payees.</p>
+</div>
+</li>
+<li>
+<p><strong>New native Bill Pay Schedule widget</strong></p>
+<div class="paragraph">
+<p>The new <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/native_bill_pay#bill_pay_schedule_widget">Bill Pay Schedule widget</a> enables a
+Bill Pay customer to schedule a payment and set the payment frequency. It also enables the customer to select the payment
+date, including the option to choose the earliest free delivery date, rush date, or other date.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_88" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>The following issue has been fixed in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-8748: Trying to extend the Bill Pay Payments widget using the <code>bbBillpayPaymentsListCustomizable</code> extension slot produced the error <code>No Provider for BillPayPaymentsRouterService</code>.</p>
+</li>
+</ul>
+</div>
+<h3 id="_deprecations_26" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release, and support for these features ceases in v3.7.0:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>editPayment</code> has been deprecated from the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_billpay#billpay_manage_payments">Bill Pay Manage Payments</a> widget. This is replaced by <code>isEditPayment</code> and <code>paymentType</code>.</p>
+</li>
+<li>
+<p>The following methods, events, and fields have been deprecated from the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/native_bill_pay#bill_pay_form_widget">Bill Pay Form</a> widget:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Android</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The method <code>getPaymentRequest()</code> from <code>BillPayFormContract</code> is deprecated. Use <code>updateViewWithPaymentRequest</code> instead.</p>
+</li>
+<li>
+<p>The method <code>selectDate</code> from <code>BillPayFormContract</code> is deprecated. Use <code>selectScheduleInformation</code> instead.</p>
+</li>
+<li>
+<p>The method <code>paymentScheduleFinished</code> from <code>BillPayFormContract</code> is deprecated without an alternative. This method should no longer be used.</p>
+</li>
+<li>
+<p>The method <code>updateViewWithDate</code> from <code>BillPayFormView</code> is deprecated. Use <code>BillPayScheduleWidget</code> instead.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_PAYEE_REQUESTED</code> is deprecated. Use <code>BillPayFormEvents.EVENT_PAYEE_REQUESTED</code> instead.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_BILL_PAY_REVIEW</code> is deprecated. Use <code>BillPayFormEvents.ACTION_BILL_PAY_SHOW_REVIEW</code> instead.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_BILL_PAY_PAYMENT_SUCCEED</code> is deprecated. Use <code>BillPayFormEvents.ACTION_BILL_PAY_OVERVIEW</code> instead.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_BILL_PAY_PAYMENT_FINISHED</code> is deprecated without an alternative. This event should no longer be used.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_BILL_PAY_FORM_SELECT_DATE</code> is deprecated. Use <code>BillPayFormEvents.EVENT_BILL_PAY_FORM_SELECT_SCHEDULE</code> instead.</p>
+</li>
+<li>
+<p>The event <code>BillPayFormWidget.EVENT_BILL_PAY_FORM_DATE_SELECTED</code> is deprecated. Use <code>BillPayFormEvents.EVENT_BILL_PAY_SCHEDULE_INFO_SELECTED</code> instead.</p>
+</li>
+<li>
+<p>The fields <code>EXPEDITION_PAYMENT</code>, <code>REGULAR_PAYMENT</code>, and <code>OVER_NIGHT_PAYMENT</code> from <code>BillPayFormWidget</code> are deprecated. Use <code>PaymentServiceType enum</code> instead.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>iOS</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The method <code>preSelectedDate</code> from <code>BillPayFormContract</code> is deprecated. Use <code>BillPayScheduleWidget</code> instead.</p>
+</li>
+<li>
+<p>The method <code>updateViewWithDate</code> from <code>BillPayFormView</code> is deprecated. Use <code>BillPayScheduleWidget</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentProductSelectedEvent</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.paymentProductSelectedEvent</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentSelectRecipientAction</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.paymentSelectRecipientAction</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentCompletedEvent</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.paymentOverviewAction</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentReviewAction</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.paymentShowReviewAction</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentFinishAction</code> from <code>BillPayFormWidget</code> is deprecated. Use your own custom action instead.</p>
+</li>
+<li>
+<p>The event <code>paymentDateSelectedEvent</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.paymentScheduleSelectedEvent</code> instead.</p>
+</li>
+<li>
+<p>The event <code>paymentDateSelectRequestedAction</code> from <code>BillPayFormWidget</code> is deprecated. Use <code>BillPayFormEvents.scheduleSelectRequestedAction</code> instead.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To update an existing deployment to accommodate these deprecations, see <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/rb_352#rb3_migrate_352">Migration</a>.</p>
+</div>
+<h3 id="_known_issues_9" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>The known issue in this release is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced in v3.5.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OBPAY-2212: The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_billpay#billpay_payee_summary">Bill Pay Payee Summary</a> widget returns a blank <code>error</code> page for all errors.</p>
+</li>
+<li>
+<p>OBPAY-2215: The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_billpay#billpay_payee_summary">Bill Pay Payee Summary</a> widget preference <code>managePayee</code> does not exist by default and needs to be added manually.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_card_management_352" class="discrete">Card Management v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_80" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Delete travel notices (web)</strong></p>
+<div class="paragraph">
+<p>It is now possible to delete travel notices in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_card_management#card_management_travel_notice">Card Management Travel Notice</a>
+web widget. This makes it easy for customers to delete a travel notice that is no longer valid.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_contacts_352_3" class="discrete">Contacts v3.5.2.3</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_81" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="paragraph">
+<p><strong>Extended error handling and customisation possibilities on loading and empty state</strong></p>
+</div>
+<div class="paragraph">
+<p>The following changes have been made:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spinner added to the loading state during initial contacts loading and search.</p>
+</li>
+<li>
+<p>Error handling added during initial contacts loading and search.</p>
+</li>
+<li>
+<p>Extension slot added to enable customization of the spinner, the empty state for contact search,
+and the error handling message during initial contacts loading and search.</p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_messages_352" class="discrete">Messages v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_82" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Create and manage drafts</strong></p>
+<div class="paragraph">
+<p>Customers can save their progress while composing a new message in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/web_messages#create_message">Create Message</a> widget or reply to a thread in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/web_messages#messages_conversation_thread">Message Conversation Thread</a> widget
+and send it later.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_deprecations_27" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>The following features are deprecated from this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for these features ceases in v3.7.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>URL-based cross-widget communication mechanism</p>
+<div class="paragraph">
+<p>To update an existing deployment to accommodate these changes, see <a href="https://community.backbase.com/documentation/Retail-Banking/3-5-2/rb_352#rb3_migrate_352">Migration</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_payments_352" class="discrete">Payments v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_83" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Submit a request to stop an issued check (web)</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_payments#stop_checks_list">Stop Checks List</a> widget enables a bank customer to
+submit a request to the bank to stop the clearance of a check (or cheque).
+This feature is helpful in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The customer has insufficient funds and wants to prevent the check from bouncing.</p>
+</li>
+<li>
+<p>The customer entered the incorrect amount or other details on the check.</p>
+</li>
+<li>
+<p>The customer&#8217;s check or check book was lost or stolen. In the case of multiple checks or an entire check book,
+the customer can stop all checks that fall within a range of serial numbers.</p>
+</li>
+<li>
+<p>The customer mailed the check to the wrong address or it was lost in the mail.</p>
+</li>
+<li>
+<p>The customer has a dispute over purchases.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Remove the connection to an external account (web)</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>In order to initiate an external account to account (A2A) transfer in the US, the
+bank customer needs to connect and activate their external account.
+An external account is an account that the customer holds at a different financial institution.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_payments#link_external_account">Connect External Account</a> widget now enables
+the customer to remove the connection to an external account, irrespective
+of its status. This includes accounts with statuses like <strong>Pending Activation</strong> or <strong>Failed Verification</strong>.
+For example, the customer can remove the connection to an external account if it failed to
+activate or has been closed.</p>
+</div>
+<div class="paragraph">
+<p>Once the connection has been successfully removed, the external account no longer appears in
+the list of connected accounts.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_products_352" class="discrete">Products v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_84" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Apply arrangement state indicator in Account Details, My Accounts, and Account Selector</strong></p>
+<div class="paragraph">
+<p>The default retail account statuses - active, inactive, and closed - are now displayed along with an icon in the Account Selector, My Accounts, and Account Details.
+If custom account statuses are sent, the widgets display the status as is, without an icon.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_89" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>The following issues have been fixed in this release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PRSUM-5198: In the Manage Accounts widget, the user was not able to inline edit the account alias if a single word value was introduced. Also, for long aliases that were close to the maximum length of 50 characters, the inline edit pen overlapped the account name.</p>
+</li>
+<li>
+<p>PRSUM-5441 - The <code>visible</code> account property was set to <code>false</code> in the Account Selector widget. If the bank did not send any visible property, accounts were not visible to the bank customer at all.</p>
+</li>
+</ul>
+</div>
+<h2 id="rb3_transactions_352" class="discrete">Transactions v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_85" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new features in this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Display pending transactions on top</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The following widgets now provide the ability to list pending and unbilled transactions in a separate container on top of the transactions list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_transactions">Transactions List widget</a> (web)</p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/native_transactions">Transactions widget</a> (native mobile)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To configure this feature, use the <code>showPendingTransactionsOnTop</code> preference.</p>
+</div>
+<div class="paragraph">
+<p>However, if you want to display pending transactions on top, ensure that the <code>billingStatus</code> column does not
+have <code>NULL</code> values. When you set <code>showPendingTransactionsOnTop</code> to true, the
+transactions list widget only displays transactions where the <code>billingStatus</code> is not <code>NULL</code>.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Overview of turnover (native mobile)</strong></p>
+<div class="paragraph">
+<p>The native mobile <a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/native_transactions">Transactions widget</a> now provides the ability to
+view the turnover (incoming and outgoing transactions) for the last six months.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_user_profile_352" class="discrete">User Profile v3.5.2</h2>
+<div class="paragraph">
+<p>This release note explains the changes to this capability.</p>
+</div>
+<h3 id="_new_features_86" class="discrete">New features</h3>
+<div class="paragraph">
+<p>The new feature in this release is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User Manage Profile widget updated for Theme 2.0</strong></p>
+<div class="paragraph">
+<p>The Backbase Theme 2.0 style is now available in the
+<a href="https://community.backbase.com/documentation/Retail-Banking/3.5.2/web_user_profile#user_manage_profile">User Manage Profile widget</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="rb3_migrate_352" class="discrete">Migration</h2>
+<div class="paragraph">
+<p>When you migrate from one version of this product to another, best practice is to update incrementally
+through all minor and major versions in between.</p>
+</div>
+<div class="paragraph">
+<p>Follow these steps to update an existing deployment:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Deprecated date events in the Bill Pay Form widget</strong></p>
+<div class="paragraph">
+<p>Make the following changes to the Bill Pay client and  Bill Pay Form widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bill Pay client changes</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Android</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RecurringPayment.setNumberOfInstances(int numberOfInstances)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RecurringPayment.setNumberOfInstances(@Nullable Integer numberOfInstances)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RecurringPayment.getNumberOfInstances()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RecurringPayment.getNullableNumberOfInstances()</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>iOS</p>
+<div class="paragraph">
+<p>In <code>RecurringPayment</code> class recurring property is removed due to DBS removal.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Bill Pay Form widget changes</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bill Pay Form contract</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Android</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getPaymentRequest</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateViewWithPaymentRequest</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectScheduleInformation()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectScheduleInformation(amount, memo)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getPayeeSummary</code> returns <code>@Nonnull PayeeSummary</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getPayeeSummary</code> returns <code>@Nullable PayeeSummary</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>iOS</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectScheduleInformation()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectScheduleInformation(amount, memo)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payeeSummary</code> returns <code>nonnull PayeeSummary</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getPayeeSummary</code> returns <code>nullable PayeeSummary</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bill Pay Form view</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateViewWithDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayScheduleWidget</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pub/sub events and properties</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Android</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EVENT_BILL_PAY_REVIEW</code> with <code>bb.action.bill-pay-form.review</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.ACTION_BILL_PAY_SHOW_REVIEW</code> with <code>bb.action.bill-pay-form.show-review</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EVENT_BILL_PAY_PAYMENT_SUCCEED</code> with <code>bb.event.bill-pay-form.success</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.ACTION_BILL_PAY_OVERVIEW</code> with <code>bb.event.bill-pay-form.overview</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EVENT_BILL_PAY_PAYMENT_FINISHED</code> with <code>bb.action.bill-pay-form.finish</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No replacement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EVENT_BILL_PAY_FORM_SELECT_DATE</code> with <code>bb.action.bill-pay-form.select-date</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.EVENT_BILL_PAY_FORM_SELECT_SCHEDULE</code> with <code>bb.event.bill-pay-form.select-schedule</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EVENT_BILL_PAY_FORM_DATE_SELECTED</code> with <code>bb.event.bill-pay-form.date-selected</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.EVENT_BILL_PAY_SCHEDULE_INFO_SELECTED</code> with <code>bb.action.bill-pay-form.schedule-selected</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.EXPEDITION_PAYMENT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PaymentServiceType.EXPEDITED_PAYMENT</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.OVER_NIGHT_PAYMENT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PaymentServiceType.OVERNIGHT_CHECK</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormWidget.REGULAR_PAYMENT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PaymentServiceType.REGULAR_PAYMENT</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>iOS</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmModeKey</code> with <code>confirm</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>overviewModeKey</code> with <code>overview</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentProductSelectedEvent</code> with <code>bb.event.bill-pay-form.product-selected</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.paymentProductSelectedEvent</code> with <code>bb.event.bill-pay-form.product-selected</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentSelectRecipientAction</code> with <code>bb.action.selector.select-recipient</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.paymentSelectRecipientAction</code> with <code>bb.action.selector.select-recipient</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentCompletedEvent</code> with <code>bb.event.bill-pay-form.completed</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.paymentOverviewAction</code> with <code>bb.event.bill-pay-form.overview</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentReviewAction</code> with <code>bb.action.bill-pay-form.review</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.paymentShowReviewAction</code> with <code>bb.action.bill-pay-form.show-review</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentFinishAction</code> with <code>bb.action.bill-pay-form.finish</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No replacement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentDateSelectedEvent</code> with <code>bb.event.bill-pay-form.date-selected</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.paymentScheduleSelectedEvent</code> with <code>bb.action.bill-pay-form.schedule-selected</code> key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentDateSelectRequestedAction</code> with <code>bb.action.bill-pay-form.select-date</code> key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BillPayFormEvents.scheduleSelectRequestedAction</code> with <code>bb.event.bill-pay-form.select-schedule</code> key</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Deprecated the editPayment property in the Bill Pay Manage Payments widget</strong></p>
+<div class="paragraph">
+<p>Make the following changes to the Bill Pay Manage Payments widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bill Pay Manage Payments widget changes</strong></p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editPayment: PaymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditPayment: boolean</code> and <code>paymentType: PaymentType</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Migration of Messages to the Communication API</strong></p>
+<div class="paragraph">
+<p>To enable Messages widgets to use the new Communication API, add a feature flag in your <code>app.module</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-none" data-lang="none">BackbaseCoreModule.forRoot({
+  logDeprecations: true,
+  features: {
+    NEW_COMMUNICATION_API_ENABLED: true,
+  },
+})</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find more information about this configuration in
+<a href="http://wa3.backbase.com/foundation/4.21.0/howto/communicate-between-widgets#communicate-from-1-widget-to-another-widget">Communication between widgets</a>.</p>
+</div>
+</li>
+<li>
+<p><strong>Migration of the Notification Settings widget to the Communication API</strong></p>
+<div class="paragraph">
+<p>Configure new output and input properties in the source and destination widgets as described in
+<a href="http://wa3.backbase.com/foundation/4.21.0/howto/communicate-between-widgets#configure-inter-widget-communication-on-a-standalone-server">Communication between widgets</a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, to set up communication between the Product Summary List widget and the Notification Settings widget, take
+the following steps:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In Product Summary List, change the old <code>output.selectedAccount: navigation:product-notifications-settings</code> property
+to the new <code>output.selectedAccount: route-param notificationsSettingsAccountId</code> property.</p>
+</li>
+<li>
+<p>In Notification Settings, configure the new <code>input.selectedAccountId: route-param notificationsSettingsAccountId</code> property.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

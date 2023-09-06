@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Compose message by the customer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="create_message_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Compose message by the customer</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html"><span class="toc-current">Compose message by the customer</span></a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="create_message_reference" class="sect0">Compose message by the customer</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="create_message_reference.html#compose_message_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#compose_message_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#compose_message_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#compose_message_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#compose_message_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#compose_message_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="compose_message_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>bb-messages-create-message-modal-widget-ang</code>.</p>
+</div>
+<h2 id="compose_message_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angular Common module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { CommonModule } from '@angular/common';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Backbase Core module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BackbaseCoreModule } from '@backbase/foundation-ang/core';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Widget module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { MessagesCreateMessageModalWidgetModule } from '@backbase/messages-create-message-modal-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="compose_message_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_message_customer_slots_1_3.svg?ver=3.10.1" alt="create message customer slots 1 3"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="create_message_reference.html#bbMessagesCreateMessageModalCustomizable">bbMessagesCreateMessageModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#bbCreateMessageFormCustomizable">bbCreateMessageFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_message_reference.html#bbMessagesUploadAttachmentsCustomizable">bbMessagesUploadAttachmentsCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbMessagesCreateMessageModalCustomizable" class="discrete">bbMessagesCreateMessageModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbMessagesCreateMessageModalCustomizable
+  let-host
+  let-maxAttachmentSize="context.maxAttachmentSize"
+  let-maxSubjectLength="context.maxSubjectLength"
+  let-maxMessageLength="context.maxMessageLength"
+  let-modalHeader="context.modalHeader"
+  let-hideComposeButton="context.hideComposeButton"
+&gt;
+  &lt;div class="bb-button-bar" *ngIf="!hideComposeButton"&gt;
+    &lt;button
+      bbButton
+      class="bb-button-bar__button"
+      data-role="compose-modal"
+      aria-label="Compose"
+      i18n-aria-label="Compose aria-label@@messages.createMessage.composeAriaLabel"
+      i18n="Button title for compose message@@messages.createMessage.compose"
+      (click)="host.openModal()"
+    &gt;
+      Compose
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;bb-modal-ui
+    [isOpen]="host.modalOpened"
+    (cancel)="host.closeModal()"
+    [modalOptions]="host.modalOptions"
+    [attr.aria-labelledby]="host.id + '-title'"
+    aria-modal="true"
+    role="dialog"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          [attr.id]="host.id + '-title'"
+          headingType="h3"
+          [heading]="modalHeader"
+          attr.aria-label="{{ modalHeader }}"
+        &gt;&lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;bb-create-message-form-ui
+          [draftId]="host.draftId"
+          [reset]="host.resetStream"
+          [maxAttachmentSize]="maxAttachmentSize"
+          [maxSubjectLength]="maxSubjectLength"
+          [maxMessageLength]="maxMessageLength"
+          (cancel)="host.closeModal()"
+          (confirm)="host.closeModal()"
+        &gt;&lt;/bb-create-message-form-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCreateMessageFormCustomizable" class="discrete">bbCreateMessageFormCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbCreateMessageFormCustomizable let-host let-topics="context.topics"&gt;
+  &lt;form [formGroup]="host.newMessageFormGroup" data-role="form" (submit)="host.onConfirm()"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;div class="form-row"&gt;
+        &lt;div class="col-12 col-md-8"&gt;
+          &lt;bb-dropdown-single-select-ui
+            label="Topic (required)"
+            i18n-label="Topic label text@@messages.createMessage.composeMessageForm.topicLabel"
+            aria-label="Topic"
+            i18n-aria-label="Topic aria-label text@@messages.createMessage.composeMessageForm.topicAriaLabel"
+            [options]="topics"
+            displayAttributePath="name"
+            placeholder="Select topic"
+            i18n-placeholder="Topic placeholder text@@messages.createMessage.composeMessageForm.topicPlaceholder"
+            formControlName="topic"
+          &gt;&lt;/bb-dropdown-single-select-ui&gt;
+          &lt;bb-input-validation-message-ui [showErrors]="host.isInvalidControl('topic')"&gt;
+            &lt;span
+              *ngIf="host.hasError('topic', 'required')"
+              i18n="
+                Error message if subject field is
+                required@@messages.createMessage.composeMessageForm.errors.subjectRequired"
+            &gt;
+              Field is required.
+            &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;bb-input-text-ui
+        data-role="subject"
+        label="Subject (required)"
+        i18n-label="Subject label text@@messages.createMessage.composeMessageForm.subjectLabel"
+        aria-label="Subject"
+        i18n-aria-label="Subject aria-label text@@messages.createMessage.composeMessageForm.subjectAriaLabel"
+        placeholder="Write subject"
+        i18n-placeholder="Subject placeholder text@@messages.createMessage.composeMessageForm.subjectPlaceholder"
+        formControlName="subject"
+        [maxlength]="host.maxSubjectLength"
+      &gt;&lt;/bb-input-text-ui&gt;
+      &lt;bb-input-validation-message-ui [showErrors]="host.isInvalidControl('subject')"&gt;
+        &lt;span
+          *ngIf="host.hasError('subject', 'required')"
+          i18n="
+            Error message if subject field is empty@@messages.createMessage.composeMessageForm.errors.subjectRequired"
+        &gt;
+          Field is required.
+        &lt;/span&gt;
+        &lt;span
+          *ngIf="host.hasError('subject', 'maxlength')"
+          i18n="
+            Error message if subject value is more then maxlength
+            value@@messages.createMessage.composeMessageForm.errors.subjectMaxlength"
+        &gt;
+          Value should be &lt; {{ host.maxSubjectLength }}
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;bb-rich-text-editor-ui
+        label="Message (required)"
+        i18n-label="Message label text@@messages.createMessage.composeMessageForm.messageLabel"
+        aria-label="Message"
+        i18n-aria-label="Message aria-label text@@messages.createMessage.composeMessageForm.messageAriaLabel"
+        name="message"
+        [maxLength]="host.maxMessageLength"
+        formControlName="body"
+        placeholder="Write some text"
+        i18n-placeholder="Message placeholder text@@messages.createMessage.composeMessageForm.messagePlaceholder"
+        counter="true"
+        [required]="true"
+      &gt;&lt;/bb-rich-text-editor-ui&gt;
+      &lt;bb-input-validation-message-ui [showErrors]="host.isInvalidControl('body')"&gt;
+        &lt;span
+          *ngIf="host.hasError('body', 'required')"
+          i18n="Error message if field is required@@messages.createMessage.composeMessageForm.errors.messageRequired"
+        &gt;
+          Field is required.
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;bb-messages-upload-attachments
+        [maxSize]="host.maxAttachmentSize"
+        [initAttachments]="attachments"
+        formControlName="attachments"
+      &gt;&lt;/bb-messages-upload-attachments&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-button-bar"&gt;
+      &lt;bb-load-button-ui
+        type="submit"
+        data-role="submit"
+        aria-label="Send"
+        i18n-aria-label="Send button aria-label text@@messages.createMessage.composeMessageForm.submitButtonAriaLabel"
+        i18n="Submit button text@@messages.createMessage.composeMessageForm.submitButton"
+        [isLoading]="host.formLoading"
+        [disabled]="!host.formLoading &amp;&amp; !host.newMessageFormGroup.valid"
+      &gt;
+        Send
+      &lt;/bb-load-button-ui&gt;
+      &lt;button
+        bbButton
+        class="bb-button-bar__button"
+        color="secondary"
+        data-role="discard"
+        aria-label="Discard"
+        i18n-aria-label="
+          Discard button aria-label text@@messages.createMessage.composeMessageForm.discardButtonAriaLabel"
+        i18n="Discard button text@@messages.createMessage.composeMessageForm.discardButton"
+        (click)="
+          host.confirmModalService.toggleModal(
+            true,
+            host.manipulationTypes.discard,
+            host.newMessageFormGroup,
+            host.draftFormValue
+          )
+        "
+      &gt;
+        Discard
+      &lt;/button&gt;
+      &lt;button
+        bbButton
+        class="bb-button-bar__button--across"
+        color="link"
+        data-role="save-and-close"
+        aria-label="Save and close"
+        i18n-aria-label="
+          Save and close button aria-label@@messages.createMessage.composeMessageForm.saveAsDraftButtonTextAriaLabel"
+        i18n="Save &amp; Close button text@@messages.createMessage.composeMessageForm.saveAsDraftButtonText"
+        (click)="host.onSave(host.getSimpleFormVal(host.newMessageFormGroup.value))"
+      &gt;
+        Save &amp; Close
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;bb-messages-manipulation-confirm-modal
+    [isOpen]="host.confirmationModal.opened"
+    [type]="host.confirmationModal.type"
+    (cancel)="host.confirmModalService.toggleModal(false)"
+    (confirm)="host.confirmConfirmationModal()"
+  &gt;&lt;/bb-messages-manipulation-confirm-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbMessagesUploadAttachmentsCustomizable" class="discrete">bbMessagesUploadAttachmentsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbMessagesUploadAttachmentsCustomizable let-host&gt;
+  &lt;bb-input-file-ui
+    [buttonText]="host.attachmentButtonText ? host.attachmentButtonText : attachFile.elementRef.nativeElement.innerText"
+    [disabled]="host.disabled"
+    [accept]="host.accept"
+    *ngIf="!(!host.multiple &amp;&amp; host.attachments.length)"
+    (change)="host.onFileAdded($event.target)"
+  &gt;&lt;/bb-input-file-ui&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="col-auto" *ngFor="let attachment of host.attachments; let i = index"&gt;
+      &lt;div class="bb-block bb-block--md"&gt;
+        &lt;bb-file-attachment-ui
+          [name]="attachment.name"
+          [size]="attachment.size"
+          [loading]="attachment.loading"
+          [deletable]="true"
+          [disabled]="true"
+          (delete)="attachment.deleteAttachment(attachment.id, i)"
+        &gt;&lt;/bb-file-attachment-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #maxAttachmentSizeError&gt;
+    &lt;span
+      i18n="
+        Uploaded file exceeds the maximum allowed
+        size@@messages.messagesEmployeeUploadAttachments.maxAttachmentSizeError"
+      &gt;The file you are trying to upload exceeds the maximum attachment size of
+    &lt;/span&gt;
+    &lt;span&gt;{{ host.maxSizeMegabytesValue }}&lt;/span&gt;
+    &lt;span i18n="Mb|Megabytes@@messages.messagesEmployeeUploadAttachments.maxAttachmentSizeError.megabytes"&gt;Mb&lt;/span&gt;.
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #attachFile i18n="Attach file@@messages.messagesEmployeeUploadAttachments.attachFile"
+    &gt;Attach file&lt;/ng-template
+  &gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="compose_message_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="21"><p class="tableblock"><code>MessagesCreateMessageModalWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="21"><p class="tableblock"><code>bbMessagesCreateMessageModalCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly id: string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unique ID HTML property for each component instance.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly resetStream: Observable&lt;void&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream with the form reset triggers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('maxAttachmentSize') set maxAttachmentSizeValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the maximum attachment size preference.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get maxAttachmentSize(): Observable&lt;string&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the maximum attachment size stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('maxSubjectLength') set maxSubjectLengthValue(value: number);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the maximum subject length preference.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get maxSubjectLength(): Observable&lt;number&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the maximum subject length preference stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('maxMessageLength') set maxMessageLengthValue(value: number);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the maximum message length preference.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get maxMessageLength(): Observable&lt;number&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the maximum message length preference stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('modalHeader') set modalHeaderValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the modal header.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get modalHeader(): Observable&lt;string&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the modal header stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('hideComposeButton') set hideComposeButtonValue(value: boolean);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input that sets the preference that hides or shows the <strong>Compose</strong> button.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get hideComposeButton(): Observable&lt;boolean&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the stream of the preference that hides or shows the <strong>Compose</strong> button.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('createMessageOpenEventName') set createMessageOpenEventNameValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event published to open the <strong>Create message</strong> modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get createMessageOpenEventName(): Observable&lt;string&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the open <strong>Create message</strong> modal events stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('createMessageClosedEventName') set createMessageClosedEventNameValue(value: string);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event published when the <strong>Create message</strong> modal widget is closed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get createMessageClosedEventName(): Observable&lt;string&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the close <strong>Create message</strong> modal events stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>draftId: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The draft ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalOpened: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag indicating if the modal is opened or closed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalOptions: { size: string, beforeDismiss: () &#8658; boolean }</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The modal options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openModal(id?: string): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to open the modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>closeModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to close the modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="30"><p class="tableblock"><code>CreateMessageFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="30"><p class="tableblock"><code>bbCreateMessageFormCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onConfirm(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to submit the message form and create a new message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() reset: Observable&lt;void&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input stream of the reset signals that trigger form reset.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() maxAttachmentSize: string | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input for the maximum file attachment size in megabytes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() maxSubjectLength: number | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input for the maximum characters length for the subject field value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() maxMessageLength: number | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input for the maximum characters length for the message field value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set draftId(value: string | undefined);</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input draft ID to get the draft and prefill the compose form with it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get draftId(): string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The draft ID getter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() confirm: EventEmitter&lt;string | null&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event published after the <strong>Confirm</strong> button is clicked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() cancel: EventEmitter&lt;void&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The event fired after the <strong>Cancel</strong> button is clicked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild messageComposeSuccessTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the successful compose message operation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild messageSaveDraftSuccessTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the successfully saved draft.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild messageUpdateDraftSuccessTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the successful draft update.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild messageComposeErrorTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the compose message error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild messageSaveDraftErrorTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the save draft error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild('messageUpdateDraftError', { static: false }) messageUpdateDraftErrorTpl: TemplateRef&lt;any&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification for the update draft error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>attachments: Array&lt;FileObject&gt; | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The file attachments array.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>newMessageFormGroup: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The blank new message form with the initial values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>draftFormValue: { [key: string]: any } | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The draft form value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmationModal: MessagesConfirmationModalModel;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confirmation modal parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formLoading: boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag indicating if the form is loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly topics: Observable&lt;TopicsGetResponseBody[] | null | undefined&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream with topics.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly manipulationTypes;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The manipulationType enum ( <code>resolve</code>, <code>unresolve</code>, <code>assign</code>, <code>unassign</code>, <code>discard</code>, <code>discardDraft</code>, <code>discardPreview</code>, <code>deleteTopic</code>, <code>deleteMailout</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getSimpleFormVal({ body, subject, topic, attachments }: SimpleFormModel): any;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get a simple value from the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createMessage(value: T): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to create a message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSave(value: T): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to save a message as a draft.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getDrafts(id?: string): Observable&lt;MessageDraftGetResponseBody | null&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get the draft and prefill the compose form with it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmConfirmationModal(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to resolve the confirmation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCancel(): void;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to cancel the confirmation modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasError(field: string, type: string): ValidationErrors | null;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get any errors generated by failing validation, or <code>null</code> if there are no errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isInvalidControl(field: string): boolean;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method that defines whether the control is valid or not.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>MessagesUploadAttachmentsComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>bbMessagesUploadAttachmentsCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set maxSize(value: number | string | undefined): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum size for the file upload in megabytes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() set initAttachments(value: Array&lt;Metadata&gt; | undefined): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The array of attachment objects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() disabled: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The disabled state flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() multiple: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The input to define adding file multiple times. True by default.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() attachmentButtonText: string | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The attachment button text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() accept</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The accepted file formats.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild maxAttachmentSizeErrorTpl: TemplateRef&lt;any&gt; | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum attachment size.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFileAdded(input: HTMLInputElement): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to upload a file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writeValue(value: Array&lt;Metadata&gt; | null | undefined): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to set the initial value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onChange: (newValue: Array&lt;Metadata&gt;) &#8658; void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to update the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onTouched: () &#8658; void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to update the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onValidationChange: () &#8658; void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to update the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registerOnChange(fn: () &#8658; void): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to register the <code>onChange</code> method.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registerOnTouched(fn: () &#8658; void): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to register the <code>onTouched</code> method.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registerOnValidatorChange(fn: () &#8658; void): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control Value Accessor method to register the <code>onValidatorChange</code> method.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setDisabledState(isDisabled: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to disable the form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validate(): ValidationErrors | null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method that returns whether the file is loading at the moment.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="compose_message_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">messages-create-message-modal-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { MessagesCreateMessageModalWidgetModule } from '@backbase/messages-create-message-modal-widget-ang';
+import { MessagesCreateMessageModalExtendedComponent } from './messages-create-message-modal-extended.component';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { MessagesCreateMessageModalExtendedComponent },
+    }),
+    MessagesCreateMessageModalWidgetModule,
+  ],
+  declarations: [MessagesCreateMessageModalExtendedComponent],
+})
+export class MessagesCreateMessageModalExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">messages-create-message-modal-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'bb-messages-create-message-modal-extended',
+  templateUrl: './messages-create-message-modal-extended.component.html',
+})
+export class MessagesCreateMessageModalExtendedComponent {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">messages-create-message-modal-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-messages-create-message-modal-widget-ang&gt;
+  &lt;ng-template
+    bbMessagesCreateMessageModalCustomizable
+    let-hostRef
+    let-maxAttachmentSize="context.maxAttachmentSize"
+    let-maxSubjectLength="context.maxSubjectLength"
+    let-maxMessageLength="context.maxMessageLength"
+    let-modalHeader="context.modalHeader"
+    let-hideComposeButton="context.hideComposeButton"
+  &gt;
+    &lt;!-- place your customization here --&gt;
+  &lt;/ng-template&gt;
+&lt;/bb-messages-create-message-modal-widget-ang&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="compose_message_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. subject length</strong></p>
+<p class="tableblock">Set the maximum number of characters in the subject.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxSubjectLength</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. message length</strong></p>
+<p class="tableblock">Set the maximum number of characters in the message body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxMessageLength</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>300</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. attachment size (megabytes)</strong></p>
+<p class="tableblock">Set the maximum size of each file that a customer can attach to the message.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxAttachmentSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modal header title text</strong></p>
+<p class="tableblock">Set the text in the header of the <strong>New message</strong> window.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalHeader</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>New message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Hide compose button</strong></p>
+<p class="tableblock">Set to hide or show the <strong>Compose</strong> button that opens the <strong>New message</strong>  window.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hideComposeButton</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Generic tracker widget open modal event name</strong></p>
+<p class="tableblock">The event emitted by the <strong>View messages by the customer</strong> widget that the <strong>Compose message by the customer</strong>
+widget listens to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createMessageOpenEventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.event.messages.create.message.open</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Generic tracker widget close modal event name</strong></p>
+<p class="tableblock">The event emitted by this widget when the <strong>New message</strong> window is closed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createMessageClosedEventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.event.messages.create.message.close</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

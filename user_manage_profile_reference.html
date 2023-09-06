@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Manage user profile - non-admin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="user_manage_profile_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage user profile - non-admin</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html"><span class="toc-current">Manage user profile - non-admin</span></a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="user_manage_profile_reference" class="sect0">Manage user profile - non-admin</h1>
+          <h2 id="_preferences_9" class="discrete">Preferences</h2>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 57.9999%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 10.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Admin<a href="user_manage_profile_reference.html#pref_user_manage_profile_fn"><sup>[a]</sup></a></th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Email address types</strong></p>
+<p class="tableblock">Set the address types that the user can select when they input an email address.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>emailAddressTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personal, Work</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Postal address types</strong></p>
+<p class="tableblock">Set the address types that the user can select when they input a postal address.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postalAddressTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Home, Business, Mailing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Phone number types</strong></p>
+<p class="tableblock">Set the address types that a user can select when they input a phone number.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>phoneNumberTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Home, Work, Mobile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maximum number of email addresses</strong></p>
+<p class="tableblock">Set the maximum number of email addresses allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxEmailAddresses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maximum number of phone numbers</strong></p>
+<p class="tableblock">Set the maximum number of phone numbers allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxPhoneNumbers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maximum number of postal addresses</strong></p>
+<p class="tableblock">Set the maximum number of postal addresses allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxPostalAddresses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification dismiss time</strong></p>
+<p class="tableblock">Set the number of seconds that notifications triggered by this widget are visible.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Phone number country code</strong></p>
+<p class="tableblock">Set the two letter country code for the phone number formatting.
+The default value is <code>CA</code> corresponding to Canada.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>phoneNumberCountryCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Phone number debounce time</strong></p>
+<p class="tableblock">Set the number of seconds after the user has input a phone number before it is formatted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>phoneNumberDebounceTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div id="pref_user_manage_profile_fn" class="paragraph">
+<p><sup>[a]</sup> Preferences that have this column
+checked, are only editable for administrators.</p>
+</div>
+<h2 id="_access_control_4" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>The user does not require any permissions to access this widget&#8217;s functionality.</p>
+</div>
+<h2 id="_extension_slots_9" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget requires you to add providers when you customize its extension slots.
+To enable your extension slots, add the following providers to your custom component:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ManageProfilePreferencesService</code> from <code>@backbase/user-common</code></p>
+</li>
+<li>
+<p><code>UserManageProfileService</code> from <code>@backbase/user-manage-profile-widget</code></p>
+</li>
+<li>
+<p><code>ManageProfileService</code> from <code>@backbase/user-common</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_1.svg?ver=3.10.1" alt="user_manage_profile_widget"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_2.svg?ver=3.10.1" alt="add_email_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_3.svg?ver=3.10.1" alt="manage_email_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_4.svg?ver=3.10.1" alt="delete_email_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_5.svg?ver=3.10.1" alt="add_phone_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_6.svg?ver=3.10.1" alt="delete_phone_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_7.svg?ver=3.10.1" alt="manage_phone_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_8.svg?ver=3.10.1" alt="add_postal_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_9.svg?ver=3.10.1" alt="manage_postal_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_10.svg?ver=3.10.1" alt="delete_postal_address"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/manage_user_profile_non_admin_slots_part_11.svg?ver=3.10.1" alt="discard_changes"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManageWidgetCustomizable">bbUserManageWidgetCustomizable</a> - customize the entire content of the widget under the title.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManageWidgetTitleCustomizable">bbUserManageWidgetTitleCustomizable</a> - customize the title displayed at the top of the widget.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManageEmailAddressesCustomizable">bbUserManageEmailAddressesCustomizable</a> - customize the list of email addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManageEmailAddressesTitleCustomizable">bbUserManageEmailAddressesTitleCustomizable</a> - customize the title displayed at the top of the list of email addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManageEmailAddressCustomizable">bbUserManageEmailAddressCustomizable</a> - customize individual email addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewEmailAddressCustomizable">bbUserNewEmailAddressCustomizable</a> - customize the new email address container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewEmailAddressTitleCustomizable">bbUserNewEmailAddressTitleCustomizable</a> - customize the title displayed at the top of the new email address form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditEmailAddressCustomizable">bbUserEditEmailAddressCustomizable</a> - customize the edit email address container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditEmailAddressTitleCustomizable">bbUserEditEmailAddressTitleCustomizable</a> - customize the title at the top of the edit email address form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressFormCustomizable">bbUserEmailAddressFormCustomizable</a> - customize the generic email address form used for both create and edit actions.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressFormErrorsCustomizable">bbUserEmailAddressFormErrorsCustomizable</a> - customize the errors displayed with the email address form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressTypeInputCustomizable">bbUserEmailAddressTypeInputCustomizable</a> - customize the email address type input element.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressTypeErrorsCustomizable">bbUserEmailAddressTypeErrorsCustomizable</a> - customize errors for email address type select.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressInputCustomizable">bbUserEmailAddressInputCustomizable</a> - customize the input element for the email address value.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEmailAddressInputErrorsCustomizable">bbUserEmailAddressInputErrorsCustomizable</a> - customize the errors displayed with the email address input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserProfileFormDeleteEmailAddressModalCustomizable">bbUserProfileFormDeleteEmailAddressModalCustomizable</a> - customize the modal that enables the user to confirm the deletion of an email address</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePhoneNumbersCustomizable">bbUserManagePhoneNumbersCustomizable</a> - customize the list of phone numbers.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePhoneNumbersTitleCustomizable">bbUserManagePhoneNumbersTitleCustomizable</a> - customize the title displayed at the top of the list of phone numbers.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePhoneNumberCustomizable">bbUserManagePhoneNumberCustomizable</a> - customize individual phone numbers.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewPhoneNumberCustomizable">bbUserNewPhoneNumberCustomizable</a> - customize the new phone number form container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewPhoneNumberTitleCustomizable">bbUserNewPhoneNumberTitleCustomizable</a> - customize the title displayed at the top of the new phone number form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditPhoneNumberCustomizable">bbUserEditPhoneNumberCustomizable</a> - customize the edit phone number container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditPhoneNumberTitleCustomizable">bbUserEditPhoneNumberTitleCustomizable</a> - customize the title at the top of the edit phone number form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberFormCustomizable">bbUserPhoneNumberFormCustomizable</a> - customize the phone number form for create and edit actions.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberFormErrorsCustomizable">bbUserPhoneNumberFormErrorsCustomizable</a> - customize errors for the phone number form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberTypeInputCustomizable">bbUserPhoneNumberTypeInputCustomizable</a> - customize the phone number type input element.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberTypeErrorsCustomizable">bbUserPhoneNumberTypeErrorsCustomizable</a> - customize errors for phone number type select.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberInputCustomizable">bbUserPhoneNumberInputCustomizable</a> - customize the input element for the phone number value.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPhoneNumberInputErrorsCustomizable">bbUserPhoneNumberInputErrorsCustomizable</a> - customize errors for phone number input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserProfileFormDeletePhoneAddressModalCustomizable">bbUserProfileFormDeletePhoneAddressModalCustomizable</a> - customize the modal that enables the user to confirm the deletion of a phone number.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePostalAddressesCustomizable">bbUserManagePostalAddressesCustomizable</a> - customize the list of postal addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePostalAddressesTitleCustomizable">bbUserManagePostalAddressesTitleCustomizable</a> - customize the title displayed at the top of the list of postal addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserManagePostalAddressCustomizable">bbUserManagePostalAddressCustomizable</a> - customize individual postal addresses.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewPostalAddressCustomizable">bbUserNewPostalAddressCustomizable</a> - customize the new postal address form container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserNewPostalAddressTitleCustomizable">bbUserNewPostalAddressTitleCustomizable</a> - customize the title displayed at the top of the new postal address form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditPostalAddressCustomizable">bbUserEditPostalAddressCustomizable</a> - customize the edit address form container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserEditPostalAddressTitleCustomizable">bbUserEditPostalAddressTitleCustomizable</a> - customize the title at the top of the edit postal address container.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalAddressFormCustomizable">bbUserPostalAddressFormCustomizable</a> - customize the generic postal address create and edit form.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalAddressFormErrorsCustomizable">bbUserPostalAddressFormErrorsCustomizable</a> - customize the postal address form errors.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalAddressTypeInputCustomizable">bbUserPostalAddressTypeInputCustomizable</a> - customize the postal address type input element.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalAddressTypeErrorsCustomizable">bbUserPostalAddressTypeErrorsCustomizable</a> - customize errors for postal address type select.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalBuildingNumberInputCustomizable">bbUserPostalBuildingNumberInputCustomizable</a> - customize the input element for the postal address building number.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalBuildingNumberInputErrorsCustomizable">bbUserPostalBuildingNumberInputErrorsCustomizable</a> - customize errors for postal building number input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalStreetNameInputCustomizable">bbUserPostalStreetNameInputCustomizable</a> - customize the input element for the postal address street name.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalTownNameInputCustomizable">bbUserPostalTownNameInputCustomizable</a> - customize the input element for the postal address town name.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalTownNameInputErrorsCustomizable">bbUserPostalTownNameInputErrorsCustomizable</a> - customize errors for postal town name input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalCountrySubDivisionInputCustomizable">bbUserPostalCountrySubDivisionInputCustomizable</a> - customize the input element for the postal country subdivision.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalCountrySubDivisionInputErrorsCustomizable">bbUserPostalCountrySubDivisionInputErrorsCustomizable</a> - customize errors for postal country subdivision.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalPostalCodeInputCustomizable">bbUserPostalPostalCodeInputCustomizable</a> - customize the input element for the postal postal code input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalPostalCodeInputErrorsCustomizable">bbUserPostalPostalCodeInputErrorsCustomizable</a> - customize errors for postal code input.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserProfileFormDeletePostalAddressModalCustomizable">bbUserProfileFormDeletePostalAddressModalCustomizable</a> - customize the modal that enables the user to confirm the deletion of a postal address.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPrimaryCheckboxInputCustomizable">bbUserPrimaryCheckboxInputCustomizable</a> - customize the input checkbox used to set an address as primary.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserProfileFormCancelModalCustomizable">bbUserProfileFormCancelModalCustomizable</a> - customize the modal that enables the administrator to cancel an edit or create action.</p>
+</li>
+<li>
+<p><a href="user_manage_profile_reference.html#bbUserPostalStreetNameInputErrorsCustomizable">bbUserPostalStreetNameInputErrorsCustomizable</a> - customize errors for the postal address street name.</p>
+</li>
+</ol>
+</div>
+<h3 id="bbUserManageWidgetCustomizable" class="discrete">bbUserManageWidgetCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManageWidgetCustomizable let-hostRef&gt;
+  &lt;section&gt;
+    &lt;bb-loading-indicator-ui
+      *ngIf="hostRef.loadingState"
+      i18n-text="User Profile loading message|Message for when the user profile is loading@@bb-user-manage-profile.bb-loading-indicator-ui"
+      text="Loading..."&gt;
+    &lt;/bb-loading-indicator-ui&gt;
+
+    &lt;bb-common-error-state-ui
+      *ngIf="hostRef.loadingErrorState"
+      class="bb-state-container"
+      [error]="hostRef.loadingError"
+      data-role="user-manage-profile-error-state"&gt;
+    &lt;/bb-common-error-state-ui&gt;
+
+    &lt;div *ngIf="!hostRef.loadingState &amp;&amp; !hostRef.loadingErrorState &amp;&amp; hostRef.userProfile"&gt;
+      &lt;ng-container *ngIf="hostRef.widgetPreferences | async; let preferences"&gt;
+        &lt;ng-container bbUserManageWidgetTitleCustomizable
+          *ngIf="preferences.showWidgetHeader"
+          [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+        &lt;div&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;bb-user-manage-email-addresses
+              [emailAddresses]="hostRef.userProfile['electronic-addresses']"
+              [emailAddressTypes]="preferences.emailAddressTypes"
+              [maxEmailAddresses]="preferences.maxEmailAddresses"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (manageEmail)="hostRef.handleManageAddressOpen()"
+              (cancelManageEmail)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging"&gt;
+            &lt;/bb-user-manage-email-addresses&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;bb-user-manage-phone-numbers
+              [phoneNumbers]="hostRef.userProfile['phone-addresses']"
+              [phoneNumberTypes]="preferences.phoneNumberTypes"
+              [maxPhoneNumbers]="preferences.maxPhoneNumbers"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (managePhoneNumber)="hostRef.handleManageAddressOpen()"
+              (cancelManagePhoneNumber)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging"&gt;
+            &lt;/bb-user-manage-phone-numbers&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-block bb-block--xl"&gt;
+            &lt;bb-user-manage-postal-addresses
+              [postalAddresses]="hostRef.userProfile['postal-addresses']"
+              [postalAddressTypes]="preferences.postalAddressTypes"
+              [maxPostalAddresses]="preferences.maxPostalAddresses"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (managePostalAddress)="hostRef.handleManageAddressOpen()"
+              (cancelManagePostalAddress)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging"&gt;
+            &lt;/bb-user-manage-postal-addresses&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManageWidgetTitleCustomizable" class="discrete">bbUserManageWidgetTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManageWidgetTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h2"
+      data-role="user-manage-profile-user-name"
+      [heading]="hostRef.userProfile.fullName"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManageEmailAddressesCustomizable" class="discrete">bbUserManageEmailAddressesCustomizable<br></h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManageEmailAddressesCustomizable let-hostRef&gt;
+  &lt;div class="card card-lg"&gt;
+    &lt;ng-container bbUserManageEmailAddressesTitleCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+
+    &lt;ng-container *ngIf="hostRef.emailAddresses &amp;&amp; hostRef.emailAddresses.length; else emptyState"&gt;
+      &lt;div *ngFor="let emailAddressDetails of hostRef.emailAddresses | slice:0:maxEmailAddresses; index as i"
+        class="card-section {{ hostRef.isManagingEmailAddressIndex === i ? 'card-section--highlight' : '' }}"&gt;
+        &lt;bb-user-manage-email-address
+          [electronicAddress]="emailAddressDetails"
+          [emailAddressCount]="hostRef.emailAddresses.length"
+          [disableManage]="hostRef.disableManage"
+          [emailAddressTypes]="hostRef.emailAddressTypes"
+          (updateProfile)="hostRef.updateUserProfileData()"
+          (manageEmail)="hostRef.handleManageEmailOpen(i)"
+          (cancelManageEmail)="hostRef.handleManageEmailClosed()"&gt;
+        &lt;/bb-user-manage-email-address&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #emptyState&gt;
+      &lt;div class="card-section"&gt;
+        &lt;bb-empty-state-ui
+          data-role="user-manage-profile-email-empty-state"
+          [showIcon]="false"
+          i18n-title="Email addresses not found text|Text for no email addresses found@@bb-user-manage-email-addresses.none-found"
+          title="No email addresses"&gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+
+    &lt;div class="card-section card-section--highlight" *ngIf="hostRef.isAddingEmailAddress"&gt;
+      &lt;bb-user-new-email-address
+        (close)="hostRef.handleManageEmailClosed()"
+        (closeAfterSave)="hostRef.updateUserProfileData()"
+        [emailAddressTypes]="hostRef.emailAddressTypes"&gt;
+      &lt;/bb-user-new-email-address&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.isAddButtonAvailable &amp;&amp; !hostRef.isAddingEmailAddress"&gt;
+      &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-email-add-button"
+          class="bb-button-bar__button"
+          color="secondary"
+          [disabled]="hostRef.disableManage"
+          (click)="hostRef.handleAddNewEmailAddress()"&gt;
+          &lt;bb-icon-ui name="create-payment"&gt;&lt;/bb-icon-ui&gt;
+          &lt;span i18n="Add email address button|Text for the button that allows the user to add a new email address@@bb-user-manage-email-addresses.add-email-button"&gt;
+            Add Email Address
+          &lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManageEmailAddressesTitleCustomizable" class="discrete">bbUserManageEmailAddressesTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManageEmailAddressesTitleCustomizable let-hostRef&gt;
+  &lt;bb-header-ui
+    headingType="h3"
+    class="card-header"
+    i18n-heading="Email addresses section title|Title text for the email addresses management section@@bb-user-manage-email-addresses.title"
+    heading="Email addresses"&gt;
+  &lt;/bb-header-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManageEmailAddressCustomizable" class="discrete">bbUserManageEmailAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManageEmailAddressCustomizable let-hostRef&gt;
+  &lt;div *ngIf="hostRef.electronicAddress &amp;&amp; !hostRef.managingEmailAddress"
+    class="bb-stack"
+    data-role="user-manage-profile-email-item"&gt;
+    &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+      &lt;div class="bb-stack bb-stack--wrap"&gt;
+        &lt;strong class="bb-stack__item"&gt;{{hostRef.electronicAddress.type}}&lt;/strong&gt;
+        &lt;bb-badge-ui
+          class="bb-stack_item"
+          *ngIf="hostRef.electronicAddress.primary"
+          color="success"
+          i18n-text="Primary email address text|Text for the primary email address badge@@bb-user-manage-email-address.primary"
+          text="Primary"&gt;
+        &lt;/bb-badge-ui&gt;
+        &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+        &lt;div class="bb-stack__item bb-stack__item--fill bb-text-align-right bb-text-align-left--sm-down break-word"&gt;
+          {{hostRef.electronicAddress.address}}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-stack__item"&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-button"
+        color="link"
+        [disabled]="hostRef.disableManage"
+        (click)="hostRef.handleManageEmailAddress()"
+        i18n="Manage email address button|Text for the button that allows the user to manage an email address@@bb-user-manage-email-address.manage-email-button"
+        attr.aria-label="Manage {{hostRef.electronicAddress.primary ? 'primary ' : ''}}{{hostRef.electronicAddress.type}} email address, {{hostRef.electronicAddress.address}}"
+        i18n-attr.aria-label="Manage email address button aria label@@bb-user-manage-email-address.manage-email-button.aria-label"&gt;
+        Manage
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;bb-user-edit-email-address
+    *ngIf="hostRef.managingEmailAddress"
+    (close)="hostRef.handleCloseEditEmailAddress()"
+    (closeAfterSave)="hostRef.handleCloseEditEmailAddressAfterSave()"
+    [emailAddressTypes]="hostRef.emailAddressTypes"
+    [emailAddressData]="hostRef.electronicAddress"
+    [emailAddressCount]="hostRef.emailAddressCount"&gt;
+  &lt;/bb-user-edit-email-address&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewEmailAddressCustomizable" class="discrete">bbUserNewEmailAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewEmailAddressCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-email-add-container"&gt;
+    &lt;ng-container bbUserNewEmailAddressTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-email-address-form
+      [emailAddressData]="hostRef.newEmailAddressData"
+      [emailAddressTypes]="hostRef.emailAddressTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"&gt;
+    &lt;/bb-user-email-address-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewEmailAddressTitleCustomizable" class="discrete">bbUserNewEmailAddressTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewEmailAddressTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="New email address title|Text for the title of the new email address card@@bb-user-new-email-address.title"
+      heading="Add email address"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditEmailAddressCustomizable" class="discrete">bbUserEditEmailAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditEmailAddressCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-email-edit-container"&gt;
+    &lt;ng-container bbUserEditEmailAddressTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-email-address-form
+      [emailAddressData]="hostRef.emailAddressData"
+      [emailAddressCount]="hostRef.emailAddressCount"
+      [emailAddressTypes]="hostRef.emailAddressTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"
+      (delete)="hostRef.handleDeleteClick($event)"&gt;
+    &lt;/bb-user-email-address-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditEmailAddressTitleCustomizable" class="discrete">bbUserEditEmailAddressTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditEmailAddressTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="Edit email address title|Text for the title of the edit email address card@@bb-user-edit-email-address.title"
+      heading="Edit email address"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressFormCustomizable" class="discrete">bbUserEmailAddressFormCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressFormCustomizable let-hostRef&gt;
+  &lt;form #emailAddressFormElement *ngIf="hostRef.emailAddressForm" [formGroup]="hostRef.emailAddressForm" (submit)="hostRef.handleSubmit()"&gt;
+    &lt;div class="bb-block bb-block--md"&gt;
+      &lt;bb-user-profile-form-errors [formGroup]="hostRef.form" [hasBeenSubmittedWithErrors]="hostRef.showFormErrors &amp;&amp; !hostRef.form.valid"&gt;
+        &lt;ng-container bbUserEmailAddressFormErrorsCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+      &lt;/bb-user-profile-form-errors&gt;
+
+      &lt;bb-user-email-address-type-input
+        fieldName="type"
+        [formGroup]="hostRef.form"
+        [emailAddressTypes]="hostRef.types"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-email-address-type-input&gt;
+
+      &lt;bb-user-email-address-input
+        fieldName="address"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-email-address-input&gt;
+
+      &lt;bb-user-primary-checkbox-input fieldName="primary" type="emailAddress" [formGroup]="hostRef.form"&gt;
+      &lt;/bb-user-primary-checkbox-input&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;bb-load-button-ui
+        data-role="user-manage-profile-email-manage-save"
+        type="submit"
+        class="bb-button-bar__button"
+        [isLoading]="hostRef.isSubmitting"
+        [disabled]="hostRef.isSubmitting"
+        i18n="Save email address button|Text of the button that triggers saving of new email address@@bb-user-email-address-form.save-button"&gt;
+        Save email address
+      &lt;/bb-load-button-ui&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-cancel-button"
+        class="bb-button-bar__button"
+        color="secondary"
+        (click)="hostRef.handleCancelClick()"
+        i18n="Cancel button|Text of the button that triggers cancellation of new email address@@bb-user-email-address-form.cancel-button"&gt;
+        Cancel
+      &lt;/button&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-email-delete-button"
+        class="bb-button-bar__button bb-button-bar__button--across"
+        *ngIf="hostRef.showDeleteButton"
+        color="link"
+        (click)="hostRef.handleDelete()"&gt;
+        &lt;bb-icon-ui name="delete"&gt;&lt;/bb-icon-ui&gt;
+        &lt;span i18n="Delete email address button|Text for the button that allows the user to delete an email address@@bb-user-email-address-form.delete-button"&gt;
+          Delete
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;bb-user-profile-form-cancel-modal [isOpen]="hostRef.isCancelModalOpen" (dismiss)="hostRef.dismissCancelModal()"
+    (close)="hostRef.closeCancelModal()"&gt;
+  &lt;/bb-user-profile-form-cancel-modal&gt;
+
+  &lt;bb-user-profile-form-delete-email-address-modal [isOpen]="hostRef.isDeleteModalOpen" (dismiss)="hostRef.dismissDeleteModal()"
+    (close)="hostRef.closeDeleteModal()"&gt;
+  &lt;/bb-user-profile-form-delete-email-address-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressFormErrorsCustomizable" class="discrete">bbUserEmailAddressFormErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressFormErrorsCustomizable let-hostRef&gt;
+  &lt;p *ngIf="hostRef.emailAddressForm.controls.type.errors?.required"&gt;
+    &lt;u i18n="Type required error|Error to say that type is a required field@@bb-user-email-address-form.errors.type-required"&gt;
+      You must enter a type.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.emailAddressForm.controls.address.errors?.required"&gt;
+    &lt;u i18n="Email address required error|Error to say that email address is a required field@@bb-user-email-address-form.errors.address-required"&gt;
+      You must enter an email address.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.emailAddressForm.controls.address.errors?.email"&gt;
+    &lt;u i18n="Email address format error|Error to say that email address is formatted incorrectly@@bb-user-email-address-form.errors.address-formatted"&gt;
+      Email address must be in a valid format.
+    &lt;/u&gt;
+  &lt;/p&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressTypeInputCustomizable" class="discrete">bbUserEmailAddressTypeInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressTypeInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-dropdown-single-select-ui
+      class="bb-form-field bb-form-field--sm"
+      data-role="user-manage-profile-email-manage-type"
+      i18n-label="Email address type label|Label for the email address type field@@bb-user-user-email-address-type-input.label"
+      label="Email address type"
+      [options]="hostRef.emailAddressTypes"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"&gt;
+    &lt;/bb-dropdown-single-select-ui&gt;
+
+    &lt;ng-container bbUserEmailAddressTypeErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressTypeErrorsCustomizable" class="discrete">bbUserEmailAddressTypeErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressTypeErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Type required error|Error to say that type is a required field@@bb-user-user-email-address-type-input.errors.required"&gt;
+      You must enter a type.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressInputCustomizable" class="discrete">bbUserEmailAddressInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-email-ui
+      class="bb-form-field bb-form-field--md"
+      data-role="user-manage-profile-email-manage-email"
+      i18n-label="Email address label|Label for the email address field@@bb-user-email-address-input.label"
+      label="Email address"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="255"&gt;
+    &lt;/bb-input-email-ui&gt;
+
+    &lt;ng-container bbUserEmailAddressInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEmailAddressInputErrorsCustomizable" class="discrete">bbUserEmailAddressInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEmailAddressInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Email address required error|Error to say that email address is a required field@@bb-user-email-address-input.errors.required"&gt;
+      You must enter an email address.
+    &lt;/span&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.email" i18n="Email address format error|Error to say that email address is formatted incorrectly@@bb-user-email-address-input.errors.formatted"&gt;
+      Email address must be in a valid format.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserProfileFormDeleteEmailAddressModalCustomizable" class="discrete">bbUserProfileFormDeleteEmailAddressModalCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserProfileFormDeleteEmailAddressModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui data-role="user-manage-profile-delete-email-modal" [isOpen]="hostRef.isOpen"
+    (cancel)="hostRef.dismissModal()"&gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h3"
+          i18n-heading="Delete email address modal title|Title of the confirmation modal for deleting an email address@@bb-user-profile-form-delete-email-address-modal.title"
+          heading="Delete email address?"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody
+        i18n="Delete email address modal body|Body text of the confirmation modal for deleting an email address@@bb-user-profile-form-delete-email-address-modal.body"&gt;
+        Are you sure you want to delete this email address? This action can not be undone
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-cancel-button"
+          color="secondary"
+          (click)="hostRef.dismissModal()"
+          i18n="Dismiss delete email address modal button|Text of the button that dismisses the delete an email address modal@@bb-user-profile-form-delete-email-address-modal.dismiss"&gt;
+          Cancel
+        &lt;/button&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-confirm-button"
+          color="danger"
+          (click)="hostRef.closeModal()"
+          i18n="Confirm delete email address modal button|Text of the button that confirms the delete an email address modal@@bb-user-profile-form-delete-email-address-modal.confirm"&gt;
+          Delete email address
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePhoneNumbersCustomizable" class="discrete">bbUserManagePhoneNumbersCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePhoneNumbersCustomizable let-hostRef&gt;
+  &lt;div class="card card-lg"&gt;
+    &lt;ng-container bbUserManagePhoneNumbersTitleCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+
+    &lt;ng-container *ngIf="hostRef.phoneNumbers &amp;&amp; hostRef.phoneNumbers.length; else emptyState"&gt;
+      &lt;div *ngFor="let phoneNumberDetails of hostRef.phoneNumbers | slice:0:maxPhoneNumbers; index as i"
+        class="card-section {{ hostRef.isManagingPhoneNumberIndex === i ? 'card-section--highlight' : '' }}"&gt;
+        &lt;bb-user-manage-phone-number
+          [phoneNumber]="phoneNumberDetails"
+          [phoneNumberCount]="hostRef.phoneNumbers.length"
+          [disableManage]="hostRef.disableManage"
+          [phoneNumberTypes]="hostRef.phoneNumberTypes"
+          (updateProfile)="hostRef.updateUserProfileData()"
+          (managePhoneNumber)="hostRef.handleManagePhoneNumberOpen(i)"
+          (cancelManagePhoneNumber)="hostRef.handleManagePhoneNumberClosed()"&gt;
+        &lt;/bb-user-manage-phone-number&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #emptyState&gt;
+      &lt;div class="card-section"&gt;
+        &lt;bb-empty-state-ui
+          data-role="user-manage-profile-phone-empty-state"
+          [showIcon]="false"
+          i18n-title="Phone numbers not found text|Text for no phone numbers found@@bb-user-manage-phone-numbers.none-found"
+          title="No phone numbers"&gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+
+    &lt;div class="card-section card-section--highlight" *ngIf="hostRef.isAddingPhoneNumber"&gt;
+      &lt;bb-user-new-phone-number
+        (close)="hostRef.handleManagePhoneNumberClosed()"
+        (closeAfterSave)="hostRef.updateUserProfileData()"
+        [phoneNumberTypes]="hostRef.phoneNumberTypes"&gt;
+      &lt;/bb-user-new-phone-number&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.isAddButtonAvailable &amp;&amp; !hostRef.isAddingPhoneNumber"&gt;
+      &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-phone-add-button"
+          class="bb-button-bar__button"
+          color="secondary"
+          [disabled]="hostRef.disableManage"
+          (click)="hostRef.handleAddNewPhoneNumber()"&gt;
+          &lt;bb-icon-ui name="create-payment"&gt;&lt;/bb-icon-ui&gt;
+          &lt;span i18n="Add phone number button|Text for the button that allows the user to add a new phone number@@bb-user-manage-phone-numbers.add-phone-number-button"&gt;
+            Add Phone Number
+          &lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePhoneNumbersTitleCustomizable" class="discrete">bbUserManagePhoneNumbersTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePhoneNumbersTitleCustomizable let-hostRef&gt;
+  &lt;bb-header-ui
+    headingType="h3"
+    class="card-header"
+    i18n-heading="Phone numbers section title|Title text for the phone numbers management section@@bb-user-manage-phone-numbers.title"
+    heading="Phone numbers"&gt;
+  &lt;/bb-header-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePhoneNumberCustomizable" class="discrete">bbUserManagePhoneNumberCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePhoneNumberCustomizable let-hostRef&gt;
+  &lt;div *ngIf="hostRef.phoneNumber &amp;&amp; !hostRef.managingPhoneNumber"
+    class="bb-stack"
+    data-role="user-manage-profile-phone-item"&gt;
+    &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+      &lt;div class="bb-stack bb-stack--wrap"&gt;
+        &lt;strong class="bb-stack__item"&gt;{{hostRef.phoneNumber.type}}&lt;/strong&gt;
+        &lt;bb-badge-ui
+          class="bb-stack__item"
+          *ngIf="hostRef.phoneNumber.primary"
+          color="success"
+          i18n-text="Primary phone number text|Text for the primary phone number badge@@bb-user-manage-phone-number.primary"
+          text="Primary"&gt;
+        &lt;/bb-badge-ui&gt;
+        &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+        &lt;div *ngIf="hostRef.phoneNumberPreferences | async; let preferences"
+          class="bb-stack__item bb-stack__item--fill bb-text-align-right bb-text-align-left--sm-down break-word"&gt;
+          &lt;ng-container *ngIf="preferences.enablePhoneNumberFormatter; else defaultPhoneNumber"&gt;
+            {{ hostRef.phoneNumber.number | phoneNumber: preferences.countryCode }}
+          &lt;/ng-container&gt;
+          &lt;ng-template #defaultPhoneNumber&gt;
+            {{ hostRef.phoneNumber.number }}
+          &lt;/ng-template&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-stack__item"&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-button"
+        color="link"
+        [disabled]="hostRef.disableManage"
+        (click)="hostRef.handleManagePhoneNumber()"
+        i18n="Manage phone number button|Text for the button that allows the user to manage a phone number@@bb-user-manage-phone-number.manage-phone-number-button"
+        attr.aria-label="Manage {{hostRef.phoneNumber.primary ? 'primary ' : ''}}{{hostRef.phoneNumber.type}} phone number, {{hostRef.phoneNumber.number}}"
+        i18n-attr.aria-label="Manage phone number button aria label@@bb-user-manage-phone-number.manage-phone-number-button.aria-label"&gt;
+        Manage
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;bb-user-edit-phone-number *ngIf="hostRef.managingPhoneNumber" (close)="hostRef.handleCloseEditPhoneNumber()"
+    (closeAfterSave)="hostRef.handleCloseEditPhoneNumberAfterSave()" [phoneNumberTypes]="hostRef.phoneNumberTypes"
+    [phoneNumberData]="hostRef.phoneNumber" [phoneNumberCount]="hostRef.phoneNumberCount"&gt;
+  &lt;/bb-user-edit-phone-number&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewPhoneNumberCustomizable" class="discrete">bbUserNewPhoneNumberCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewPhoneNumberCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-phone-add-container"&gt;
+    &lt;ng-container bbUserNewPhoneNumberTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-phone-number-form
+      [phoneNumberData]="hostRef.newPhoneNumberData"
+      [phoneNumberTypes]="hostRef.phoneNumberTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"&gt;
+    &lt;/bb-user-phone-number-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewPhoneNumberTitleCustomizable" class="discrete">bbUserNewPhoneNumberTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewPhoneNumberTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="New phone number title|Text for the title of the new phone number card@@bb-user-new-phone-number.title"
+      heading="Add phone number"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditPhoneNumberCustomizable" class="discrete">bbUserEditPhoneNumberCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditPhoneNumberCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-phone-edit-container"&gt;
+    &lt;ng-container bbUserEditPhoneNumberTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-phone-number-form
+      [phoneNumberData]="hostRef.phoneNumberData"
+      [phoneNumberCount]="hostRef.phoneNumberCount"
+      [phoneNumberTypes]="hostRef.phoneNumberTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"
+      (delete)="hostRef.handleDeleteClick($event)"&gt;
+    &lt;/bb-user-phone-number-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditPhoneNumberTitleCustomizable" class="discrete">bbUserEditPhoneNumberTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditPhoneNumberTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="Edit phone number title|Text for the title of the edit phone number card@@bb-user-edit-phone-number.title"
+      heading="Edit phone number"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberFormCustomizable" class="discrete">bbUserPhoneNumberFormCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberFormCustomizable let-hostRef&gt;
+  &lt;form #phoneNumberFormElement *ngIf="hostRef.phoneNumberForm" [formGroup]="hostRef.phoneNumberForm" (submit)="hostRef.handleSubmit()"&gt;
+    &lt;div class="bb-block bb-block--md"&gt;
+      &lt;bb-user-profile-form-errors [formGroup]="hostRef.form" [hasBeenSubmittedWithErrors]="hostRef.showFormErrors &amp;&amp; !hostRef.form.valid"&gt;
+        &lt;ng-container bbUserPhoneNumberFormErrorsCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+      &lt;/bb-user-profile-form-errors&gt;
+
+      &lt;bb-user-phone-number-type-input
+        fieldName="type"
+        [formGroup]="hostRef.form"
+        [phoneNumberTypes]="hostRef.types"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-phone-number-type-input&gt;
+
+      &lt;bb-user-phone-number-input
+        fieldName="number"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-phone-number-input&gt;
+
+      &lt;bb-user-primary-checkbox-input fieldName="primary" type="phoneNumber" [formGroup]="hostRef.form"&gt;
+      &lt;/bb-user-primary-checkbox-input&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;bb-load-button-ui
+        data-role="user-manage-profile-phone-manage-save"
+        type="submit"
+        class="bb-button-bar__button"
+        [isLoading]="hostRef.isSubmitting"
+        [disabled]="hostRef.isSubmitting"
+        i18n="Save phone number button|Text of the button that triggers saving of new phone number@@bb-user-phone-number-form.save-button"&gt;
+        Save phone number
+      &lt;/bb-load-button-ui&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-cancel-button"
+        class="bb-button-bar__button"
+        color="secondary"
+        (click)="hostRef.handleCancelClick()"
+        i18n="Cancel button|Text of the button that triggers cancellation of new phone number@@bb-user-phone-number-form.cancel-button"&gt;
+        Cancel
+      &lt;/button&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-phone-delete-button"
+        class="bb-button-bar__button bb-button-bar__button--across"
+        *ngIf="hostRef.showDeleteButton"
+        color="link"
+        (click)="hostRef.handleDelete()"&gt;
+        &lt;bb-icon-ui name="delete"&gt;&lt;/bb-icon-ui&gt;
+        &lt;span i18n="Delete phone number button|Text for the button that allows the user to delete a phone number@@bb-user-phone-number-form.delete-button"&gt;
+          Delete
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;bb-user-profile-form-cancel-modal [isOpen]="hostRef.isCancelModalOpen" (dismiss)="hostRef.dismissCancelModal()"
+    (close)="hostRef.closeCancelModal()"&gt;
+  &lt;/bb-user-profile-form-cancel-modal&gt;
+
+  &lt;bb-user-profile-form-delete-phone-address-modal [isOpen]="hostRef.isDeleteModalOpen" (dismiss)="hostRef.dismissDeleteModal()"
+    (close)="hostRef.closeDeleteModal()"&gt;
+  &lt;/bb-user-profile-form-delete-phone-address-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberFormErrorsCustomizable" class="discrete">bbUserPhoneNumberFormErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberFormErrorsCustomizable let-hostRef&gt;
+  &lt;p *ngIf="hostRef.phoneNumberForm.controls.type.errors?.required"&gt;
+    &lt;u i18n="Type required error|Error to say that type is a required field@@bb-user-phone-number-form.errors.type-required"&gt;
+      You must enter a type.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.phoneNumberForm.controls.number.errors?.required"&gt;
+    &lt;u i18n="Phone number required error|Error to say that phone number is a required field@@bb-user-phone-number-form.errors.number-required"&gt;
+      You must enter a phone number.
+    &lt;/u&gt;
+  &lt;/p&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberTypeInputCustomizable" class="discrete">bbUserPhoneNumberTypeInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberTypeInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-dropdown-single-select-ui
+      class="bb-form-field bb-form-field--sm"
+      data-role="user-manage-profile-phone-manage-type"
+      i18n-label="Phone number type label|Label for the phone number type field@@bb-user-user-phone-number-type-input.label"
+      label="Phone number type"
+      [options]="hostRef.phoneNumberTypes"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [autofocus]="true"&gt;
+    &lt;/bb-dropdown-single-select-ui&gt;
+
+    &lt;ng-container bbUserPhoneNumberTypeErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberTypeErrorsCustomizable" class="discrete">bbUserPhoneNumberTypeErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberTypeErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Type required error|Error to say that type is a required field@@bb-user-user-email-address-type-input.errors.required"&gt;
+      You must enter a type.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberInputCustomizable" class="discrete">bbUserPhoneNumberInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-phone-ui
+      class="bb-form-field bb-form-field--md"
+      data-role="user-manage-profile-phone-manage-phone"
+      i18n-label="Phone number label|Label for the phone-number field@@bb-user-phone-number-input.label"
+      label="Phone number"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="30"&gt;
+    &lt;/bb-input-phone-ui&gt;
+
+    &lt;ng-container bbUserPhoneNumberInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPhoneNumberInputErrorsCustomizable" class="discrete">bbUserPhoneNumberInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPhoneNumberInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Phone number required error|Error to say that phone-number is a required field@@bb-user-phone-number-input.errors.required"&gt;
+      You must enter a phone number.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserProfileFormDeletePhoneAddressModalCustomizable" class="discrete">bbUserProfileFormDeletePhoneAddressModalCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserProfileFormDeletePhoneAddressModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui data-role="user-manage-profile-delete-phone-modal" [isOpen]="hostRef.isOpen"
+    (cancel)="hostRef.dismissModal()"&gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h3"
+          i18n-heading="Delete phone address modal title|Title of the confirmation modal for deleting an phone address@@bb-user-profile-form-delete-phone-address-modal.title"
+          heading="Delete phone number?"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody
+        i18n="Delete phone address modal body|Body text of the confirmation modal for deleting an phone address@@bb-user-profile-form-delete-phone-address-modal.body"&gt;
+        Are you sure you want to delete this phone number? This action can not be undone
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-cancel-button"
+          color="secondary"
+          (click)="hostRef.dismissModal()"
+          i18n="Dismiss delete phone address modal button|Text of the button that dismisses the delete an phone address modal@@bb-user-profile-form-delete-phone-address-modal.dismiss"&gt;
+          Cancel
+        &lt;/button&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-confirm-button"
+          color="danger"
+          (click)="hostRef.closeModal()"
+          i18n="Confirm delete phone address modal button|Text of the button that confirms the delete an phone address modal@@bb-user-profile-form-delete-phone-address-modal.confirm"&gt;
+          Delete phone number
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePostalAddressesCustomizable" class="discrete">bbUserManagePostalAddressesCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePostalAddressesCustomizable let-hostRef&gt;
+  &lt;div class="card card-lg"&gt;
+    &lt;ng-container bbUserManagePostalAddressesTitleCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+
+    &lt;ng-container *ngIf="hostRef.postalAddresses &amp;&amp; hostRef.postalAddresses.length; else emptyState"&gt;
+      &lt;div *ngFor="let addressDetails of hostRef.postalAddresses | slice:0:maxPostalAddresses; index as i"
+        class="card-section {{ hostRef.isManagingPostalAddressIndex === i ? 'card-section--highlight' : '' }}"&gt;
+        &lt;bb-user-manage-postal-address
+          [postalAddress]="addressDetails"
+          [postalAddressCount]="hostRef.postalAddresses.length"
+          [disableManage]="hostRef.disableManage"
+          [postalAddressTypes]="hostRef.postalAddressTypes"
+          (updateProfile)="hostRef.updateUserProfileData()"
+          (managePostalAddress)="hostRef.handleManagePostalAddressOpen(i)"
+          (cancelManagePostalAddress)="hostRef.handleManagePostalAddressClosed()"&gt;
+        &lt;/bb-user-manage-postal-address&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #emptyState&gt;
+      &lt;div class="card-section"&gt;
+        &lt;bb-empty-state-ui
+          data-role="user-manage-profile-postal-empty-state"
+          [showIcon]="false"
+          i18n-title="Addresses not found text|Text for no addresses found@@bb-user-manage-addresses.none-found"
+          title="No postal addresses"&gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+
+    &lt;div class="card-section card-section--highlight" *ngIf="hostRef.isAddingPostalAddress"&gt;
+      &lt;bb-user-new-postal-address
+        (close)="hostRef.handleManagePostalAddressClosed()"
+        (closeAfterSave)="hostRef.updateUserProfileData()"
+        [postalAddressTypes]="hostRef.postalAddressTypes"&gt;
+      &lt;/bb-user-new-postal-address&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card-section" *ngIf="hostRef.isAddButtonAvailable &amp;&amp; !hostRef.isAddingPostalAddress"&gt;
+      &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-postal-add-button"
+          class="bb-button-bar__button"
+          color="secondary"
+          [disabled]="hostRef.disableManage"
+          (click)="hostRef.handleAddNewPostalAddress()"&gt;
+          &lt;bb-icon-ui name="create-payment"&gt;&lt;/bb-icon-ui&gt;
+          &lt;span i18n="Add postal address button|Text for the button that allows the user to add a new postal address@@bb-user-manage-postal-addresses.add-postal-address-button"&gt;
+            Add Address
+          &lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePostalAddressesTitleCustomizable" class="discrete">bbUserManagePostalAddressesTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePostalAddressesTitleCustomizable let-hostRef&gt;
+  &lt;bb-header-ui
+    headingType="h3"
+    class="card-header"
+    i18n-heading="Addresses section title|Title text for the addresses management section@@bb-user-manage-addresses.title"
+    heading="Addresses"&gt;
+  &lt;/bb-header-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserManagePostalAddressCustomizable" class="discrete">bbUserManagePostalAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserManagePostalAddressCustomizable let-hostRef&gt;
+  &lt;div *ngIf="hostRef.postalAddress &amp;&amp; !hostRef.managingPostalAddress"
+    class="bb-stack"
+    data-role="user-manage-profile-postal-item"&gt;
+    &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+      &lt;div class="bb-stack bb-stack--align-top bb-stack--wrap"&gt;
+        &lt;strong class="bb-stack__item"&gt;{{hostRef.postalAddress.type}}&lt;/strong&gt;
+        &lt;bb-badge-ui
+          class="bb-stack__item"
+          *ngIf="hostRef.postalAddress.primary"
+          color="success"
+          i18n-text="Primary address text|Text for the primary address badge@@bb-user-manage-address.primary"
+          text="Primary"&gt;
+        &lt;/bb-badge-ui&gt;
+        &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+        &lt;div class="bb-stack__item bb-stack__item--fill bb-text-align-right bb-text-align-left--sm-down break-word"&gt;
+          &lt;address class="bb-block bb-block--no-margin"&gt;
+            &lt;div *ngIf="hostRef.postalAddress.department"&gt;{{hostRef.postalAddress.department}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.subDepartment"&gt;{{hostRef.postalAddress.subDepartment}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.addressLine"&gt;{{hostRef.postalAddress.addressLine}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.buildingNumber"&gt;{{hostRef.postalAddress.buildingNumber}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.streetName"&gt;{{hostRef.postalAddress.streetName}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.townName"&gt;{{hostRef.postalAddress.townName}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.countrySubDivision"&gt;{{hostRef.postalAddress.countrySubDivision}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.postalCode"&gt;{{hostRef.postalAddress.postalCode}}&lt;/div&gt;
+            &lt;div *ngIf="hostRef.postalAddress.country"&gt;{{hostRef.postalAddress.country}}&lt;/div&gt;
+          &lt;/address&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-stack__item"&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-button"
+        color="link"
+        [disabled]="hostRef.disableManage"
+        (click)="hostRef.handleManagePostalAddress()"
+        i18n="Manage postal address button|Text for the button that allows the user to manage a postal address@@bb-user-manage-postal-address.manage-postal-address-button"
+        attr.aria-label="Manage {{hostRef.postalAddress.primary ? 'primary ' : ''}}{{hostRef.postalAddress.type}} postal address, {{hostRef.postalAddress.buildingNumber}}"
+        i18n-attr.aria-label="Manage postal address button aria label@@bb-user-manage-postal-address.manage-postal-address-button.aria-label"&gt;
+        Manage
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;bb-user-edit-postal-address *ngIf="hostRef.managingPostalAddress" (close)="hostRef.handleCloseEditPostalAddress()"
+    (closeAfterSave)="hostRef.handleCloseEditPostalAddressAfterSave()" [postalAddressTypes]="hostRef.postalAddressTypes"
+    [postalAddressData]="hostRef.postalAddress" [postalAddressCount]="hostRef.postalAddressCount"&gt;
+  &lt;/bb-user-edit-postal-address&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewPostalAddressCustomizable" class="discrete">bbUserNewPostalAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewPostalAddressCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-postal-add-container"&gt;
+    &lt;ng-container bbUserNewPostalAddressTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-postal-address-form
+      [postalAddressData]="hostRef.newPostalAddressData"
+      [postalAddressTypes]="hostRef.postalAddressTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"&gt;
+    &lt;/bb-user-postal-address-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserNewPostalAddressTitleCustomizable" class="discrete">bbUserNewPostalAddressTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserNewPostalAddressTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="New postal address title|Text for the title of the new postal address card@@bb-user-new-postal-address.title"
+      heading="Add address"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditPostalAddressCustomizable" class="discrete">bbUserEditPostalAddressCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditPostalAddressCustomizable let-hostRef&gt;
+  &lt;div data-role="user-manage-profile-postal-edit-container"&gt;
+    &lt;ng-container bbUserEditPostalAddressTitleCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-user-postal-address-form
+      [postalAddressData]="hostRef.postalAddressData"
+      [postalAddressCount]="hostRef.postalAddressCount"
+      [postalAddressTypes]="hostRef.postalAddressTypes"
+      [isSubmitting]="hostRef.isSubmitting"
+      (cancel)="hostRef.handleCancelClick()"
+      (save)="hostRef.handleSaveClick($event)"
+      (delete)="hostRef.handleDeleteClick($event)"&gt;
+    &lt;/bb-user-postal-address-form&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserEditPostalAddressTitleCustomizable" class="discrete">bbUserEditPostalAddressTitleCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserEditPostalAddressTitleCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md"&gt;
+    &lt;bb-header-ui
+      headingType="h4"
+      i18n-heading="Edit postal address title|Text for the title of the edit postal address card@@bb-user-edit-postal-address.title"
+      heading="Edit address"&gt;
+    &lt;/bb-header-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalAddressFormCustomizable" class="discrete">bbUserPostalAddressFormCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalAddressFormCustomizable let-hostRef&gt;
+  &lt;form #postalAddressFormElement *ngIf="hostRef.postalAddressForm" [formGroup]="hostRef.postalAddressForm" (submit)="hostRef.handleSubmit()"&gt;
+    &lt;div class="bb-block bb-block--md"&gt;
+      &lt;bb-user-profile-form-errors [formGroup]="hostRef.form" [hasBeenSubmittedWithErrors]="hostRef.showFormErrors &amp;&amp; !hostRef.form.valid"&gt;
+        &lt;ng-container bbUserPostalAddressFormErrorsCustomizable [bbHostRef]="hostRef"&gt;
+        &lt;/ng-container&gt;
+      &lt;/bb-user-profile-form-errors&gt;
+
+      &lt;bb-user-postal-address-type-input
+        fieldName="type"
+        [formGroup]="hostRef.form"
+        [postalAddressTypes]="hostRef.types"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-postal-address-type-input&gt;
+
+      &lt;bb-user-postal-building-number-input
+        fieldName="buildingNumber"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-postal-building-number-input&gt;
+
+      &lt;bb-user-postal-street-name-input
+        fieldName="streetName"
+        [formGroup]="hostRef.form"&gt;
+      &lt;/bb-user-postal-street-name-input&gt;
+
+      &lt;bb-user-postal-town-name-input
+        fieldName="townName"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-postal-town-name-input&gt;
+
+      &lt;bb-user-postal-country-sub-division-input
+        fieldName="countrySubDivision"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-postal-country-sub-division-input&gt;
+
+      &lt;bb-user-postal-postal-code-input
+        fieldName="postalCode"
+        [formGroup]="hostRef.form"
+        [hasBeenSubmitted]="hostRef.hasBeenSubmitted"&gt;
+      &lt;/bb-user-postal-postal-code-input&gt;
+
+      &lt;bb-user-primary-checkbox-input fieldName="primary" type="postalAddress" [formGroup]="hostRef.form"&gt;
+      &lt;/bb-user-primary-checkbox-input&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;bb-load-button-ui
+        data-role="user-manage-profile-postal-manage-save"
+        type="submit"
+        class="bb-button-bar__button"
+        [isLoading]="hostRef.isSubmitting"
+        [disabled]="hostRef.isSubmitting"
+        i18n="Save postal address button|Text of the button that triggers saving of new postal address@@bb-user-postal-address-form.save-button"&gt;
+        Save address
+      &lt;/bb-load-button-ui&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-manage-cancel-button"
+        class="bb-button-bar__button"
+        color="secondary"
+        (click)="hostRef.handleCancelClick()"
+        i18n="Cancel button|Text of the button that triggers cancellation of new postal address@@bb-user-postal-address-form.cancel-button"&gt;
+        Cancel
+      &lt;/button&gt;
+      &lt;button bbButton
+        data-role="user-manage-profile-postal-delete-button"
+        class="bb-button-bar__button bb-button-bar__button--across"
+        *ngIf="hostRef.showDeleteButton"
+        color="link"
+        (click)="hostRef.handleDelete()"&gt;
+        &lt;bb-icon-ui name="delete"&gt;&lt;/bb-icon-ui&gt;
+        &lt;span i18n="Delete postal address button|Text for the button that allows the user to delete a postal address@@bb-user-postal-address-form.delete-button"&gt;
+          Delete
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;bb-user-profile-form-cancel-modal [isOpen]="hostRef.isCancelModalOpen" (dismiss)="hostRef.dismissCancelModal()"
+    (close)="hostRef.closeCancelModal()"&gt;
+  &lt;/bb-user-profile-form-cancel-modal&gt;
+
+  &lt;bb-user-profile-form-delete-postal-address-modal [isOpen]="hostRef.isDeleteModalOpen" (dismiss)="hostRef.dismissDeleteModal()"
+    (close)="hostRef.closeDeleteModal()"&gt;
+  &lt;/bb-user-profile-form-delete-postal-address-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalAddressFormErrorsCustomizable" class="discrete">bbUserPostalAddressFormErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalAddressFormErrorsCustomizable let-hostRef&gt;
+  &lt;p *ngIf="hostRef.postalAddressForm.controls.type.errors?.required"&gt;
+    &lt;u i18n="Type required error|Error to say that type is a required field@@bb-user-postal-address-form.errors.type-required"&gt;
+      You must enter a type.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.postalAddressForm.controls.buildingNumber.errors?.required"&gt;
+    &lt;u i18n="Building number required error|Error to say that building number is a required field@@bb-user-postal-address-form.errors.building-number-required"&gt;
+      You must enter a value for Address line 1.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.postalAddressForm.controls.townName.errors?.required"&gt;
+    &lt;u i18n="Town name required error|Error to say that town name is a required field@@bb-user-postal-address-form.errors.town-name-required"&gt;
+      You must enter a value for City or town.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.postalAddressForm.controls.countrySubDivision.errors?.required"&gt;
+    &lt;u i18n="Country sub division required error|Error to say that country sub division is a required field@@bb-user-postal-address-form.errors.country-sub-division-required"&gt;
+      You must enter a value for State, province or region.
+    &lt;/u&gt;
+  &lt;/p&gt;
+  &lt;p *ngIf="hostRef.postalAddressForm.controls.postalCode.errors?.required"&gt;
+    &lt;u i18n="Postal code required error|Error to say that postal code is a required field@@bb-user-postal-address-form.errors.postal-code-required"&gt;
+      You must enter a value for Postal or ZIP code.
+    &lt;/u&gt;
+  &lt;/p&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalAddressTypeInputCustomizable" class="discrete">bbUserPostalAddressTypeInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalAddressTypeInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-dropdown-single-select-ui
+      class="bb-form-field bb-form-field--sm"
+      data-role="user-manage-profile-postal-manage-type"
+      i18n-label="Postal address type label|Label for the postal address type field@@bb-user-user-postal-address-type-input.label"
+      label="Address type"
+      [options]="hostRef.postalAddressTypes"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [autofocus]="true"&gt;
+    &lt;/bb-dropdown-single-select-ui&gt;
+
+    &lt;ng-container bbUserPostalAddressTypeErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalAddressTypeErrorsCustomizable" class="discrete">bbUserPostalAddressTypeErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalAddressTypeErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Type required error|Error to say that type is a required field@@bb-user-user-email-address-type-input.errors.required"&gt;
+      You must enter a type.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalBuildingNumberInputCustomizable" class="discrete">bbUserPostalBuildingNumberInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalBuildingNumberInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-text-ui
+      class="bb-form-field bb-form-field--md"
+      data-role="user-manage-profile-postal-manage-line-1"
+      i18n-label="Building number label|Label for the building number field@@bb-user-postal-building-number-input.label"
+      label="Address line 1"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="255"&gt;
+    &lt;/bb-input-text-ui&gt;
+
+    &lt;ng-container bbUserPostalBuildingNumberInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalBuildingNumberInputErrorsCustomizable" class="discrete">bbUserPostalBuildingNumberInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalBuildingNumberInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Building number required error|Error to say that postal building number is a required field@@bb-user-postal-building-number-input.errors.required"&gt;
+      You must enter a value for Address line 1.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalStreetNameInputCustomizable" class="discrete">bbUserPostalStreetNameInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalStreetNameInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-text-ui
+      class="bb-form-field bb-form-field--md"
+      data-role="user-manage-profile-postal-manage-line-2"
+      i18n-label="Street name label|Label for the street name field@@bb-user-postal-street-name-input.label"
+      label="Address line 2 (optional)"
+      [formControlName]="hostRef.fieldName"
+      [maxLength]="255"&gt;
+    &lt;/bb-input-text-ui&gt;
+
+    &lt;ng-container bbUserPostalStreetNameInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalTownNameInputCustomizable" class="discrete">bbUserPostalTownNameInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalTownNameInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-text-ui
+      class="bb-form-field bb-form-field--md"
+      data-role="user-manage-profile-postal-manage-city"
+      i18n-label="Town name label|Label for the town name field@@bb-user-postal-town-name-input.label"
+      label="City or town"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="35"&gt;
+    &lt;/bb-input-text-ui&gt;
+
+    &lt;ng-container bbUserPostalTownNameInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalTownNameInputErrorsCustomizable" class="discrete">bbUserPostalTownNameInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalTownNameInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Town name required error|Error to say that postal town name is a required field@@bb-user-postal-town-name-input.errors.required"&gt;
+      You must enter a value for City or town.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalCountrySubDivisionInputCustomizable" class="discrete">bbUserPostalCountrySubDivisionInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalCountrySubDivisionInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-text-ui
+      class="bb-form-field bb-form-field--sm"
+      data-role="user-manage-profile-postal-manage-state"
+      i18n-label="Country sub-division label|Label for the country sub-division field@@bb-user-postal-country-sub-division-input.label"
+      label="State, province or region"
+      [formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="35"&gt;
+    &lt;/bb-input-text-ui&gt;
+
+    &lt;ng-container bbUserPostalCountrySubDivisionInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalCountrySubDivisionInputErrorsCustomizable" class="discrete">bbUserPostalCountrySubDivisionInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalCountrySubDivisionInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Country sub-division required error|Error to say that postal country sub-division is a required field@@bb-user-postal-country-sub-division-input.errors.required"&gt;
+      You must enter a value for State, province or region.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalPostalCodeInputCustomizable" class="discrete">bbUserPostalPostalCodeInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalPostalCodeInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group" [formGroup]="hostRef.formGroup"&gt;
+    &lt;bb-input-text-ui
+      class="bb-form-field bb-form-field--xs"
+      data-role="user-manage-profile-postal-manage-post-code"
+      i18n-label="Postal code label|Label for the postal code field@@bb-user-postal-postal-code-input.label"
+      label="Postal or ZIP code"
+      formControlName]="hostRef.fieldName"
+      (blur)="hostRef.onFieldBlur()"
+      [required]="true"
+      [maxLength]="16"&gt;
+    &lt;/bb-input-text-ui&gt;
+
+    &lt;ng-container bbUserPostalPostalCodeInputErrorsCustomizable [bbHostRef]="hostRef"&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalPostalCodeInputErrorsCustomizable" class="discrete">bbUserPostalPostalCodeInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalPostalCodeInputErrorsCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="hostRef.hasErrors"&gt;
+    &lt;span *ngIf="hostRef.fieldControl.errors?.required" i18n="Postal code required error|Error to say that postal postal code is a required field@@bb-user-postal-postal-code-input.errors.required"&gt;
+      You must enter a value for Postal or ZIP code.
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserProfileFormDeletePostalAddressModalCustomizable" class="discrete">bbUserProfileFormDeletePostalAddressModalCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserProfileFormDeletePostalAddressModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui data-role="user-manage-profile-delete-postal-modal" [isOpen]="hostRef.isOpen"
+    (cancel)="hostRef.dismissModal()"&gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h3"
+          i18n-heading="Delete postal address modal title|Title of the confirmation modal for deleting an postal address@@bb-user-profile-form-delete-postal-address-modal.title"
+          heading="Delete address?"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody
+        i18n="Delete postal address modal body|Body text of the confirmation modal for deleting an postal address@@bb-user-profile-form-delete-postal-address-modal.body"&gt;
+        Are you sure you want to delete this address? This action can not be undone
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-cancel-button"
+          color="secondary"
+          (click)="hostRef.dismissModal()"
+          i18n="Dismiss delete postal address modal button|Text of the button that dismisses the delete an postal address modal@@bb-user-profile-form-delete-postal-address-modal.dismiss"&gt;
+          Cancel
+        &lt;/button&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-delete-confirm-button"
+          color="danger"
+          (click)="hostRef.closeModal()"
+          i18n="Confirm delete postal address modal button|Text of the button that confirms the delete an postal address modal@@bb-user-profile-form-delete-postal-address-modal.confirm"&gt;
+          Delete address
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPrimaryCheckboxInputCustomizable" class="discrete">bbUserPrimaryCheckboxInputCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPrimaryCheckboxInputCustomizable let-hostRef&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div [formGroup]="hostRef.formGroup"&gt;
+      &lt;bb-input-checkbox-ui
+        *ngIf="hostRef.type === hostRef.availableTypes.email"
+        data-role="user-manage-profile-email-manage-primary"
+        [id]="hostRef.id"
+        i18n-label="Primary email address label|Label for the is primary email address field@@bb-user-primary-checkbox-input.email-address-label"
+        label="This is my primary email address"
+        [formControlName]="hostRef.fieldName"&gt;
+      &lt;/bb-input-checkbox-ui&gt;
+      &lt;bb-input-checkbox-ui
+        *ngIf="hostRef.type === hostRef.availableTypes.phone"
+        data-role="user-manage-profile-phone-manage-primary"
+        [id]="hostRef.id"
+        i18n-label="Primary phone number label|Label for the is primary phone number field@@bb-user-primary-checkbox-input.phone-number-label"
+        label="This is my primary phone number"
+        [formControlName]="hostRef.fieldName"&gt;
+      &lt;/bb-input-checkbox-ui&gt;
+      &lt;bb-input-checkbox-ui
+        *ngIf="hostRef.type === hostRef.availableTypes.address"
+        data-role="user-manage-profile-postal-manage-primary"
+        [id]="hostRef.id"
+        i18n-label="Primary postal address label|Label for the is primary postal address field@@bb-user-primary-checkbox-input.postal-address-label"
+        label="This is my primary address"
+        [formControlName]="hostRef.fieldName"&gt;
+      &lt;/bb-input-checkbox-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserProfileFormCancelModalCustomizable" class="discrete">bbUserProfileFormCancelModalCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserProfileFormCancelModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui [isOpen]="hostRef.isOpen" (cancel)="hostRef.dismissModal()"&gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h3"
+          i18n-heading="Discard changes modal title|Title of the confirmation modal for discarding working changes@@bb-user-profile-form-cancel-modal.title"
+          heading="Discard changes?"&gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody
+        i18n="Discard changes modal body|Body text of the confirmation modal for discarding working changes@@bb-user-profile-form-cancel-modal.body"&gt;
+        Are you sure you want to cancel and discard all changes?
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-modal-cancel-button"
+          color="secondary"
+          (click)="hostRef.dismissModal()"
+          i18n="Dismiss discard modal button|Text of the button that dismisses the discard changes confirmation modal@@bb-user-profile-form-cancel-modal.cancel"&gt;
+          Continue editing
+        &lt;/button&gt;
+        &lt;button bbButton
+          data-role="user-manage-profile-modal-confirm-button"
+          color="danger"
+          (click)="hostRef.closeModal()"
+          i18n="Confirm discard modal button|Text of the button that confirms the discard changes confirmation modal@@bb-user-profile-form-cancel-modal.confirm"&gt;
+          Discard changes
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbUserPostalStreetNameInputErrorsCustomizable" class="discrete">bbUserPostalStreetNameInputErrorsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbUserPostalStreetNameInputErrorsCustomizable let-hostRef&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

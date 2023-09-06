@@ -1,0 +1,3594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Backbase software lifecycle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="retirement" class="book toc2 toc-left">
+<div id="header">
+<h1>Backbase software lifecycle</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html">Create online banking account</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html"><span class="toc-current">Backbase software lifecycle</span></a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="retirement" class="sect0">Backbase software lifecycle</h1>
+          <div class="ulist">
+<ul>
+<li>
+<p><a href="retirement.html#retirement_support_terms">Standard support terms</a></p>
+</li>
+<li>
+<p><a href="retirement.html#deprecations">Deprecations</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_schedule">Retirement schedule</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="retirement.html#retirement_foundation_services">Foundation Services</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_app_manager">App Manager</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_cxp">CXP</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_ips">IPS</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_widgets">Widget collections</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_dbs">DBS</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_iam">Identity Services</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_msdk">Mobile SDK</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_hsdk">Hybrid SDK</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_flow">Flow</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_forms">Forms</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_uca">Universal Collection Angular</a></p>
+</li>
+<li>
+<p><a href="retirement.html#retirement_uch">Universal Collection Handlebars</a></p>
+</li>
+<li>
+<p>For the Service SDK retirement schedule, see the
+<a href="https://community.backbase.com/documentation/ServiceSDK/latest/ssdk_retirement">Service SDK software lifecycle</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="retirement_support_terms" class="discrete">Standard support terms</h2>
+<div class="paragraph">
+<p>Backbase software versions and releases are supported according to the following schedule:</p>
+</div>
+<div id="release" class="ulist">
+<ul>
+<li>
+<p><strong>Release:</strong> A release is supported for a period of 24&#160;months after the commercial release of the
+<em>next release</em>, but for no longer than 3&#160;years. To be eligible for support, customers must use the most
+recent major version and minor version of a release.</p>
+</li>
+</ul>
+</div>
+<div id="major_version" class="ulist">
+<ul>
+<li>
+<p><strong>Major version:</strong> A major version will be supported for a period of 12&#160;months after the commercial release
+of the <em>next major version</em>. To be eligible for support, customers must use the most recent minor version of the
+major version.</p>
+</li>
+</ul>
+</div>
+<div id="minor_version" class="ulist">
+<ul>
+<li>
+<p><strong>Minor version:</strong> A minor version will be supported for a period of 2&#160;months after the commercial release of the
+<em>next minor version</em>.</p>
+</li>
+<li>
+<p><strong>Sample code:</strong> Sample code and any versions and releases that are identified by Backbase as developmental,
+beta, or pre-release are not supported.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To keep software eligible for support, customers must install patches, new versions, and releases as required by
+Backbase. Backbase does not support software that does not meet these terms.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+These support terms may vary on a customer-by-customer basis. Always refer to your M&amp;S agreement for
+the applicable terms.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following table provides some examples:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version type</th>
+<th class="tableblock halign-left valign-top">Support period</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Release</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>24 months</strong> after the commercial release of the next <em>release</em> but no longer than 3&#160;years.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backbase supports release 2 for 24&#160;months after 3 is released.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Major</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>12 months</strong> after the commercial release of the next <em>major version</em>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backbase supports major version 2.18 for 12&#160;months after 2.19 is released.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Minor</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2 months</strong> after the commercial release of the next <em>minor version</em>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backbase supports minor version 2.18.1 for 2&#160;months after 2.18.2 is released.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="deprecations" class="discrete">Deprecations</h2>
+<div class="paragraph">
+<p>To mitigate the impact of deprecations, Backbase provides advance notice in the release notes. Deprecations
+are announced at least one full major version ahead of changes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Deprecations include any updates that will cause breaking changes in a future major release. Until then,
+deprecated features, configuration, and related functionality will continue to work and remain fully supported.
+The release notes list deprecations to allow sufficient time to plan and update your deployment or implementation
+before the breaking changes are introduced.
+</td>
+</tr>
+</table>
+</div>
+<h2 id="retirement_schedule" class="discrete">Retirement schedule</h2>
+<div class="paragraph">
+<p>The following tables provide the release and retirement dates for all Backbase products.
+Note that the retirement date is calculated from the release date of the <em>next version</em>. This means that
+the retirement date is not available until the next version is released.</p>
+</div>
+<h3 id="retirement_foundation_services" class="discrete">Foundation Services</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Customers currently using CXS can use all Foundation Services capabilities under their existing license
+agreement,
+as a continuation of CXS support. They receive further support and updates when upgrading to Foundation. For more
+details on how to upgrade from CX6 to Foundation Services, see
+<a href="https://community.backbase.com/documentation/cxs/2021.07/index">Customer Experience Services deprecation</a>.</p>
+</div>
+<div class="paragraph">
+<p>For information on the support for deprecated CXS services, see
+<a href="retirement.html#retirement_app_manager">App Manager</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Foundation Services</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">-</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2021.08</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2021.07.MAJOR</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-July-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Oct-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="38"><p class="tableblock">CXS</p></th>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">6.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-June-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-July-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-August-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-July-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-May-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock">6.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Nov-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jan-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Sep-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Apr-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">6.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="16"><p class="tableblock">6.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Apr-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Sep-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Aug-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Feb-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Dec-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Apr-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Feb-2018</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_app_manager" class="discrete">App Manager</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Customers currently using Experience Manager can use App Manager under their existing license
+agreement,
+as a continuation of CXS support. They receive further support and updates when upgrading to App Manager. For
+more information, see
+<a href="https://community.backbase.com/documentation/cxs/2021.07/index">Customer Experience Services deprecation</a>.</p>
+</div>
+<div class="paragraph">
+<p>App Manager also includes several services previously documented by CXS. For information on which services fall under
+the support terms, see
+<a href="https://community.backbase.com/documentation/app_manager/latest/app_manager_backend_services">App Manager backend services</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">App Manager</p></th>
+<th class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">End of support</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-Sep-2022</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Jul-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Jul-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jan-2022</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="39"><p class="tableblock">Experience Manager</p></th>
+<th class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">End of support</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2022</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">6.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-June-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-August-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-July-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-May-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock">6.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Nov-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jan-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Sep-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Apr-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">6.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="16"><p class="tableblock">6.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-Apr-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Sep-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Aug-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Feb-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Dec-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Apr-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Feb-2018</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_cxp" class="discrete">CXP</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock"><strong>CXP</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>End of support</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>30-Nov-2021</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock">5</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">5.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jan-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">5.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.8.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Mar-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.8.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-May-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">5.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.7.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Aug-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jan-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">5.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Apr-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Aug-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Dec-2016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Jun-2017</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jul-2016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Feb-2017</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Nov-2015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2016</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jul-2015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Feb-2016</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock"><strong>Backbase Portal</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">5</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">5.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.5.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Oct-2014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jul-2016</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Dec-2013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Jul-2016</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">5.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.4.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Oct-2013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Dec-2014</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">5.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Oct-2012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Oct-2014</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">5.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.2.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-May-2012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Oct-2013</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">5.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.1.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Feb-2012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-May-2013</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Oct-2011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Feb-2013</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_ips" class="discrete">IPS</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="34"><p class="tableblock">1</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.14</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.14.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Jun-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">1.13</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.13.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Jun-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.13.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.13.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.13.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">1.12</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Nov-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Jan-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Sep-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="14"><p class="tableblock">1.11</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.5.2</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.4.1</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.1.2</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.0.1</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.11.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">1.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.3.3</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.2.1</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">1.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9.7.1</p>
+<p class="tableblock">Security patch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_widgets" class="discrete">Widget collections</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock"><strong>Widget Collection 3</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="35"><p class="tableblock">3</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-August-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-July-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-October-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">3.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-June-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-July-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-August-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">3.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">3.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Feb-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">3.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Oct-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">3.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Apr-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">3.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock"><strong>Widget Collection 2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>End of support</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>11-Nov-2020</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="34"><p class="tableblock">2</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2.17</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.16</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Sep-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2.15</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.15.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.15.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.14</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Apr-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.13</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.12</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Sep-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.11</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Jul-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">2.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Feb-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Dec-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Apr-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Feb-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Oct-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jun-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Sep-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Oct-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Sep-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jul-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jun-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jul-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jun-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Apr-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-May-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Apr-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Feb-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Feb-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Dec-2016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2017</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_dbs" class="discrete">DBS</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="52"><p class="tableblock">2</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2.21</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.21.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-August-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.21.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-July-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-October-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">2.20</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-June-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-July-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-August-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-July-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.20.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">2.19</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.19.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.19.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.19.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.19.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.18</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.18.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.18.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.18.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">2.17</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.17.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16-Feb-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">2.16</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Sep-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2.15</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.15.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.15.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.14</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.14.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Apr-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.13</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.13.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.12</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Sep-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.11</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jul-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.11.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Jul-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">2.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Mar-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Feb-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Dec-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Apr-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Feb-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Oct-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jan-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Sep-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Oct-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Aug-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Sep-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Oct-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jul-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jun-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jul-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">2.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jul-2017</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Apr-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-May-2018</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_iam" class="discrete">Identity Services</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="26"><p class="tableblock">1</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">1.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-Aug-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-Oct-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">1.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jun-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Aug-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">1.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02-Dec-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02-Feb-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">1.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Sep-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">1.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Sep-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jun-2020</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_msdk" class="discrete">Mobile SDK</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="49"><p class="tableblock">3</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock">3.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Dec-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Feb-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Dec-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Sep-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.7.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jan-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Apr-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock">3.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jan-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-May-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">3.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.11 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.10 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.9 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Aug-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.6 (iOS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.8 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jul-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.7 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.6 (Android)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Feb-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Apr-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Mar-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-Sep-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">3.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.6 (iOS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jul-2018 (iOS)</p>
+<p class="tableblock">06-Jun-2019 (Android)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Feb-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Apr-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jul-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Nov-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jun-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jul-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jun-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Apr-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11-May-2018</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_hsdk" class="discrete">Hybrid SDK</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock">1</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">1.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Dec-2020</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-Mar-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Aug-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jun-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-Oct-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Oct-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Aug-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Aug-2020</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_flow" class="discrete">Flow</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2021.07</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-July-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="14"><p class="tableblock">1</p></th>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">1.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-June-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-July-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Aug-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Jul-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Apr-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">1.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Dec-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02-Nov-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Feb-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02-Jan-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">1.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Oct-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Aug-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jun-2021</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_forms" class="discrete">Forms</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="18"><p class="tableblock">11</p></th>
+<th class="tableblock halign-left valign-top" rowspan="9"><p class="tableblock">11.11</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.11.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Oct-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.10.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-May-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Apr-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.7.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Mar-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jan-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.5.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Dec-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Nov-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Oct-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">11.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="21"><p class="tableblock">6</p></th>
+<th class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock">6.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Aug-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Feb-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Dec-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Nov-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jul-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Mar-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Feb-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Sep-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29-Nov-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Sep-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-Aug-2018</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">6.9</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31-May-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">6.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.8.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07-May-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">6.7</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Apr-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">6.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01-May-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Mar-2019</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_uca" class="discrete">Universal Collection Angular</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">7</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">7.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Aug-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jul-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Oct-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">6</p></th>
+<th class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">6.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-May-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Jul-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Apr-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jul-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Mar-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Feb-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.9.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Mar-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">5</p></th>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">5.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Sep-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-Oct-2022</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock">4</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">4.10</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.10.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2022</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.8</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jun-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.6.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Mar-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.6.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-May-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Feb-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">4.4</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Dec-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">4.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Nov-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Sep-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Nov-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09-Aug-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock">3</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.16</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.16.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jun-2021</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.15</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.15.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Jun-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.15.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Aug-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">3.14</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.14.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.14.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22-Jul-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.14.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.13</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.13.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-May-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.13.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jul-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.12</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.12.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.11</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.11.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Mar-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-May-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.6</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Mar-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.6.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24-Mar-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.5</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Jan-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Jan-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jan-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Jan-2019</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retirement_uch" class="discrete">Universal Collection Handlebars</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25.5813%;">
+<col style="width: 16.279%;">
+<col style="width: 16.279%;">
+<col style="width: 20.9302%;">
+<col style="width: 20.9305%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Major</th>
+<th class="tableblock halign-left valign-top">Minor</th>
+<th class="tableblock halign-left valign-top">Release date</th>
+<th class="tableblock halign-left valign-top">Retirement date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock">3</p></th>
+<th class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">3.3</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Jan-2021</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Dec-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14-Mar-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Aug-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-May-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-Jul-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Apr-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.2</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Dec-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10-Feb-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Nov-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-Feb-2020</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">3.1</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Nov-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Oct-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23-Dec-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">3.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15-Oct-2020</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Aug-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Jul-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Oct-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Jun-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08-Sep-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-Aug-2019</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">2</p></th>
+<th class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">2.0</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Apr-2021</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Jan-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12-Jun-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Nov-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03-Mar-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Oct-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20-Jan-2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Sep-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Dec-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Aug-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Nov-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Jul-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Oct-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jun-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-Sep-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-May-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Aug-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Apr-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28-Jul-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-Mar-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-Jun-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Dec-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06-May-2018</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Nov-2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21-Feb-2018</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

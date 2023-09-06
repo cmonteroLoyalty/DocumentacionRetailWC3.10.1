@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Retail Banking Widget Collection, BACKBASE, services">
+<title>Create online banking account</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="self_enrollment_create_account_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Create online banking account</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Retail Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand Retail Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Retail Banking Widget Collection</a>
+</li>
+<li><a href="entitlements_understand.html">Understand Access Control</a>
+</li>
+<li><a href="actions_understand.html">Understand Actions</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authorized_users_understand.html">Understand Authorized Users</a>
+<ul class="sectlevel3">
+<li><a href="web_authorized_users.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="billpay_understand.html">Understand Bill Pay</a>
+<ul class="sectlevel3">
+<li><a href="web_billpay.html">Web widgets</a>
+</li>
+<li><a href="native_bill_pay.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+<li><a href="native_card_management.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="consents_understand.html">Understand Consents</a>
+<ul class="sectlevel3">
+<li><a href="web_consents.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+<li><a href="native_contacts.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+<li><a href="native_messages.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+<li><a href="native_notifications.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+<li><a href="native_payments.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="pfm_understand.html">Understand Personal Finance Management</a>
+<ul class="sectlevel3">
+<li><a href="web_pfm.html">Web widgets</a>
+</li>
+<li><a href="native_pfm.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+<li><a href="native_places.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+<li><a href="native_products.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="rdc_understand.html">Understand Remote Deposit Capture</a>
+<ul class="sectlevel3">
+<li><a href="native_rdc.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="self_enrollment_understand.html">Understand Self Enrollment</a>
+<ul class="sectlevel3">
+<li><a href="web_self_enrollment.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+<li><a href="native_transactions.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_self_service.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_profile_understand.html">Understand User Profile</a>
+<ul class="sectlevel3">
+<li><a href="web_user_profile.html">Web widgets</a>
+</li>
+<li><a href="native_user_profile.html">Native mobile widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="use_backbase_app.html">Use the Retail Banking Mobile App with Community</a>
+</li>
+<li><a href="refresh_widget_data_automatically.html">Refresh widget data in the same view automatically</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_and_build_with_wc3.html">Extend and build with Widget Collection 3</a>
+<ul class="sectlevel3">
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+<li><a href="configure_self_enrollment_route_guard.html">Customize Self Enrollment with a route guard</a>
+</li>
+<li><a href="configure_self_enrollment_identification_form.html">Customize the Self Enrollment with Identification form</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build_native.html">Extend and build native mobile apps</a>
+<ul class="sectlevel3">
+<li><a href="understanding_native_mobile_apps.html">Understand native mobile apps</a>
+</li>
+<li><a href="search_bar_framework.html">Understand the search bar framework</a>
+</li>
+<li><a href="integrating_a_mobile_widget_collection.html">Integrate a mobile widget collection</a>
+</li>
+<li><a href="implementing_an_oauth_20_compatible_auth_client.html">Implement an OAuth 2.0-compatible Auth Client</a>
+</li>
+<li><a href="build_rest_request.html">Build a REST request (iOS only)</a>
+</li>
+<li><a href="integrating_mobile_widgets.html">Install native mobile widgets</a>
+</li>
+<li><a href="integrating_native_client.html">Install native mobile clients</a>
+</li>
+<li><a href="journeys_in_widget_architecture.html">Integrate journeys in a widget-based mobile app</a>
+</li>
+<li><a href="customize_payment_order_widget.html">Customize the Create payment order widget</a>
+</li>
+<li><a href="customize_products_converters.html">Customize Product Converters</a>
+</li>
+<li><a href="bill_pay_usage_guide.html">Integrate the Schedule bill pay widget along with the Create bill payment widget</a>
+</li>
+<li><a href="transactions_filter_usage_guide.html">Integrate the Filter transactions widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transaction_details_widget.html">Integrate the View transaction details widget in your experience</a>
+</li>
+<li><a href="integrate_transactions_filter_amount_range_widget.html">Integrate the Filter transactions by amount range widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_date_range_widget.html">Integrate the Filter transactions by date range widget with the View transactions widget</a>
+</li>
+<li><a href="integrate_transactions_filter_type_widget.html">Integrate the Filter transactions by transaction type widget with the Filter transactions widget</a>
+</li>
+<li><a href="integrate_view_check_images_widget.html">Integrate the View check images widget with the View transaction details widget</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="account_information_consent_reference.html">Account information consent</a>
+</li>
+<li><a href="account_information_dashboard_revoke_reference.html">Account information dashboard and revoke</a>
+</li>
+<li><a href="manage_retail_notification_preferences_reference.html">Manage retail notification preferences</a>
+</li>
+<li><a href="link_external_account_reference.html">Connect external account</a>
+</li>
+<li><a href="contact_manager_reference.html">Contact manager</a>
+</li>
+<li><a href="authorized_user_create_reference.html">Create authorized user</a>
+</li>
+<li><a href="self_enrollment_create_account_reference.html"><span class="toc-current">Create online banking account</span></a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="bill_pay_auto_enrolment_reference.html">Enroll bill pay automatically</a>
+</li>
+<li><a href="bill_pay_ebills_payveris_enrolment_reference.html">Enroll Payveris eBills</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="bill_pay_enrolment_guard_reference.html">Guard bill pay enrollment</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="list_account_information_consents_reference.html">List account information consents</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="bill_pay_manage_payee_reference.html">Manage bill payee</a>
+</li>
+<li><a href="bill_pay_manage_payments_reference.html">Manage bill payments</a>
+</li>
+<li><a href="budget_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="product_summary_manage_accounts_reference.html">Manage retail account settings</a>
+</li>
+<li><a href="saving_goals_reference.html">Manage saving goals</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="upcoming_payments_reference.html">Manage upcoming payments</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="user_manage_profile_reference.html">Manage user profile - non-admin</a>
+</li>
+<li><a href="payment_initiation_consent_reference.html">Payment initiation consent</a>
+</li>
+<li><a href="self_enrollment_identification_reference.html">Provide information for self-enrollment</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_selector_reference.html">Select retail account</a>
+</li>
+<li><a href="self_enrollment_verification_reference.html">Verify identity for self-enrollment</a>
+</li>
+<li><a href="left_to_spend_reference.html">View amount left to spend</a>
+</li>
+<li><a href="authorized_user_view_reference.html">View authorized users</a>
+</li>
+<li><a href="account_statements_list_reference.html">View and download retail account statements</a>
+</li>
+<li><a href="bill_pay_payee_list_reference.html">View bill payees</a>
+</li>
+<li><a href="bill_pay_payee_summary_reference.html">View bill payee summary</a>
+</li>
+<li><a href="bill_pay_payments_reference.html">View bill payments</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="income_spending_analysis_reference.html">View income and spending by category</a>
+</li>
+<li><a href="self_enrollment_locked_out_reference.html">View locked out message for self-enrollment</a>
+</li>
+<li><a href="turnovers_reference.html">View monthly turnovers chart</a>
+</li>
+<li><a href="product_summary_view_details_reference.html">View retail account details</a>
+</li>
+<li><a href="product_summary_list_reference.html">View retail account list</a>
+</li>
+<li><a href="self_enrollment_confirmation_reference.html">View self-enrollment confirmation message</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="top_metrics_reference.html">View top spending metrics</a>
+</li>
+<li><a href="transactions_list_reference.html">View transactions list</a>
+</li>
+<li><a href="quick_transfer_reference.html">Quick transfer</a>
+</li>
+</ul>
+</li>
+<li><a href="native_reference.html">Native mobile widgets</a>
+<ul class="sectlevel3">
+<li><a href="bill_pay_native_reference.html">Manage bill payments</a>
+</li>
+<li><a href="bill_pay_form_native_reference.html">Create bill payment</a>
+</li>
+<li><a href="bill_pay_schedule_native_reference.html">Schedule bill payment</a>
+</li>
+<li><a href="budgets_native_reference.html">Manage budgets</a>
+</li>
+<li><a href="card_management_native_reference.html">Manage cards</a>
+</li>
+<li><a href="categories_native_reference.html">View income and spending by category</a>
+</li>
+<li><a href="contacts_native_reference.html">Manage contacts</a>
+</li>
+<li><a href="message_center_native_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="notifications_native_reference.html">Manage notifications</a>
+</li>
+<li><a href="payment_order_native_reference.html">Create payment order</a>
+</li>
+<li><a href="schedule_payment_order_native_reference.html">Schedule payment order</a>
+</li>
+<li><a href="pin_request_native_reference.html">Request PIN</a>
+</li>
+<li><a href="pin_reset_native_reference.html">Reset PIN</a>
+</li>
+<li><a href="places_native_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="place_details_native_reference.html">View branch and ATM details</a>
+</li>
+<li><a href="product_details_native_reference.html">Manage account</a>
+</li>
+<li><a href="products_native_reference.html">Manage accounts</a>
+</li>
+<li><a href="rdc_form_native_reference.html">Submit remote deposit check</a>
+</li>
+<li><a href="rdc_history_native_reference.html">View remote deposit capture history</a>
+</li>
+<li><a href="saving_goals_native_reference.html">Manage saving goals</a>
+</li>
+<li><a href="selector_widget.html">Selector widget</a>
+</li>
+<li><a href="transactions_native_reference.html">View transactions, turnovers, and spending/income analysis</a>
+</li>
+<li><a href="transaction_details_native_reference.html">View transaction details</a>
+</li>
+<li><a href="transactions_check_images_native_reference.html">View check images</a>
+</li>
+<li><a href="transactions_filter_native_reference.html">Filter transactions</a>
+</li>
+<li><a href="transactions_filter_amount_range_native_reference.html">Filter transactions by amount range</a>
+</li>
+<li><a href="transactions_filter_date_range_native_reference.html">Filter transactions by date range</a>
+</li>
+<li><a href="transactions_filter_type_native_reference.html">Filter transactions by transaction type</a>
+</li>
+<li><a href="travel_notice_form_native_reference.html">Create travel notice</a>
+</li>
+<li><a href="travel_notice_list_native_reference.html">View travel notices</a>
+</li>
+<li><a href="user_profile_overview_native_reference.html">View user profile - non-admin</a>
+</li>
+</ul>
+</li>
+<li><a href="native_client_reference.html">Native mobile clients</a>
+<ul class="sectlevel3">
+<li><a href="access_control_client_reference.html">Access control</a>
+</li>
+<li><a href="actions_client_reference.html">Actions</a>
+</li>
+<li><a href="bill_pay_client_reference.html">Bill pay</a>
+</li>
+<li><a href="card_management_client_reference.html">Card management</a>
+</li>
+<li><a href="contacts_client_reference.html">Contacts</a>
+</li>
+<li><a href="notifications_client_reference.html">Notifications</a>
+</li>
+<li><a href="message_center_client_reference.html">Compose and receive messages</a>
+</li>
+<li><a href="payment_order_client_reference.html">Payment order</a>
+</li>
+<li><a href="places_client_reference.html">Places</a>
+</li>
+<li><a href="products_client_reference.html">Products</a>
+</li>
+<li><a href="pfm_client_reference.html">Personal finance management</a>
+</li>
+<li><a href="rdc_client_reference.html">Remote deposit capture</a>
+</li>
+<li><a href="transactions_client_reference.html">Transactions</a>
+</li>
+<li><a href="user_profile_client_reference.html">User profile</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="common_utils.html">Common Utils</a>
+</li>
+<li><a href="experimental_features.html">Experimental features</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="native_apis.html">Native APIs</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="rb_3_10_1.html">Retail Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="rb_3100.html">Retail Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="rb_395.html">Retail Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="rb_394.html">Retail Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="rb_393.html">Retail Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="rb_392.html">Retail Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="rb_391.html">Retail Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="rb_390.html">Retail Banking Widget Collection v3.9.0</a>
+<ul class="sectlevel3">
+<li><a href="rb_390_web.html">Retail Banking Widget Collection v3.9.0 - Web</a>
+</li>
+<li><a href="rb_390_mob.html">Retail Banking Widget Collection v3.9.0 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_381.html">Retail Banking Web Widget Collection v3.8.1</a>
+</li>
+<li><a href="rb_380.html">Retail Banking Web Widget Collection v3.8.0</a>
+</li>
+<li><a href="rb_371.html">Widget Collection Retail Banking v3.7.1</a>
+<ul class="sectlevel3">
+<li><a href="rb_371_web.html">Widget Collection Retail Banking v3.7.1 - Web</a>
+</li>
+<li><a href="rb_371_mob.html">Widget Collection Retail Banking v3.7.1 - Mobile</a>
+</li>
+</ul>
+</li>
+<li><a href="rb_370.html">Widget Collection Retail Banking v3.7.0</a>
+</li>
+<li><a href="rb_362.html">Widget Collection Retail Banking v3.6.2</a>
+</li>
+<li><a href="rb_361.html">Widget Collection Retail Banking v3.6.1</a>
+</li>
+<li><a href="rb_360.html">Widget Collection Retail Banking v3.6.0</a>
+</li>
+<li><a href="rb_353.html">Widget Collection Retail Banking v3.5.3</a>
+</li>
+<li><a href="rb_352.html">Widget Collection Retail Banking v3.5.2</a>
+</li>
+<li><a href="rb_351.html">Widget Collection Retail Banking v3.5.1</a>
+</li>
+<li><a href="rb_350.html">Widget Collection Retail Banking v3.5.0</a>
+</li>
+<li><a href="rb_343.html">Widget Collection Retail Banking v3.4.3</a>
+</li>
+<li><a href="rb_342.html">Widget Collection Retail Banking v3.4.2</a>
+</li>
+<li><a href="rb_341.html">Widget Collection Retail Banking v3.4.1</a>
+</li>
+<li><a href="rb_340.html">Widget Collection Retail Banking v3.4.0</a>
+</li>
+<li><a href="rb_330.html">Widget Collection Retail Banking v3.3.0</a>
+</li>
+<li><a href="rb_321.html">Retail Banking Widget Collection v3.2.1</a>
+</li>
+<li><a href="rb_320.html">Retail Banking Widget Collection v3.2.0</a>
+</li>
+<li><a href="rb_315.html">Retail Banking Widget Collection v3.1.5</a>
+</li>
+<li><a href="rb_314.html">Retail Banking Widget Collection v3.1.4</a>
+</li>
+<li><a href="rb_313.html">Retail Banking Widget Collection v3.1.3</a>
+</li>
+<li><a href="rbrn_312.html">Retail Banking Widget Collection v3.1.2</a>
+</li>
+<li><a href="rbrn_311.html">Retail Banking Widget Collection v3.1.1</a>
+</li>
+<li><a href="rbrn_310.html">Retail Banking Widget Collection v3.1.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="self_enrollment_create_account_reference" class="sect0">Create online banking account</h1>
+          <h2 id="_preferences_3" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+can edit in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 52%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Admin<a href="self_enrollment_create_account_reference.html#create_account_admin_fn"><sup>[a]</sup></a></th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Complete navigation</strong></p>
+<p class="tableblock">Sets a navigation path when the account creation is successfully completed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.complete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cancel navigation</strong></p>
+<p class="tableblock">Sets a navigation path when the user requests to cancel the enrollment process.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.cancel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Log in navigation</strong></p>
+<p class="tableblock">Sets a navigation path when the request is being made to navigate to the login screen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.login</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+</tbody>
+</table>
+<div id="create_account_admin_fn" class="paragraph">
+<p><sup>[a]</sup> Preferences that have this column
+checked, are only editable for administrators.</p>
+</div>
+<h2 id="_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>The bank customer does not require any permissions to access this widget&#8217;s functionality.</p>
+</div>
+<h2 id="_extension_slots_3" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/create_online_banking_account_slots_1_2_4.svg?ver=3.10.1" alt="self_enrollment_create_account.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/create_online_banking_account_slots_3_4.svg?ver=3.10.1" alt="self_enrollment_create_account_error.png"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="self_enrollment_create_account_reference.html#bbSelfEnrollmentCreateAccountCustomizable">bbSelfEnrollmentCreateAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="self_enrollment_create_account_reference.html#bbSelfEnrollmentCreateAccountFormFieldsCustomizable">bbSelfEnrollmentCreateAccountFormFieldsCustomizable</a></p>
+</li>
+<li>
+<p><a href="self_enrollment_create_account_reference.html#bbSelfEnrollmentCreateAccountSubmitErrorCustomizable">bbSelfEnrollmentCreateAccountSubmitErrorCustomizable</a></p>
+</li>
+<li>
+<p><a href="self_enrollment_create_account_reference.html#bbSelfEnrollmentCreateAccountPasswordErrorCustomizable">bbSelfEnrollmentCreateAccountPasswordErrorCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbSelfEnrollmentCreateAccountCustomizable" class="discrete">bbSelfEnrollmentCreateAccountCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbSelfEnrollmentCreateAccountCustomizable let-hostRef&gt;
+  &lt;form [formGroup]="hostRef.createAccountForm" (keyup.enter)="hostRef.onSubmit()" data-role="create-account-form"&gt;
+    &lt;div class="card card-lg bb-block bb-block--lg"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;div class="bb-block bb-block--lg"&gt;
+          &lt;bb-header-ui
+            heading="Create new account"
+            headingType="h2"
+            i18n-heading="
+                Create new account|Header for self enrollment create account
+              form@@self.enrollment.create-account.header
+            "
+          &gt;
+          &lt;/bb-header-ui&gt;
+        &lt;/div&gt;
+        &lt;ng-container bbSelfEnrollmentCreateAccountSubmitErrorCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+
+        &lt;div class="bb-stack bb-stack--wrap no-gutters"&gt;
+          &lt;div class="bb-stack__item bb-stack__item--align-top col-12 col-md-6"&gt;
+            &lt;div class="bb-block bb-block--sm bb-stack bb-stack--wrap"&gt;
+              &lt;bb-icon-ui
+                class="bb-stack__item bb-stack__item--align-top"
+                name="user"
+                color="warning"
+                size="xxl"
+              &gt;&lt;/bb-icon-ui&gt;
+              &lt;div class="bb-stack__break bb-stack__break--spacing-sm bb-stack__break--md-up"&gt;&lt;/div&gt;
+              &lt;p
+                class="bb-stack__item bb-stack__item--fill bb-text-support"
+                i18n="
+                    Self enrollment create account intro text|Short explanation on how you can use your account once
+                  you enroll@@self.enrollment.create-account.description
+                "
+              &gt;
+                Create your user account to be able to access your digital banking account.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+          &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+            &lt;ng-container bbSelfEnrollmentCreateAccountFormFieldsCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card card-lg bb-block bb-block--lg"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;div class="bb-block bb-block--lg"&gt;
+          &lt;bb-header-ui
+            heading="Terms and conditions"
+            headingType="h2"
+            i18n-heading="
+                Terms and conditions|Header for self enrollment create account terms and
+              conditions@@self.enrollment.create-account.tc.header
+            "
+          &gt;
+          &lt;/bb-header-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body scrollable-box-content bb-block bb-block--lg"&gt;
+          &lt;ng-container *ngTemplateOutlet="termsAndConditions"&gt;&lt;/ng-container&gt;
+        &lt;/div&gt;
+
+        &lt;div [formGroup]="hostRef.createAccountForm" class="form-group"&gt;
+          &lt;bb-input-checkbox-ui
+            formControlName="acceptTerms"
+            data-role="accept-terms-input"
+            label="Accept all terms and conditions"
+            i18n-label="
+                Accept all terms and conditions|Accept self enrollment terms and conditions checkbox
+              label@@self.enrollment.create-account.tc.accept
+            "
+          &gt;&lt;/bb-input-checkbox-ui&gt;
+          &lt;bb-input-validation-message-ui
+            [showErrors]="
+              hostRef.createAccountForm.controls.acceptTerms.invalid &amp;&amp;
+              hostRef.createAccountForm.controls.acceptTerms.touched
+            "
+          &gt;
+            &lt;span
+              data-role="terms-validation-msg"
+              i18n="
+                  Required field|Error message stating that create account form field is
+                required@@self.enrollment.create-account.form.error.required
+              "
+            &gt;
+              Required field
+            &lt;/span&gt;
+          &lt;/bb-input-validation-message-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;div class="bb-button-bar"&gt;
+    &lt;bb-load-button-ui
+      class="bb-button-bar__button"
+      color="primary"
+      i18n="Create|Self enrollment create account submission button label@@self.enrollment.create-account.create"
+      data-role="create-button"
+      [isLoading]="hostRef.isCreating"
+      (click)="!hostRef.isCreating &amp;&amp; hostRef.onSubmit()"
+    &gt;
+      Create
+    &lt;/bb-load-button-ui&gt;
+    &lt;button
+      bbButton
+      class="bb-button-bar__button"
+      color="link"
+      i18n="Cancel|Cancel self enrollment button label@@self.enrollment.create-account.cancel"
+      data-role="cancel-button"
+      (click)="hostRef.onCancel()"
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #termsAndConditions&gt;
+    &lt;p
+      i18n="
+         Terms and conditions text|Text for self enrollment create account terms and
+        conditions@@self.enrollment.create-account.tc.text
+      "
+      data-role="terms-conditions-text"
+    &gt;
+      These terms and conditions outline the rules and regulations for the use of Backbase's Website, located at
+      www.backbase.com. By accessing this website we assume you accept these terms and conditions. Do not continue to
+      use www.backbase.com if you do not agree to take all of the terms and conditions stated on this page. Our Terms
+      and Conditions were created with the help of the Terms And Conditions Generator. The following terminology applies
+      to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and
+      "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The
+      Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both
+      the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to
+      undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of
+      meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and
+      subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular,
+      plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+      Cookies: We employ the use of cookies. By accessing www.backbase.com, you agreed to use cookies in agreement with
+      the Backbase's Privacy Policy. Most interactive websites use cookies to let us retrieve the user's details for
+      each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for
+      people visiting our website. Some of our affiliate/advertising partners may also use cookies. License: Unless
+      otherwise stated, Backbase and/or its licensors own the intellectual property rights for all material on
+      www.backbase.com. All intellectual property rights are reserved. You may access this from www.backbase.com for
+      your own personal use subjected to restrictions set in these terms and conditions. You must not: Republish
+      material from www.backbase.com Sell, rent or sub-license material from www.backbase.com Reproduce, duplicate or
+      copy material from www.backbase.com Redistribute content from www.backbase.com This Agreement shall begin on the
+      date hereof. Parts of this website offer an opportunity for users to post and exchange opinions and information in
+      certain areas of the website. Backbase does not filter, edit, publish or review Comments prior to their presence
+      on the website. Comments do not reflect the views and opinions of Backbase, its agents and/or affiliates. Comments
+      reflect the views and opinions of the person who post their views and opinions. To the extent permitted by
+      applicable laws, Backbase shall not be liable for the Comments or for any liability, damages or expenses caused
+      and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+      Backbase reserves the right to monitor all Comments and to remove any Comments which can be considered
+      inappropriate, offensive or causes breach of these Terms and Conditions. You warrant and represent that: You are
+      entitled to post the Comments on our website and have all necessary licenses and consents to do so; The Comments
+      do not invade any intellectual property right, including without limitation copyright, patent or trademark of any
+      third party; The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful
+      material which is an invasion of privacyThe Comments will not be used to solicit or promote business or custom or
+      present commercial activities or unlawful activity. You hereby grant Backbase a non-exclusive license to use,
+      reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats
+      or media. Hyperlinking to our Content The following organizations may link to our Website without prior written
+      approval: Government agencies; Search engines; News organizations; Online directory distributors may link to our
+      Website in the same manner as they hyperlink to the Websites of other listed businesses; andSystem wide Accredited
+      Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups
+      which may not hyperlink to our Web site. These organizations may link to our home page, to publications or to
+      other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply
+      sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within
+      the context of the linking party's site. We may consider and approve other link requests from the following types
+      of organizations: commonly-known consumer and/or business information sources; dot.com community sites;
+      associations or other groups representing charities; online directory distributors; internet portals; accounting,
+      law and consulting firms; andeducational institutions and trade associations. We will approve link requests from
+      these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our
+      accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from
+      the visibility of the hyperlink compensates the absence of Backbase; and (d) the link is in the context of general
+      resource information. These organizations may link to our home page so long as the link: (a) is not in any way
+      deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products
+      or services; and (c) fits within the context of the linking party's site. If you are one of the organizations
+      listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail
+      to Backbase. Please include your name, your organization name, contact information as well as the URL of your
+      site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which
+      you would like to link. Wait 2-3 weeks for a response. Approved organizations may hyperlink to our Website as
+      follows:By use of our corporate name; orBy use of the uniform resource locator being linked to; orBy use of any
+      other description of our Website being linked to that makes sense within the context and format of content on the
+      linking party's site. No use of Backbase's logo or other artwork will be allowed for linking absent a trademark
+      license agreement. iFrames Without prior approval and written permission, you may not create frames around our
+      Webpages that alter in any way the visual presentation or appearance of our Website. Content Liability We shall
+      not be hold responsible for any content that appears on your Website. You agree to protect and defend us against
+      all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as
+      libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other
+      violation of, any third party rights. Your Privacy Please read Privacy Policy Reservation of Rights We reserve the
+      right to request that you remove all links or any particular link to our Website. You approve to immediately
+      remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and
+      it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these
+      linking terms and conditions. Removal of links from our website If you find any link on our Website that is
+      offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove
+      links but we are not obligated to or so or to respond to you directly. We do not ensure that the information on
+      this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the
+      website remains available or that the material on the website is kept up to date. Disclaimer To the maximum extent
+      permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and
+      the use of this website. Nothing in this disclaimer will:limit or exclude our or your liability for death or
+      personal injury; limit or exclude our or your liability for fraud or fraudulent misrepresentation; limit any of
+      our or your liabilities in any way that is not permitted under applicable law; or exclude any of our or your
+      liabilities that may not be excluded under applicable law. The limitations and prohibitions of liability set in
+      this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all
+      liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of
+      statutory duty. As long as the website and the information and services on the website are provided free of
+      charge, we will not be liable for any loss or damage of any nature.
+    &lt;/p&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSelfEnrollmentCreateAccountFormFieldsCustomizable" class="discrete">bbSelfEnrollmentCreateAccountFormFieldsCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbSelfEnrollmentCreateAccountFormFieldsCustomizable let-hostRef&gt;
+  &lt;div [formGroup]="hostRef.createAccountForm" class="form-group"&gt;
+    &lt;bb-input-text-ui
+      label="Choose Username"
+      formControlName="username"
+      i18n-label="
+          Choose Username|Label for username input field in create account
+        form@@self.enrollment.create-account.form.username
+      "
+      data-role="username-input"
+    &gt;&lt;/bb-input-text-ui&gt;
+    &lt;bb-input-validation-message-ui [showErrors]="hostRef.createAccountForm.controls.username.errors?.unique"&gt;
+      &lt;div
+        data-role="username-validation-unique-msg"
+      &gt;
+        &lt;span
+          i18n="
+              Username already exists|Error message stating that typed in username already exists in the
+            system@@self.enrollment.create-account.form.error.unique.message
+          "
+        &gt;
+          Username already exists
+        &lt;/span&gt;
+        &lt;button
+          bbButton
+          color="link"
+          i18n="
+              Try to Log In|Link that will lead user to the login
+            screen@@self.enrollment.create-account.form.error.unique.link
+          "
+          (click)="hostRef.onLogin()"
+        &gt;
+          &lt;small&gt;Try to Log In&lt;/small&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+    &lt;bb-input-validation-message-ui
+      [showErrors]="
+        hostRef.createAccountForm.controls.username.errors?.required &amp;&amp;
+        hostRef.createAccountForm.controls.username.touched
+      "
+    &gt;
+      &lt;span
+        data-role="username-validation-required-msg"
+        i18n="
+            Required field|Error message stating that create account form field is
+          required@@self.enrollment.create-account.form.error.required
+        "
+      &gt;
+        Required field
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/div&gt;
+
+  &lt;div [formGroup]="hostRef.createAccountForm" class="form-group"&gt;
+    &lt;bb-input-password-ui
+      label="Choose Password"
+      formControlName="password"
+      i18n-label="
+          Choose Password|Label for password input field in create account
+        form@@self.enrollment.create-account.form.password
+      "
+      data-role="password-input"
+      [showVisibilityControl]="true"
+      visibilityControlLabel="Toggle password visibility"
+      i18n-visibilityControlLabel="
+          Toggle password visibility|Aria label for password visibility toggle
+        button@@self.enrollment.create-account.form.password.toggle.ariaLabel
+      "
+    &gt;&lt;/bb-input-password-ui&gt;
+
+    &lt;ng-container bbSelfEnrollmentCreateAccountPasswordErrorCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;div [formGroup]="hostRef.createAccountForm" class="form-group"&gt;
+    &lt;bb-input-password-ui
+      label="Confirm Password"
+      formControlName="passwordRepeat"
+      i18n-label="
+          Confirm Password|Label for confirm password input field in create account
+        form@@self.enrollment.create-account.form.passwordRepeat
+      "
+      data-role="password-repeat-input"
+      [showVisibilityControl]="true"
+      visibilityControlLabel="Toggle password visibility"
+      i18n-visibilityControlLabel="
+          Toggle password visibility|Aria label for password visibility toggle
+        button@@self.enrollment.create-account.form.passwordRepeat.toggle.ariaLabel
+      "
+    &gt;&lt;/bb-input-password-ui&gt;
+    &lt;bb-input-validation-message-ui
+      [showErrors]="
+        hostRef.createAccountForm.controls.passwordRepeat.errors?.required &amp;&amp;
+        hostRef.createAccountForm.controls.passwordRepeat.touched
+      "
+    &gt;
+      &lt;span
+        data-role="password-repeat-validation-required-msg"
+        i18n="
+            Required field|Error message stating that create account form field is
+          required@@self.enrollment.create-account.form.error.required
+        "
+      &gt;
+        Required field
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+    &lt;bb-input-validation-message-ui
+      [showErrors]="
+        hostRef.createAccountForm.errors?.notSame &amp;&amp; hostRef.createAccountForm.controls.passwordRepeat.touched
+      "
+    &gt;
+      &lt;span
+        data-role="password-repeat-validation-not-same-msg"
+        i18n="
+            Passwords are not the same|Error message stating passwords in two password fields are not the
+          same@@self.enrollment.create-account.form.error.not-same
+        "
+      &gt;
+        Passwords are not the same
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSelfEnrollmentCreateAccountSubmitErrorCustomizable" class="discrete">bbSelfEnrollmentCreateAccountSubmitErrorCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbSelfEnrollmentCreateAccountSubmitErrorCustomizable let-hostRef&gt;
+  &lt;bb-alert-ui
+    data-role="create-account-bad-request-error-message"
+    *ngIf="hostRef.isBadRequest"
+    modifier="error"
+    title="Unfortunately we could not create a new account for you"
+    i18n-title="
+        We could not create a new account for you|Title of an error message that appears in case account creation
+      request is not valid@@self.enrollment.create-account.error.bad-request.title
+    "
+    i18n="
+        The data you entered is not suffcient to create a new account|Explanation on what to do in case create account
+      request is not valid@@self.enrollment.create-account.error.bad-request.text
+    "
+  &gt;
+    The data you entered is not suffcient to create a new account. Please contact us for further assistance.
+  &lt;/bb-alert-ui&gt;
+  &lt;bb-alert-ui
+    data-role="create-account-forbidden-error-message"
+    *ngIf="hostRef.isUnauthorized"
+    modifier="error"
+    title="Unfortunately we could not create a new account for you"
+    i18n-title="
+        We could not create a new account for you|Title of an error message that appears in case user is not authorized
+      to create an account@@self.enrollment.create-account.error.unauthorized.title
+    "
+    i18n="
+        Try refreshing the page|Explanation on how to proceed in case user is not authorized to create an
+      account@@self.enrollment.create-account.error.unauthorized.text
+    "
+  &gt;
+    Try refreshing the page and filling the form again. If you have already seen this error, please contact us for
+    further assistance.
+  &lt;/bb-alert-ui&gt;
+  &lt;bb-alert-ui
+    data-role="create-account-system-error-message"
+    *ngIf="hostRef.isSystemErrorOccurred"
+    modifier="error"
+    title="Unexpected error"
+    i18n-title="
+        Unexpected error|Title of an error message that appears in case when system fails to create a new
+      account@@self.enrollment.create-account.error.title
+    "
+    i18n="
+        Please try again later|Content of an error message that appears in case when system fails to create a new
+      account@@self.enrollment.create-account.error.text
+    "
+  &gt;
+    Something is gone wrong with our server. Please try again later.
+  &lt;/bb-alert-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSelfEnrollmentCreateAccountPasswordErrorCustomizable" class="discrete">bbSelfEnrollmentCreateAccountPasswordErrorCustomizable</h3>
+<div class="paragraph">
+<p>You configure this extension slot using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbSelfEnrollmentCreateAccountPasswordErrorCustomizable let-hostRef&gt;
+  &lt;bb-input-validation-message-ui [showErrors]="true"&gt;
+    &lt;ul class="bb-text-support"&gt;
+      &lt;li
+        i18n="
+            Required field|One of the rules for new password@@self.enrollment.create-account.form.error.required
+        "
+        data-role="password-validation-required-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.required
+        }"
+      &gt;
+        Required field.
+      &lt;/li&gt;
+      &lt;li
+        i18n="
+            x uppercase letter(s)|One of the rules for new
+          password@@self.enrollment.create-account.password.rule.letters
+        "
+        data-role="password-validation-uppercase-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.capitalLetters
+        }"
+      &gt;
+        {{ hostRef.pwdCapitalLetters }} uppercase letter(s).
+      &lt;/li&gt;
+      &lt;li
+        i18n="
+            x lowercase letter(s)|One of the rules for new
+          password@@self.enrollment.create-account.password.rule.letters
+        "
+        data-role="password-validation-lowercase-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.smallLetters
+        }"
+      &gt;
+        {{ hostRef.pwdSmallLetters }} lowercase letter(s).
+      &lt;/li&gt;
+      &lt;li
+        i18n="
+            x number(s)|One of the rules for new password@@self.enrollment.create-account.password.rule.number
+        "
+        data-role="password-validation-number-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.numbers
+        }"
+      &gt;
+        {{ hostRef.pwdNumbers }} number(s).
+      &lt;/li&gt;
+      &lt;li
+        i18n="
+            x special character(s)|One of the rules for new
+          password@@self.enrollment.create-account.password.rule.special
+        "
+        data-role="password-validation-special-char-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.specialCharacters
+        }"
+      &gt;
+        {{ hostRef.pwdSpecialCharacters }} special character(s).
+      &lt;/li&gt;
+      &lt;li
+        i18n="
+            Minimum x character(s) long|One of the rules for new
+          password@@self.enrollment.create-account.password.rule.length
+        "
+        data-role="password-validation-length-msg"
+        [ngClass]="{
+          'text-danger bb-text-danger':
+            hostRef.createAccountForm.controls.password.touched &amp;&amp;
+            hostRef.createAccountForm.controls.password.errors?.length
+        }"
+      &gt;
+        Minimum {{ hostRef.pwdLength }} character(s) long.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>
